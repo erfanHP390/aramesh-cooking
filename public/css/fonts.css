@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('/fonts/Vazir-Regular.woff2') format('woff2'), 
+         url('/fonts/Vazir-Regular.woff') format('woff'),
+         url('/fonts/Vazir-Regular.ttf') format('truetype'), 
+         url('/fonts/Vazir-Regular.eot') format('embedded-opentype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Vazirmatn_bold';
+    src: url('/fonts/Vazir-Bold.woff2') format('woff2'), 
+         url('/fonts/Vazir-Bold.woff') format('woff'),
+         url('/fonts/Vazir-Bold.ttf') format('truetype'),
+         url('/fonts/Vazir-Bold.eot') format('embedded-opentype'); 
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Vazirmatn_fd';
+    src: url('/fonts/Vazir-FD-Regular.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Vazirmatn_fd_bold';
+    src: url('/fonts/Vazir-FD-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+:root{
+    --base-font-family:"Vazirmatn", sans-serif;
+    --base-font-family-bold:"Vazirmatn_bold", sans-serif;
+    --base-font-family-fd:"Vazirmatn_fd","Vazirmatn", sans-serif;
+    --base-font-family-fd-bold:"Vazirmatn_fd_bold","Vazirmatn_bold", sans-serif;
+    --base-font-size:1rem;
+    --base-font-weight:400;
+    --base-line-height:1.5;
+    --base-font-color:#1f1f1f;
+}
+.font-vazir-regular,.font-regular{
+    font-family: 'Vazirmatn' !important;
+}
+.font-vazir-bold,.font-bold{
+    font-family: 'Vazirmatn_bold' !important;
+}
+.font-vazir-fd-regular{
+    font-family: 'Vazirmatn' !important;
+}
+.font-vazir-fd-bold{
+    font-family: 'Vazirmatnfd_bold' !important;
+}
+span.counter{
+    font-family: var(--base-font-family-fd-bold);
+}

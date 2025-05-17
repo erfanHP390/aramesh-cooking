@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--Title-->
+  <title>راهنمای کامل پلاگین ها</title>
+
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Favicon  -->
+  <link rel="icon" href="../../src/img-min/logo/favicon.png">
+
+  <!--Google Fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&amp;display=swap" rel="stylesheet">
+
+  <!--Plugins Styles-->
+  <link rel="stylesheet" href="../../src/plugins/aos/dist/aos.css">
+  <link rel="stylesheet" href="../../src/plugins/lightgallery.js/dist/css/lightgallery.min.css">
+  <link rel="stylesheet" href="../../src/plugins/flickity/dist/flickity.min.css">
+
+  <!--Styles-->
+  <link rel="stylesheet" href="../../src/css/theme.css">
+
+  <!--Documentation css-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/docs.css">
+</head>
+
+<body id="page-top">
+  <!--Skippy-->
+  <a id="skippy" class="visually-hidden-focusable" href="#content">
+    <div class="container">
+      <span class="skiplink-text">Skip to main content</span>
+    </div>
+  </a>
+    <!--Header start-->
+    <header class="header">
+      <!-- Navigation -->
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light border-bottom z-index-50 py-2 py-lg-0 px-4">
+        <div class="container">
+          <!-- logo -->
+          <div class="nav-logo6">
+            <a class="navbar-brand main-logo" href="../index.html">
+              <img src="../../src/img-min/logo/logo.png" alt="LOGO">
+            </a>
+          </div>
+  
+          <!-- menu  -->
+          <button class="navbar-toggler p-0 border-0 rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div id="navbarNavDropdown" class="collapse navbar-collapse">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="../../index.html">
+                  <svg class="bi bi-collection me-1" width="1.2rem" height="1.2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M14.5 13.5h-13A.5.5 0 011 13V6a.5.5 0 01.5-.5h13a.5.5 0 01.5.5v7a.5.5 0 01-.5.5zm-13 1A1.5 1.5 0 010 13V6a1.5 1.5 0 011.5-1.5h13A1.5 1.5 0 0116 6v7a1.5 1.5 0 01-1.5 1.5h-13zM2 3a.5.5 0 00.5.5h11a.5.5 0 000-1h-11A.5.5 0 002 3zm2-2a.5.5 0 00.5.5h7a.5.5 0 000-1h-7A.5.5 0 004 1z" clip-rule="evenodd"></path>
+                  </svg>
+                مشاهده قالب</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../user-documents/document.html">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 16 16" class="bi bi-file-earmark-text me-1" fill="currentColor"><path d="M4 0h5.5v1H4a1 1 0 00-1 1v12a1 1 0 001 1h8a1 1 0 001-1V4.5h1V14a2 2 0 01-2 2H4a2 2 0 01-2-2V2a2 2 0 012-2z"></path><path d="M9.5 3V0L14 4.5h-3A1.5 1.5 0 019.5 3z"></path><path fill-rule="evenodd" d="M5 11.5a.5.5 0 01.5-.5h2a.5.5 0 010 1h-2a.5.5 0 01-.5-.5zm0-2a.5.5 0 01.5-.5h5a.5.5 0 010 1h-5a.5.5 0 01-.5-.5zm0-2a.5.5 0 01.5-.5h5a.5.5 0 010 1h-5a.5.5 0 01-.5-.5z"></path></svg>
+                راهنمای قالب</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../user-documents/plugins.html">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 16 16" class="bi bi-code-square me-1" fill="currentColor"><path fill-rule="evenodd" d="M14 1H2a1 1 0 00-1 1v12a1 1 0 001 1h12a1 1 0 001-1V2a1 1 0 00-1-1zM2 0a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V2a2 2 0 00-2-2H2z"></path><path fill-rule="evenodd" d="M6.854 4.646a.5.5 0 010 .708L4.207 8l2.647 2.646a.5.5 0 01-.708.708l-3-3a.5.5 0 010-.708l3-3a.5.5 0 01.708 0zm2.292 0a.5.5 0 000 .708L11.793 8l-2.647 2.646a.5.5 0 00.708.708l3-3a.5.5 0 000-.708l-3-3a.5.5 0 00-.708 0z"></path></svg>
+                  آموزش پلاگین ها</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../svg-img/ionicons.html">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" fill="currentColor" viewBox="0 0 512 512"><rect x="64" y="64" width="80" height="80" rx="40" ry="40" style="fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:32px"/><rect x="216" y="64" width="80" height="80" rx="40" ry="40" style="fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:32px"/><rect x="368" y="64" width="80" height="80" rx="40" ry="40" style="fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:32px"/><rect x="64" y="216" width="80" height="80" rx="40" ry="40" style="fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:32px"/><rect x="216" y="216" width="80" height="80" rx="40" ry="40" style="fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:32px"/><rect x="368" y="216" width="80" height="80" rx="40" ry="40" style="fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:32px"/><rect x="64" y="368" width="80" height="80" rx="40" ry="40" style="fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:32px"/><rect x="216" y="368" width="80" height="80" rx="40" ry="40" style="fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:32px"/><rect x="368" y="368" width="80" height="80" rx="40" ry="40" style="fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:32px"/></svg>
+                  آیکن ها</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../svg-img/scribble.html">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" fill="currentColor" viewBox="0 0 512 512"><rect x="64" y="176" width="384" height="256" rx="28.87" ry="28.87" style="fill:none;stroke:currentColor;stroke-linejoin:round;stroke-width:32px"/><line x1="144" y1="80" x2="368" y2="80" style="stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/><line x1="112" y1="128" x2="400" y2="128" style="stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/></svg>
+                   خطوط منحنی</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- end navigation -->
+    </header>
+  <!--Main start-->
+  <div id="content" class="container">
+    <div class="row">
+      <main class="col-12 px-md-3 ps-lg-5 pe-lg-4 bn-content pb-5">
+        <div class="jump mt-lg-3">
+          <h1 class="mb-3">AOS</h1>
+          <p class="lead text-muted">Animate On Scroll library using CSS3.</p>
+        </div>
+
+        <div id="installation" class="jump">
+          <h2 class="h4 mb-3">Installation</h2>
+          <p>Add styles in <code>&lt;head&gt;&lt;/head&gt;</code></p>
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;link rel="stylesheet" href="src/plugins/aos/dist/aos.css"&gt;
+            </code>
+          </pre>
+          <p>Add script right before closing <code>&lt;/body&gt;</code> tag, and initialize AOS</p>
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;!-- Plugin js --&gt;
+              &lt;script src="src/plugins/aos/dist/aos.js"&gt;&lt;/script&gt;
+
+              &lt;!-- Theme js --&gt;
+              &lt;script src="src/js/theme.js"&gt;&lt;/script&gt;
+            </code>
+          </pre>
+          <p>If you want to remove AOS js editing <code>theme.js</code> in this function <code>myAos();</code></p>
+          <br>
+        </div>
+        
+        <div id="example" class="jump">
+          <h2 class="h4 mb-3">Example</h2>
+          <br>
+          <!-- row -->
+          <div class="row text-center">
+            <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up">
+              <!-- service block -->
+              <div class="shadow-sm rounded-3 bg-white p-4 mb-5 hover-box-up">
+                <div class="text-primary mb-4">
+                  <!-- icon -->
+                  <!-- <i class="fab fa-bootstrap"></i> -->
+                  <svg class="bi bi-bootstrap" width="2.5rem" height="2.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M12 1H4a3 3 0 00-3 3v8a3 3 0 003 3h8a3 3 0 003-3V4a3 3 0 00-3-3zM4 0a4 4 0 00-4 4v8a4 4 0 004 4h8a4 4 0 004-4V4a4 4 0 00-4-4H4z" clip-rule="evenodd"></path>
+                    <path fill-rule="evenodd" d="M8.537 12H5.062V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396zM6.375 4.658v2.467h1.558c1.16 0 1.764-.428 1.764-1.23 0-.78-.569-1.237-1.541-1.237H6.375zm1.898 6.229H6.375V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <h3 class="h5 fw-medium mb-1">Latest Bootstrap</h3>
+                <p class="text-light-blue">Bootstrap 4 the world’s most popular front-end component library.</p>
+              </div> <!-- end service block -->
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <!-- service block -->
+              <div class="shadow-sm rounded-3 bg-white p-4 mb-5 hover-box-up">
+                <div class="text-primary mb-4">
+                  <!-- icon -->
+                  <!-- <i class="fab fa-npm"></i> -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 512 512"><rect x="227.6" y="213.1" width="28.4" height="57.1" style="fill:currentColor"></rect><path d="M0,156V327.4H142.2V356H256V327.4H512V156ZM142.2,298.9H113.8V213.2H85.3v85.7H28.4V184.6H142.2Zm142.2,0H227.5v28.6H170.6V184.6H284.4V298.9Zm199.2,0H455.2V213.2H426.8v85.7H398.4V213.2H370v85.7H313.1V184.6H483.8V298.9Z" style="fill:currentColor"></path></svg>
+
+                </div>
+                <h3 class="h5 fw-medium mb-1">NPM Software</h3>
+                <p class="text-light-blue">Enjoy with the public registry tools you already love to use.</p>
+              </div><!-- end service block -->
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+              <!-- service block -->
+              <div class="shadow-sm rounded-3 bg-white p-4 mb-5 hover-box-up">
+                <div class="text-primary mb-4">
+                  <!-- icon -->
+                  <!-- <i class="fab fa-gulp"></i> -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 256 512"><path style="fill:currentColor" d="M209.8 391.1l-14.1 24.6-4.6 80.2c0 8.9-28.3 16.1-63.1 16.1s-63.1-7.2-63.1-16.1l-5.8-79.4-14.9-25.4c41.2 17.3 126 16.7 165.6 0zm-196-253.3l13.6 125.5c5.9-20 20.8-47 40-55.2 6.3-2.7 12.7-2.7 18.7.9 5.2 3 9.6 9.3 10.1 11.8 1.2 6.5-2 9.1-4.5 9.1-3 0-5.3-4.6-6.8-7.3-4.1-7.3-10.3-7.6-16.9-2.8-6.9 5-12.9 13.4-17.1 20.7-5.1 8.8-9.4 18.5-12 28.2-1.5 5.6-2.9 14.6-.6 19.9 1 2.2 2.5 3.6 4.9 3.6 5 0 12.3-6.6 15.8-10.1 4.5-4.5 10.3-11.5 12.5-16l5.2-15.5c2.6-6.8 9.9-5.6 9.9 0 0 10.2-3.7 13.6-10 34.7-5.8 19.5-7.6 25.8-7.6 25.8-.7 2.8-3.4 7.5-6.3 7.5-1.2 0-2.1-.4-2.6-1.2-1-1.4-.9-5.3-.8-6.3.2-3.2 6.3-22.2 7.3-25.2-2 2.2-4.1 4.4-6.4 6.6-5.4 5.1-14.1 11.8-21.5 11.8-3.4 0-5.6-.9-7.7-2.4l7.6 79.6c2 5 39.2 17.1 88.2 17.1 49.1 0 86.3-12.2 88.2-17.1l10.9-94.6c-5.7 5.2-12.3 11.6-19.6 14.8-5.4 2.3-17.4 3.8-17.4-5.7 0-5.2 9.1-14.8 14.4-21.5 1.4-1.7 4.7-5.9 4.7-8.1 0-2.9-6-2.2-11.7 2.5-3.2 2.7-6.2 6.3-8.7 9.7-4.3 6-6.6 11.2-8.5 15.5-6.2 14.2-4.1 8.6-9.1 22-5 13.3-4.2 11.8-5.2 14-.9 1.9-2.2 3.5-4 4.5-1.9 1-4.5.9-6.1-.3-.9-.6-1.3-1.9-1.3-3.7 0-.9.1-1.8.3-2.7 1.5-6.1 7.8-18.1 15-34.3 1.6-3.7 1-2.6.8-2.3-6.2 6-10.9 8.9-14.4 10.5-5.8 2.6-13 2.6-14.5-4.1-.1-.4-.1-.8-.2-1.2-11.8 9.2-24.3 11.7-20-8.1-4.6 8.2-12.6 14.9-22.4 14.9-4.1 0-7.1-1.4-8.6-5.1-2.3-5.5 1.3-14.9 4.6-23.8 1.7-4.5 4-9.9 7.1-16.2 1.6-3.4 4.2-5.4 7.6-4.5.6.2 1.1.4 1.6.7 2.6 1.8 1.6 4.5.3 7.2-3.8 7.5-7.1 13-9.3 20.8-.9 3.3-2 9 1.5 9 2.4 0 4.7-.8 6.9-2.4 4.6-3.4 8.3-8.5 11.1-13.5 2-3.6 4.4-8.3 5.6-12.3.5-1.7 1.1-3.3 1.8-4.8 1.1-2.5 2.6-5.1 5.2-5.1 1.3 0 2.4.5 3.2 1.5 1.7 2.2 1.3 4.5.4 6.9-2 5.6-4.7 10.6-6.9 16.7-1.3 3.5-2.7 8-2.7 11.7 0 3.4 3.7 2.6 6.8 1.2 2.4-1.1 4.8-2.8 6.8-4.5 1.2-4.9.9-3.8 26.4-68.2 1.3-3.3 3.7-4.7 6.1-4.7 1.2 0 2.2.4 3.2 1.1 1.7 1.3 1.7 4.1 1 6.2-.7 1.9-.6 1.3-4.5 10.5-5.2 12.1-8.6 20.8-13.2 31.9-1.9 4.6-7.7 18.9-8.7 22.3-.6 2.2-1.3 5.8 1 5.8 5.4 0 19.3-13.1 23.1-17 .2-.3.5-.4.9-.6.6-1.9 1.2-3.7 1.7-5.5 1.4-3.8 2.7-8.2 5.3-11.3.8-1 1.7-1.6 2.7-1.6 2.8 0 4.2 1.2 4.2 4 0 1.1-.7 5.1-1.1 6.2 1.4-1.5 2.9-3 4.5-4.5 15-13.9 25.7-6.8 25.7.2 0 7.4-8.9 17.7-13.8 23.4-1.6 1.9-4.9 5.4-5 6.4 0 1.3.9 1.8 2.2 1.8 2 0 6.4-3.5 8-4.7 5-3.9 11.8-9.9 16.6-14.1l14.8-136.8c-30.5 17.1-197.6 17.2-228.3.2zm229.7-8.5c0 21-231.2 21-231.2 0 0-8.8 51.8-15.9 115.6-15.9 9 0 17.8.1 26.3.4l12.6-48.7L228.1.6c1.4-1.4 5.8-.2 9.9 3.5s6.6 7.9 5.3 9.3l-.1.1L185.9 74l-10 40.7c39.9 2.6 67.6 8.1 67.6 14.6zm-69.4 4.6c0-.8-.9-1.5-2.5-2.1l-.2.8c0 1.3-5 2.4-11.1 2.4s-11.1-1.1-11.1-2.4c0-.1 0-.2.1-.3l.2-.7c-1.8.6-3 1.4-3 2.3 0 2.1 6.2 3.7 13.7 3.7 7.7.1 13.9-1.6 13.9-3.7z"></path></svg>
+
+                </div>
+                <h3 class="h5 fw-medium mb-1">Built with Gulp</h3>
+                <p class="text-light-blue">Gulp making your project automatic and easy to running.</p>
+              </div><!-- end service block -->
+            </div>
+          </div>
+          <h2 class="fw-medium mb-3">How to use</h2>
+          <p>You can use animation with paste this code <code>data-aos="fade-up"</code> or <code>data-aos="fade-right"</code> or other style in your layout. You also can set delay time with this code <code>data-aos-delay="100"</code> and dont forget to change 100 with your value.</p>
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;!-- row --&gt;
+              &lt;div class="row text-center"&gt;
+                &lt;div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up"&gt;
+                  &lt;!-- service block --&gt;
+                  &lt;div class="shadow-sm rounded-3 bg-white p-4 mb-5 hover-box-up"&gt;
+                    &lt;div class="text-primary mb-4"&gt;
+                      &lt;!-- icon --&gt;
+                      &lt;svg class="bi bi-bootstrap" width="2.5rem" height="2.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;path fill-rule="evenodd" d="M12 1H4a3 3 0 00-3 3v8a3 3 0 003 3h8a3 3 0 003-3V4a3 3 0 00-3-3zM4 0a4 4 0 00-4 4v8a4 4 0 004 4h8a4 4 0 004-4V4a4 4 0 00-4-4H4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                    &lt;path fill-rule="evenodd" d="M8.537 12H5.062V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396zM6.375 4.658v2.467h1.558c1.16 0 1.764-.428 1.764-1.23 0-.78-.569-1.237-1.541-1.237H6.375zm1.898 6.229H6.375V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                  &lt;/svg&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class="h5 fw-medium mb-1"&gt;Latest Bootstrap&lt;/h3&gt;
+                    &lt;p class="text-light-blue"&gt;Bootstrap 4 the world’s most popular front-end component library.&lt;/p&gt;
+                  &lt;/div&gt; &lt;!-- end service block --&gt;
+                &lt;/div&gt;
+
+                &lt;div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100"&gt;
+                  &lt;!-- service block --&gt;
+                  &lt;div class="shadow-sm rounded-3 bg-white p-4 mb-5 hover-box-up"&gt;
+                    &lt;div class="text-primary mb-4"&gt;
+                      &lt;!-- icon --&gt;
+                      &lt;svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 512 512"&gt;&lt;rect x="227.6" y="213.1" width="28.4" height="57.1" style="fill:currentColor"&gt;&lt;/rect&gt;&lt;path d="M0,156V327.4H142.2V356H256V327.4H512V156ZM142.2,298.9H113.8V213.2H85.3v85.7H28.4V184.6H142.2Zm142.2,0H227.5v28.6H170.6V184.6H284.4V298.9Zm199.2,0H455.2V213.2H426.8v85.7H398.4V213.2H370v85.7H313.1V184.6H483.8V298.9Z" style="fill:currentColor"&gt;&lt;/path&gt;&lt;/svg&gt;
+
+                    &lt;/div&gt;
+                    &lt;h3 class="h5 fw-medium mb-1"&gt;NPM Software&lt;/h3&gt;
+                    &lt;p class="text-light-blue"&gt;Enjoy with the public registry tools you already love to use.&lt;/p&gt;
+                  &lt;/div&gt;&lt;!-- end service block --&gt;
+                &lt;/div&gt;
+
+                &lt;div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="200"&gt;
+                  &lt;!-- service block --&gt;
+                  &lt;div class="shadow-sm rounded-3 bg-white p-4 mb-5 hover-box-up"&gt;
+                    &lt;div class="text-primary mb-4"&gt;
+                      &lt;!-- icon --&gt;
+                      &lt;svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 256 512"&gt;&lt;path style="fill:currentColor" d="M209.8 391.1l-14.1 24.6-4.6 80.2c0 8.9-28.3 16.1-63.1 16.1s-63.1-7.2-63.1-16.1l-5.8-79.4-14.9-25.4c41.2 17.3 126 16.7 165.6 0zm-196-253.3l13.6 125.5c5.9-20 20.8-47 40-55.2 6.3-2.7 12.7-2.7 18.7.9 5.2 3 9.6 9.3 10.1 11.8 1.2 6.5-2 9.1-4.5 9.1-3 0-5.3-4.6-6.8-7.3-4.1-7.3-10.3-7.6-16.9-2.8-6.9 5-12.9 13.4-17.1 20.7-5.1 8.8-9.4 18.5-12 28.2-1.5 5.6-2.9 14.6-.6 19.9 1 2.2 2.5 3.6 4.9 3.6 5 0 12.3-6.6 15.8-10.1 4.5-4.5 10.3-11.5 12.5-16l5.2-15.5c2.6-6.8 9.9-5.6 9.9 0 0 10.2-3.7 13.6-10 34.7-5.8 19.5-7.6 25.8-7.6 25.8-.7 2.8-3.4 7.5-6.3 7.5-1.2 0-2.1-.4-2.6-1.2-1-1.4-.9-5.3-.8-6.3.2-3.2 6.3-22.2 7.3-25.2-2 2.2-4.1 4.4-6.4 6.6-5.4 5.1-14.1 11.8-21.5 11.8-3.4 0-5.6-.9-7.7-2.4l7.6 79.6c2 5 39.2 17.1 88.2 17.1 49.1 0 86.3-12.2 88.2-17.1l10.9-94.6c-5.7 5.2-12.3 11.6-19.6 14.8-5.4 2.3-17.4 3.8-17.4-5.7 0-5.2 9.1-14.8 14.4-21.5 1.4-1.7 4.7-5.9 4.7-8.1 0-2.9-6-2.2-11.7 2.5-3.2 2.7-6.2 6.3-8.7 9.7-4.3 6-6.6 11.2-8.5 15.5-6.2 14.2-4.1 8.6-9.1 22-5 13.3-4.2 11.8-5.2 14-.9 1.9-2.2 3.5-4 4.5-1.9 1-4.5.9-6.1-.3-.9-.6-1.3-1.9-1.3-3.7 0-.9.1-1.8.3-2.7 1.5-6.1 7.8-18.1 15-34.3 1.6-3.7 1-2.6.8-2.3-6.2 6-10.9 8.9-14.4 10.5-5.8 2.6-13 2.6-14.5-4.1-.1-.4-.1-.8-.2-1.2-11.8 9.2-24.3 11.7-20-8.1-4.6 8.2-12.6 14.9-22.4 14.9-4.1 0-7.1-1.4-8.6-5.1-2.3-5.5 1.3-14.9 4.6-23.8 1.7-4.5 4-9.9 7.1-16.2 1.6-3.4 4.2-5.4 7.6-4.5.6.2 1.1.4 1.6.7 2.6 1.8 1.6 4.5.3 7.2-3.8 7.5-7.1 13-9.3 20.8-.9 3.3-2 9 1.5 9 2.4 0 4.7-.8 6.9-2.4 4.6-3.4 8.3-8.5 11.1-13.5 2-3.6 4.4-8.3 5.6-12.3.5-1.7 1.1-3.3 1.8-4.8 1.1-2.5 2.6-5.1 5.2-5.1 1.3 0 2.4.5 3.2 1.5 1.7 2.2 1.3 4.5.4 6.9-2 5.6-4.7 10.6-6.9 16.7-1.3 3.5-2.7 8-2.7 11.7 0 3.4 3.7 2.6 6.8 1.2 2.4-1.1 4.8-2.8 6.8-4.5 1.2-4.9.9-3.8 26.4-68.2 1.3-3.3 3.7-4.7 6.1-4.7 1.2 0 2.2.4 3.2 1.1 1.7 1.3 1.7 4.1 1 6.2-.7 1.9-.6 1.3-4.5 10.5-5.2 12.1-8.6 20.8-13.2 31.9-1.9 4.6-7.7 18.9-8.7 22.3-.6 2.2-1.3 5.8 1 5.8 5.4 0 19.3-13.1 23.1-17 .2-.3.5-.4.9-.6.6-1.9 1.2-3.7 1.7-5.5 1.4-3.8 2.7-8.2 5.3-11.3.8-1 1.7-1.6 2.7-1.6 2.8 0 4.2 1.2 4.2 4 0 1.1-.7 5.1-1.1 6.2 1.4-1.5 2.9-3 4.5-4.5 15-13.9 25.7-6.8 25.7.2 0 7.4-8.9 17.7-13.8 23.4-1.6 1.9-4.9 5.4-5 6.4 0 1.3.9 1.8 2.2 1.8 2 0 6.4-3.5 8-4.7 5-3.9 11.8-9.9 16.6-14.1l14.8-136.8c-30.5 17.1-197.6 17.2-228.3.2zm229.7-8.5c0 21-231.2 21-231.2 0 0-8.8 51.8-15.9 115.6-15.9 9 0 17.8.1 26.3.4l12.6-48.7L228.1.6c1.4-1.4 5.8-.2 9.9 3.5s6.6 7.9 5.3 9.3l-.1.1L185.9 74l-10 40.7c39.9 2.6 67.6 8.1 67.6 14.6zm-69.4 4.6c0-.8-.9-1.5-2.5-2.1l-.2.8c0 1.3-5 2.4-11.1 2.4s-11.1-1.1-11.1-2.4c0-.1 0-.2.1-.3l.2-.7c-1.8.6-3 1.4-3 2.3 0 2.1 6.2 3.7 13.7 3.7 7.7.1 13.9-1.6 13.9-3.7z"&gt;&lt;/path&gt;&lt;/svg&gt;
+
+                    &lt;/div&gt;
+                    &lt;h3 class="h5 fw-medium mb-1"&gt;Built with Gulp&lt;/h3&gt;
+                    &lt;p class="text-light-blue"&gt;Gulp making your project automatic and easy to running.&lt;/p&gt;
+                  &lt;/div&gt;&lt;!-- end service block --&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            </code>
+          </pre>
+          <br>
+          <p>For complete documentation read <a href="https://github.com/michalsnik/aos" target="_blank">in here</a></p>
+        </div>
+      </main>
+      <main class="col-12 px-md-3 ps-lg-5 pe-lg-4 bn-content pb-5">
+        <div class="jump mt-lg-3">
+          <h1 class="mb-3">Counter Up2</h1>
+          <p class="lead text-muted">A lightweight module that counts up to a targeted number when the number becomes visible.</p>
+        </div>
+
+        <div id="installation" class="jump">
+          <h2 class="h4 mb-3">Installation</h2>
+          <p>Add script right before closing <code>&lt;/body&gt;</code> tag, and initialize Counter Up2. Counter Up2 required to install Waypoints Js</p>
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;!-- Plugin js --&gt;
+              &lt;script src="src/plugins/waypoints/lib/noframework.waypoints.min.js"&gt;&lt;/script&gt;
+              &lt;script src="src/plugins/counterup2/dist/index.js"&gt;&lt;/script&gt;
+
+              &lt;!-- Theme js --&gt;
+              &lt;script src="src/js/theme.js"&gt;&lt;/script&gt;
+            </code>
+          </pre>
+          <p>If you want to remove Counter js editing <code>theme.js</code> in this function <code>myCounters();</code></p>
+          <br>
+        </div>
+        
+        <div id="example" class="jump">
+          <h2 class="h4 mb-3">Example</h2>
+          <br>
+          <!-- row -->
+          <div class="row text-center text-uppercase">
+            <div class="col-lg-3 col-sm-6">
+              <div class="p-4 bg-white rounded shadow-sm position-relative mb-4 mb-lg-0">
+                <div class="display-4 text-primary mb-1">
+                  <span class="counter">1500<span class="small">+</span></span>
+                </div>
+                <small class="d-block text-uppercase text-primary">Customers</small>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+              <div class="p-4 bg-white rounded shadow-sm position-relative mb-4 mb-lg-0">
+                <div class="display-4 text-primary mb-1">
+                  <span class="counter">250<span class="small">+</span></span>
+                </div>
+                <small class="d-block text-uppercase text-primary">Company</small>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+              <div class="p-4 bg-white rounded shadow-sm position-relative mb-4 mb-lg-0">
+                <div class="display-4 text-primary mb-1">
+                  <span class="counter">520<span class="small">+</span></span>
+                </div>
+                <small class="d-block text-uppercase text-primary">Project</small>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+              <div class="p-4 bg-white rounded shadow-sm position-relative mb-4 mb-lg-0">
+                <div class="display-4 text-primary mb-1">
+                  <span class="counter">450<span class="small">+</span></span>
+                </div>
+                <small class="d-block text-uppercase text-primary">Complete</small>
+              </div>
+            </div>
+          </div>
+          <br><br>
+          <h3 class="h4">How to use</h3>
+          <p>You can use counter up animation with add this <code>counter</code> classes</p>
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;div class="row text-center text-uppercase"&gt;
+                &lt;div class="col-lg-3 col-sm-6"&gt;
+                  &lt;div class="p-4 bg-white rounded shadow-sm position-relative mb-4 mb-lg-0"&gt;
+                    &lt;div class="display-4 text-primary mb-1"&gt;
+                      &lt;span class="counter"&gt;1500&lt;span class="small"&gt;+&lt;/span&gt;&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;small class="d-block text-uppercase text-primary"&gt;Customers&lt;/small&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class="col-lg-3 col-sm-6"&gt;
+                  &lt;div class="p-4 bg-white rounded shadow-sm position-relative mb-4 mb-lg-0"&gt;
+                    &lt;div class="display-4 text-primary mb-1"&gt;
+                      &lt;span class="counter"&gt;250&lt;span class="small"&gt;+&lt;/span&gt;&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;small class="d-block text-uppercase text-primary"&gt;Company&lt;/small&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class="col-lg-3 col-sm-6"&gt;
+                  &lt;div class="p-4 bg-white rounded shadow-sm position-relative mb-4 mb-lg-0"&gt;
+                    &lt;div class="display-4 text-primary mb-1"&gt;
+                      &lt;span class="counter"&gt;520&lt;span class="small"&gt;+&lt;/span&gt;&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;small class="d-block text-uppercase text-primary"&gt;Running Project&lt;/small&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class="col-lg-3 col-sm-6"&gt;
+                  &lt;div class="p-4 bg-white rounded shadow-sm position-relative mb-4 mb-lg-0"&gt;
+                    &lt;div class="display-4 text-primary mb-1"&gt;
+                      &lt;span class="counter"&gt;450&lt;span class="small"&gt;+&lt;/span&gt;&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;small class="d-block text-uppercase text-primary"&gt;Complete Project&lt;/small&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            </code>
+          </pre>
+          <br>
+          <br>
+          <p>For complete documentation read <a href="https://github.com/bfintal/Counter-Up2" target="_blank">in here</a></p>
+        </div>
+      </main>
+      <main class="col-12 px-md-3 ps-lg-5 pe-lg-4 bn-content pb-5">
+        <div class="jump mt-lg-3">
+          <h1 class="mb-3">Flickity</h1>
+          <p class="lead text-muted">Touch, responsive, flickable carousels.</p>
+        </div>
+
+        <div id="how-to-use" class="jump">
+          <h2 class="h4 mb-3">How to install?</h2>
+          <p>Paste the following css link source before <code>&lt;/head&gt;</code></p>
+
+          <pre>
+            <code class="language-html" data-lang="html">
+              &lt;link rel="stylesheet" href="src/plugins/flickity/dist/flickity.min.css"&gt;
+            </code>
+          </pre>
+
+          <p>And paste the following <code>&lt;script&gt;</code>s near the end of your pages before <code>&lt;/body&gt;</code></p>
+
+          <pre>
+            <code class="language-html" data-lang="html">
+              &lt;!-- plugins --&gt;
+              &lt;script src="src/plugins/flickity/dist/flickity.pkgd.min.js"&gt;&lt;/script&gt;
+            </code>
+          </pre>
+        </div>
+
+        <div id="image-slides-only" class="jump">
+          <h2 class="h4 mb-3">Basic Example</h2>
+
+          <div class="fd-example">
+            <div id="thumbnail-slider" class="mb-7 mb-lg-3 carousel" data-flickity='{ "cellAlign": "left", "wrapAround": true,"rightToLeft": true, "draggable": false, "adaptiveHeight": true, "prevNextButtons": true , "imagesLoaded": true }'>
+              <div class="carousel-cell text-center mb-4 col-12 col-md-6 px-2">
+                <img alt="title" class="w-100 img-fluid" src="../../src/img-min/section/coworking1.jpg">
+              </div>
+              <div class="carousel-cell text-center mb-4 col-12 col-md-6 px-2">
+                <img alt="title" class="w-100 img-fluid" src="../../src/img-min/section/coworking2.jpg">
+              </div>
+              <div class="carousel-cell text-center mb-4 col-12 col-md-6 px-2">
+                <img alt="title" class="w-100 img-fluid" src="../../src/img-min/section/coworking3.jpg">
+              </div>
+            </div>
+          </div>
+          <br>
+          <pre>
+            <code class="language-html" data-lang="html">
+              &lt;div id="thumbnail-slider" class="mb-7 mb-lg-3 carousel" data-flickity='{ "cellAlign": "left","rightToLeft": true, "wrapAround": true, "draggable": false, "adaptiveHeight": true, "prevNextButtons": true , "imagesLoaded": true }'&gt;
+                &lt;div class="carousel-cell text-center mb-4 col-12 col-md-6 px-2"&gt;
+                  &lt;img alt="title" class="w-100 img-fluid" src="assets/img-min/section/coworking1.jpg"&gt;
+                &lt;/div&gt;
+                &lt;div class="carousel-cell text-center mb-4 col-12 col-md-6 px-2"&gt;
+                  &lt;img alt="title" class="w-100 img-fluid" src="assets/img-min/section/coworking2.jpg"&gt;
+                &lt;/div&gt;
+                &lt;div class="carousel-cell text-center mb-4 col-12 col-md-6 px-2"&gt;
+                  &lt;img alt="title" class="w-100 img-fluid" src="assets/img-min/section/coworking3.jpg"&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            </code>
+          </pre>
+          <p>If want to use dark navigation and light dots, use following code <code>.nav-dark-button</code> and <code>.nav-light-dots</code></p>
+          <p>Make navigation inset <code>.nav-inset-button</code></p>
+          <div class="fd-example2">
+            <div id="thumbnail-slider" class="mb-7 mb-lg-3 carousel nav-inset-button nav-dark-button nav-light-dots" data-flickity='{ "cellAlign": "left","rightToLeft": true, "wrapAround": true, "draggable": false, "adaptiveHeight": true, "prevNextButtons": true , "imagesLoaded": true }'>
+              <div class="carousel-cell text-center mb-4 col-12 col-md-6 px-2">
+                <img alt="title" class="w-100 img-fluid" src="../../src/img-min/section/coworking1.jpg">
+              </div>
+              <div class="carousel-cell text-center mb-4 col-12 col-md-6 px-2">
+                <img alt="title" class="w-100 img-fluid" src="../../src/img-min/section/coworking2.jpg">
+              </div>
+              <div class="carousel-cell text-center mb-4 col-12 col-md-6 px-2">
+                <img alt="title" class="w-100 img-fluid" src="../../src/img-min/section/coworking3.jpg">
+              </div>
+            </div>
+          </div>
+          <br>
+          <pre>
+            <code class="language-html" data-lang="html">
+              &lt;div id="thumbnail-slider" class="mb-7 mb-lg-3 carousel nav-inset-button nav-dark-button nav-light-dots" data-flickity='{ "cellAlign": "left","rightToLeft": true, "wrapAround": true, "draggable": false, "adaptiveHeight": true, "prevNextButtons": true , "imagesLoaded": true }'&gt;
+                &lt;div class="carousel-cell text-center mb-4 col-12 col-md-6 px-2"&gt;
+                  &lt;img alt="title" class="w-100 img-fluid" src="assets/img-min/section/coworking1.jpg"&gt;
+                &lt;/div&gt;
+                &lt;div class="carousel-cell text-center mb-4 col-12 col-md-6 px-2"&gt;
+                  &lt;img alt="title" class="w-100 img-fluid" src="assets/img-min/section/coworking2.jpg"&gt;
+                &lt;/div&gt;
+                &lt;div class="carousel-cell text-center mb-4 col-12 col-md-6 px-2"&gt;
+                  &lt;img alt="title" class="w-100 img-fluid" src="assets/img-min/section/coworking3.jpg"&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            </code>
+          </pre>
+          <br>
+          <p>For responsive design, you can use Bootstrap responsive grid</p>
+          <p>More example slider in <a href="../../sections/reviews.html">Reviews section</a> and <a href="../../sections/slider.html">Hero slider</a></p>
+          <p></p>
+        </div>
+
+        <div class="jump">
+          <h3 id="official-documentation" class="h4">Plugin documentation</h3>
+          <p>For more detailed information, see the official documentation: <a target="_blank"  href="https://flickity.metafizzy.co/">Flickity</a>.</p>
+        </div>
+      </main>
+      <main class="col-12 px-md-3 ps-lg-5 pe-lg-4 bn-content pb-5">
+        <div class="jump mt-lg-3">
+          <h1 class="mb-3">HC Sticky</h1>
+          <p class="lead text-muted">JavaScript library that makes any element on your page visible while you scroll. Dependency free, but lso works as a jQuery plugin.</p>
+        </div>
+
+        <div id="installation" class="jump">
+          <h2 class="h4 mb-3">Installation</h2>
+          <p>Add script right before closing <code>&lt;/body&gt;</code> tag, and initialize Sticky</p>
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;!-- Plugin js --&gt;
+              &lt;script src="src/plugins/hc-sticky/dist/hc-sticky.js"&gt;&lt;/script&gt;
+
+              &lt;!-- Theme js --&gt;
+              &lt;script src="src/js/theme.js"&gt;&lt;/script&gt;
+            </code>
+          </pre>
+          <p>If you want to editing Hc sticky js, open file <code>theme.js</code> and edit this function <code>mySticky();</code></p>
+          <br>
+        </div>
+        
+        <div id="example" class="jump">
+          <h2 class="h4 mb-3">How to trigger sticky</h2>
+          <br>
+          <p>Add <code>.sticky</code> classes in your element</p>
+          <h3 class="h5 mb-4">Example sticky</h3>
+          <section>
+            <div class="row">
+              <div class="col-md-8">
+                <div class="ex-content text-center py-9 border bg-light mb-5">
+                  <p>Main content</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <aside class="sticky">
+                  <div class="ex-sidebar text-center py-4 border bg-light mb-4">
+                    <p>Sticky content</p>
+                  </div>
+                  <div class="ex-sidebar text-center py-4 border bg-light mb-4">
+                    <p>Sticky content</p>
+                  </div>
+                </aside>
+              </div>
+            </div>
+          </section>
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;section&gt;
+                &lt;div class="row"&gt;
+                  &lt;div class="col-md-8"&gt;
+                    &lt;div class="ex-content text-center py-9 border bg-light mb-5"&gt;
+                      &lt;p&gt;Main content&lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class="col-md-4"&gt;
+                    &lt;aside class="sticky"&gt;
+                      &lt;div class="ex-sidebar text-center py-4 border bg-light mb-4"&gt;
+                        &lt;p&gt;Sticky content&lt;/p&gt;
+                      &lt;/div&gt;
+                      &lt;div class="ex-sidebar text-center py-4 border bg-light mb-4"&gt;
+                        &lt;p&gt;Sticky content&lt;/p&gt;
+                      &lt;/div&gt;
+                    &lt;/aside&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/section&gt;
+            </code>
+          </pre>
+          <br>
+          <p>For complete documentation read <a href="https://github.com/somewebmedia/hc-sticky" target="_blank">in here</a></p>
+        </div>
+      </main>
+      <main class="col-12 px-md-3 ps-lg-5 pe-lg-4 bn-content pb-5">
+        <div class="jump mt-lg-3">
+          <h1 class="mb-3">Isotope</h1>
+          <p class="lead text-muted">Filter & sort magical layouts.</p>
+        </div>
+
+        <div id="installation" class="jump">
+          <h2 class="h4 mb-3">Installation</h2>
+          <p>Add script right before closing <code>&lt;/body&gt;</code> tag, and initialize Isotope</p>
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;!-- Plugin js --&gt;
+              &lt;script src="src/plugins/isotope-layout/dist/isotope.pkgd.min.js"&gt;&lt;/script&gt;
+            </code>
+          </pre>
+          <p>If you want to remove Isotope js editing <code>theme.js</code> in this function <code>myIsotope_filter();</code></p>
+          <br>
+        </div>
+        
+        <div id="example" class="jump">
+          <h2 class="h4 mb-3">Example</h2>
+          <br>
+
+          <!-- navigation -->
+          <div class="button-group filters-button-group portfolio-nav text-center">
+            <button class="portfolio-nav-item bg-transparent border-0 mb-4 mb-md-5 active" data-filter="*">All</button>
+            <button class="portfolio-nav-item bg-transparent border-0 mb-4 mb-md-5" data-filter=".web">Web</button>
+            <button class="portfolio-nav-item bg-transparent border-0 mb-4 mb-md-5" data-filter=".branding">Branding</button>
+            <button class="portfolio-nav-item bg-transparent border-0 mb-4 mb-md-5" data-filter=".graphic">Graphic</button>
+            <button class="portfolio-nav-item bg-transparent border-0 mb-4 mb-md-5" data-filter=".photovid">Photograpy</button>
+          </div><!-- end navigation -->
+          
+          <!-- Portfolio Content -->
+          <div id="thumbnail-images" class="grid portfolio row g-0">
+            <figure data-src="../../src/img-min/portfolio/digital1.jpg" class="col-sm-6 col-lg-4 portfolio-item branding" data-sub-html="title images">
+              <img class="portfolio-image" src="../../src/img-min/portfolio/digital1-small.jpg" alt="Image Description">
+              <figcaption class="portfolio-info text-center">
+                <h3 class="h6 my-1 text-light">Logo Design</h3>
+                <small class="d-block">Branding</small>
+              </figcaption>
+            </figure>
+
+            <figure data-src="../../src/img-min/portfolio/digital2.jpg" class="col-sm-6 col-lg-4 portfolio-item photovid branding web" data-sub-html="title images">
+              <img class="portfolio-image" src="../../src/img-min/portfolio/digital2-small.jpg" alt="Image Description">
+              <figcaption class="portfolio-info text-center">
+                <h3 class="h6 my-1 text-light">Web Development</h3>
+                <small class="d-block">Web</small>
+              </figcaption>
+            </figure>
+
+            <figure data-src="../../src/img-min/portfolio/digital3.jpg" class="col-sm-6 col-lg-4 portfolio-item graphic" data-sub-html="title images">
+              <img class="portfolio-image" src="../../src/img-min/portfolio/digital3-small.jpg" alt="Image Description">
+              <figcaption class="portfolio-info text-center">
+                <h3 class="h6 my-1 text-light">Graphic Design</h3>
+                <small class="d-block">Graphic</small>
+              </figcaption>
+            </figure>
+
+            <figure data-src="../../src/img-min/portfolio/digital4.jpg" class="col-sm-6 col-lg-4 portfolio-item branding graphic" data-sub-html="title images">
+              <img class="portfolio-image" src="../../src/img-min/portfolio/digital4-small.jpg" alt="Image Description">
+              <figcaption class="portfolio-info text-center">
+                <h3 class="h6 my-1 text-light">Video بازاریاب</h3>
+                <small class="d-block">Video</small>
+              </figcaption>
+            </figure>
+
+            <figure data-src="../../src/img-min/portfolio/digital5.jpg" class="col-sm-6 col-lg-4 portfolio-item photovid" data-sub-html="title images">
+              <img class="portfolio-image" src="../../src/img-min/portfolio/digital5-small.jpg" alt="Image Description">
+              <figcaption class="portfolio-info text-center">
+                <h3 class="h6 my-1 text-light">Photography</h3>
+                <small class="d-block">Photo</small>
+              </figcaption>
+            </figure>
+
+            <figure data-src="../../src/img-min/portfolio/digital6.jpg" class="col-sm-6 col-lg-4 portfolio-item web" data-sub-html="title images">
+              <img class="portfolio-image" src="../../src/img-min/portfolio/digital6-small.jpg" alt="Image Description">
+              <figcaption class="portfolio-info text-center">
+                <h3 class="h6 my-1 text-light">Apps Development</h3>
+                <small class="d-block">Apps</small>
+              </figcaption>
+            </figure>
+          </div>
+          <br><br>
+          <h3 class="fw-medium">How to use</h3>
+          <p>You can use isotope with add class in data filter like this <code>data-filter=".web"</code> and use caption text with <code>data-sub-html="title images"</code></p>
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;!-- navigation --&gt;
+              &lt;div class="button-group filters-button-group portfolio-nav text-center"&gt;
+                &lt;button class="portfolio-nav-item bg-transparent border-0 mb-4 mb-md-5 active" data-filter="*"&gt;All&lt;/button&gt;
+                &lt;button class="portfolio-nav-item bg-transparent border-0 mb-4 mb-md-5" data-filter=".web"&gt;Web&lt;/button&gt;
+                &lt;button class="portfolio-nav-item bg-transparent border-0 mb-4 mb-md-5" data-filter=".branding"&gt;Branding&lt;/button&gt;
+                &lt;button class="portfolio-nav-item bg-transparent border-0 mb-4 mb-md-5" data-filter=".graphic"&gt;Graphic&lt;/button&gt;
+                &lt;button class="portfolio-nav-item bg-transparent border-0 mb-4 mb-md-5" data-filter=".photovid"&gt;Photograpy&lt;/button&gt;
+              &lt;/div&gt;&lt;!-- end navigation --&gt;
+              
+              &lt;!-- Portfolio Content --&gt;
+              &lt;div id="thumbnail-images" class="grid portfolio row g-0"&gt;
+                &lt;figure data-src="assets/img-min/portfolio/digital1.jpg" class="col-sm-6 col-lg-4 portfolio-item branding" data-sub-html="title images"&gt;
+                  &lt;img class="portfolio-image" src="assets/img-min/portfolio/digital1-small.jpg" alt="Image Description"&gt;
+                  &lt;figcaption class="portfolio-info text-center"&gt;
+                    &lt;h3 class="h6 my-1 text-light"&gt;Logo Design&lt;/h3&gt;
+                    &lt;small class="d-block"&gt;Branding&lt;/small&gt;
+                  &lt;/figcaption&gt;
+                &lt;/figure&gt;
+
+                &lt;figure data-src="assets/img-min/portfolio/digital2.jpg" class="col-sm-6 col-lg-4 portfolio-item photovid branding web" data-sub-html="title images"&gt;
+                  &lt;img class="portfolio-image" src="assets/img-min/portfolio/digital2-small.jpg" alt="Image Description"&gt;
+                  &lt;figcaption class="portfolio-info text-center"&gt;
+                    &lt;h3 class="h6 my-1 text-light"&gt;Web Development&lt;/h3&gt;
+                    &lt;small class="d-block"&gt;Web&lt;/small&gt;
+                  &lt;/figcaption&gt;
+                &lt;/figure&gt;
+
+                &lt;figure data-src="assets/img-min/portfolio/digital3.jpg" class="col-sm-6 col-lg-4 portfolio-item graphic" data-sub-html="title images"&gt;
+                  &lt;img class="portfolio-image" src="assets/img-min/portfolio/digital3-small.jpg" alt="Image Description"&gt;
+                  &lt;figcaption class="portfolio-info text-center"&gt;
+                    &lt;h3 class="h6 my-1 text-light"&gt;Graphic Design&lt;/h3&gt;
+                    &lt;small class="d-block"&gt;Graphic&lt;/small&gt;
+                  &lt;/figcaption&gt;
+                &lt;/figure&gt;
+
+                &lt;figure data-src="assets/img-min/portfolio/digital4.jpg" class="col-sm-6 col-lg-4 portfolio-item branding graphic" data-sub-html="title images"&gt;
+                  &lt;img class="portfolio-image" src="assets/img-min/portfolio/digital4-small.jpg" alt="Image Description"&gt;
+                  &lt;figcaption class="portfolio-info text-center"&gt;
+                    &lt;h3 class="h6 my-1 text-light"&gt;Video بازاریاب&lt;/h3&gt;
+                    &lt;small class="d-block"&gt;Video&lt;/small&gt;
+                  &lt;/figcaption&gt;
+                &lt;/figure&gt;
+
+                &lt;figure data-src="assets/img-min/portfolio/digital5.jpg" class="col-sm-6 col-lg-4 portfolio-item photovid" data-sub-html="title images"&gt;
+                  &lt;img class="portfolio-image" src="assets/img-min/portfolio/digital5-small.jpg" alt="Image Description"&gt;
+                  &lt;figcaption class="portfolio-info text-center"&gt;
+                    &lt;h3 class="h6 my-1 text-light"&gt;Photography&lt;/h3&gt;
+                    &lt;small class="d-block"&gt;Photo&lt;/small&gt;
+                  &lt;/figcaption&gt;
+                &lt;/figure&gt;
+
+                &lt;figure data-src="assets/img-min/portfolio/digital6.jpg" class="col-sm-6 col-lg-4 portfolio-item web" data-sub-html="title images"&gt;
+                  &lt;img class="portfolio-image" src="assets/img-min/portfolio/digital6-small.jpg" alt="Image Description"&gt;
+                  &lt;figcaption class="portfolio-info text-center"&gt;
+                    &lt;h3 class="h6 my-1 text-light"&gt;Apps Development&lt;/h3&gt;
+                    &lt;small class="d-block"&gt;Apps&lt;/small&gt;
+                  &lt;/figcaption&gt;
+                &lt;/figure&gt;
+              &lt;/div&gt;
+            </code>
+          </pre>
+          <br>
+          <p>For complete documentation read <a href="https://isotope.metafizzy.co/" target="_blank">in here</a></p>
+        </div>
+      </main>
+      <main class="col-12  px-md-3 ps-lg-5 pe-lg-4 bn-content pb-5">
+        <div class="jump mt-lg-3">
+          <h1 class="mb-3">Jarallax</h1>
+          <p class="lead text-muted">NO dependencies JavaScript parallax scrolling.</p>
+        </div>
+
+        <div id="installation" class="jump">
+          <h2 class="h4 mb-3">Installation</h2>
+          <p>Add script right before closing <code>&lt;/body&gt;</code> tag, and initialize Jarallax</p>
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;!-- Plugin js --&gt;
+              &lt;script src="src/plugins/jarallax/dist/jarallax.min.js"&gt;&lt;/script&gt;
+              &lt;script src="src/plugins/jarallax/dist/jarallax-video.min.js"&gt;&lt;/script&gt;
+
+              &lt;!-- Theme js --&gt;
+              &lt;script src="src/js/theme.js"&gt;&lt;/script&gt;
+            </code>
+          </pre>
+          <p>If you want to remove Jarallax js editing <code>theme.js</code> in this function <code>myJarallax();</code></p>
+          <br>
+        </div>
+        
+        <div id="example" class="jump">
+          <h2 class="h4 mb-3">Example</h2>
+          <br>
+
+          <section id="counters" class="position-relative py-6 py-md-7 bg-dark border-top border-bottom z-index-1 jarallax">
+            <!-- background parallax -->
+            <img class="jarallax-img" src="../../src/img-min/bg/bg3.jpg" alt="title">
+
+            <div class="container">
+              <div class="row text-center text-uppercase">
+
+                <div class="col-lg-3 col-sm-6">
+                  <div class="p-4 bg-white rounded-3 border position-relative mb-4 mb-lg-0">
+                    <h5 class="js-counter display-4 mb-1 text-primary">
+                      <span class="counter">1500</span><span class="small">+</span>
+                    </h5>
+                    <small class="d-block font-style-normal text-uppercase text-primary u-letter-spacing-sm">Customers</small>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                  <div class="p-4 bg-white rounded-3 border position-relative mb-4 mb-lg-0">
+                    <h5 class="js-counter display-4 mb-1 text-primary">
+                      <span class="counter">250<span class="small">+</span></span>
+                    </h5>
+                    <small class="d-block font-style-normal text-uppercase text-primary u-letter-spacing-sm">Company</small>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                  <div class="p-4 bg-white rounded-3 border position-relative mb-4 mb-lg-0">
+                    <h5 class="js-counter display-4 mb-1 text-primary">
+                      <span class="counter">520<span class="small">+</span></span>
+                    </h5>
+                    <small class="d-block font-style-normal text-uppercase text-primary u-letter-spacing-sm">Running</small>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                  <div class="p-4 bg-white rounded-3 border position-relative mb-4 mb-lg-0">
+                    <h5 class="js-counter display-4 mb-1 text-primary">
+                      <span class="counter">450<span class="small">+</span></span>
+                    </h5>
+                    <small class="d-block font-style-normal text-uppercase text-primary u-letter-spacing-sm">Complete</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <br><br>
+          <h3 class="fw-medium">How to use</h3>
+          <p>You can use jarallax with add class <code>jarallax</code> and <code>jarallax-img</code>. You also can add background video with <code>jarallax</code> and <code>data-jarallax-video="https://www.youtube.com/watch?v=ab0TSkLe-E0"</code></p>
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;!-- Background Image Parallax --&gt;
+              &lt;div class="jarallax"&gt;
+                &lt;img class="jarallax-img" src="&lt;background_image_url_here&gt;" alt=""&gt;
+                Your content here...
+              &lt;/div&gt;
+
+              &lt;!-- Background YouTube Parallax --&gt;
+              &lt;div class="jarallax" data-jarallax-video="https://www.youtube.com/watch?v=ab0TSkLe-E0"&gt;
+                  Your content here...
+              &lt;/div&gt;
+            </code>
+          </pre>
+          <br>
+          <p>For complete documentation read <a href="https://github.com/nk-o/jarallax" target="_blank">in here</a></p>
+        </div>
+      </main>
+      <main class="col-12 px-md-3 ps-lg-5 pe-lg-4 bn-content pb-5">
+        <div class="jump mt-lg-3">
+          <h1 class="mb-3">lightgallery.js</h1>
+          <p class="lead text-muted">Full featured javascript lightbox gallery, No dependencies.</p>
+        </div>
+
+        <div id="installation" class="jump">
+          <h2 class="h4 mb-3">Installation</h2>
+          <p>Add styles in <code>&lt;head&gt;&lt;/head&gt;</code></p>
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;link rel="stylesheet" href="src/plugins/lightgallery.js/dist/css/lightgallery.min.css"&gt;
+            </code>
+          </pre>
+          <p>Add script right before closing <code>&lt;/body&gt;</code> tag, and initialize lightgallery.js</p>
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;!-- Plugin js --&gt;
+              &lt;script src="src/plugins/lightgallery.js/dist/js/lightgallery.min.js"&gt;&lt;/script&gt;
+              &lt;script src="src/plugins/lightgallery.js/demo/js/lg-thumbnail.min.js"&gt;&lt;/script&gt;
+              &lt;script src="src/plugins/lightgallery.js/demo/js/lg-video.js"&gt;&lt;/script&gt;
+
+              &lt;!-- Theme js --&gt;
+              &lt;script src="src/js/theme.js"&gt;&lt;/script&gt;
+            </code>
+          </pre>
+          <p>If you want to edit lightgallery.js open <code>theme.js</code> and edit in this function <code>myLightgallery();</code></p>
+          <br>
+        </div>
+        
+        <div id="example" class="jump">
+          <h2 class="h4 mb-3">Example gallery</h2>
+          <br>
+
+          <div class="container px-0">
+            <!-- Portfolio Content -->
+            <div class="portfolio row g-0 lightgallery-thumbnail">
+              <figure data-src="../../src/img-min/portfolio/digital1.jpg"  class="col-sm-6 col-lg-4 portfolio-item branding" data-sub-html="title images">
+                <img class="portfolio-image-2" src="../../src/img-min/portfolio/digital1-small.jpg" alt="Image Description">
+                <figcaption class="portfolio-info-2">
+                  <div class="portfolio-info-content-2">
+                    <h4 class="h5 mb-3 text-white">Logo Design</h4>
+                    <small class="d-block text-light">Rebranding Your Brand with new Logo</small>
+                  </div>
+                </figcaption>
+              </figure>
+
+              <figure data-src="../../src/img-min/portfolio/digital2.jpg"  class="col-sm-6 col-lg-4 portfolio-item photovid branding web" data-sub-html="title images">
+                <img class="portfolio-image-2" src="../../src/img-min/portfolio/digital2-small.jpg" alt="Image Description">
+                <figcaption class="portfolio-info-2">
+                  <div class="portfolio-info-content-2">
+                    <h4 class="h5 mb-3 text-white">Web</h4>
+                    <small class="d-block text-light">Web Development Service</small>
+                  </div>
+                </figcaption>
+              </figure>
+
+              <figure data-src="../../src/img-min/portfolio/digital3.jpg"  class="col-sm-6 col-lg-4 portfolio-item graphic" data-sub-html="title images">
+                <img class="portfolio-image-2" src="../../src/img-min/portfolio/digital3-small.jpg" alt="Image Description">
+                <figcaption class="portfolio-info-2">
+                  <div class="portfolio-info-content-2">
+                    <h4 class="h5 mb-3 text-white">Graphic</h4>
+                    <small class="d-block text-light">Graphic Design for بازاریاب</small>
+                  </div>
+                </figcaption>
+              </figure>
+
+              <figure data-src="../../src/img-min/portfolio/digital4.jpg"  class="col-sm-6 col-lg-4 portfolio-item branding graphic" data-sub-html="title images">
+                <img class="portfolio-image-2" src="../../src/img-min/portfolio/digital4-small.jpg" alt="Image Description">
+                <figcaption class="portfolio-info-2">
+                  <div class="portfolio-info-content-2">
+                    <h4 class="h5 mb-3 text-white">Video</h4>
+                    <small class="d-block text-light">Video Sales and بازاریاب</small>
+                  </div>
+                </figcaption>
+              </figure>
+
+              <figure data-src="../../src/img-min/portfolio/digital5.jpg"  class="col-sm-6 col-lg-4 portfolio-item photovid" data-sub-html="title images">
+                <img class="portfolio-image-2" src="../../src/img-min/portfolio/digital5-small.jpg" alt="Image Description">
+                <figcaption class="portfolio-info-2">
+                  <div class="portfolio-info-content-2">
+                    <h4 class="h5 mb-3 text-white">Photography</h4>
+                    <small class="d-block text-light">Record Your Best Moment</small>
+                  </div>
+                </figcaption>
+              </figure>
+
+              <figure data-src="../../src/img-min/portfolio/digital6.jpg"  class="col-sm-6 col-lg-4 portfolio-item web" data-sub-html="title images">
+                <img class="portfolio-image-2" src="../../src/img-min/portfolio/digital6-small.jpg" alt="Image Description">
+                <figcaption class="portfolio-info-2">
+                  <div class="portfolio-info-content-2">
+                    <h4 class="h5 mb-3 text-white">Apps</h4>
+                    <small class="d-block text-light">Apps Development and Games</small>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;div class="container"&gt;
+                &lt;!-- Portfolio Content --&gt;
+                &lt;div class="portfolio row g-0 lightgallery-thumbnail"&gt;
+                  &lt;figure data-src="src/img-min/portfolio/digital1.jpg"  class="col-sm-6 col-lg-4 portfolio-item branding" data-sub-html="title images"&gt;
+                    &lt;img class="portfolio-image-2" src="src/img-min/portfolio/digital1-small.jpg" alt="Image Description"&gt;
+                    &lt;figcaption class="portfolio-info-2"&gt;
+                      &lt;div class="portfolio-info-content-2"&gt;
+                        &lt;h4 class="h5 mb-3 text-white"&gt;Logo Design&lt;/h4&gt;
+                        &lt;small class="d-block text-light"&gt;Rebranding Your Brand with new Logo&lt;/small&gt;
+                      &lt;/div&gt;
+                    &lt;/figcaption&gt;
+                  &lt;/figure&gt;
+
+                  &lt;figure data-src="src/img-min/portfolio/digital2.jpg"  class="col-sm-6 col-lg-4 portfolio-item photovid branding web" data-sub-html="title images"&gt;
+                    &lt;img class="portfolio-image-2" src="src/img-min/portfolio/digital2-small.jpg" alt="Image Description"&gt;
+                    &lt;figcaption class="portfolio-info-2"&gt;
+                      &lt;div class="portfolio-info-content-2"&gt;
+                        &lt;h4 class="h5 mb-3 text-white"&gt;Web&lt;/h4&gt;
+                        &lt;small class="d-block text-light"&gt;Web Development Service&lt;/small&gt;
+                      &lt;/div&gt;
+                    &lt;/figcaption&gt;
+                  &lt;/figure&gt;
+
+                  &lt;figure data-src="src/img-min/portfolio/digital3.jpg"  class="col-sm-6 col-lg-4 portfolio-item graphic" data-sub-html="title images"&gt;
+                    &lt;img class="portfolio-image-2" src="src/img-min/portfolio/digital3-small.jpg" alt="Image Description"&gt;
+                    &lt;figcaption class="portfolio-info-2"&gt;
+                      &lt;div class="portfolio-info-content-2"&gt;
+                        &lt;h4 class="h5 mb-3 text-white"&gt;Graphic&lt;/h4&gt;
+                        &lt;small class="d-block text-light"&gt;Graphic Design for بازاریاب&lt;/small&gt;
+                      &lt;/div&gt;
+                    &lt;/figcaption&gt;
+                  &lt;/figure&gt;
+
+                  &lt;figure data-src="src/img-min/portfolio/digital4.jpg"  class="col-sm-6 col-lg-4 portfolio-item branding graphic" data-sub-html="title images"&gt;
+                    &lt;img class="portfolio-image-2" src="src/img-min/portfolio/digital4-small.jpg" alt="Image Description"&gt;
+                    &lt;figcaption class="portfolio-info-2"&gt;
+                      &lt;div class="portfolio-info-content-2"&gt;
+                        &lt;h4 class="h5 mb-3 text-white"&gt;Video&lt;/h4&gt;
+                        &lt;small class="d-block text-light"&gt;Video Sales and بازاریاب&lt;/small&gt;
+                      &lt;/div&gt;
+                    &lt;/figcaption&gt;
+                  &lt;/figure&gt;
+
+                  &lt;figure data-src="src/img-min/portfolio/digital5.jpg"  class="col-sm-6 col-lg-4 portfolio-item photovid" data-sub-html="title images"&gt;
+                    &lt;img class="portfolio-image-2" src="src/img-min/portfolio/digital5-small.jpg" alt="Image Description"&gt;
+                    &lt;figcaption class="portfolio-info-2"&gt;
+                      &lt;div class="portfolio-info-content-2"&gt;
+                        &lt;h4 class="h5 mb-3 text-white"&gt;Photography&lt;/h4&gt;
+                        &lt;small class="d-block text-light"&gt;Record Your Best Moment&lt;/small&gt;
+                      &lt;/div&gt;
+                    &lt;/figcaption&gt;
+                  &lt;/figure&gt;
+
+                  &lt;figure data-src="src/img-min/portfolio/digital6.jpg"  class="col-sm-6 col-lg-4 portfolio-item web" data-sub-html="title images"&gt;
+                    &lt;img class="portfolio-image-2" src="src/img-min/portfolio/digital6-small.jpg" alt="Image Description"&gt;
+                    &lt;figcaption class="portfolio-info-2"&gt;
+                      &lt;div class="portfolio-info-content-2"&gt;
+                        &lt;h4 class="h5 mb-3 text-white"&gt;Apps&lt;/h4&gt;
+                        &lt;small class="d-block text-light"&gt;Apps Development and Games&lt;/small&gt;
+                      &lt;/div&gt;
+                    &lt;/figcaption&gt;
+                  &lt;/figure&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            </code>
+          </pre>
+          <p>More example lightgallery.js in here <a href="../../sections/portfolio.html">Portfolio section</a></p>
+        </div>
+        <div id="example2" class="jump">
+          <h2 class="h4 mb-3">Popup video</h2>
+          <br>
+
+          <div class="container px-0">
+            <div class="d-inline-block lightgallery-thumbnail">
+              <a class="btn btn-light border text-primary mb-3 mb-md-0 hover-button-up" href="https://www.youtube.com/watch?v=BGPSIUZdTkc">
+                <!-- <i class="fas fa-play"></i> -->
+                <svg class="bi bi-play-fill ms-1 mb-1 me-2 rtl-180" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z"></path>
+                </svg>Watch Video
+              </a>
+            </div>
+            <br><br>
+          </div>
+
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;div class="d-inline-block lightgallery-thumbnail"&gt;
+                &lt;a class="btn btn-light border text-primary mb-3 mb-md-0 hover-button-up" href="https://www.youtube.com/watch?v=BGPSIUZdTkc"&gt;
+                  &lt;!-- &lt;i class="fas fa-play"&gt;&lt;/i&gt; --&gt;
+                  &lt;svg class="bi bi-play-fill ms-1 mb-1 me-2 rtl-180" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z"&gt;&lt;/path&gt;
+                  &lt;/svg&gt;Watch Video
+                &lt;/a&gt;
+              &lt;/div&gt;
+            </code>
+          </pre>
+          <p>More example lightgallery.js in here <a href="../../sections/portfolio.html">Portfolio section</a></p>
+          <br>
+          <p>For complete documentation read <a href="https://github.com/sachinchoolur/lightgallery.js/" target="_blank">in here</a></p>
+        </div>
+        <div id="example3" class="jump">
+          <h2 class="h4 mb-3">Slider popup</h2>
+          <br>
+
+          <div class="container px-0">
+            <!-- slider -->
+            <div class="lightgallery-slider mb-7 mb-lg-3 carousel nav-inset-button nav-dark-button" data-flickity='{ "cellAlign": "left","rightToLeft": true, "wrapAround": true, "pageDots": false, "draggable": false, "adaptiveHeight": true, "prevNextButtons": true , "imagesLoaded": true }'>
+              <!-- item -->
+              <div class="carousel-cell slider-item text-center col-12 col-md-6 px-2" data-src="../../src/img-min/portfolio/digital1.jpg" data-sub-html="Screenshot 1">
+                <img class="img-fluid d-inline-block" src="../../src/img-min/portfolio/digital1.jpg">
+              </div>
+              <!-- item -->
+              <div class="carousel-cell slider-item text-center col-12 col-md-6 px-2" data-src="../../src/img-min/portfolio/digital2.jpg" data-sub-html="Screenshot 2">
+                <img class="img-fluid d-inline-block" src="../../src/img-min/portfolio/digital2.jpg">
+              </div>
+              <!-- item -->
+              <div class="carousel-cell slider-item text-center col-12 col-md-6 px-2" data-src="../../src/img-min/portfolio/digital3.jpg" data-sub-html="Screenshot 3">
+                <img class="img-fluid d-inline-block" src="../../src/img-min/portfolio/digital3.jpg">
+              </div>
+            </div><!-- end slider -->
+            <br><br>
+          </div>
+
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;!-- slider --&gt;
+              &lt;div class="lightgallery-slider mb-7 mb-lg-3 carousel nav-inset-button nav-dark-button" data-flickity='{ "cellAlign": "left","rightToLeft": true, "wrapAround": true, "pageDots": false, "draggable": false, "adaptiveHeight": true, "prevNextButtons": true , "imagesLoaded": true }'&gt;
+                &lt;!-- item --&gt;
+                &lt;div class="carousel-cell slider-item text-center col-12 col-md-6 px-2" data-src="src/img-min/portfolio/digital1.jpg" data-sub-html="Screenshot 1"&gt;
+                  &lt;img class="img-fluid d-inline-block" src="src/img-min/portfolio/digital1.jpg"&gt;
+                &lt;/div&gt;
+                &lt;!-- item --&gt;
+                &lt;div class="carousel-cell slider-item text-center col-12 col-md-6 px-2" data-src="src/img-min/portfolio/digital2.jpg" data-sub-html="Screenshot 2"&gt;
+                  &lt;img class="img-fluid d-inline-block" src="src/img-min/portfolio/digital2.jpg"&gt;
+                &lt;/div&gt;
+                &lt;!-- item --&gt;
+                &lt;div class="carousel-cell slider-item text-center col-12 col-md-6 px-2" data-src="src/img-min/portfolio/digital3.jpg" data-sub-html="Screenshot 3"&gt;
+                  &lt;img class="img-fluid d-inline-block" src="src/img-min/portfolio/digital3.jpg"&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;&lt;!-- end slider --&gt;
+            </code>
+          </pre>
+          <p>Note: This features is required <a href="flickity.html">Flickity slider</a> and can't applied in flickity <code>draggable style</code>, other style work fine.</p>
+          <br>
+          <p>For complete documentation read <a href="https://github.com/sachinchoolur/lightgallery.js/" target="_blank">in here</a></p>
+        </div>
+      </main>
+      <main class="col-12 px-md-3 ps-lg-5 pe-lg-4 bn-content pb-5">
+        <div class="jump mt-lg-3">
+          <h1 class="mb-3">Smooth Scroll</h1>
+          <p class="lead text-muted">Smooth Scroll allows for easy implementation of smooth scrolling for Pages.</p>
+        </div>
+
+        <div id="how-to-install" class="jump">
+          <h2 class="h4 mb-3">How to install ?</h2>
+          <p>This very simple, just add this javascript before your <code>&lt;/body&gt;</code></p>
+          <br>
+          <div class="block-area">
+            <pre>
+              <code class="language-html" data-lang="html">
+                &lt;script src="src/plugins/smooth-scroll/dist/smooth-scroll.polyfills.min.js"&gt;&lt;/script&gt;
+              </code>
+            </pre>
+          </div>
+          <p>If you want to remove <code>Smooth Scroll</code> js editing <code>theme.js</code> in this function <code>mySmooth();</code></p>
+          <p>You can read more documentation about smooth scroll <a href="https://github.com/cferdinandi/smooth-scroll">In here</a>.</p>
+          <br>
+          <br>
+          <br>
+          <br>
+        </div>
+      </main>
+      <main class="col-12 px-md-3 ps-lg-5 pe-lg-4 bn-content pb-5">
+        <div class="jump mt-lg-3">
+          <h1 class="mb-3">Typed Js</h1>
+          <p class="lead text-muted">Typed.js is a library that types. Enter in any string, and watch it type at the speed you've set, backspace what it's typed, and begin a new sentence for however many strings you've set..</p>
+        </div>
+
+        <div id="installation" class="jump">
+          <h2 class="h4 mb-3">Installation</h2>
+          <p>Add script right before closing <code>&lt;/body&gt;</code> tag, and initialize Typed.js</p>
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;!-- Plugin js --&gt;
+              &lt;script src="src/plugins/typed.js/dist/typed.umd.js"&gt;&lt;/script&gt;
+
+              &lt;!-- Theme js --&gt;
+              &lt;script src="src/js/theme.js"&gt;&lt;/script&gt;
+            </code>
+          </pre>
+          <p>If you want to remove Typed.js editing <code>theme.js</code> in this function <code>myTyped();</code></p>
+          <br>
+        </div>
+        
+        <div id="example" class="jump">
+          <h2 class="h4 mb-3">Example</h2>
+          <br>
+          <p>Template for <span data-toggle="typed" data-options='{"strings": ["Apps", "StartUp", "Company", "Portfolio"]}'></span></p>
+          <br><br>
+          <h3 class="h4">How to use</h3>
+          <p>You can set text with editing this code <code>data-options='{"strings": ["Apps", "StartUp", "Company", "Portfolio"]}'</code> and initializes the plugin with this code <code>data-toggle="typed"</code></p>
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;p>Template for &lt;span data-toggle="typed" data-options='{"strings": ["Apps", "StartUp", "Company", "Portfolio"]}'&gt;&lt;/span&gt;&lt;/p&gt;
+            </code>
+          </pre>
+          <br>
+          <p>For complete documentation read <a href="https://github.com/mattboldt/typed.js/" target="_blank">in here</a></p>
+        </div>
+      </main>
+      <main class="col-12px-md-3 ps-lg-5 pe-lg-4 bn-content pb-5">
+        <div class="jump mt-lg-3">
+          <h1 class="mb-3">Vanilla LazyLoad</h1>
+          <p class="lead text-muted">Lightweight (2.4 kB) and flexible script that speeds up your web application by deferring the loading of your below-the-fold images, videos and iframes to when they will enter the viewport.</p>
+        </div>
+
+        <div id="installation" class="jump">
+          <h2 class="h4 mb-3">Installation</h2>
+          <p>Add script right before closing <code>&lt;/body&gt;</code> tag, and initialize Lazyload</p>
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;!-- Plugin js --&gt;
+              &lt;script src="src/plugins/vanilla-lazyload/dist/lazyload.min.js"&gt;&lt;/script&gt;
+
+              &lt;!-- Theme js --&gt;
+              &lt;script src="src/js/theme.js"&gt;&lt;/script&gt;
+            </code>
+          </pre>
+          <p>If you want to editing Lax js open file <code>theme.js</code> and edit this function <code>myLazyload();</code></p>
+          <br>
+        </div>
+        
+        <div id="example" class="jump">
+          <h2 class="h4 mb-3">How to trigger lazyload</h2>
+          <p>In order to make your content be loaded by LazyLoad, you must use some data- attributes instead of the actual attributes.</p>
+          <br>
+          <h3 class="h4">Example</h3>
+          <p>Lazy image:</p>
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;img alt="A lazy image" class="lazy" data-src="lazy.jpg"&gt;
+            </code>
+          </pre>
+          <br>
+          <p>Lazy image with low quality placeholder:</p>
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;img alt="A lazy image" class="lazy" src="lazy-lowQuality.jpg" data-src="lazy.jpg"&gt;
+            </code>
+          </pre>
+          <br>
+          <p>background image:</p>
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;div class="lazy" data-bg="lazy.jpg"&gt;&lt;/div&gt;
+            </code>
+          </pre>
+          <br>
+          <p>Lazy video:</p>
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;video class="lazy" controls width="620" data-src="lazy.mp4" data-poster="lazy.jpg"&gt;
+                &lt;source type="video/mp4" data-src="lazy.mp4" /&gt;
+                &lt;source type="video/ogg" data-src="lazy.ogg" /&gt;
+                &lt;source type="video/avi" data-src="lazy.avi" /&gt;
+              &lt;/video&gt;
+            </code>
+          </pre>
+          <br>
+          <p>Lazy iframe:</p>
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;iframe class="lazy" data-src="lazyFrame.html"&gt;&lt;/iframe&gt;
+            </code>
+          </pre>
+          <br>
+
+          <p>For complete documentation read <a href="https://github.com/verlok/vanilla-lazyload" target="_blank">in here</a></p>
+        </div>
+      </main>
+      <main class="col-12 px-md-3 ps-lg-5 pe-lg-4 bn-content pb-5">
+        <div class="jump mt-lg-3">
+          <h1 class="mb-3">Waves</h1>
+          <p class="lead text-muted">Create SVG wave background in section quick and easily.</p>
+        </div>
+
+        <div id="installation" class="jump">
+          <h2 class="h4 mb-3">Installation</h2>
+          <p>Wave can add in top or bottom section, use this css <code>waves-top-center</code> or <code>waves-bottom-center</code></p>
+          <p>Example code</p>
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;figure class="waves-bottom-center text-primary z-index-n1"&gt;
+                &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"&gt;
+                  &lt;path fill="currentColor" your path code .... &gt;&lt;/path&gt;
+                &lt;/svg&gt;
+              &lt;/figure&gt;
+            </code>
+          </pre>
+          <p>Dont forget to add position <code>relative</code> and <code>z-index-1</code> in parent this code</p>
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;div class="section bg-white z-index-1"&gt;
+                &lt;figure class="waves-bottom-center text-primary z-index-n1"&gt;
+                  &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"&gt;
+                    &lt;path fill="currentColor" your path code .... &gt;&lt;/path&gt;
+                  &lt;/svg&gt;
+                &lt;/figure&gt;
+              &lt;/div&gt;
+            </code>
+          </pre>
+          <br><br>
+          <h2 class="h4 mb-3">Generate Waves</h2>
+          <p>We use tools from <a href="https://getwaves.io/">https://getwaves.io/</a> for generate wave background with fast and easy</p>
+          <p>Generate and copy svg code from here and editing svg code like this</p>
+          <p>This original wave svg code from Getwaves.io</p>
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"&gt;
+                &lt;path fill="#0099ff" fill-opacity="1" d="M0,0L48,48C96,96,192,192,288,197.3C384,203,480,117,576,101.3C672,85,768,139,864,160C960,181,1056,171,1152,154.7C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"&gt;&lt;/path&gt;
+              &lt;/svg&gt;
+            </code>
+          </pre>
+          <p>This code after editing</p>
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;svg xmlns="http://www.w3.org/2000/svg" class="text-primary" viewBox="0 0 1440 320"&gt;
+                &lt;path fill="currentColor" fill-opacity="1" d="M0,0L48,48C96,96,192,192,288,197.3C384,203,480,117,576,101.3C672,85,768,139,864,160C960,181,1056,171,1152,154.7C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"&gt;&lt;/path&gt;
+              &lt;/svg&gt;
+            </code>
+          </pre>
+
+          <p>Replace this code <code>fill="#0099ff"</code> with this class <code>fill="currentColor"</code> and after changes this code, add text color from Bootstrap like <code>.text-primary</code> or other color.</p>
+          <p>if svg images use <code>stroke</code> replace code with this code <code>stroke="currentColor"</code></p>
+
+          <br>
+          <p>Want to add multi waves, you can use following example code</p>
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;svg xmlns="http://www.w3.org/2000/svg" class="text-primary" viewBox="0 0 1440 320"&gt;
+                &lt;path class="opacity-20 translate-top-2" fill="currentColor" fill-opacity="1" d="M0,0L48,48C96,96,192,192,288,197.3C384,203,480,117,576,101.3C672,85,768,139,864,160C960,181,1056,171,1152,154.7C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"&gt;&lt;/path&gt;
+                &lt;path class="opacity-30 translate-top-1" fill="currentColor" fill-opacity="1" d="M0,0L48,48C96,96,192,192,288,197.3C384,203,480,117,576,101.3C672,85,768,139,864,160C960,181,1056,171,1152,154.7C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"&gt;&lt;/path&gt;
+                &lt;path fill="currentColor" fill-opacity="1" d="M0,0L48,48C96,96,192,192,288,197.3C384,203,480,117,576,101.3C672,85,768,139,864,160C960,181,1056,171,1152,154.7C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"&gt;&lt;/path&gt;
+              &lt;/svg&gt;
+            </code>
+          </pre>
+
+          <p>Duplicate path code and add <code>class="opacity-30 translate-top-1" </code> and <code>class="opacity-20 translate-top-2"</code></p>
+          <p>Opacity classes available from 1 to 90, example opacity 35 <code>opacity-35</code></p>
+          <p>Translate top available from 1 to 5 <code>translate-top-1</code> or for bottom <code>translate-bottom-2</code></p>
+          <br>
+        </div>
+        
+        <div id="example" class="jump">
+          <h2 class="h4 mb-3">Single Waves</h2>
+          <div id="hero" class="section pt-5 pt-md-7 pb-7 pb-md-9 bg-white z-index-1">
+            <h2 class="text-center">Your Content in here</h2>
+            <!-- waves start -->
+            <figure class="waves-bottom-center z-index-n1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="text-primary" viewBox="0 0 1440 320">
+                <path fill="currentColor" fill-opacity="1" d="M0,160L60,186.7C120,213,240,267,360,245.3C480,224,600,128,720,106.7C840,85,960,139,1080,149.3C1200,160,1320,128,1380,112L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+              </svg>
+            </figure>
+          </div>
+          <br><br>
+          <h5 class="fw-normal">Example Code</h5>
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;div id="hero" class="section pt-5 pt-md-7 pb-7 pb-md-9 bg-white z-index-1"&gt;
+                &lt;h2 class="text-center"&gt;Your Content in here&lt;/h2&gt;
+                &lt;!-- waves start --&gt;
+                &lt;figure class="waves-bottom-center z-index-n1"&gt;
+                  &lt;svg xmlns="http://www.w3.org/2000/svg" class="text-primary" viewBox="0 0 1440 320"&gt;
+                    &lt;path fill="currentColor" fill-opacity="1" d="M0,160L60,186.7C120,213,240,267,360,245.3C480,224,600,128,720,106.7C840,85,960,139,1080,149.3C1200,160,1320,128,1380,112L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"&gt;&lt;/path&gt;
+                  &lt;/svg&gt;
+                &lt;/figure&gt;
+              &lt;/div&gt;
+            </code>
+          </pre>
+          <br>
+        </div>
+
+        <div id="example2" class="jump">
+          <h2 class="h4 mb-3">Multi Waves</h2>
+          <div id="hero" class="section pt-5 pt-md-7 pb-7 pb-md-9 bg-white z-index-1">
+            <h2 class="text-center">Your Content in here</h2>
+            <!-- waves start -->
+            <figure class="waves-bottom-center z-index-n1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="text-primary" viewBox="0 0 1440 320">
+                <path class="opacity-20 translate-top-2" fill="currentColor"  fill-opacity="1" d="M0,160L60,186.7C120,213,240,267,360,245.3C480,224,600,128,720,106.7C840,85,960,139,1080,149.3C1200,160,1320,128,1380,112L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+
+                <path class="opacity-30 translate-top-1" fill="currentColor"  fill-opacity="1" d="M0,160L60,186.7C120,213,240,267,360,245.3C480,224,600,128,720,106.7C840,85,960,139,1080,149.3C1200,160,1320,128,1380,112L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+                
+                <path fill="currentColor" fill-opacity="1" d="M0,160L60,186.7C120,213,240,267,360,245.3C480,224,600,128,720,106.7C840,85,960,139,1080,149.3C1200,160,1320,128,1380,112L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+              </svg>
+            </figure>
+          </div>
+          <br><br>
+          <h5 class="fw-normal">Example Code</h5>
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;div id="hero" class="section pt-5 pt-md-7 pb-7 pb-md-9 bg-white z-index-1"&gt;
+                &lt;h2 class="text-center"&gt;Your Content in here&lt;/h2&gt;
+                &lt;!-- waves start --&gt;
+                &lt;figure class="waves-bottom-center z-index-n1"&gt;
+                  &lt;svg xmlns="http://www.w3.org/2000/svg" class="text-primary" viewBox="0 0 1440 320"&gt;
+                    &lt;path class="opacity-20 translate-top-2" fill="currentColor"  fill-opacity="1" d="M0,160L60,186.7C120,213,240,267,360,245.3C480,224,600,128,720,106.7C840,85,960,139,1080,149.3C1200,160,1320,128,1380,112L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"&gt;&lt;/path&gt;
+                    &lt;path class="opacity-30 translate-top-1" fill="currentColor"  fill-opacity="1" d="M0,160L60,186.7C120,213,240,267,360,245.3C480,224,600,128,720,106.7C840,85,960,139,1080,149.3C1200,160,1320,128,1380,112L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"&gt;&lt;/path&gt;
+                    &lt;path fill="currentColor" fill-opacity="1" d="M0,160L60,186.7C120,213,240,267,360,245.3C480,224,600,128,720,106.7C840,85,960,139,1080,149.3C1200,160,1320,128,1380,112L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"&gt;&lt;/path&gt;
+                  &lt;/svg&gt;
+                &lt;/figure&gt;
+              &lt;/div&gt;
+            </code>
+          </pre>
+          <br>
+        </div>
+
+        <div id="example3" class="jump">
+          <h2 class="h4 mb-3">Mix Waves</h2>
+          <div id="hero" class="section pt-5 pt-md-7 pb-7 pb-md-9 bg-white z-index-1">
+            <h2 class="text-center">Your Content in here</h2>
+            <!-- waves start -->
+            <figure class="waves-bottom-center z-index-n1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="text-primary" viewBox="0 0 1440 320">
+                <path class="opacity-30" fill="currentColor" fill-opacity="1" d="M0,192L48,165.3C96,139,192,85,288,90.7C384,96,480,160,576,186.7C672,213,768,203,864,186.7C960,171,1056,149,1152,144C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                <path fill="currentColor" fill-opacity="1" d="M0,160L60,186.7C120,213,240,267,360,245.3C480,224,600,128,720,106.7C840,85,960,139,1080,149.3C1200,160,1320,128,1380,112L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+              </svg>
+            </figure>
+          </div>
+          <br><br>
+          <h5 class="fw-normal">Example Code</h5>
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;div id="hero" class="section pt-5 pt-md-7 pb-7 pb-md-9 bg-white z-index-1"&gt;
+                &lt;h2 class="text-center"&gt;Your Content in here&lt;/h2&gt;
+                &lt;!-- waves start --&gt;
+                &lt;figure class="waves-bottom-center z-index-n1"&gt;
+                  &lt;svg xmlns="http://www.w3.org/2000/svg" class="text-primary" viewBox="0 0 1440 320"&gt;
+                    &lt;path class="opacity-30" fill="currentColor" fill-opacity="1" d="M0,192L48,165.3C96,139,192,85,288,90.7C384,96,480,160,576,186.7C672,213,768,203,864,186.7C960,171,1056,149,1152,144C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"&gt;&lt;/path&gt;
+                    &lt;path fill="currentColor" fill-opacity="1" d="M0,160L60,186.7C120,213,240,267,360,245.3C480,224,600,128,720,106.7C840,85,960,139,1080,149.3C1200,160,1320,128,1380,112L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"&gt;&lt;/path&gt;
+                  &lt;/svg&gt;
+                &lt;/figure&gt;
+              &lt;/div&gt;
+            </code>
+          </pre>
+          <br>
+        </div>
+      </main>
+      <main class="col-12 px-md-3 ps-lg-5 pe-lg-4 bn-content pb-5">
+        <div class="jump mt-lg-3">
+          <h1 class="mb-3">Waypoints Js</h1>
+          <p class="lead text-muted">Waypoints is the easiest way to trigger a function when you scroll to an element.</p>
+        </div>
+
+        <div id="installation" class="jump">
+          <h2 class="h4 mb-3">Installation</h2>
+          <p>Add script right before closing <code>&lt;/body&gt;</code> tag, and initialize Typed.js</p>
+          <pre>
+            <code class="language-markup" data-lang="html">
+              &lt;!-- Plugin js --&gt;
+              &lt;script src="src/plugins/waypoints/lib/noframework.waypoints.min.js"&gt;&lt;/script&gt;
+
+              &lt;!-- Theme js --&gt;
+              &lt;script src="src/js/theme.js"&gt;&lt;/script&gt;
+            </code>
+          </pre>
+          <p>Waypoints required if you need activate <a href="../../sections/counter.html">Counter Up</a> and <a href="../../sections/progress.html">Progress Bar</a> features. Waypoints available in <code>theme.js</code> in this function <code>myProgressBar();</code> and <code>myCounters();</code></p>
+          <p>You can refresh waypoints with add <code>.way-refresh</code> classes in your section or other area.</p>
+          <br>
+          <p>For complete documentation read <a href="http://imakewebthings.com/waypoints/guides/getting-started/" target="_blank">in here</a></p>
+        </div>
+      </main>
+    </div>
+  </div>
+  <!--Main end-->
+
+  <!-- =========={ SCROLL TO TOP }==========  -->
+  <a href="#page-top" class="p-3 border position-fixed end-1 bottom-1 z-index-10 back-top" title="Scroll To Top">
+    <!-- <i class="fas fa-arrow-up"></i> -->
+    <svg class="bi bi-arrow-up" width="1rem" height="1rem" viewBox="0 0 16 16" fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M8 3.5a.5.5 0 01.5.5v9a.5.5 0 01-1 0V4a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+      <path fill-rule="evenodd"
+        d="M7.646 2.646a.5.5 0 01.708 0l3 3a.5.5 0 01-.708.708L8 3.707 5.354 6.354a.5.5 0 11-.708-.708l3-3z"
+        clip-rule="evenodd"></path>
+    </svg>
+  </a>
+
+  <!-- =========={ JAVASCRIPT }==========  -->
+  <!-- Popper and Bootstrap js -->
+  <script src="../../src/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin js -->
+  <script src="../../src/plugins/jarallax/dist/jarallax.min.js"></script>
+  <script src="../../src/plugins/jarallax/dist/jarallax-video.min.js"></script>
+
+  <script src="../../src/plugins/lightgallery.js/dist/js/lightgallery.min.js"></script>
+  <script src="../../src/plugins/lightgallery.js/demo/js/lg-thumbnail.min.js"></script>
+  <script src="../../src/plugins/lightgallery.js/demo/js/lg-video.js"></script>
+
+  <script src="../../src/plugins/aos/dist/aos.js"></script>
+  <script src="../../src/plugins/waypoints/lib/noframework.waypoints.min.js"></script>
+  <script src="../../src/plugins/counterup2/dist/index.js"></script>
+  <script src="../../src/plugins/flickity/dist/flickity.pkgd.min.js"></script>
+  <script src="../../src/plugins/typed.js/dist/typed.umd.js"></script>
+  <script src="../../src/plugins/isotope-layout/dist/isotope.pkgd.min.js"></script>
+  <script src="../../src/plugins/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+  <script src="../../src/plugins/vanilla-lazyload/dist/lazyload.min.js"></script>
+  <script src="../../src/plugins/hc-sticky/dist/hc-sticky.js"></script>
+
+  <!-- Theme js -->
+  <script src="../../src/js/theme.js"></script>
+
+  <!--documentation js-->
+  <script src="../assets/js/prism/prism.js"></script>
+</body>
+
+
+</html>
