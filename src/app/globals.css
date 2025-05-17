@@ -1,42 +1,48 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/fonts/Vazir-Regular.woff2') format('woff2'),
+    url('/fonts/Vazir-Regular.woff') format('woff'),
+    url('/fonts/Vazir-Regular.ttf') format('truetype'),
+    url('/fonts/Vazir-Regular.eot') format('embedded-opentype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: 'Vazirmatn_bold';
+  src: url('/fonts/Vazir-Bold.woff2') format('woff2'),
+    url('/fonts/Vazir-Bold.woff') format('woff'),
+    url('/fonts/Vazir-Bold.ttf') format('truetype'),
+    url('/fonts/Vazir-Bold.eot') format('embedded-opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+@font-face {
+  font-family: 'Vazirmatn_fd';
+  src: url('/fonts/Vazir-FD-Regular.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'Vazirmatn_fd_bold';
+  src: url('/fonts/Vazir-FD-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+.font-vazir-regular,
+.font-regular {
+  font-family: 'Vazirmatn' !important;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
+.font-vazir-bold,
+.font-bold {
+  font-family: 'Vazirmatn_bold' !important;
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.font-vazir-fd-regular {
+  font-family: 'Vazirmatn' !important;
+}
+.font-vazir-fd-bold {
+  font-family: 'Vazirmatnfd_bold' !important;
 }
