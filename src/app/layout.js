@@ -2,6 +2,7 @@ import "./globals.css";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Script from "next/script";
 import ScrollTopBtn from "@/components/modules/ScrollTopBtn/ScrollTopBtn";
+import DarkModeBtn from "@/components/modules/darkModeBtn/DarkModeBtn";
 
 export const metadata = {
   title: "Create Next App",
@@ -88,6 +89,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         {children}
+        <DarkModeBtn />
         <ScrollTopBtn />
       </body>
     </html>
