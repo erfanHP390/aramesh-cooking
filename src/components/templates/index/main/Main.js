@@ -4,6 +4,7 @@ import Profile from '../profile/Profile'
 import Services from '../services/Services'
 import Statistic from '../statistic/Statistic'
 import Team from '../team/Team'
+import Latest from '../latest/Latest'
 
 function Main() {
   return (
@@ -13,6 +14,7 @@ function Main() {
       <Services />
       <Statistic />
       <Team />
+      <Latest />
     </>
   )
 }
