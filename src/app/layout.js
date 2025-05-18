@@ -1,15 +1,6 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import Script from "next/script";
 
 export const metadata = {
   title: "Create Next App",
@@ -19,9 +10,85 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        {children}
-      </body>
+      <head>
+        {/* Scripts */}
+        <link rel="stylesheet" href="/plugins/aos/dist/aos-rtl.css" />
+        <link
+          rel="stylesheet"
+          href="/plugins/lightgallery.js/dist/css/lightgallery.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="/plugins/flickity/dist/flickity.min.css"
+        />
+
+        <link rel="stylesheet" href="/css/theme-rtl.css" />
+        <link rel="stylesheet" href="/css/colors1.css" />
+
+        <link rel="manifest" href="/js/pwa/manifest.json" />
+        <link rel="apple-touch-icon" href="/img-min/logo/apple-icon.png" />
+
+        <Script src="/js/switch.js" strategy="beforeInteractive" />
+        <Script
+          src="/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"
+          strategy="beforeInteractive"
+        />
+        <Script
+          src="/plugins/jarallax/dist/jarallax.min.js"
+          strategy="beforeInteractive"
+        />
+        <Script
+          src="/plugins/jarallax/dist/jarallax-video.min.js"
+          strategy="beforeInteractive"
+        />
+        <Script
+          src="/plugins/lightgallery.js/dist/js/lightgallery.min.js"
+          strategy="afterInteractive"
+        />
+        <Script
+          src="/plugins/lightgallery.js/demo/js/lg-thumbnail.min.js"
+          strategy="afterInteractive"
+        />
+        <Script
+          src="/plugins/lightgallery.js/demo/js/lg-video.js"
+          strategy="afterInteractive"
+        />
+        <Script src="/plugins/aos/dist/aos.js" strategy="afterInteractive" />
+        <Script
+          src="/plugins/waypoints/lib/noframework.waypoints.min.js"
+          strategy="afterInteractive"
+        />
+        <Script
+          src="/plugins/counterup2/dist/index.js"
+          strategy="afterInteractive"
+        />
+        <Script
+          src="/plugins/flickity/dist/flickity.pkgd.min.js"
+          strategy="afterInteractive"
+        />
+        <Script
+          src="/plugins/typed.js/dist/typed.umd.js"
+          strategy="afterInteractive"
+        />
+        <Script
+          src="/plugins/isotope-layout/dist/isotope.pkgd.min.js"
+          strategy="afterInteractive"
+        />
+        <Script
+          src="/plugins/smooth-scroll/dist/smooth-scroll.polyfills.min.js"
+          strategy="afterInteractive"
+        />
+        <Script
+          src="/plugins/vanilla-lazyload/dist/lazyload.min.js"
+          strategy="afterInteractive"
+        />
+        <Script
+          src="/plugins/hc-sticky/dist/hc-sticky.js"
+          strategy="afterInteractive"
+        />
+        <Script src="/js/theme.js" strategy="afterInteractive" />
+      </head>
+      <body>{children}</body>
     </html>
   );
 }
