@@ -1,0 +1,167 @@
+.mainNav {
+  background-color: #8B4513 !important;
+  padding: 0.5rem 0 !important;
+  direction: rtl !important;
+}
+
+.navbarBrand {
+  color: #FFFFFF !important;
+  font-size: 1.5rem !important;
+  font-weight: bold !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.navbarBrand:hover {
+  color: #F5EBDD !important;
+}
+
+.logo-dark {
+  width: 40px !important;
+  height: 40px !important;
+  object-fit: contain !important;
+  transition: transform 0.3s ease !important;
+}
+
+.navbarBrand:hover .logo-dark {
+  transform: scale(1.1) !important;
+}
+
+.navLink {
+  color: #FFFFFF !important;
+  padding: 0.5rem 1rem !important;
+  position: relative !important;
+  transition: all 0.3s ease !important;
+}
+
+.navLink:hover {
+  color: #F5EBDD !important;
+  background-color: rgba(139, 46, 44, 0.2) !important;
+}
+
+.dropdown-toggle::after {
+  display: inline-block !important;
+  margin-right: 0.255em !important;
+  vertical-align: 0.255em !important;
+  content: "" !important;
+  border-top: 0.3em solid #F5EBDD !important;
+  border-right: 0.3em solid transparent !important;
+  border-bottom: 0 !important;
+  border-left: 0.3em solid transparent !important;
+  transition: transform 0.3s ease !important;
+}
+
+.dropdown-toggle:hover::after {
+  border-top-color: #607744 !important;
+}
+
+.dropdown.show .dropdown-toggle::after {
+  transform: rotate(-180deg) !important;
+}
+
+/* استایل‌های سفارشی برای submenu با اولویت بالا */
+.submenu.dropdown-menu {
+  display: none !important;
+  flex-direction: column !important;
+}
+
+.submenu.dropdown-menu.show {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.navItem.dropdown:hover .dropdown-menu,
+.dropdown-submenu:hover > .dropdown-menu,
+.dropdown.show .dropdown-menu,
+.dropdown-submenu.show > .dropdown-menu {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.navbarToggler {
+  border-color: #FFFFFF !important;
+  padding: 0.5rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.navbarToggler:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25) !important;
+}
+
+.navbarTogglerIcon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  transition: all 0.3s ease !important;
+}
+
+.navbarTogglerIcon.open {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M5 5l20 20M25 5L5 25'/%3e%3c/svg%3e") !important;
+}
+
+.dropdown-menu {
+  background-color: #F5EBDD !important;
+  border: none !important;
+  border-radius: 0.25rem !important;
+  margin-top: 0 !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
+}
+
+.dropdownItem {
+  color: #8B2E2C !important;
+  padding: 0.75rem 1.5rem !important;
+  text-align: right !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+}
+
+.dropdownItem:hover {
+  background-color: #8B2E2C !important;
+  color: #FFFFFF !important;
+}
+
+.dropdownItem.dropdown-toggle::after {
+  position: absolute !important;
+  left: 1rem !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+
+.submenu {
+  background-color: #F5EBDD !important;
+  margin-top: 0 !important;
+  margin-right: 0.5rem !important;
+}
+
+@media (max-width: 991.98px) {
+  .logo-dark {
+    width: 35px !important;
+    height: 35px !important;
+  }
+  
+  .navItem {
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .navLink {
+    padding: 0.75rem 0 !important;
+    border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+  }
+  
+  .dropdown-menu {
+    background-color: rgba(245, 235, 221, 0.95) !important;
+    margin-left: 1rem !important;
+  }
+  
+  .navItem.dropdown:hover .dropdown-menu,
+  .dropdown-submenu:hover > .dropdown-menu {
+    display: none !important;
+  }
+  
+  .dropdown.show .dropdown-menu,
+  .dropdown-submenu.show > .dropdown-menu {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
