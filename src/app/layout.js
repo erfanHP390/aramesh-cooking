@@ -1,6 +1,7 @@
 import "./globals.css";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Script from "next/script";
+import ScrollTopBtn from "@/components/modules/ScrollTopBtn/ScrollTopBtn";
 
 export const metadata = {
   title: "Create Next App",
@@ -17,10 +18,7 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
           href="/plugins/lightgallery.js/dist/css/lightgallery.min.css"
         />
-        <link
-          rel="stylesheet"
-          href="/plugins/flickity/dist/flickity.min.css"
-        />
+        <link rel="stylesheet" href="/plugins/flickity/dist/flickity.min.css" />
 
         <link rel="stylesheet" href="/css/theme-rtl.css" />
         <link rel="stylesheet" href="/css/colors1.css" />
@@ -88,7 +86,10 @@ export default function RootLayout({ children }) {
         />
         <Script src="/js/theme.js" strategy="afterInteractive" />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <ScrollTopBtn />
+      </body>
     </html>
   );
 }
