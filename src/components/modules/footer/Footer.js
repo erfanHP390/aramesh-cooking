@@ -3,362 +3,173 @@ import styles from "./Footer.module.css";
 
 function Footer() {
   return (
-    <>
-      <footer className="bg-secondary">
-        {/*Footer content*/}
-        <div id="footer" className="footer-dark section pt-6 pb-5">
-          <div className="container">
-            <div className="row">
-              {/* left widget */}
-              <div className="col-lg-4">
-                {/* Footer Content */}
-                <div className="widget-content pe-lg-5">
-                  {/* Footer Title */}
-                  <h4 className="h5 mb-4">درباره ما</h4>
-                  <div className="widget-body">
-                    <p>
-                      لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
-                      و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه
-                      روزنامه و مجله در ستون و سطرآنچنان که لازم است.
-                    </p>
-                    <address>
-                      {/* <i class="fa fa-map-marker-alt me-2"></i> */}
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="1.2rem"
-                        height="1.2rem"
-                        viewBox="0 0 512 512"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="M256,48c-79.5,0-144,61.39-144,137,0,87,96,224.87,131.25,272.49a15.77,15.77,0,0,0,25.5,0C304,409.89,400,272.07,400,185,400,109.39,335.5,48,256,48Z"
-                          style={{
-                            fill: "none",
-                            stroke: "currentColor",
-                            strokeLinecap: "round",
-                            strokeLinejoin: "round",
-                            strokeWidth: 32,
-                          }}
-                        />
-                        <circle
-                          fill="currentColor"
-                          cx={256}
-                          cy={192}
-                          r={48}
-                          style={{
-                            fill: "none",
-                            stroke: "currentColor",
-                            strokeLinecap: "round",
-                            strokeLinejoin: "round",
-                            strokeWidth: 32,
-                          }}
-                        />
-                      </svg>
-                      ایران,تهران,میدان آزادی,خیابان مفتح,پلاک 10
-                    </address>
-                    <p className="footer-info">
-                      {/* <i class="fa fa-phone me-2"></i> */}
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="1.2rem"
-                        height="1.2rem"
-                        viewBox="0 0 512 512"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="M451,374c-15.88-16-54.34-39.35-73-48.76C353.7,313,351.7,312,332.6,326.19c-12.74,9.47-21.21,17.93-36.12,14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48,5.41-23.23,14.79-36c13.22-18,12.22-21,.92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9,44,119.9,47,108.83,51.6A160.15,160.15,0,0,0,83,65.37C67,76,58.12,84.83,51.91,98.1s-9,44.38,23.07,102.64,54.57,88.05,101.14,134.49S258.5,406.64,310.85,436c64.76,36.27,89.6,29.2,102.91,23s22.18-15,32.83-31a159.09,159.09,0,0,0,13.8-25.8C465,391.17,468,391.17,451,374Z"
-                          style={{
-                            fill: "none",
-                            stroke: "currentColor",
-                            strokeMiterlimit: 10,
-                            strokeWidth: 32,
-                          }}
-                        />
-                      </svg>
-                      09121234567
-                    </p>
-                    <p className="footer-info">
-                      {/* <i class="fa fa-envelope me-2"></i> */}
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="1.2rem"
-                        height="1.2rem"
-                        viewBox="0 0 512 512"
-                      >
-                        <rect
-                          fill="currentColor"
-                          x={48}
-                          y={96}
-                          width={416}
-                          height={320}
-                          rx={40}
-                          ry={40}
-                          style={{
-                            fill: "none",
-                            stroke: "currentColor",
-                            strokeLinecap: "round",
-                            strokeLinejoin: "round",
-                            strokeWidth: 32,
-                          }}
-                        />
-                        <polyline
-                          fill="currentColor"
-                          points="112 160 256 272 400 160"
-                          style={{
-                            fill: "none",
-                            stroke: "currentColor",
-                            strokeLinecap: "round",
-                            strokeLinejoin: "round",
-                            strokeWidth: 32,
-                          }}
-                        />
-                      </svg>
-                      support@example.com
-                    </p>
-                  </div>
-                </div>
-              </div>
-              {/* center widget */}
-              <div className="footer-links col-md-6 col-lg-4">
-                {/* Footer Content */}
-                <div className="widget-content">
-                  {/* Footer Title */}
-                  <h4 className="h5 mb-4">لینک های مهم</h4>
-                  <div className="row">
-                    <div className="col-sm-6">
-                      <ul className="list-unstyled before-arrow">
-                        <li className="py-2">
-                          <a href="#">درباره ما</a>
-                        </li>
-                        <li className="py-2">
-                          <a href="#">تماس با ما</a>
-                        </li>
-                        <li className="py-2">
-                          <a href="#">سیاست های حریم خصوصی</a>
-                        </li>
-                        <li className="py-2">
-                          <a href="#">قوانین استفاده</a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="col-sm-6">
-                      <ul className="list-unstyled before-arrow">
-                        <li className="py-2">
-                          <a href="#">آخرین مطالب</a>
-                        </li>
-                        <li className="py-2">
-                          <a href="#">مطالب مهم</a>
-                        </li>
-                        <li className="py-2">
-                          <a href="#">وبلاگ</a>
-                        </li>
-                        <li className="py-2">
-                          <a href="#">رویداد ها</a>
-                        </li>
-                        <li className="py-2">
-                          <a href="#">دسته بندی ها</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* right */}
-              <div className="widget col-md-6 col-lg-4">
-                {/* Footer Content */}
-                <div className="widget-content">
-                  {/* Footer Title */}
-                  <h4 className="h5 mb-4">خبرنامه</h4>
+    <footer className={styles.footer}>
+      <div className={`${styles.footerContent} section pt-6 `}>
+        <div className="container">
+          <div className="row">
+            {/* بخش اول - درباره ما */}
+            <div className="col-lg-4">
+              <div className={`${styles.widget} pe-lg-5`}>
+                <h4 className={styles.widgetTitle}>درباره گروه آشپزی آرامش</h4>
+                <div className={styles.widgetBody}>
                   <p>
-                    در خبرنامه ما مشترک شوید تا به روزرسانی های روزانه مستقیم در
-                    صندوق ایمیل خود دریافت کنید!
+                    گروه آشپزی آرامش با بیش از ۱۰ سال سابقه در زمینه تهیه غذای مجالس و 
+                    آموزش آشپزی حرفه‌ای، آماده ارائه خدمات با کیفیت به شما عزیزان می‌باشد.
                   </p>
-                  {/*form*/}
-                  <div className="mx-auto mb-4">
-                    <form id="subscribe" action="#">
-                      <div className="input-group">
-                        <input
-                          type="email"
-                          className="form-control"
-                          dir="auto"
-                          name="email"
-                          required=""
-                          placeholder="آدرس ایمیل شما"
-                          aria-label="subcribe newsletter"
-                        />
-                        <button className="btn btn-warning" type="submit">
-                          مشترک می شوم
-                        </button>
-                      </div>
-                    </form>
-                  </div>
-                  {/*end form*/}
-                  <div className="my-1" />
-                  <ul className="footer-links list-unstyled social-icon mb-4">
-                    {/*facebook*/}
-                    <li className="my-2 me-3">
-                      <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://facebook.com/"
-                        title="Facebook"
-                      >
-                        {/* <i class="fab fa-facebook fa-2x"></i> */}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="2rem"
-                          height="2rem"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M455.27,32H56.73A24.74,24.74,0,0,0,32,56.73V455.27A24.74,24.74,0,0,0,56.73,480H256V304H202.45V240H256V189c0-57.86,40.13-89.36,91.82-89.36,24.73,0,51.33,1.86,57.51,2.68v60.43H364.15c-28.12,0-33.48,13.3-33.48,32.9V240h67l-8.75,64H330.67V480h124.6A24.74,24.74,0,0,0,480,455.27V56.73A24.74,24.74,0,0,0,455.27,32Z"
-                          />
-                        </svg>
-                      </a>
-                    </li>
-                    {/*twitter*/}
-                    <li className="my-2 me-3">
-                      <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://twitter.com/"
-                        title="Twitter"
-                      >
-                        {/* <i class="fab fa-twitter fa-2x"></i> */}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="2rem"
-                          height="2rem"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z"
-                          />
-                        </svg>
-                      </a>
-                    </li>
-                    {/*youtube*/}
-                    <li className="my-2 me-3">
-                      <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://youtube.com/"
-                        title="Youtube"
-                      >
-                        {/* <i class="fab fa-youtube fa-2x"></i> */}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="2rem"
-                          height="2rem"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M508.64,148.79c0-45-33.1-81.2-74-81.2C379.24,65,322.74,64,265,64H247c-57.6,0-114.2,1-169.6,3.6-40.8,0-73.9,36.4-73.9,81.4C1,184.59-.06,220.19,0,255.79q-.15,53.4,3.4,106.9c0,45,33.1,81.5,73.9,81.5,58.2,2.7,117.9,3.9,178.6,3.8q91.2.3,178.6-3.8c40.9,0,74-36.5,74-81.5,2.4-35.7,3.5-71.3,3.4-107Q512.24,202.29,508.64,148.79ZM207,353.89V157.39l145,98.2Z"
-                          />
-                        </svg>
-                      </a>
-                    </li>
-                    {/*VKontakte*/}
-                    <li className="my-2 me-3">
-                      <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://vk.com/"
-                        title="VKontakte"
-                      >
-                        {/* <i class="fab fa-vk fa-2x"></i> */}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="2rem"
-                          height="2rem"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M484.7,132c3.56-11.28,0-19.48-15.75-19.48H416.58c-13.21,0-19.31,7.18-22.87,14.86,0,0-26.94,65.6-64.56,108.13-12.2,12.3-17.79,16.4-24.4,16.4-3.56,0-8.14-4.1-8.14-15.37V131.47c0-13.32-4.06-19.47-15.25-19.47H199c-8.14,0-13.22,6.15-13.22,12.3,0,12.81,18.81,15.89,20.84,51.76V254c0,16.91-3,20-9.66,20-17.79,0-61-66.11-86.92-141.44C105,117.64,99.88,112,86.66,112H33.79C18.54,112,16,119.17,16,126.86c0,13.84,17.79,83.53,82.86,175.77,43.21,63,104.72,96.86,160.13,96.86,33.56,0,37.62-7.69,37.62-20.5V331.33c0-15.37,3.05-17.93,13.73-17.93,7.62,0,21.35,4.09,52.36,34.33C398.28,383.6,404.38,400,424.21,400h52.36c15.25,0,22.37-7.69,18.3-22.55-4.57-14.86-21.86-36.38-44.23-62-12.2-14.34-30.5-30.23-36.09-37.92-7.62-10.25-5.59-14.35,0-23.57-.51,0,63.55-91.22,70.15-122"
-                            style={{ fillRule: "evenodd" }}
-                          />
-                        </svg>
-                      </a>
-                    </li>
-                    {/*Linkedin*/}
-                    <li className="my-2 me-3">
-                      <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://linkedin.com/"
-                        title="Linkedin"
-                      >
-                        {/* <i class="fab fa-linkedin fa-2x"></i> */}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="2rem"
-                          height="2rem"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M444.17,32H70.28C49.85,32,32,46.7,32,66.89V441.61C32,461.91,49.85,480,70.28,480H444.06C464.6,480,480,461.79,480,441.61V66.89C480.12,46.7,464.6,32,444.17,32ZM170.87,405.43H106.69V205.88h64.18ZM141,175.54h-.46c-20.54,0-33.84-15.29-33.84-34.43,0-19.49,13.65-34.42,34.65-34.42s33.85,14.82,34.31,34.42C175.65,160.25,162.35,175.54,141,175.54ZM405.43,405.43H341.25V296.32c0-26.14-9.34-44-32.56-44-17.74,0-28.24,12-32.91,23.69-1.75,4.2-2.22,9.92-2.22,15.76V405.43H209.38V205.88h64.18v27.77c9.34-13.3,23.93-32.44,57.88-32.44,42.13,0,74,27.77,74,87.64Z"
-                          />
-                        </svg>
-                      </a>
-                    </li>
-                    {/*instagram*/}
-                    <li className="my-2 me-3">
-                      <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://instagram.com/"
-                        title="Instagram"
-                      >
-                        {/* <i class="fab fa-instagram fa-2x"></i> */}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="2rem"
-                          height="2rem"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M349.33,69.33a93.62,93.62,0,0,1,93.34,93.34V349.33a93.62,93.62,0,0,1-93.34,93.34H162.67a93.62,93.62,0,0,1-93.34-93.34V162.67a93.62,93.62,0,0,1,93.34-93.34H349.33m0-37.33H162.67C90.8,32,32,90.8,32,162.67V349.33C32,421.2,90.8,480,162.67,480H349.33C421.2,480,480,421.2,480,349.33V162.67C480,90.8,421.2,32,349.33,32Z"
-                          />
-                          <path
-                            fill="currentColor"
-                            d="M377.33,162.67a28,28,0,1,1,28-28A27.94,27.94,0,0,1,377.33,162.67Z"
-                          />
-                          <path
-                            fill="currentColor"
-                            d="M256,181.33A74.67,74.67,0,1,1,181.33,256,74.75,74.75,0,0,1,256,181.33M256,144A112,112,0,1,0,368,256,112,112,0,0,0,256,144Z"
-                          />
-                        </svg>
-                      </a>
-                    </li>
-                    {/*end instagram*/}
-                  </ul>
+                  <address className={styles.contactInfo}>
+                    <svg className={styles.icon} viewBox="0 0 512 512">
+                      <path
+                        d="M256,48c-79.5,0-144,61.39-144,137,0,87,96,224.87,131.25,272.49a15.77,15.77,0,0,0,25.5,0C304,409.89,400,272.07,400,185,400,109.39,335.5,48,256,48Z"
+                        style={{
+                          fill: "none",
+                          stroke: "currentColor",
+                          strokeLinecap: "round",
+                          strokeLinejoin: "round",
+                          strokeWidth: 32,
+                        }}
+                      />
+                      <circle
+                        cx={256}
+                        cy={192}
+                        r={48}
+                        style={{
+                          fill: "none",
+                          stroke: "currentColor",
+                          strokeLinecap: "round",
+                          strokeLinejoin: "round",
+                          strokeWidth: 32,
+                        }}
+                      />
+                    </svg>
+                    تهران، خیابان ولیعصر، کوچه آرامش، پلاک ۱۲
+                  </address>
+                  <p className={styles.contactInfo}>
+                    <svg className={styles.icon} viewBox="0 0 512 512">
+                      <path
+                        d="M451,374c-15.88-16-54.34-39.35-73-48.76C353.7,313,351.7,312,332.6,326.19c-12.74,9.47-21.21,17.93-36.12,14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48,5.41-23.23,14.79-36c13.22-18,12.22-21,.92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9,44,119.9,47,108.83,51.6A160.15,160.15,0,0,0,83,65.37C67,76,58.12,84.83,51.91,98.1s-9,44.38,23.07,102.64,54.57,88.05,101.14,134.49S258.5,406.64,310.85,436c64.76,36.27,89.6,29.2,102.91,23s22.18-15,32.83-31a159.09,159.09,0,0,0,13.8-25.8C465,391.17,468,391.17,451,374Z"
+                        style={{
+                          fill: "none",
+                          stroke: "currentColor",
+                          strokeMiterlimit: 10,
+                          strokeWidth: 32,
+                        }}
+                      />
+                    </svg>
+                    ۰۹۱۲۱۲۳۴۵۶۷
+                  </p>
+                  <p className={styles.contactInfo}>
+                    <svg className={styles.icon} viewBox="0 0 512 512">
+                      <rect
+                        x={48}
+                        y={96}
+                        width={416}
+                        height={320}
+                        rx={40}
+                        ry={40}
+                        style={{
+                          fill: "none",
+                          stroke: "currentColor",
+                          strokeLinecap: "round",
+                          strokeLinejoin: "round",
+                          strokeWidth: 32,
+                        }}
+                      />
+                      <polyline
+                        points="112 160 256 272 400 160"
+                        style={{
+                          fill: "none",
+                          stroke: "currentColor",
+                          strokeLinecap: "round",
+                          strokeLinejoin: "round",
+                          strokeWidth: 32,
+                        }}
+                      />
+                    </svg>
+                    info@aramesh-cooking.ir
+                  </p>
                 </div>
-                {/* End Footer Content */}
               </div>
-              {/* end right */}
+            </div>
+
+            {/* بخش دوم - لینک‌های سریع */}
+            <div className="col-md-6 col-lg-4">
+              <div className={styles.widget}>
+                <h4 className={styles.widgetTitle}>لینک‌های سریع</h4>
+                <div className="row">
+                  <div className="col-sm-6">
+                    <ul className={styles.linkList}>
+                      <li><a href="#">صفحه اصلی</a></li>
+                      <li><a href="#">درباره ما</a></li>
+                      <li><a href="#">خدمات ما</a></li>
+                      <li><a href="#">تماس با ما</a></li>
+                    </ul>
+                  </div>
+                  <div className="col-sm-6">
+                    <ul className={styles.linkList}>
+                      <li><a href="#">منوی غذاها</a></li>
+                      <li><a href="#">دوره‌های آموزشی</a></li>
+                      <li><a href="#">وبلاگ آشپزی</a></li>
+                      <li><a href="#">سوالات متداول</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* بخش سوم - خبرنامه و شبکه‌های اجتماعی */}
+            <div className="col-md-6 col-lg-4">
+              <div className={styles.widget}>
+                <h4 className={styles.widgetTitle}>عضویت در خبرنامه</h4>
+                <p>
+                  برای دریافت جدیدترین دستورپخت‌ها و تخفیف‌های ویژه، ایمیل خود را وارد کنید.
+                </p>
+                <form className={styles.newsletterForm}>
+                  <div className="input-group">
+                    <input
+                      type="email"
+                      className={`form-control ${styles.newsletterInput}`}
+                      placeholder="آدرس ایمیل شما"
+                      required
+                    />
+                    <button className={styles.newsletterButton} type="submit">
+                      عضویت
+                    </button>
+                  </div>
+                </form>
+                <div className={styles.socialLinks}>
+                  <a href="#" title="Instagram">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                  </a>
+                  <a href="#" title="Telegram">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                      <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"/>
+                    </svg>
+                  </a>
+                  <a href="#" title="WhatsApp">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                      <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.99 6.98l-2.52 2.51c-.566.566-1.109 1.184-1.673 1.773-.444.48-.905.968-1.424 1.384-.486.389-.981.708-1.606.772-.602.062-1.205.006-1.808-.011-.445-.012-.893-.025-1.34-.039-.572-.019-1.215.241-1.405.799-.191.558-.111 1.072.25 1.578.24.336.551.637.872.918.292.255.59.504.885.745 1.616 1.302 3.438 2.191 5.471 1.382 1.624-.642 2.732-2.278 2.93-3.999.2-1.782-.355-3.59-1.213-5.03-.931-1.546-2.254-2.738-3.934-3.397-1.696-.666-3.644-.585-5.298.213-1.661.803-2.876 2.247-3.468 3.992-.584 1.7-.399 3.61.507 5.201.89 1.566 2.347 2.765 4.004 3.497.853.382 1.758.573 2.671.653.6.053 1.213.057 1.821.02.559-.034 1.126-.116 1.675-.248 1.417-.341 2.367-1.615 2.367-3.104 0-.445-.083-.901-.28-1.317l-.498-1.378c-.172-.476-.439-.93-.773-1.316-.665-.77-1.616-1.147-2.56-1.108-.848.033-1.694.227-2.444.579-.529.244-1.006.589-1.446.963-.096.083-.192.167-.279.256-.434.444-.605.967-.566 1.54.041.537.296 1.044.691 1.389.277.244.59.42.928.52.338.098.688.119 1.038.047.368-.075.701-.25.981-.498.256-.224.474-.488.654-.775.21-.338.374-.701.51-1.078.151-.417.327-.834.546-1.225.209-.377.476-.72.795-1.001.356-.318.781-.549 1.238-.675.464-.127.95-.137 1.421-.028.471.109.912.326 1.284.634.343.281.637.614.867.978.229.363.398.76.497 1.175.09.382.12.774.089 1.165-.031.39-.122.776-.27 1.144-.148.367-.352.71-.604 1.016-.251.306-.548.572-.88.788-.332.216-.695.38-1.076.487-.381.107-.776.156-1.172.146-.396-.01-.79-.077-1.167-.202-.376-.124-.732-.308-1.054-.545-.322-.237-.606-.524-.84-.849-.234-.325-.416-.685-.538-1.068-.123-.383-.184-.784-.182-1.187.002-.403.068-.804.197-1.186.129-.382.32-.74.566-1.062.247-.322.546-.604.886-.832.34-.228.718-.4 1.117-.509.399-.109.814-.154 1.229-.133.415.021.826.107 1.217.255.39.148.755.357 1.08.618.325.261.607.57.835.914.228.344.4.719.511 1.112.111.394.16.802.146 1.21-.014.408-.091.813-.229 1.2-.138.388-.335.753-.583 1.083-.248.33-.544.621-.878.863-.333.242-.701.432-1.09.563-.389.131-.795.202-1.205.21-.41.008-.82-.046-1.216-.161-.397-.115-.774-.29-1.117-.519-.343-.229-.648-.51-.904-.832-.256-.322-.46-.683-.604-1.068-.144-.385-.226-.79-.242-1.2-.016-.41.034-.82.146-1.216.112-.397.284-.775.511-1.118.227-.343.506-.653.83-.914.324-.261.687-.473 1.075-.623.388-.149.796-.237 1.209-.26.413-.023.825.022 1.223.129.398.107.775.276 1.115.502.34.226.637.505.885.825.248.32.44.675.57 1.054.13.379.198.78.2 1.183.002.403-.06.803-.185 1.186-.125.383-.309.744-.545 1.071-.236.327-.524.616-.848.855-.324.239-.68.426-1.058.553-.378.127-.773.193-1.171.196-.398.003-.795-.052-1.176-.165z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        {/*End footer content*/}
-        {/*Start footer copyright*/}
-        <div className="footer-dark">
-          <div className="container py-4 border-top border-smooth">
+
+        {/* کپی رایت */}
+        <div className={styles.copyright}>
+          <div className="container py-3 border-top">
             <div className="row">
               <div className="col-12 text-center">
-                <p className="d-block my-3">کلیه حقوق محفوظ است.</p>
+                <p>© {new Date().getFullYear()} گروه آشپزی آرامش. تمامی حقوق محفوظ است.</p>
               </div>
             </div>
           </div>
         </div>
-        {/*End footer copyright*/}
-      </footer>
-    </>
+      </div>
+    </footer>
   );
 }
 
