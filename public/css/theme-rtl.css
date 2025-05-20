@@ -5151,13 +5151,13 @@ textarea.form-control-lg {
 
 .navbar-dark,
 .navbar[data-bs-theme=dark] {
-  --bs-navbar-color: #ded5f9;
-  --bs-navbar-hover-color: #fff;
-  --bs-navbar-disabled-color: rgba(255, 255, 255, 0.25);
-  --bs-navbar-active-color: #fff;
-  --bs-navbar-brand-color: #fff;
-  --bs-navbar-brand-hover-color: #fff;
-  --bs-navbar-toggler-border-color: transparent;
+  --bs-navbar-color: #000 !important;
+  --bs-navbar-hover-color: #000 !important;
+  --bs-navbar-disabled-color: #000 !important;
+  --bs-navbar-active-color: #000 !important;
+  --bs-navbar-brand-color: #000 !important;
+  --bs-navbar-brand-hover-color: #000 !important;
+  --bs-navbar-toggler-border-color: transparent !important;
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ded5f9' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
@@ -10751,7 +10751,7 @@ textarea.form-control-lg {
 
 .bg-body {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-body-bg-rgb), var(--bs-bg-opacity)) !important;
+  background-color: #F5EBDD !important;
 }
 
 .bg-transparent {
