@@ -1,0 +1,14 @@
+.btn_services {
+    color: #fff !important;
+    background-color: #8B2E2C !important;
+    transition: all 0.5s ease !important;
+}
+
+.btn_services:hover {
+    background-color: #607744 !important;
+    border-color: #607744 !important;
+}
+
+.btn_services  svg {
+    margin-right: 0.5rem !important;
+}
