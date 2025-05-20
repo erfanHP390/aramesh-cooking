@@ -1,0 +1,84 @@
+.contactSection {
+  background-color: #f5ebdd; /* رنگ بژ روشن برای پس‌زمینه */
+}
+
+.contactBox {
+  background-color: #faf9f5; /* سفید گرم برای باکس فرم */
+  border: 1px solid #a97142; /* حاشیه قهوه‌ای خاکی */
+}
+
+.contactTitle {
+  color: #8b2e2c; /* قرمز زرشکی برای عنوان */
+}
+
+.divider {
+  background-color: #607744; /* سبز ریحانی برای خط جداکننده */
+  border-color: #607744;
+  height: 3px;
+  width: 100px;
+  margin: 1rem auto;
+}
+
+.contactSubtitle {
+  color: #607744; /* سبز ریحانی برای متن توضیح */
+}
+
+.formLabel {
+  color: #8b2e2c; /* قرمز زرشکی برای لیبل‌ها */
+  font-weight: 500;
+}
+
+.formInput {
+  border: 1px solid #a97142; /* قهوه‌ای خاکی برای حاشیه فیلدها */
+  background-color: rgba(245, 235, 221, 0.5); /* بژ روشن با شفافیت */
+  transition: all 0.3s ease;
+}
+
+.formInput:focus {
+  border-color: #8b2e2c; /* قرمز زرشکی هنگام فوکوس */
+  box-shadow: 0 0 0 0.25rem rgba(139, 46, 44, 0.25); /* سایه هماهنگ */
+}
+
+.submitBtn {
+  background-color: #8b2e2c; /* قرمز زرشکی برای دکمه */
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.submitBtn:hover {
+  background-color: #a97142; /* قهوه‌ای خاکی هنگام هاور */
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* استایل‌های ریسپانسیو */
+@media (max-width: 768px) {
+  .contactBox {
+    padding: 2rem !important;
+  }
+
+  .formInput {
+    font-size: 0.9rem;
+  }
+
+  .submitBtn {
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+.btn_services {
+  color: #fff !important;
+  background-color: #8b2e2c !important;
+  transition: all 0.5s ease !important;
+}
+
+.btn_services:hover {
+  background-color: #607744 !important;
+  border-color: #607744 !important;
+}
+
+.btn_services svg {
+  margin-right: 0.5rem !important;
+}
