@@ -1,54 +1,95 @@
-
-
 .swiper {
   width: 100%;
-  height: 100%;
+  height: 500px; /* ارتفاع ثابت برای اسلایدر */
+  margin: 0 auto;
 }
 
-.swiper_slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper_slide img {
-  display: block;
+.swiperSlide {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.autoplay_progress {
-  position: absolute;
-  right: 16px;
-  bottom: 16px;
-  z-index: 10;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.imageContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slideImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* تضمین می‌کند همه عکس‌ها یکسان نمایش داده شوند */
+  object-position: center;
+}
+
+/* Navigation buttons */
+.swiperButtonNext,
+.swiperButtonPrev {
+  background-color: #8b2e2c;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: #faf9f5 !important;
+  transition: all 0.3s ease;
+}
+
+.swiperButtonNext::after,
+.swiperButtonPrev::after {
+  font-size: 20px;
   font-weight: bold;
-  color: var(--swiper-theme-color);
 }
 
-.autoplay_progress svg {
-  --progress: 0;
-  position: absolute;
-  left: 0;
-  top: 0px;
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-  stroke-width: 4px;
-  stroke: var(--swiper-theme-color);
-  fill: none;
-  stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
-  stroke-dasharray: 125.6;
-  transform: rotate(-90deg);
+.swiperButtonNext:hover,
+.swiperButtonPrev:hover {
+  background-color: #a97142;
+}
+
+/* Pagination bullets */
+.customBullet {
+  border: 1px solid #a97142;
+}
+
+.customBulletActive {
+  box-shadow: 0 0 0 2px #f5ebdd;
+}
+
+@media (max-width: 768px) {
+  .swiper {
+    height: 300px; /* ارتفاع کمتر برای موبایل */
+  }
+}
+
+/* Navigation buttons */
+.swiperButtonNext,
+.swiperButtonPrev {
+  background-color: #8b2e2c;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: #faf9f5 !important;
+  transition: all 0.3s ease;
+}
+
+.swiperButtonNext::after,
+.swiperButtonPrev::after {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.swiperButtonNext:hover,
+.swiperButtonPrev:hover {
+  background-color: #a97142;
+}
+
+/* Pagination bullets */
+.customBullet {
+  border: 1px solid #a97142;
+}
+
+.customBulletActive {
+  box-shadow: 0 0 0 2px #f5ebdd;
 }
