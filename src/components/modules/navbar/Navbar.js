@@ -6,14 +6,27 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 
 function Navbar() {
+  const scrollToSection = (sectionId, offset = 0) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
   return (
     <>
       <header>
         <nav
-          className={`${styles.earthtone_primary_bg} main-nav navbar navbar-expand-lg hover-navbar fixed-top navbar-light-dark `}
+          className={`${styles.earthtone_primary_bg} main-nav navbar navbar-expand-lg hover-navbar fixed-top navbar-light-dark`}
         >
           <div className="container">
-            <a className="navbar-brand main-logo" href="#">
+            <Link className="navbar-brand main-logo" href="/">
               <img
                 className={`logo-dark ${styles.logo}`}
                 src="/images/logonav.png"
@@ -24,7 +37,7 @@ function Navbar() {
               >
                 آرامش
               </span>
-            </a>
+            </Link>
 
             <button
               className={`navbar-toggler ${styles.earthtone_border_light}`}
@@ -45,11 +58,7 @@ function Navbar() {
                 <li className="nav-item">
                   <Link
                     className={`nav-link ${styles.earthtone_light_text} ${styles.nav_link_home}`}
-                    href={"/"}
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    id="navbarDropdown1"
+                    href="/"
                   >
                     خانه
                   </Link>
@@ -66,7 +75,6 @@ function Navbar() {
                     سایر صفحات
                     <IoMdArrowDropdown className={styles.icon_down} />
                   </a>
-
                   <ul
                     className={`dropdown-menu dropdown-menu-lg-center ${styles.earthtone_dropdown}`}
                     aria-labelledby="navbarhome"
@@ -80,7 +88,6 @@ function Navbar() {
                         صفحات
                         <MdOutlineKeyboardArrowLeft />
                       </a>
-
                       <ul
                         className={`submenu dropdown-menu ${styles.earthtone_dropdown}`}
                         aria-labelledby="sub2"
@@ -94,7 +101,6 @@ function Navbar() {
                             موارد اصلی
                             <MdOutlineKeyboardArrowLeft />
                           </a>
-
                           <ul
                             className={`submenu dropdown-menu ${styles.earthtone_dropdown}`}
                             aria-labelledby="sub350"
@@ -191,7 +197,6 @@ function Navbar() {
                         </li>
                       </ul>
                     </li>
-
                     <li className="dropdown-submenu">
                       <a
                         id="sub22"
@@ -201,7 +206,6 @@ function Navbar() {
                         وبلاگ
                         <MdOutlineKeyboardArrowLeft />
                       </a>
-
                       <ul
                         className={`submenu dropdown-menu ${styles.earthtone_dropdown}`}
                         aria-labelledby="sub22"
@@ -248,7 +252,6 @@ function Navbar() {
                         </li>
                       </ul>
                     </li>
-
                     <li className="dropdown-submenu">
                       <a
                         id="sub221"
@@ -258,7 +261,6 @@ function Navbar() {
                         کاربران
                         <MdOutlineKeyboardArrowLeft />
                       </a>
-
                       <ul
                         className={`submenu dropdown-menu ${styles.earthtone_dropdown}`}
                         aria-labelledby="sub221"
@@ -292,52 +294,52 @@ function Navbar() {
                   </ul>
                 </li>
                 <li className="nav-item">
-                  <a
-                    className={`nav-link ${styles.earthtone_light_text}`}
-                    href="docs/svg-img/ionicons.html"
+                  <button
+                    className={`nav-link ${styles.earthtone_light_text} ${styles.nav_link_button}`}
+                    onClick={() => scrollToSection("about", 80)}
                   >
                     درباره ما
-                  </a>
+                  </button>
                 </li>
                 <li className="nav-item">
-                  <a
-                    className={`nav-link ${styles.earthtone_light_text}`}
-                    href="docs/svg-img/ionicons.html"
+                  <button
+                    className={`nav-link ${styles.earthtone_light_text} ${styles.nav_link_button}`}
+                    onClick={() => scrollToSection("services", 120)}
                   >
                     خدمات
-                  </a>
+                  </button>
                 </li>
                 <li className="nav-item">
-                  <a
-                    className={`nav-link ${styles.earthtone_light_text}`}
-                    href="docs/svg-img/scribble.html"
+                  <button
+                    className={`nav-link ${styles.earthtone_light_text} ${styles.nav_link_button}`}
+                    onClick={() => scrollToSection("statistic", 80)}
                   >
                     آمار
-                  </a>
+                  </button>
                 </li>
                 <li className="nav-item">
-                  <a
-                    className={`nav-link ${styles.earthtone_light_text}`}
-                    href="docs/svg-img/scribble.html"
+                  <button
+                    className={`nav-link ${styles.earthtone_light_text} ${styles.nav_link_button}`}
+                    onClick={() => scrollToSection("team", 80)}
                   >
                     تیم ما
-                  </a>
+                  </button>
                 </li>
                 <li className="nav-item">
-                  <a
-                    className={`nav-link ${styles.earthtone_light_text}`}
-                    href="docs/svg-img/scribble.html"
+                  <button
+                    className={`nav-link ${styles.earthtone_light_text} ${styles.nav_link_button}`}
+                    onClick={() => scrollToSection("latest", 80)}
                   >
                     وبلاگ
-                  </a>
+                  </button>
                 </li>
                 <li className="nav-item">
-                  <a
-                    className={`nav-link ${styles.earthtone_light_text}`}
-                    href="docs/svg-img/scribble.html"
+                  <button
+                    className={`nav-link ${styles.earthtone_light_text} ${styles.nav_link_button}`}
+                    onClick={() => scrollToSection("contact", 80)}
                   >
                     تماس با ما
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>

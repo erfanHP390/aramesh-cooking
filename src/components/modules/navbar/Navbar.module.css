@@ -1,47 +1,47 @@
 .earthtone_primary_bg {
-    background-color: #A97142 !important; 
+  background-color: #a97142 !important;
 }
 
 .earthtone_light_text {
-    color: #FAF9F5 !important; 
+  color: #faf9f5 !important;
 }
 
 .earthtone_hover_text {
-    color: #F5EBDD !important; 
+  color: #f5ebdd !important;
 }
 
 .earthtone_accent {
-    color: #8B2E2C !important; 
+  color: #8b2e2c !important;
 }
 
 .earthtone_secondary {
-    background-color: #607744 !important; 
+  background-color: #607744 !important;
 }
 
 .earthtone_border_light {
-    border-color: #FAF9F5 !important; 
+  border-color: #faf9f5 !important;
 }
 
 .earthtone_dropdown {
-    background-color: #F5EBDD !important; 
-    border-color: #8B2E2C !important; 
+  background-color: #f5ebdd !important;
+  border-color: #8b2e2c !important;
 }
 
 .earthtone_dropdown_item {
-    color: #8B2E2C !important; 
+  color: #8b2e2c !important;
 }
 
 .earthtone_dropdown_item:hover {
-    background-color: #607744 !important; 
-    color: #FAF9F5 !important; 
+  background-color: #607744 !important;
+  color: #faf9f5 !important;
 }
 
 .earthtone_toggler_icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23FAF9F5' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23FAF9F5' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
 .earthtone_light_text::before {
-  background-color: #8B2E2C !important;
+  background-color: #8b2e2c !important;
 }
 
 .earthtone_light_text::after {
@@ -50,7 +50,7 @@
 
 .earthtone_accent:hover {
   background-color: #607744 !important;
-  color: #FAF9F5 !important;
+  color: #faf9f5 !important;
 }
 
 .earthtone_light_text::after {
@@ -73,4 +73,84 @@
 
 .logo {
   min-height: 4.5rem !important;
+}
+
+.earthtone_primary_bg {
+  background-color: #A97142;
+}
+
+.earthtone_light_text {
+  color: #FAF9F5;
+}
+
+.earthtone_border_light {
+  border-color: #F5EBDD;
+}
+
+.earthtone_toggler_icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28245, 235, 221, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.earthtone_dropdown {
+  background-color: #8B2E2C;
+  border: 1px solid #607744;
+}
+
+.earthtone_accent {
+  color: #F5EBDD;
+}
+
+.earthtone_dropdown_item {
+  color: #FAF9F5;
+}
+
+.earthtone_dropdown_item:hover {
+  background-color: #607744;
+  color: #FAF9F5;
+}
+
+.earthtone_light_text {
+  background-color: transparent !important;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+.icon_down {
+  margin-right: 5px;
+}
+
+.nav_link_home {
+  padding: 0.5rem 1rem;
+}
+
+.nav_link_button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  text-align: right;
+  width: 100%;
+}
+
+.nav_link_button:hover {
+  color: #F5EBDD !important;
+}
+
+@media (max-width: 992px) {
+  .navbar-collapse {
+    padding: 1rem;
+    background-color: #A97142;
+  }
+  
+  .nav_link_button {
+    text-align: right;
+    padding: 0.75rem 1rem;
+  }
+  
+  .dropdown-menu {
+    margin-right: 1rem;
+  }
 }

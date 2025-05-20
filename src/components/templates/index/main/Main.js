@@ -10,13 +10,25 @@ import Contact from "../contact/Contact";
 function Main() {
   return (
     <>
-      <Banner />
-      <Profile />
-      <Services />
-      <Statistic />
-      <Team />
-      <Latest />
-      <Contact />
+      <Banner id="home" />
+      <div id="about">
+        <Profile />
+      </div>
+      <div id="services" style={{ position: 'relative', top: '-60px', paddingTop: '60px' }}>
+        <Services />
+      </div>
+      <div id="statistic" style={{ position: 'relative', top: '-60px', paddingTop: '60px' }}>
+        <Statistic />
+      </div>
+      <div id="team">
+        <Team />
+      </div>
+      <div id="latest">
+        <Latest />
+      </div>
+      <div id="contact">
+        <Contact />
+      </div>
     </>
   );
 }
