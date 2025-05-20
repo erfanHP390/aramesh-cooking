@@ -2,42 +2,74 @@ import React from "react";
 import styles from "./Team.module.css";
 
 function Team() {
+  const teamMembers = [
+    {
+      id: 1,
+      name: "شیرین احمدی",
+      role: "سرآشپز غذاهای ایرانی",
+      image: "https://images.unsplash.com/photo-1601315488950-3b5047998b38?w=500&auto=format&fit=crop&q=60",
+      specialties: ["قورمه سبزی", "فسنجان", "چلوکباب"]
+    },
+    {
+      id: 2,
+      name: "رضا محمدی",
+      role: "متخصص پیش غذاها",
+      image: "https://images.unsplash.com/photo-1581299894007-aaa50297cf16?w=500&auto=format&fit=crop&q=60",
+      specialties: ["میرزا قاسمی", "کشک بادمجان", "آش رشته"]
+    },
+    {
+      id: 3,
+      name: "نیما رضایی",
+      role: "متخصص دسرها",
+      image: "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=500&auto=format&fit=crop&q=60",
+      specialties: ["شیرینی پزی", "دسرهای سنتی", "بستنی خانگی"]
+    },
+    {
+      id: 4,
+      name: "مریم حسینی",
+      role: "سرآشپز بین المللی",
+      image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&auto=format&fit=crop&q=60",
+      specialties: ["غذاهای ایتالیایی", "سوشی", "استیک"]
+    }
+  ];
+
   return (
-    <>
-      <div
-        id="team"
-        className="section pt-6 pt-md-7 pb-4 pb-md-5 bg-light-dark"
-      >
-        <div className="container">
-          {/* section header */}
-          <header className="text-center mx-auto mb-5">
-            <h2 className="h3 fw-bold">تیم ما</h2>
-            <hr className="divider my-4 bg-warning border-warning" />
-          </header>
-          {/* end section header */}
-          {/* row */}
-          <div className="row justify-content-center">
-            <div className="col-8 col-sm-6 col-md-5 col-lg-3 px-lg-4">
+    <div id="team" className={`section pt-6 pt-md-7 pb-4 pb-md-5 ${styles.teamSection}`}>
+      <div className="container">
+        {/* section header */}
+        <header className="text-center mx-auto mb-5">
+          <h2 className={`h3 fw-bold ${styles.sectionTitle}`}>تیم آشپزی آرامش</h2>
+          <hr className={`divider my-4 ${styles.divider}`} />
+          <p className={`lead ${styles.sectionSubtitle}`}>
+            با تیم حرفه‌ای ما آشنا شوید که با عشق و مهارت برای شما می‌پزند
+          </p>
+        </header>
+        {/* end section header */}
+        
+        {/* row */}
+        <div className="row justify-content-center">
+          {teamMembers.map((member, index) => (
+            <div key={member.id} className="col-8 col-sm-6 col-md-5 col-lg-3 px-lg-4">
               {/* team block */}
               <div
-                className="team2 shadow-sm rounded-3 overflow-hidden bg-body mb-5"
+                className={`${styles.teamBlock} shadow-sm rounded-3 overflow-hidden mb-5`}
                 data-aos="fade-up"
+                data-aos-delay={index * 100}
               >
-                <div className="team-thumb bg-gradient-primary">
+                <div className={styles.teamThumb}>
                   <img
-                    src="src/img-min/team/avatar1.png"
+                    src={member.image}
                     className="img-fluid"
-                    alt="title image"
+                    alt={member.name}
                   />
                   <a
-                    className="view-profile"
+                    className={styles.viewProfile}
                     data-bs-toggle="tooltip"
                     data-bs-placement="top"
-                    aria-label="مشاهده پروفایل کاربری"
-                    title="مشاهده پروفایل کاربری"
+                    aria-label={`مشاهده پروفایل ${member.name}`}
+                    title={`مشاهده پروفایل ${member.name}`}
                     href="#"
                   >
-                    {/* <i class="fas fa-eye"></i> */}
                     <svg
                       className="bi bi-eye"
                       width="1.2rem"
@@ -59,14 +91,18 @@ function Team() {
                     </svg>
                   </a>
                 </div>
-                <div className="team-info">
-                  <div className="team-info-content">
-                    <p className="h5 mb-1">کامران محمدی</p>
-                    <span className="text-muted">بنیان گذار</span>
+                <div className={styles.teamInfo}>
+                  <div className={styles.teamInfoContent}>
+                    <p className={`h5 mb-1 ${styles.memberName}`}>{member.name}</p>
+                    <span className={styles.memberRole}>{member.role}</span>
+                    <ul className={styles.specialtiesList}>
+                      {member.specialties.map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
                     {/* social icon */}
-                    <div className="team-info-social mb-2">
-                      <a className="text-twitter" href="#">
-                        {/* <i class="fab fa-twitter text-twitter"></i> */}
+                    <div className={`${styles.teamInfoSocial} mb-2`}>
+                      <a className={styles.socialIcon} href="#">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="1rem"
@@ -76,11 +112,10 @@ function Team() {
                           <path
                             fill="currentColor"
                             d="M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z"
-                          ></path>
+                          />
                         </svg>
                       </a>
-                      <a className="text-facebook" href="#">
-                        {/* <i class="fab fa-facebook text-facebook"></i> */}
+                      <a className={styles.socialIcon} href="#">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="1rem"
@@ -90,11 +125,10 @@ function Team() {
                           <path
                             fill="currentColor"
                             d="M455.27,32H56.73A24.74,24.74,0,0,0,32,56.73V455.27A24.74,24.74,0,0,0,56.73,480H256V304H202.45V240H256V189c0-57.86,40.13-89.36,91.82-89.36,24.73,0,51.33,1.86,57.51,2.68v60.43H364.15c-28.12,0-33.48,13.3-33.48,32.9V240h67l-8.75,64H330.67V480h124.6A24.74,24.74,0,0,0,480,455.27V56.73A24.74,24.74,0,0,0,455.27,32Z"
-                          ></path>
+                          />
                         </svg>
                       </a>
-                      <a className="text-instagram" href="#">
-                        {/* <i class="fab fa-instagram text-instagram"></i> */}
+                      <a className={styles.socialIcon} href="#">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="1rem"
@@ -104,29 +138,15 @@ function Team() {
                           <path
                             fill="currentColor"
                             d="M349.33,69.33a93.62,93.62,0,0,1,93.34,93.34V349.33a93.62,93.62,0,0,1-93.34,93.34H162.67a93.62,93.62,0,0,1-93.34-93.34V162.67a93.62,93.62,0,0,1,93.34-93.34H349.33m0-37.33H162.67C90.8,32,32,90.8,32,162.67V349.33C32,421.2,90.8,480,162.67,480H349.33C421.2,480,480,421.2,480,349.33V162.67C480,90.8,421.2,32,349.33,32Z"
-                          ></path>
+                          />
                           <path
                             fill="currentColor"
                             d="M377.33,162.67a28,28,0,1,1,28-28A27.94,27.94,0,0,1,377.33,162.67Z"
-                          ></path>
+                          />
                           <path
                             fill="currentColor"
                             d="M256,181.33A74.67,74.67,0,1,1,181.33,256,74.75,74.75,0,0,1,256,181.33M256,144A112,112,0,1,0,368,256,112,112,0,0,0,256,144Z"
-                          ></path>
-                        </svg>
-                      </a>
-                      <a className="text-linkedin" href="#">
-                        {/* <i class="fab fa-linkedin text-linkedin"></i> */}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="1rem"
-                          height="1rem"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M444.17,32H70.28C49.85,32,32,46.7,32,66.89V441.61C32,461.91,49.85,480,70.28,480H444.06C464.6,480,480,461.79,480,441.61V66.89C480.12,46.7,464.6,32,444.17,32ZM170.87,405.43H106.69V205.88h64.18ZM141,175.54h-.46c-20.54,0-33.84-15.29-33.84-34.43,0-19.49,13.65-34.42,34.65-34.42s33.85,14.82,34.31,34.42C175.65,160.25,162.35,175.54,141,175.54ZM405.43,405.43H341.25V296.32c0-26.14-9.34-44-32.56-44-17.74,0-28.24,12-32.91,23.69-1.75,4.2-2.22,9.92-2.22,15.76V405.43H209.38V205.88h64.18v27.77c9.34-13.3,23.93-32.44,57.88-32.44,42.13,0,74,27.77,74,87.64Z"
-                          ></path>
+                          />
                         </svg>
                       </a>
                     </div>
@@ -135,416 +155,11 @@ function Team() {
               </div>
               {/* end team block */}
             </div>
-            <div className="col-8 col-sm-6 col-md-5 col-lg-3 px-lg-4">
-              {/* team block */}
-              <div
-                className="team2 shadow-sm rounded-3 overflow-hidden bg-body mb-5"
-                data-aos="fade-up"
-                data-aos-delay={100}
-              >
-                <div className="team-thumb bg-gradient-primary">
-                  <img
-                    src="src/img-min/team/avatar2.png"
-                    className="img-fluid"
-                    alt="title image"
-                  />
-                  <a
-                    className="view-profile"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="top"
-                    aria-label="مشاهده پروفایل کاربری"
-                    title="مشاهده پروفایل کاربری"
-                    href="#"
-                  >
-                    {/* <i class="fas fa-eye"></i> */}
-                    <svg
-                      className="bi bi-eye"
-                      width="1.2rem"
-                      height="1.2rem"
-                      viewBox="0 0 16 16"
-                      fill="currentColor"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.134 13.134 0 001.66 2.043C4.12 11.332 5.88 12.5 8 12.5c2.12 0 3.879-1.168 5.168-2.457A13.134 13.134 0 0014.828 8a13.133 13.133 0 00-1.66-2.043C11.879 4.668 10.119 3.5 8 3.5c-2.12 0-3.879 1.168-5.168 2.457A13.133 13.133 0 001.172 8z"
-                        clipRule="evenodd"
-                      />
-                      <path
-                        fillRule="evenodd"
-                        d="M8 5.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM4.5 8a3.5 3.5 0 117 0 3.5 3.5 0 01-7 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </a>
-                </div>
-                <div className="team-info">
-                  <div className="team-info-content">
-                    <p className="h5 mb-1">مهدی حسینی</p>
-                    <span className="text-muted">مدیر پروژه</span>
-                    {/* social icon */}
-                    <div className="team-info-social mb-2">
-                      <a
-                        className="text-twitter"
-                        aria-label="Twitter link"
-                        href="#"
-                      >
-                        {/* <i class="fab fa-twitter text-twitter"></i> */}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="1rem"
-                          height="1rem"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z"
-                          ></path>
-                        </svg>
-                      </a>
-                      <a
-                        className="text-facebook"
-                        aria-label="Facebook link"
-                        href="#"
-                      >
-                        {/* <i class="fab fa-facebook text-facebook"></i> */}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="1rem"
-                          height="1rem"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M455.27,32H56.73A24.74,24.74,0,0,0,32,56.73V455.27A24.74,24.74,0,0,0,56.73,480H256V304H202.45V240H256V189c0-57.86,40.13-89.36,91.82-89.36,24.73,0,51.33,1.86,57.51,2.68v60.43H364.15c-28.12,0-33.48,13.3-33.48,32.9V240h67l-8.75,64H330.67V480h124.6A24.74,24.74,0,0,0,480,455.27V56.73A24.74,24.74,0,0,0,455.27,32Z"
-                          ></path>
-                        </svg>
-                      </a>
-                      <a
-                        className="text-instagram"
-                        aria-label="Instagram link"
-                        href="#"
-                      >
-                        {/* <i class="fab fa-instagram text-instagram"></i> */}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="1rem"
-                          height="1rem"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M349.33,69.33a93.62,93.62,0,0,1,93.34,93.34V349.33a93.62,93.62,0,0,1-93.34,93.34H162.67a93.62,93.62,0,0,1-93.34-93.34V162.67a93.62,93.62,0,0,1,93.34-93.34H349.33m0-37.33H162.67C90.8,32,32,90.8,32,162.67V349.33C32,421.2,90.8,480,162.67,480H349.33C421.2,480,480,421.2,480,349.33V162.67C480,90.8,421.2,32,349.33,32Z"
-                          ></path>
-                          <path
-                            fill="currentColor"
-                            d="M377.33,162.67a28,28,0,1,1,28-28A27.94,27.94,0,0,1,377.33,162.67Z"
-                          ></path>
-                          <path
-                            fill="currentColor"
-                            d="M256,181.33A74.67,74.67,0,1,1,181.33,256,74.75,74.75,0,0,1,256,181.33M256,144A112,112,0,1,0,368,256,112,112,0,0,0,256,144Z"
-                          ></path>
-                        </svg>
-                      </a>
-                      <a
-                        className="text-linkedin"
-                        aria-label="Linkedin link"
-                        href="#"
-                      >
-                        {/* <i class="fab fa-linkedin text-linkedin"></i> */}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="1rem"
-                          height="1rem"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M444.17,32H70.28C49.85,32,32,46.7,32,66.89V441.61C32,461.91,49.85,480,70.28,480H444.06C464.6,480,480,461.79,480,441.61V66.89C480.12,46.7,464.6,32,444.17,32ZM170.87,405.43H106.69V205.88h64.18ZM141,175.54h-.46c-20.54,0-33.84-15.29-33.84-34.43,0-19.49,13.65-34.42,34.65-34.42s33.85,14.82,34.31,34.42C175.65,160.25,162.35,175.54,141,175.54ZM405.43,405.43H341.25V296.32c0-26.14-9.34-44-32.56-44-17.74,0-28.24,12-32.91,23.69-1.75,4.2-2.22,9.92-2.22,15.76V405.43H209.38V205.88h64.18v27.77c9.34-13.3,23.93-32.44,57.88-32.44,42.13,0,74,27.77,74,87.64Z"
-                          ></path>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* end team block */}
-            </div>
-            <div className="col-8 col-sm-6 col-md-5 col-lg-3 px-lg-4">
-              {/* team block */}
-              <div
-                className="team2 shadow-sm rounded-3 overflow-hidden bg-body mb-5"
-                data-aos="fade-up"
-                data-aos-delay={200}
-              >
-                <div className="team-thumb bg-gradient-primary">
-                  <img
-                    src="src/img-min/team/avatar3.png"
-                    className="img-fluid"
-                    alt="title image"
-                  />
-                  <a
-                    className="view-profile"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="top"
-                    aria-label="مشاهده پروفایل کاربری"
-                    title="مشاهده پروفایل کاربری"
-                    href="#"
-                  >
-                    {/* <i class="fas fa-eye"></i> */}
-                    <svg
-                      className="bi bi-eye"
-                      width="1.2rem"
-                      height="1.2rem"
-                      viewBox="0 0 16 16"
-                      fill="currentColor"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.134 13.134 0 001.66 2.043C4.12 11.332 5.88 12.5 8 12.5c2.12 0 3.879-1.168 5.168-2.457A13.134 13.134 0 0014.828 8a13.133 13.133 0 00-1.66-2.043C11.879 4.668 10.119 3.5 8 3.5c-2.12 0-3.879 1.168-5.168 2.457A13.133 13.133 0 001.172 8z"
-                        clipRule="evenodd"
-                      />
-                      <path
-                        fillRule="evenodd"
-                        d="M8 5.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM4.5 8a3.5 3.5 0 117 0 3.5 3.5 0 01-7 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </a>
-                </div>
-                <div className="team-info">
-                  <div className="team-info-content">
-                    <p className="h5 mb-1">آرش حسینی</p>
-                    <span className="text-muted">بازاریاب</span>
-                    {/* social icon */}
-                    <div className="team-info-social mb-2">
-                      <a
-                        className="text-twitter"
-                        aria-label="Twitter link"
-                        href="#"
-                      >
-                        {/* <i class="fab fa-twitter text-twitter"></i> */}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="1rem"
-                          height="1rem"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z"
-                          ></path>
-                        </svg>
-                      </a>
-                      <a
-                        className="text-facebook"
-                        aria-label="Facebook link"
-                        href="#"
-                      >
-                        {/* <i class="fab fa-facebook text-facebook"></i> */}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="1rem"
-                          height="1rem"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M455.27,32H56.73A24.74,24.74,0,0,0,32,56.73V455.27A24.74,24.74,0,0,0,56.73,480H256V304H202.45V240H256V189c0-57.86,40.13-89.36,91.82-89.36,24.73,0,51.33,1.86,57.51,2.68v60.43H364.15c-28.12,0-33.48,13.3-33.48,32.9V240h67l-8.75,64H330.67V480h124.6A24.74,24.74,0,0,0,480,455.27V56.73A24.74,24.74,0,0,0,455.27,32Z"
-                          ></path>
-                        </svg>
-                      </a>
-                      <a
-                        className="text-instagram"
-                        aria-label="Instagram link"
-                        href="#"
-                      >
-                        {/* <i class="fab fa-instagram text-instagram"></i> */}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="1rem"
-                          height="1rem"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M349.33,69.33a93.62,93.62,0,0,1,93.34,93.34V349.33a93.62,93.62,0,0,1-93.34,93.34H162.67a93.62,93.62,0,0,1-93.34-93.34V162.67a93.62,93.62,0,0,1,93.34-93.34H349.33m0-37.33H162.67C90.8,32,32,90.8,32,162.67V349.33C32,421.2,90.8,480,162.67,480H349.33C421.2,480,480,421.2,480,349.33V162.67C480,90.8,421.2,32,349.33,32Z"
-                          ></path>
-                          <path
-                            fill="currentColor"
-                            d="M377.33,162.67a28,28,0,1,1,28-28A27.94,27.94,0,0,1,377.33,162.67Z"
-                          ></path>
-                          <path
-                            fill="currentColor"
-                            d="M256,181.33A74.67,74.67,0,1,1,181.33,256,74.75,74.75,0,0,1,256,181.33M256,144A112,112,0,1,0,368,256,112,112,0,0,0,256,144Z"
-                          ></path>
-                        </svg>
-                      </a>
-                      <a
-                        className="text-linkedin"
-                        aria-label="Linkedin link"
-                        href="#"
-                      >
-                        {/* <i class="fab fa-linkedin text-linkedin"></i> */}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="1rem"
-                          height="1rem"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M444.17,32H70.28C49.85,32,32,46.7,32,66.89V441.61C32,461.91,49.85,480,70.28,480H444.06C464.6,480,480,461.79,480,441.61V66.89C480.12,46.7,464.6,32,444.17,32ZM170.87,405.43H106.69V205.88h64.18ZM141,175.54h-.46c-20.54,0-33.84-15.29-33.84-34.43,0-19.49,13.65-34.42,34.65-34.42s33.85,14.82,34.31,34.42C175.65,160.25,162.35,175.54,141,175.54ZM405.43,405.43H341.25V296.32c0-26.14-9.34-44-32.56-44-17.74,0-28.24,12-32.91,23.69-1.75,4.2-2.22,9.92-2.22,15.76V405.43H209.38V205.88h64.18v27.77c9.34-13.3,23.93-32.44,57.88-32.44,42.13,0,74,27.77,74,87.64Z"
-                          ></path>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* end team block */}
-            </div>
-            <div className="col-8 col-sm-6 col-md-5 col-lg-3 px-lg-4">
-              {/* team block */}
-              <div
-                className="team2 shadow-sm rounded-3 overflow-hidden bg-body mb-5"
-                data-aos="fade-up"
-                data-aos-delay={300}
-              >
-                <div className="team-thumb bg-gradient-primary">
-                  <img
-                    src="src/img-min/team/avatar4.png"
-                    className="img-fluid"
-                    alt="title image"
-                  />
-                  <a
-                    className="view-profile"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="top"
-                    aria-label="مشاهده پروفایل کاربری"
-                    title="مشاهده پروفایل کاربری"
-                    href="#"
-                  >
-                    {/* <i class="fas fa-eye"></i> */}
-                    <svg
-                      className="bi bi-eye"
-                      width="1.2rem"
-                      height="1.2rem"
-                      viewBox="0 0 16 16"
-                      fill="currentColor"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.134 13.134 0 001.66 2.043C4.12 11.332 5.88 12.5 8 12.5c2.12 0 3.879-1.168 5.168-2.457A13.134 13.134 0 0014.828 8a13.133 13.133 0 00-1.66-2.043C11.879 4.668 10.119 3.5 8 3.5c-2.12 0-3.879 1.168-5.168 2.457A13.133 13.133 0 001.172 8z"
-                        clipRule="evenodd"
-                      />
-                      <path
-                        fillRule="evenodd"
-                        d="M8 5.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM4.5 8a3.5 3.5 0 117 0 3.5 3.5 0 01-7 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </a>
-                </div>
-                <div className="team-info">
-                  <div className="team-info-content">
-                    <p className="h5 mb-1">دانیال حسینی</p>
-                    <span className="text-muted">برنامه نویس ارشد</span>
-                    {/* social icon */}
-                    <div className="team-info-social mb-2">
-                      <a
-                        className="text-twitter"
-                        aria-label="Twitter link"
-                        href="#"
-                      >
-                        {/* <i class="fab fa-twitter text-twitter"></i> */}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="1rem"
-                          height="1rem"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z"
-                          ></path>
-                        </svg>
-                      </a>
-                      <a
-                        className="text-facebook"
-                        aria-label="Facebook link"
-                        href="#"
-                      >
-                        {/* <i class="fab fa-facebook text-facebook"></i> */}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="1rem"
-                          height="1rem"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M455.27,32H56.73A24.74,24.74,0,0,0,32,56.73V455.27A24.74,24.74,0,0,0,56.73,480H256V304H202.45V240H256V189c0-57.86,40.13-89.36,91.82-89.36,24.73,0,51.33,1.86,57.51,2.68v60.43H364.15c-28.12,0-33.48,13.3-33.48,32.9V240h67l-8.75,64H330.67V480h124.6A24.74,24.74,0,0,0,480,455.27V56.73A24.74,24.74,0,0,0,455.27,32Z"
-                          ></path>
-                        </svg>
-                      </a>
-                      <a
-                        className="text-instagram"
-                        aria-label="Instagram link"
-                        href="#"
-                      >
-                        {/* <i class="fab fa-instagram text-instagram"></i> */}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="1rem"
-                          height="1rem"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M349.33,69.33a93.62,93.62,0,0,1,93.34,93.34V349.33a93.62,93.62,0,0,1-93.34,93.34H162.67a93.62,93.62,0,0,1-93.34-93.34V162.67a93.62,93.62,0,0,1,93.34-93.34H349.33m0-37.33H162.67C90.8,32,32,90.8,32,162.67V349.33C32,421.2,90.8,480,162.67,480H349.33C421.2,480,480,421.2,480,349.33V162.67C480,90.8,421.2,32,349.33,32Z"
-                          ></path>
-                          <path
-                            fill="currentColor"
-                            d="M377.33,162.67a28,28,0,1,1,28-28A27.94,27.94,0,0,1,377.33,162.67Z"
-                          ></path>
-                          <path
-                            fill="currentColor"
-                            d="M256,181.33A74.67,74.67,0,1,1,181.33,256,74.75,74.75,0,0,1,256,181.33M256,144A112,112,0,1,0,368,256,112,112,0,0,0,256,144Z"
-                          ></path>
-                        </svg>
-                      </a>
-                      <a
-                        className="text-linkedin"
-                        aria-label="Linkedin link"
-                        href="#"
-                      >
-                        {/* <i class="fab fa-linkedin text-linkedin"></i> */}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="1rem"
-                          height="1rem"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M444.17,32H70.28C49.85,32,32,46.7,32,66.89V441.61C32,461.91,49.85,480,70.28,480H444.06C464.6,480,480,461.79,480,441.61V66.89C480.12,46.7,464.6,32,444.17,32ZM170.87,405.43H106.69V205.88h64.18ZM141,175.54h-.46c-20.54,0-33.84-15.29-33.84-34.43,0-19.49,13.65-34.42,34.65-34.42s33.85,14.82,34.31,34.42C175.65,160.25,162.35,175.54,141,175.54ZM405.43,405.43H341.25V296.32c0-26.14-9.34-44-32.56-44-17.74,0-28.24,12-32.91,23.69-1.75,4.2-2.22,9.92-2.22,15.76V405.43H209.38V205.88h64.18v27.77c9.34-13.3,23.93-32.44,57.88-32.44,42.13,0,74,27.77,74,87.64Z"
-                          ></path>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* end team block */}
-            </div>
-          </div>
-          {/* end row */}
+          ))}
         </div>
+        {/* end row */}
       </div>
-    </>
+    </div>
   );
 }
 
