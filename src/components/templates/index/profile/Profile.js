@@ -13,7 +13,7 @@ function Profile() {
                 <div className="px-5 px-md-6 mb-5 mb-lg-0">
                   <img
                     className="img-fluid"
-                    src="src/img-min/svg/presentation2.svg"
+                    src="/images/our-services-home.webp"
                     alt="company profile"
                   />
                 </div>
@@ -22,15 +22,17 @@ function Profile() {
             <div className="col-lg-6" data-aos="flip-up">
               <div className="pt-0">
                 <h2 className="fw-bold mb-3">
-                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+                  گروه آشپزی آرامش | تخصص در طعم‌های اصیل
                 </h2>
                 <p className="lead mb-5">
-                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
-                  مجله در ستون و سطرآنچنان که لازم است .
+                  گروه تخصصی آشپزی آرامش با سال‌ها تجربه در زمینه آموزش آشپزی
+                  حرفه‌ای و پذیرش سفارشات مجالس، آماده ارائه خدمات با کیفیت به
+                  شما عزیزان می‌باشد. ما با استفاده از بهترین مواد اولیه و تیم
+                  حرفه‌ای، هر نوع سفارش غذایی از مهمانی‌های کوچک تا مجالس بزرگ
+                  را پذیرفته و با بالاترین استانداردها اجرا می‌کنیم.
                 </p>
-                <a href="#services" className="btn btn-warning">
-                  خدمات ما
+                <a href="#services" className={`${styles.btn_services} btn btn-warning`}>
+                  مشاهده خدمات ما
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={16}
