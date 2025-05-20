@@ -1,89 +1,153 @@
-import React from 'react'
+"use client";
+import React, { useEffect } from "react";
+import styles from "./Statistic.module.css";
 
-function Statistic() {
+const Statistic = () => {
+  useEffect(() => {
+    const progressTrigger = document.querySelector(
+      `.${styles.progressVerticalTrigger}`
+    );
+    const progressBars = document.querySelectorAll(
+      `.${styles.progressVerticalLine}`
+    );
+
+    const animateProgressBars = () => {
+      progressBars.forEach((bar) => {
+        const percent = bar.getAttribute("data-percent");
+        bar.style.height = `${percent}%`;
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateProgressBars();
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    if (progressTrigger) {
+      observer.observe(progressTrigger);
+    }
+
+    return () => {
+      if (progressTrigger) {
+        observer.unobserve(progressTrigger);
+      }
+    };
+  }, []);
+
   return (
-    <>
-     <div id="statistic" className="section py-6 py-md-7 bg-body">
-  <div className="container">
-    <header className="text-center mx-auto mb-5">
-      <h2 className="h3 fw-bold">
-        {" "}
-        آمار <span className="fw-light">ما</span>
-      </h2>
-      <hr className="divider my-4 bg-warning border-warning" />
-      <p className="lead text-muted">
-        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
-      </p>
-    </header>
-    <div className="row">
-      <div className="col-md-6 progress-vertical-trigger">
-        <div className="row mb-5 mb-lg-0">
-          {/* Vertical Progress Bar */}
-          <div className="col-3 text-center">
-            <div className="progress-vertical rounded mb-3">
-              <div className="progress-vertical-line" data-percent={73} />
+    <div className={`${styles.space_elem}  container`}>
+      <header className={`text-center mx-auto mb-5 ${styles.header}`}>
+        <h2 className="h3 fw-bold">
+          آمار <span className="fw-light">گروه آشپزی آرامش</span>
+        </h2>
+        <hr className={`divider my-4 ${styles.divider}`} />
+        <p className={`lead ${styles.subtitle}`}>
+          آمار و ارقامی از فعالیت‌ها و موفقیت‌های گروه تخصصی آشپزی آرامش
+        </p>
+      </header>
+      <div className="row">
+        <div className={`col-md-6 ${styles.progressVerticalTrigger}`}>
+          <div className="row mb-5 mb-lg-0">
+            {/* Vertical Progress Bar */}
+            <div className="col-3 text-center">
+              <div className={`${styles.progressVertical} rounded mb-3`}>
+                <div
+                  className={styles.progressVerticalLine}
+                  data-percent={95}
+                  style={{
+                    height: "0%",
+                    backgroundColor: "#8B2E2C",
+                    transition: "height 1.5s ease-in-out",
+                  }}
+                />
+              </div>
+              <p className="h6">رضایت مشتریان</p>
             </div>
-            <p className="h6">UI/UX</p>
-          </div>
-          {/* Vertical Progress Bar */}
-          <div className="col-3 text-center">
-            <div className="progress-vertical rounded mb-3">
-              <div className="progress-vertical-line" data-percent={53} />
+            {/* Vertical Progress Bar */}
+            <div className="col-3 text-center">
+              <div className={`${styles.progressVertical} rounded mb-3`}>
+                <div
+                  className={styles.progressVerticalLine}
+                  data-percent={87}
+                  style={{
+                    height: "0%",
+                    backgroundColor: "#607744",
+                    transition: "height 1.5s ease-in-out 0.2s",
+                  }}
+                />
+              </div>
+              <p className="h6">تعداد دوره‌ها</p>
             </div>
-            <p className="h6">SEO</p>
-          </div>
-          {/* Vertical Progress Bar */}
-          <div className="col-3 text-center">
-            <div className="progress-vertical rounded mb-3">
-              <div className="progress-vertical-line" data-percent={83} />
+            {/* Vertical Progress Bar */}
+            <div className="col-3 text-center">
+              <div className={`${styles.progressVertical} rounded mb-3`}>
+                <div
+                  className={styles.progressVerticalLine}
+                  data-percent={92}
+                  style={{
+                    height: "0%",
+                    backgroundColor: "#A97142",
+                    transition: "height 1.5s ease-in-out 0.4s",
+                  }}
+                />
+              </div>
+              <p className="h6">میزان موفقیت</p>
             </div>
-            <p className="h6">Web</p>
-          </div>
-          {/* Vertical Progress Bar */}
-          <div className="col-3 text-center">
-            <div className="progress-vertical rounded mb-3">
-              <div className="progress-vertical-line" data-percent={93} />
+            {/* Vertical Progress Bar */}
+            <div className="col-3 text-center">
+              <div className={`${styles.progressVertical} rounded mb-3`}>
+                <div
+                  className={styles.progressVerticalLine}
+                  data-percent={78}
+                  style={{
+                    height: "0%",
+                    backgroundColor: "#ffcc43",
+                    transition: "height 1.5s ease-in-out 0.6s",
+                  }}
+                />
+              </div>
+              <p className="h6">تعداد مشتریان</p>
             </div>
-            <p className="h6">Apps</p>
           </div>
         </div>
-      </div>
-      <div className="col-md-5 ms-md-auto">
-        <p className="lead mb-4">
-          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
-          از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
-          سطرآنچنان که لازم است .
-        </p>
-        <a href="#" className="btn btn-warning hover-button-up">
-          اطلاعات بیشتر
-          <svg
-            className="bi bi-graph-up ms-2"
-            width="1rem"
-            height="1rem"
-            viewBox="0 0 16 16"
-            fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M0 0h1v16H0V0zm1 15h15v1H1v-1z" />
-            <path
-              fillRule="evenodd"
-              d="M14.39 4.312L10.041 9.75 7 6.707l-3.646 3.647-.708-.708L7 5.293 9.959 8.25l3.65-4.563.781.624z"
-              clipRule="evenodd"
-            />
-            <path
-              fillRule="evenodd"
-              d="M10 3.5a.5.5 0 01.5-.5h4a.5.5 0 01.5.5v4a.5.5 0 01-1 0V4h-3.5a.5.5 0 01-.5-.5z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </a>
+        <div className="col-md-5 ms-md-auto">
+          <p className={`lead mb-4 ${styles.description}`}>
+            گروه آشپزی آرامش با سال‌ها تجربه در زمینه آموزش و پذیرش سفارشات
+            مجالس، توانسته به موفقیت‌های چشمگیری در صنعت آشپزی دست یابد. ما با
+            استفاده از بهترین مواد اولیه و تیم حرفه‌ای، همواره در تلاش برای
+            ارائه خدمات باکیفیت هستیم.
+          </p>
+          <a href="#" className={`btn btn-warning ${styles.btn_services}`}>
+            مشاهده جزئیات
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1rem"
+              height="1rem"
+              fill="currentColor"
+              className={`bi bi-chevron-double-left ms-2 ${styles.icon}`}
+              viewBox="0 0 16 16"
+            >
+              <path
+                fillRule="evenodd"
+                d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+              />
+              <path
+                fillRule="evenodd"
+                d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+              />
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</div>
- 
-    </>
-  )
-}
+  );
+};
 
-export default Statistic
+export default Statistic;
