@@ -46,6 +46,81 @@
 .font-vazir-fd-bold {
   font-family: 'Vazirmatnfd_bold' !important;
 }
+
+body {
+  background-color: #F5EBDD !important; 
+  color: #333333 !important; 
+  --link-color: #8B2E2C; 
+  --link-hover-color: #A97142; 
+  --secondary-color: #607744;
+  --text-on-dark: #FAF9F5;
+  --border-color: #A97142; 
+  --box-shadow: 0 2px 8px rgba(169, 113, 66, 0.1); 
+  font-family:    'Vazirmatn' !important;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--link-color) !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #F5EBDD!important;
+}
+
+button, .button {
+  background-color: var(--link-color) !important;
+  color: var(--text-on-dark) !important;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, .button:hover {
+  background-color: var(--link-hover-color)  !important;
+}
+
+.secondary-button {
+  background-color: var(--secondary-color) !important;
+  color: var(--text-on-dark) !important;
+}
+
+.secondary-button:hover {
+  background-color: #4e6536 !important; 
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: var(--border-color) !important;
+  opacity: 0.2;
+  margin: 1.5rem 0;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow) !important;
+  border: 1px solid rgba(169, 113, 66, 0.1);
+  padding: 1.5rem;
+}
+
+body::-webkit-scrollbar {
+  background-color: #A97142 !important;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #8B2E2C !important;
+    width: 10px !important;
+    border-radius: 10% !important;
+}
+
 /* ================================================================ */
 *,
 *::before,
