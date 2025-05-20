@@ -1,0 +1,162 @@
+.footer {
+  background-color: #a97142;
+  color: #faf9f5;
+}
+
+.widget {
+  margin-bottom: 2rem;
+}
+
+.widgetTitle {
+  color: #f5ebdd;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.widgetTitle::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  background-color: #8b2e2c;
+}
+
+.widgetBody {
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.contactInfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-left: 0.5rem;
+  color: #8b2e2c;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.linkList li {
+  margin-bottom: 0.75rem;
+}
+
+.linkList a {
+  color: #f5ebdd !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+  padding-right: 1rem;
+  transition: all 0.5s ease;
+}
+
+.linkList a::before {
+  color: #f5ebdd !important;
+}
+
+.linkList a:hover {
+  color: #8b2e2c !important;
+  margin-right: 0.5rem !important;
+}
+
+.linkList a::before {
+  content: '→';
+  position: absolute;
+  right: 0;
+  color: #8b2e2c;
+}
+
+.newsletterForm {
+  margin-bottom: 1.5rem;
+}
+
+.newsletterInput {
+  background-color: rgba(245, 235, 221, 0.1);
+  border: 1px solid #f5ebdd;
+  color: #f5ebdd !important;
+}
+
+.newsletterInput::placeholder {
+  color: #f5ebdd !important;
+}
+
+.newsletterInput:focus {
+  border-color: #f5ebdd;
+  box-shadow: 0 0 0 0.25rem rgba(139, 46, 44, 0.25);
+}
+
+.newsletterButton {
+  background-color: #8b2e2c;
+  color: #faf9f5;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.newsletterButton:hover {
+  background-color: #607744 !important;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialLinks a {
+  color: #faf9f5;
+  background-color: rgba(139, 46, 44, 0.3);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.socialLinks a:hover {
+  background-color: #8b2e2c;
+  transform: translateY(-3px);
+}
+
+.copyright {
+  background-color: rgba(96, 119, 68, 0.3);
+  color: #f5ebdd;
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(245, 235, 221, 0.2);
+}
+
+@media (max-width: 992px) {
+  .widget {
+    margin-bottom: 2.5rem;
+  }
+
+  .linkList {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .footerContent {
+    padding: 2rem 0;
+  }
+
+  .widgetTitle {
+    font-size: 1.1rem;
+  }
+}
