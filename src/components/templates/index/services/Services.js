@@ -4,46 +4,43 @@ import styles from "./Services.module.css";
 function Services() {
   return (
     <>
-      <div
-        id="services"
-        className="section bg-gradient-primary overflow-hidden"
-      >
+      <div id="services" className="section  overflow-hidden">
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-6 bg-light-dark">
               <div className="px-4 py-5 px-lg-7 py-lg-7" data-aos="fade-right">
-                <h2 className="fw-bold mb-3">خدمات ما</h2>
+                <h2 className="fw-bold mb-3">خدمات گروه آشپزی آرامش</h2>
                 <p className="lead mb-5">
-                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
-                  مجله در ستون و سطرآنچنان که لازم است .<br /> لورم ایپسوم متن
-                  ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
-                  طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
-                  سطرآنچنان که لازم است .
+                  گروه تخصصی آشپزی آرامش با تیمی از سرآشپزان حرفه‌ای آماده ارائه
+                  خدمات در زمینه‌های:
+                  <br />
+                  - پذیرش سفارشات مجالس و مهمانی‌ها
+                  <br />
+                  - آموزش آشپزی حرفه‌ای و خانگی
+                  <br />
+                  - طراحی منوی اختصاصی برای رستوران‌ها
+                  <br />- مشاوره تغذیه و برنامه‌ریزی غذایی
                 </p>
-                <a href="#" className="btn btn-primary">
-                  اطلاعات بیشتر
+                <a href="#" className={`${styles.btn_services} btn btn-primary`}>
+                  مشاهده منوی کامل
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={16}
                     height={16}
                     fill="currentColor"
-                    className="bi bi-chevron-double-left"
+                    className="bi bi-utensils"
                     viewBox="0 0 16 16"
                   >
-                    <path
-                      fillRule="evenodd"
-                      d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
-                    />
-                    <path
-                      fillRule="evenodd"
-                      d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
-                    />
+                    <path d="M15.5 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H14v10a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V6H8.5v10a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V6H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 3h15Z" />
+                    <path d="M3 0h1.5v1H3a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1.5v1H3a1 1 0 0 0-1 1v1.5a1 1 0 0 0 1 1h1.5v1H3a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2Zm12 0h-1.5v1H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-1.5v1H15a1 1 0 0 1 1 1v1.5a1 1 0 0 1-1 1h-1.5v1H15a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Z" />
                   </svg>
                 </a>
               </div>
             </div>
-            <div className="col-md-6 text-light position-relative overflow-hidden">
+            <div
+              className="col-md-6 text-light position-relative overflow-hidden"
+              style={{ backgroundColor: "#8B2E2C" }}
+            >
               {/* scribble */}
               <figure className="scribble scale-3 opacity-10 bottom-0 end-0 z-index-n1">
                 <svg
@@ -115,35 +112,27 @@ function Services() {
                     <div className="my-3">
                       <div className="d-block d-sm-flex rounded ps-3 pe-1 ps-md-1 pe-md-1 py-2">
                         <div className="d-block d-sm-flex align-items-center text-center mb-4 mb-sm-0 me-sm-4">
-                          {/* <i class="far fa-user me-3 fa-2x text-primary"></i> */}
                           <svg
-                            className="bi bi-graph-up text-warning"
+                            className="bi bi-egg-fried text-warning"
                             width="4rem"
                             height="4rem"
                             viewBox="0 0 16 16"
                             fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg"
                           >
-                            <path d="M0 0h1v16H0V0zm1 15h15v1H1v-1z" />
                             <path
                               fillRule="evenodd"
-                              d="M14.39 4.312L10.041 9.75 7 6.707l-3.646 3.647-.708-.708L7 5.293 9.959 8.25l3.65-4.563.781.624z"
-                              clipRule="evenodd"
+                              d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
                             />
-                            <path
-                              fillRule="evenodd"
-                              d="M10 3.5a.5.5 0 01.5-.5h4a.5.5 0 01.5.5v4a.5.5 0 01-1 0V4h-3.5a.5.5 0 01-.5-.5z"
-                              clipRule="evenodd"
-                            />
+                            <path d="M13.997 5.17a5 5 0 0 0-8.101-4.09A5 5 0 0 0 1.28 9.342a5 5 0 0 0 8.336 5.109 3.5 3.5 0 0 0 5.201-4.065 3.001 3.001 0 0 0-.822-5.216zm-1-.034a1 1 0 0 0 .668.977 2.001 2.001 0 0 1 .547 3.478 1 1 0 0 0-.341 1.113 2.5 2.5 0 0 1-3.715 2.905 1 1 0 0 0-1.262.152 4 4 0 0 1-6.67-4.087 1 1 0 0 0-.2-1 4 4 0 0 1 3.693-6.61 1 1 0 0 0 .8-.2 4 4 0 0 1 6.48 3.273z" />
                           </svg>
                         </div>
                         <div className="text-start">
-                          <h3 className="h5 text-white">عنوان یک بخش مهم</h3>
+                          <h3 className="h5 text-white">منوی اختصاصی مجالس</h3>
                           <p className="text-light">
-                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از
-                            صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
-                            متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
-                            است .
+                            طراحی منوی اختصاصی برای مراسم شما با توجه به سلیقه و
+                            بودجه، استفاده از بهترین مواد اولیه و اجرای حرفه‌ای
+                            توسط سرآشپزان با تجربه
                           </p>
                         </div>
                       </div>
@@ -157,34 +146,25 @@ function Services() {
                     <div className="my-3">
                       <div className="d-block d-sm-flex rounded ps-3 pe-1 ps-md-1 pe-md-1 py-2">
                         <div className="d-block d-sm-flex align-items-center text-center mb-4 mb-sm-0 me-sm-4">
-                          {/* <i class="far fa-thumbs-up me-3 fa-2x text-primary"></i> */}
                           <svg
-                            className="bi bi-pie-chart text-warning"
+                            className="bi bi-mortarboard text-warning"
                             width="4rem"
                             height="4rem"
                             viewBox="0 0 16 16"
                             fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg"
                           >
-                            <path
-                              fillRule="evenodd"
-                              d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z"
-                              clipRule="evenodd"
-                            />
-                            <path
-                              fillRule="evenodd"
-                              d="M7.5 7.793V1h1v6.5H15v1H8.207l-4.853 4.854-.708-.708L7.5 7.793z"
-                              clipRule="evenodd"
-                            />
+                            <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5Z" />
+                            <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032Z" />
                           </svg>
                         </div>
                         <div className="text-start">
-                          <h3 className="h5 text-white">عنوان یک بخش مهم</h3>
+                          <h3 className="h5 text-white">
+                            دوره‌های آموزش آشپزی
+                          </h3>
                           <p className="text-light">
-                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از
-                            صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
-                            متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
-                            است .
+                            برگزاری دوره‌های تخصصی آشپزی ایرانی و بین‌المللی
+                            برای علاقه‌مندان و هنرجویان توسط اساتید مجرب
                           </p>
                         </div>
                       </div>
@@ -194,34 +174,22 @@ function Services() {
                     <div className="my-3">
                       <div className="d-block d-sm-flex rounded ps-3 pe-1 ps-md-1 pe-md-1 py-2">
                         <div className="d-block d-sm-flex align-items-center text-center mb-4 mb-sm-0 me-sm-4">
-                          {/* <i class="far fa-file-archive me-3 fa-2x text-primary"></i> */}
                           <svg
-                            className="bi bi-file-richtext text-warning"
+                            className="bi bi-people text-warning"
                             width="4rem"
                             height="4rem"
                             viewBox="0 0 16 16"
                             fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg"
                           >
-                            <path
-                              fillRule="evenodd"
-                              d="M4 1h8a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V3a2 2 0 012-2zm0 1a1 1 0 00-1 1v10a1 1 0 001 1h8a1 1 0 001-1V3a1 1 0 00-1-1H4z"
-                              clipRule="evenodd"
-                            />
-                            <path
-                              fillRule="evenodd"
-                              d="M4.5 11.5A.5.5 0 015 11h3a.5.5 0 010 1H5a.5.5 0 01-.5-.5zm0-2A.5.5 0 015 9h6a.5.5 0 010 1H5a.5.5 0 01-.5-.5zm1.639-3.708l1.33.886 1.854-1.855a.25.25 0 01.289-.047l1.888.974V7.5a.5.5 0 01-.5.5H5a.5.5 0 01-.5-.5V7s1.54-1.274 1.639-1.208zM6.25 5a.75.75 0 100-1.5.75.75 0 000 1.5z"
-                              clipRule="evenodd"
-                            />
+                            <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275z" />
                           </svg>
                         </div>
                         <div className="text-start">
-                          <h3 className="h5 text-white">عنوان یک بخش مهم</h3>
+                          <h3 className="h5 text-white">مشاوره تغذیه و رژیم</h3>
                           <p className="text-light">
-                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از
-                            صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
-                            متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
-                            است .
+                            ارائه برنامه‌های غذایی سالم و متنوع توسط متخصصین
+                            تغذیه برای افراد، خانواده‌ها و رستوران‌ها
                           </p>
                         </div>
                       </div>
