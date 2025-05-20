@@ -1,0 +1,81 @@
+.header {
+  color: #333;
+}
+
+.divider {
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+
+.space_elem {
+  margin-top: 2.5rem !important;
+}
+
+.subtitle {
+  color: #6c757d;
+}
+
+.progressVertical {
+  height: 150px;
+  width: 20px;
+  background-color: #fff;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progressVerticalLine {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.hoverButton {
+  transition: transform 0.3s ease;
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #212529;
+}
+
+.hoverButton:hover {
+  transform: translateY(-3px);
+  background-color: #e0a800;
+  border-color: #d39e00;
+}
+
+.description {
+  color: #495057;
+  line-height: 1.6;
+}
+
+.icon {
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .progressVertical {
+    height: 120px;
+  }
+
+  .progressVerticalTrigger {
+    margin-bottom: 2rem;
+  }
+}
+
+.btn_services {
+  color: #fff !important;
+  background-color: #8b2e2c !important;
+  transition: all 0.5s ease !important;
+}
+
+.btn_services:hover {
+  background-color: #607744 !important;
+  border-color: #607744 !important;
+}
+
+.btn_services svg {
+  margin-right: 0.5rem !important;
+}
