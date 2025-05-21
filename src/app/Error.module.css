@@ -1,0 +1,250 @@
+/* app/error.module.css */
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5EBDD; 
+  padding: 2rem;
+  direction: rtl;
+}
+
+.errorContent {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+  background-color: #FAF9F5; 
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border: 2px solid #A97142; 
+}
+
+.errorIllustration {
+  position: relative;
+  height: 200px;
+  margin-bottom: 2rem;
+}
+
+.bowl {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 80px;
+  background-color: #FAF9F5; 
+  border-radius: 0 0 80px 80px;
+  border: 5px solid #A97142; 
+  overflow: hidden;
+}
+
+.spilledSoup {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 100px;
+  background-color: #8B2E2C;
+  border-radius: 50%;
+  animation: spill 2s ease-in-out infinite;
+}
+
+.oven {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 120px;
+  background-color: #A97142; 
+  border-radius: 10px;
+}
+
+.oven:before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 40px;
+  background-color: #A97142;
+  border-radius: 10px 10px 0 0;
+}
+
+.smoke {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 80px;
+  background: radial-gradient(circle, rgba(0,0,0,0.1) 0%, transparent 70%);
+  animation: smoke 3s ease-in-out infinite;
+}
+
+.errorText {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  font-weight: bold;
+  color: #8B2E2C; 
+  opacity: 0.8;
+  z-index: 2;
+}
+
+.title {
+  color: #8B2E2C; 
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: #A97142; 
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.retryButton {
+  background-color: #607744; 
+  color: #FAF9F5; 
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: 2px solid #607744;
+}
+
+.retryButton:hover {
+  background-color: transparent;
+  color: #607744;
+}
+
+.homeButton {
+  background-color: #8B2E2C; 
+  color: #FAF9F5; 
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: 2px solid #8B2E2C;
+}
+
+.homeButton:hover {
+  background-color: transparent;
+  color: #8B2E2C;
+}
+
+@keyframes spill {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.1);
+  }
+}
+
+@keyframes smoke {
+  0% {
+    opacity: 0.3;
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50px);
+  }
+}
+
+@media (max-width: 768px) {
+  .errorIllustration {
+    height: 150px;
+  }
+  
+  .bowl {
+    width: 120px;
+    height: 60px;
+  }
+  
+  .spilledSoup {
+    width: 160px;
+    height: 80px;
+  }
+  
+  .oven {
+    width: 140px;
+    height: 90px;
+  }
+  
+  .errorText {
+    font-size: 2.5rem;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .errorContent {
+    padding: 1.5rem;
+  }
+  
+  .errorIllustration {
+    height: 120px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .bowl {
+    width: 100px;
+    height: 50px;
+  }
+  
+  .spilledSoup {
+    width: 130px;
+    height: 65px;
+  }
+  
+  .errorText {
+    font-size: 2rem;
+  }
+  
+  .title {
+    font-size: 1.3rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+  }
+  
+  .actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .retryButton, .homeButton {
+    width: 100%;
+    text-align: center;
+  }
+}
