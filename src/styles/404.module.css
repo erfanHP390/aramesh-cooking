@@ -1,0 +1,209 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5EBDD; 
+  padding: 2rem;
+  direction: rtl;
+}
+
+.content {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+  background-color: #FAF9F5; 
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border: 2px solid #A97142; 
+}
+
+.errorIllustration {
+  position: relative;
+  height: 200px;
+  margin-bottom: 2rem;
+}
+
+.pan {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 180px;
+  background-color: #A97142; 
+  border-radius: 50%;
+}
+
+.pan:before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 20px;
+  background-color: #A97142;
+  border-radius: 5px;
+}
+
+.egg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(15deg);
+  width: 100px;
+  height: 130px;
+  background-color: #FAF9F5; 
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  border: 3px dashed #8B2E2C;
+  animation: eggShake 3s infinite ease-in-out;
+}
+
+.errorText {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  font-weight: bold;
+  color: #8B2E2C; 
+  opacity: 0.8;
+  z-index: 2;
+}
+
+.title {
+  color: #8B2E2C;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: #A97142; 
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  background-color: #8B2E2C;
+  color: #FAF9F5 !important; 
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: 2px solid #8B2E2C;
+}
+
+.primaryButton:hover {
+  background-color: #A97142;
+  color: #8B2E2C;
+  border-color: #A97142;
+}
+
+.secondaryButton {
+  background-color: transparent;
+  color: #607744; 
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: 2px solid #607744;
+}
+
+.secondaryButton:hover {
+  background-color: #607744;
+  color: #FAF9F5;
+}
+
+@keyframes eggShake {
+  0%, 100% {
+    transform: translate(-50%, -50%) rotate(15deg);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(-15deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(15deg) translateY(-20px);
+  }
+  75% {
+    transform: translate(-50%, -50%) rotate(-15deg) translateY(-10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .errorIllustration {
+    height: 150px;
+  }
+  
+  .pan {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .egg {
+    width: 80px;
+    height: 100px;
+  }
+  
+  .errorText {
+    font-size: 4rem;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .content {
+    padding: 1.5rem;
+  }
+  
+  .errorIllustration {
+    height: 120px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .pan {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .egg {
+    width: 70px;
+    height: 90px;
+  }
+  
+  .errorText {
+    font-size: 3rem;
+  }
+  
+  .actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .primaryButton, .secondaryButton {
+    width: 100%;
+    text-align: center;
+  }
+}
