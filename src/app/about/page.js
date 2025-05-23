@@ -13,7 +13,7 @@ function page() {
     <>
       <Navbar />
       <main id="content">
-        <Breadcrumb />
+        <Breadcrumb  title={"درباره ما"}   />
         <AboutUs />
         <Services />
         <Statistic />
