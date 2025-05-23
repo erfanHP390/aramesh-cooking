@@ -1,0 +1,134 @@
+.breadcrumbContainer {
+  background-color: #A97142 !important;
+  position: relative;
+  padding: 3rem 0;
+}
+
+.breadcrumbOverlay {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #A97142 !important;
+  opacity: 0.9;
+  z-index: -1;
+}
+
+.breadcrumbParticleContainer {
+  position: absolute !important;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.breadcrumbParticle {
+  position: absolute !important;
+  animation: breadcrumbMoveUp linear infinite;
+  color: #607744 !important;
+}
+
+.breadcrumbParticle1 {
+  width: 2rem !important;
+  height: 2rem !important;
+  display: none !important;
+}
+
+.breadcrumbParticle2 {
+  width: 1rem !important;
+  height: 1rem !important;
+}
+
+.breadcrumbParticle3 {
+  width: 1.2rem !important;
+  height: 1.2rem !important;
+  display: none !important;
+}
+
+.breadcrumbParticle4 {
+  width: 1rem !important;
+  height: 1rem !important;
+  display: none !important;
+}
+
+.breadcrumbParticle5 {
+  width: 1.2rem !important;
+  height: 1.2rem !important;
+  display: none !important;
+}
+
+.breadcrumbParticle6 {
+  width: 2rem !important;
+  height: 2rem !important;
+}
+
+.breadcrumbParticle7 {
+  width: 1.2rem !important;
+  height: 1.2rem !important;
+}
+
+.breadcrumbParticle8 {
+  width: 1.2rem !important;
+  height: 1.2rem !important;
+}
+
+.breadcrumbParticle9 {
+  width: 2rem !important;
+  height: 2rem !important;
+}
+
+.breadcrumbText {
+  color: #FAF9F5 !important;
+}
+
+.breadcrumb_icon {
+  font-size: 4.5rem;
+}
+
+.breadcrumbDivider {
+  background-color: #8B2E2C !important;
+  border-color: #8B2E2C !important;
+}
+
+.breadcrumbLink {
+  color: #FAF9F5 !important;
+}
+
+.breadcrumbActiveItem {
+  color: #FAF9F5 !important;
+}
+
+@keyframes breadcrumbMoveUp {
+  0% {
+    transform: translateY(100vh) rotate(315deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-20vh) rotate(315deg);
+    opacity: 0;
+  }
+}
+
+@media (min-width: 576px) {
+  .breadcrumbParticle3,
+  .breadcrumbParticle5 {
+    display: block !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .breadcrumbParticle1 {
+    display: block !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .breadcrumbParticle4 {
+    display: block !important;
+  }
+}
