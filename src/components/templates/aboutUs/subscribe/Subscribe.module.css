@@ -1,0 +1,213 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section {
+  padding: 4rem 0;
+  background-color: #F5EBDD;
+  position: relative;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  opacity: 0.5;
+  z-index: -1;
+  animation: scrollRotate 20s linear infinite;
+}
+
+.particle svg {
+  width: 100%;
+  height: 100%;
+}
+
+.particle1 {
+  right: 9%;
+  bottom: 72%;
+  width: 2rem;
+  height: 2rem;
+  color: #8B2E2C;
+}
+
+.particle2 {
+  right: 12%;
+  bottom: 30%;
+  width: 2rem;
+  height: 2rem;
+  color: #607744;
+}
+
+.particle3 {
+  right: 22%;
+  bottom: 55%;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #8B2E2C;
+  display: none;
+}
+
+.particle4 {
+  left: 40%;
+  top: 20%;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #8B2E2C;
+  display: none;
+}
+
+.particle5 {
+  left: 60%;
+  bottom: 20%;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #8B2E2C;
+}
+
+.particle6 {
+  left: 20%;
+  bottom: 60%;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #607744;
+}
+
+.particle7 {
+  left: 6%;
+  bottom: 75%;
+  width: 2rem;
+  height: 2rem;
+  color: #607744;
+}
+
+@keyframes scrollRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.icon {
+  width: 5rem;
+  height: 5rem;
+  margin-bottom: 1.5rem;
+  color: #8B2E2C;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #A97142;
+  margin-bottom: 1rem;
+}
+
+.titleLight {
+  font-weight: 300;
+}
+
+.divider {
+  width: 80px;
+  height: 3px;
+  background-color: #8B2E2C;
+  border: none;
+  margin: 1rem auto;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #A97142;
+  margin-bottom: 0;
+}
+
+.formContainer {
+  margin: 0 auto;
+}
+
+.form {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.inputContainer {
+  flex: 1;
+  padding: 0 10px;
+  margin-bottom: 1rem;
+}
+
+.buttonContainer {
+  padding: 0 10px;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #A97142;
+  border-radius: 4px;
+  background-color: #FAF9F5;
+  color: #A97142;
+  font-size: 1rem;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #8B2E2C;
+  box-shadow: 0 0 0 2px rgba(139, 46, 44, 0.2);
+}
+
+.button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: #8B2E2C;
+  color: #FAF9F5;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #6e2423;
+}
+
+@media (min-width: 992px) {
+  .particle3, .particle4 {
+    display: block;
+  }
+  
+  .inputContainer {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding: 3rem 0;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+  }
+}
