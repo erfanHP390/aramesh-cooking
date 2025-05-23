@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Navbar.module.css";
 import Link from "next/link";
 import { IoMdArrowDropdown } from "react-icons/io";
@@ -7,15 +7,17 @@ import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 
 function Navbar() {
   const scrollToSection = (sectionId, offset = 0) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-      
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
+    if (typeof window !== "undefined") {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
     }
   };
 
@@ -31,6 +33,8 @@ function Navbar() {
                 className={`logo-dark ${styles.logo}`}
                 src="/images/logonav.png"
                 alt="LOGO"
+                width={120}
+                height={60}
               />
               <span
                 className={`h2 ${styles.earthtone_light_text} fw-bold mt-2`}
@@ -148,12 +152,12 @@ function Navbar() {
                           </ul>
                         </li>
                         <li>
-                          <a
+                          <Link
                             className={`dropdown-item ${styles.earthtone_dropdown_item}`}
-                            href="about.html"
+                            href={"/about"}
                           >
                             درباره ما
-                          </a>
+                          </Link>
                         </li>
                         <li>
                           <a
