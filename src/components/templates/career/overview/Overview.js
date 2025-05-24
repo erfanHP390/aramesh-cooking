@@ -15,7 +15,7 @@ function Overview() {
               data-aos="fade-left"
             >
               <img
-                src="src/img-min/svg/chef-team.svg"
+                src="/images/overview.jpg"
                 className="img-fluid"
                 alt="تیم حرفه ای آشپزی با آرامش"
               />
@@ -26,10 +26,10 @@ function Overview() {
             >
               <div className="mt-4 mt-lg-0">
                 <h2 className={`h1 fw-light mt-3 ${styles.overviewTitle}`}>
-                  به خانواده <span className={`fw-semi-bold ${styles.overviewTitleBold}`}>با آرامش</span> بپیوندید
+                  به خانواده <span className={`fw-semi-bold ${styles.overviewTitleBold}`}>آرامش</span> بپیوندید
                 </h2>
                 <p className={`lead mt-3 ${styles.overviewText}`}>
-                  ما در مجموعه "با آرامش" به دنبال افراد خلاق، پرانرژی و علاقه‌مند به دنیای آشپزی هستیم. اگر عاشق خلق طعم‌های جدید هستید و به کار تیمی اعتقاد دارید، اینجا محل رشد و شکوفایی استعدادهای شماست.
+                  ما در مجموعه " آرامش" به دنبال افراد خلاق، پرانرژی و علاقه‌مند به دنیای آشپزی هستیم. اگر عاشق خلق طعم‌های جدید هستید و به کار تیمی اعتقاد دارید، اینجا محل رشد و شکوفایی استعدادهای شماست.
                   <br /><br />
                   ما با ارائه محیطی پویا و حرفه‌ای، فرصت‌های بی‌نظیری برای یادگیری و پیشرفت در اختیار شما قرار می‌دهیم.
                 </p>
