@@ -176,40 +176,40 @@ function Navbar() {
                           </Link>
                         </li>
                         <li>
-                          <a
+                          <Link
                             className={`dropdown-item ${styles.earthtone_dropdown_item}`}
-                            href="portfolio.html"
+                            href={"/portfolio"}
                           >
                             نمونه کار
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
+                          <Link
                             className={`dropdown-item ${styles.earthtone_dropdown_item}`}
-                            href="pricing.html"
+                            href={"/pricing"}
                           >
                             تعرفه ها
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
+                          <Link
                             className={`dropdown-item ${styles.earthtone_dropdown_item}`}
-                            href="service.html"
+                            href={"/services"}
                           >
                             خدمات
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </li>
                     <li className="dropdown-submenu">
-                      <a
+                      <Link
                         id="sub22"
                         className={`dropdown-item dropdown-toggle ${styles.earthtone_accent}`}
-                        href="#"
+                        href={"/blogs"}
                       >
                         وبلاگ
                         <MdOutlineKeyboardArrowLeft />
-                      </a>
+                      </Link>
                       <ul
                         className={`submenu dropdown-menu ${styles.earthtone_dropdown}`}
                         aria-labelledby="sub22"
@@ -270,28 +270,28 @@ function Navbar() {
                         aria-labelledby="sub221"
                       >
                         <li>
-                          <a
+                          <Link
                             className={`dropdown-item ${styles.earthtone_dropdown_item}`}
-                            href="login.html"
+                            href={"/login"}
                           >
                             ورود
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
+                          <Link
                             className={`dropdown-item ${styles.earthtone_dropdown_item}`}
-                            href="register.html"
+                            href={"/register"}
                           >
                             ثبت نام
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
+                          <Link
                             className={`dropdown-item ${styles.earthtone_dropdown_item}`}
-                            href="forgot.html"
+                            href={"/forgotPassword"}
                           >
                             بازیابی رمز
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </li>
