@@ -9,7 +9,7 @@ function page() {
     <>
       <Navbar />
       <main id="content">
-        <Breadcrumb />
+        <Breadcrumb title={"تماس با ما"} />
         <Contact />
       </main>
       <Footer />
