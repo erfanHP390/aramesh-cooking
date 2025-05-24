@@ -1,0 +1,110 @@
+/* Main section container */
+.sectionContainer {
+  background-color: transparent;
+  padding: 60px 0;
+}
+
+/* Section title */
+.sectionTitle {
+  color: #8b2e2c;
+  font-family: sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Brands container */
+.brandsContainer {
+  background-color: #F5EBDD;
+  border-radius: 12px;
+  padding: 20px 50px;
+  position: relative;
+}
+
+/* Swiper container */
+.brandSwiper {
+  padding: 20px 0;
+}
+
+/* Individual brand slide */
+.brandSlide {
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Brand image styling */
+.brandImage {
+  max-height: 80px;
+  width: auto;
+  filter: grayscale(20%);
+  transition: all 0.3s ease;
+}
+
+.brandImage:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* Navigation buttons */
+.swiperButtonPrev,
+.swiperButtonNext {
+  color: #F5EBDD;
+  background-color:   #8B2E2C;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.swiperButtonPrev {
+  left: 10px;
+}
+
+.swiperButtonNext {
+  right: 10px;
+}
+
+.swiperButtonPrev:hover,
+.swiperButtonNext:hover {
+  background-color: #607744;
+  color: #FAF9F5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .brandsContainer {
+    padding: 20px 30px;
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .brandsContainer {
+    padding: 20px 15px;
+  }
+  
+  .brandImage {
+    max-height: 60px;
+  }
+  
+  .swiperButtonPrev,
+  .swiperButtonNext {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+}
