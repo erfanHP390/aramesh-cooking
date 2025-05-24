@@ -10,7 +10,7 @@ function page() {
     <>
       <Navbar />
       <main id="content">
-        <Breadcrumb />
+        <Breadcrumb title={"خدمات"} />
         <Service />
         <Brands />
       </main>
