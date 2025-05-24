@@ -1,0 +1,70 @@
+.primaryBg {
+  background-color: #f5ebdd;
+}
+
+.secondaryBg {
+  background-color: #faf9f5;
+}
+
+.iconBg {
+  background-color: #607744;
+  color: white;
+}
+
+.titleColor {
+  color: #8b2e2c;
+}
+
+.textColor {
+  color: #a97142;
+}
+
+.hoverEffect:hover {
+  background-color: #8b2e2c;
+  color: #faf9f5 !important;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.fiveService {
+  transition: all 0.3s ease;
+}
+
+.fiveService:hover {
+  transform: translateY(-10px);
+}
+
+.serviceIcon {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: -40px;
+  transition: all 0.3s ease;
+}
+
+.serviceContent {
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.hoverBoxUp:hover .serviceIcon {
+  transform: scale(1.1);
+}
+
+.readMore {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.readMore:hover {
+  transform: rotate(90deg);
+  color: #607744 !important;
+}
