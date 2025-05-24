@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Position.module.css";
+import Link from "next/link";
 
 function Position() {
   return (
@@ -89,7 +90,7 @@ function Position() {
               <div className={styles.positionFooter}>
                 <p className="mb-0">
                   علاقه‌مند به همکاری با بهترین تیم آشپزی هستید؟{" "}
-                  <a href="contact.html">با ما تماس بگیرید</a>
+                  <Link href={"/contact"}>با ما تماس بگیرید</Link>
                 </p>
               </div>
             </div>

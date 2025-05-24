@@ -168,12 +168,12 @@ function Navbar() {
                           </Link>
                         </li>
                         <li>
-                          <a
+                          <Link
                             className={`dropdown-item ${styles.earthtone_dropdown_item}`}
-                            href="contact.html"
+                            href={"/contact"}
                           >
                             تماس با ما
-                          </a>
+                          </Link>
                         </li>
                         <li>
                           <a
