@@ -160,12 +160,12 @@ function Navbar() {
                           </Link>
                         </li>
                         <li>
-                          <a
+                          <Link
                             className={`dropdown-item ${styles.earthtone_dropdown_item}`}
-                            href="career.html"
+                            href={"/career"}
                           >
                             حرفه و اشتغال
-                          </a>
+                          </Link>
                         </li>
                         <li>
                           <a
