@@ -1,0 +1,73 @@
+/* Main Section Styles */
+.overviewSection {
+  background-color: #F5EBDD !important;
+  padding-top: 4rem !important;
+  padding-bottom: 3rem !important;
+}
+
+/* Image Container */
+.overviewImageContainer {
+  padding: 0 1.25rem !important;
+}
+
+/* Text Content */
+.overviewTitle {
+  color: #8B2E2C !important;
+  font-weight: 300 !important;
+}
+
+.overviewTitleBold {
+  font-weight: 600 !important;
+  color: #8B2E2C !important;
+}
+
+.overviewText {
+  color: #A97142 !important;
+  font-size: 1.25rem !important;
+  line-height: 1.6 !important;
+}
+
+/* Service Boxes */
+.serviceBox {
+  background-color: #F5EBDD !important;
+  border: 2px solid #A97142 !important;
+  border-radius: 0.5rem !important;
+  padding: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.serviceBox:hover {
+  transform: translateY(-0.5rem) !important;
+  box-shadow: 0 0.5rem 1rem rgba(139, 46, 44, 0.1) !important;
+}
+
+.serviceIcon {
+  color: #607744 !important;
+  margin-bottom: 1rem !important;
+}
+
+.serviceTitle {
+  color: #8B2E2C !important;
+  font-size: 1.25rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.serviceDescription {
+  color: #A97142 !important;
+  line-height: 1.6 !important;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+  .overviewSection {
+    padding-top: 5rem !important;
+    padding-bottom: 4rem !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .overviewImageContainer {
+    padding: 0 2rem !important;
+  }
+}
