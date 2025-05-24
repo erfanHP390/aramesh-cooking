@@ -192,7 +192,7 @@ function Subscribe() {
                   />
                 </div>
                 <div className={styles.buttonContainer}>
-                  <button type="submit" className={styles.button}>
+                  <button type="submit" className={`${styles.button}  btn_services`}>
                     عضویت!
                   </button>
                 </div>
