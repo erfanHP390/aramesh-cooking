@@ -1,0 +1,94 @@
+/* Main Section Styles */
+.positionSection {
+  background-color: #F5EBDD !important;
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+}
+
+/* Header Styles */
+.positionHeader {
+  text-align: center !important;
+  margin: 0 auto 2rem !important;
+}
+
+.positionTitle {
+  color: #8B2E2C !important;
+  font-weight: 700 !important;
+  font-size: 1.75rem !important;
+}
+
+.positionDivider {
+  background-color: #607744 !important;
+  border-color: #607744 !important;
+  height: 2px !important;
+  margin: 1rem auto !important;
+  width: 80px !important;
+}
+
+/* Job List Styles */
+.positionListHeader {
+  background-color: #A97142 !important;
+  color: #FAF9F5 !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 8px 8px 0 0 !important;
+}
+
+.positionListHeader p {
+  margin-bottom: 0 !important;
+  color: #FAF9F5 !important;
+}
+
+.positionList {
+  background-color: #FAF9F5 !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 0 0 8px 8px !important;
+  margin-bottom: 2rem !important;
+}
+
+.positionItem {
+  border-bottom: 1px solid #F5EBDD !important;
+  padding: 1.5rem !important;
+}
+
+.positionItem:last-child {
+  border-bottom: none !important;
+}
+
+.positionName {
+  color: #8B2E2C !important;
+  font-weight: 600 !important;
+  margin-bottom: 0 !important;
+}
+
+.positionTeam, .positionLocation {
+  color: #A97142 !important;
+}
+
+/* Footer Text */
+.positionFooter {
+  text-align: center !important;
+  color: #A97142 !important;
+}
+
+.positionFooter a {
+  color:  #8B2E2C !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  transition: color 0.3s ease !important;
+}
+
+.positionFooter a:hover {
+  color: #607744 !important;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+  .positionSection {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+  }
+  
+  .positionTitle {
+    font-size: 2rem !important;
+  }
+}
