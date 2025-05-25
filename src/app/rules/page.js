@@ -9,7 +9,7 @@ function page() {
     <>
       <Navbar />
       <main id="content">
-        <Breadcrumb />
+        <Breadcrumb title={"قوانین"} />
         <Terms />
       </main>
       <Footer />

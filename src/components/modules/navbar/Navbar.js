@@ -118,14 +118,6 @@ function Navbar() {
                               </a>
                             </li>
                             <li>
-                              <a
-                                className={`dropdown-item ${styles.earthtone_dropdown_item}`}
-                                href="classic-page.html"
-                              >
-                                کلاسیک
-                              </a>
-                            </li>
-                            <li>
                               <Link
                                 className={`dropdown-item ${styles.earthtone_dropdown_item}`}
                                 href={"/comingSoon"}
@@ -142,12 +134,12 @@ function Navbar() {
                               </Link>
                             </li>
                             <li>
-                              <a
+                              <Link
                                 className={`dropdown-item ${styles.earthtone_dropdown_item}`}
-                                href="terms.html"
+                                href={"/rules"}
                               >
                                 قوانین استفاده
-                              </a>
+                              </Link>
                             </li>
                           </ul>
                         </li>
@@ -202,25 +194,25 @@ function Navbar() {
                       </ul>
                     </li>
                     <li className="dropdown-submenu">
-                      <Link
+                      <a
                         id="sub22"
                         className={`dropdown-item dropdown-toggle ${styles.earthtone_accent}`}
-                        href={"/blogs"}
+                        href={"#"}
                       >
                         وبلاگ
                         <MdOutlineKeyboardArrowLeft />
-                      </Link>
+                      </a>
                       <ul
                         className={`submenu dropdown-menu ${styles.earthtone_dropdown}`}
                         aria-labelledby="sub22"
                       >
                         <li>
-                          <a
+                          <Link
                             className={`dropdown-item ${styles.earthtone_dropdown_item}`}
-                            href="category.html"
+                            href={"/blogs"}
                           >
                             صفحه وبلاگ
-                          </a>
+                          </Link>
                         </li>
                         <li>
                           <a
