@@ -9,7 +9,7 @@ function page() {
     <>
       <Navbar />
       <main id="content">
-        <Breadcrumb />
+        <Breadcrumb title={"مقالات"} />
         <AllBlog />
       </main>
       <Footer />
