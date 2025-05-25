@@ -126,12 +126,12 @@ function Navbar() {
                               </a>
                             </li>
                             <li>
-                              <a
+                              <Link
                                 className={`dropdown-item ${styles.earthtone_dropdown_item}`}
-                                href="coming-soon.html"
+                                href={"/comingSoon"}
                               >
                                 به زودی
-                              </a>
+                              </Link>
                             </li>
                             <li>
                               <a
