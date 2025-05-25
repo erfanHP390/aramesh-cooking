@@ -1,0 +1,180 @@
+.section {
+  position: relative;
+  width: 100%;
+}
+
+.zIndex2 {
+  z-index: 2;
+}
+
+.pb6 {
+  padding-bottom: 3.5rem !important;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.bgBody {
+  background-color: #F5EBDD !important; /* بژ روشن */
+}
+
+.rounded3 {
+  border-radius: 0.5rem !important;
+}
+
+.shadowSm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.py4 {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
+.pyLg5 {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+.px4 {
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+}
+
+.pxXl5 {
+  padding-right: 3rem !important;
+  padding-left: 3rem !important;
+}
+
+.mtN7 {
+  margin-top: -5rem !important;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.colLg8 {
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.postContent {
+  position: relative;
+}
+
+.pxMd3 {
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  color: #8B2E2C; /* قرمز زرشکی */
+}
+
+.cookingIcon {
+  font-size: 2.5rem;
+  margin-left: 1rem;
+  color: #607744; /* سبز ریحانی */
+}
+
+.mainTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #8B2E2C; /* قرمز زرشکی */
+  margin: 0;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #A97142; /* قهوه‌ای خاکی */
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.paragraph {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.mt4 {
+  margin-top: 1.5rem !important;
+}
+
+.strongText {
+  font-weight: 600;
+  color: #8B2E2C; /* قرمز زرشکی */
+}
+
+/* رنگ‌های اضافی برای عناصر خاص */
+.primaryButton {
+  background-color: #8B2E2C; /* قرمز زرشکی */
+  color: #FAF9F5; /* سفید گرم */
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.25rem;
+}
+
+.secondaryButton {
+  background-color: #607744; /* سبز ریحانی */
+  color: #FAF9F5; /* سفید گرم */
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.25rem;
+}
+
+/* رسپانسیو */
+@media (max-width: 992px) {
+  .colLg8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  .mainTitle {
+    font-size: 1.75rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .px4 {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+  }
+  
+  .pxXl5 {
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+  }
+  
+  .titleContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .cookingIcon {
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+  }
+}
