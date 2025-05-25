@@ -1,148 +1,147 @@
 import React from "react";
 import styles from "./Sidebar.module.css";
+import { GiArchiveRegister, GiCook, GiNotebook } from "react-icons/gi";
 
 function Sidebar() {
   return (
-    <>
-      {/* sidebar */}
-      <div className="col-lg-4 ps-lg-5">
-        <aside className="widget-area sticky mt-5 mt-lg-0">
-          {/* widget */}
-          <aside id="archives" className="widget mb-4">
-            <div className="widget-title">
-              <h4 className="h5">
-                <span>آرشیو محتوا</span>
-              </h4>
-            </div>
-            <div className="side-links">
-              <a
-                className="py-2 d-flex justify-content-between align-items-center"
-                href="category.html"
-              >
-                فروردین 1403
-                <span className="badge bg-light-dark text-primary rounded-3">
-                  10
-                </span>
-              </a>
-              <a
-                className="py-2 d-flex justify-content-between align-items-center"
-                href="category.html"
-              >
-                اردیبهشت 1403
-                <span className="badge bg-light-dark text-primary rounded-3">
-                  14
-                </span>
-              </a>
-              <a
-                className="py-2 d-flex justify-content-between align-items-center"
-                href="category.html"
-              >
-                خرداد 1403
-                <span className="badge bg-light-dark text-primary rounded-3">
-                  12
-                </span>
-              </a>
-              <a
-                className="py-2 d-flex justify-content-between align-items-center"
-                href="category.html"
-              >
-                تیر 1403
-                <span className="badge bg-light-dark text-primary rounded-3">
-                  11
-                </span>
-              </a>
-              <a
-                className="py-2 d-flex justify-content-between align-items-center"
-                href="category.html"
-              >
-                مرداد 1403
-                <span className="badge bg-light-dark text-primary rounded-3">
-                  16
-                </span>
-              </a>
-            </div>
-          </aside>
-          {/* end widget */}
-          {/* widget */}
-          <aside id="categories" className="widget mb-4">
-            <div className="widget-title">
-              <h4 className="h5">
-                <span>دسته بندی ها</span>
-              </h4>
-            </div>
-            <div className="side-links">
-              <a
-                className="py-2 d-flex justify-content-between align-items-center"
-                href="category.html"
-              >
-                وبلاگ
-                <span className="badge bg-light-dark text-primary rounded-3">
-                  16
-                </span>
-              </a>
-              <a
-                className="py-2 d-flex justify-content-between align-items-center"
-                href="category.html"
-              >
-                خبر
-                <span className="badge bg-light-dark text-primary rounded-3">
-                  23
-                </span>
-              </a>
-              <a
-                className="py-2 d-flex justify-content-between align-items-center"
-                href="category.html"
-              >
-                بروزرسانی ها
-                <span className="badge bg-light-dark text-primary rounded-3">
-                  15
-                </span>
-              </a>
-              <a
-                className="py-2 d-flex justify-content-between align-items-center"
-                href="category.html"
-              >
-                مشکل
-                <span className="badge bg-light-dark text-primary rounded-3">
-                  3
-                </span>
-              </a>
-            </div>
-          </aside>
-          {/* end widget */}
-          {/* widget */}
-          <aside id="meta" className="widget mb-4">
-            <div className="widget-title">
-              <h4 className="h5">
-                <span>سایر</span>
-              </h4>
-            </div>
-            <div className="side-links">
-              <a
-                className="py-2 d-flex justify-content-between align-items-center"
-                href="login.html"
-              >
-                صفحه ورود
-              </a>
-              <a
-                className="py-2 d-flex justify-content-between align-items-center"
-                href="category.html"
-              >
-                دسته بندی ها
-              </a>
-              <a
-                className="py-2 d-flex justify-content-between align-items-center"
-                href="category.html"
-              >
-                نظرات
-              </a>
-            </div>
-          </aside>
-          {/* end widget */}
+    <div className={`${styles.colLg4} ${styles.psLg5}`}>
+      <aside className={`${styles.widgetArea} ${styles.sticky} ${styles.mt5} ${styles.mtLg0}`}>
+        {/* آرشیو محتوا */}
+        <aside id="archives" className={`${styles.widget} ${styles.mb4}`}>
+          <div className={styles.widgetTitle}>
+            <GiArchiveRegister className={styles.widgetIcon} />
+            <h4 className={styles.h5}>
+              <span>آرشیو محتوا</span>
+            </h4>
+          </div>
+          <div className={styles.sideLinks}>
+            <a
+              className={`${styles.py2} ${styles.dFlex} ${styles.justifyContentBetween} ${styles.alignItemsCenter}`}
+              href="category.html"
+            >
+              فروردین 1403
+              <span className={`${styles.badge} ${styles.bgLightDark} ${styles.textPrimary} ${styles.rounded3}`}>
+                10
+              </span>
+            </a>
+            <a
+              className={`${styles.py2} ${styles.dFlex} ${styles.justifyContentBetween} ${styles.alignItemsCenter}`}
+              href="category.html"
+            >
+              اردیبهشت 1403
+              <span className={`${styles.badge} ${styles.bgLightDark} ${styles.textPrimary} ${styles.rounded3}`}>
+                14
+              </span>
+            </a>
+            <a
+              className={`${styles.py2} ${styles.dFlex} ${styles.justifyContentBetween} ${styles.alignItemsCenter}`}
+              href="category.html"
+            >
+              خرداد 1403
+              <span className={`${styles.badge} ${styles.bgLightDark} ${styles.textPrimary} ${styles.rounded3}`}>
+                12
+              </span>
+            </a>
+            <a
+              className={`${styles.py2} ${styles.dFlex} ${styles.justifyContentBetween} ${styles.alignItemsCenter}`}
+              href="category.html"
+            >
+              تیر 1403
+              <span className={`${styles.badge} ${styles.bgLightDark} ${styles.textPrimary} ${styles.rounded3}`}>
+                11
+              </span>
+            </a>
+            <a
+              className={`${styles.py2} ${styles.dFlex} ${styles.justifyContentBetween} ${styles.alignItemsCenter}`}
+              href="category.html"
+            >
+              مرداد 1403
+              <span className={`${styles.badge} ${styles.bgLightDark} ${styles.textPrimary} ${styles.rounded3}`}>
+                16
+              </span>
+            </a>
+          </div>
         </aside>
-      </div>
-      {/* end sidebar */}
-    </>
+
+        {/* دسته بندی ها */}
+        <aside id="categories" className={`${styles.widget} ${styles.mb4}`}>
+          <div className={styles.widgetTitle}>
+            <GiCook className={styles.widgetIcon} />
+            <h4 className={styles.h5}>
+              <span>دسته بندی ها</span>
+            </h4>
+          </div>
+          <div className={styles.sideLinks}>
+            <a
+              className={`${styles.py2} ${styles.dFlex} ${styles.justifyContentBetween} ${styles.alignItemsCenter}`}
+              href="category.html"
+            >
+              دستور پخت‌ها
+              <span className={`${styles.badge} ${styles.bgLightDark} ${styles.textPrimary} ${styles.rounded3}`}>
+                16
+              </span>
+            </a>
+            <a
+              className={`${styles.py2} ${styles.dFlex} ${styles.justifyContentBetween} ${styles.alignItemsCenter}`}
+              href="category.html"
+            >
+              تکنیک‌های آشپزی
+              <span className={`${styles.badge} ${styles.bgLightDark} ${styles.textPrimary} ${styles.rounded3}`}>
+                23
+              </span>
+            </a>
+            <a
+              className={`${styles.py2} ${styles.dFlex} ${styles.justifyContentBetween} ${styles.alignItemsCenter}`}
+              href="category.html"
+            >
+              مواد اولیه
+              <span className={`${styles.badge} ${styles.bgLightDark} ${styles.textPrimary} ${styles.rounded3}`}>
+                15
+              </span>
+            </a>
+            <a
+              className={`${styles.py2} ${styles.dFlex} ${styles.justifyContentBetween} ${styles.alignItemsCenter}`}
+              href="category.html"
+            >
+              ابزار آشپزی
+              <span className={`${styles.badge} ${styles.bgLightDark} ${styles.textPrimary} ${styles.rounded3}`}>
+                3
+              </span>
+            </a>
+          </div>
+        </aside>
+
+        {/* سایر */}
+        <aside id="meta" className={`${styles.widget} ${styles.mb4}`}>
+          <div className={styles.widgetTitle}>
+            <GiNotebook className={styles.widgetIcon} />
+            <h4 className={styles.h5}>
+              <span>سایر</span>
+            </h4>
+          </div>
+          <div className={styles.sideLinks}>
+            <a
+              className={`${styles.py2} ${styles.dFlex} ${styles.justifyContentBetween} ${styles.alignItemsCenter}`}
+              href="login.html"
+            >
+              صفحه ورود
+            </a>
+            <a
+              className={`${styles.py2} ${styles.dFlex} ${styles.justifyContentBetween} ${styles.alignItemsCenter}`}
+              href="category.html"
+            >
+              دوره‌های آموزشی
+            </a>
+            <a
+              className={`${styles.py2} ${styles.dFlex} ${styles.justifyContentBetween} ${styles.alignItemsCenter}`}
+              href="category.html"
+            >
+              نظرات
+            </a>
+          </div>
+        </aside>
+      </aside>
+    </div>
   );
 }
 
