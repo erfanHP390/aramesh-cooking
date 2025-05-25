@@ -134,12 +134,12 @@ function Navbar() {
                               </Link>
                             </li>
                             <li>
-                              <a
+                              <Link
                                 className={`dropdown-item ${styles.earthtone_dropdown_item}`}
-                                href="faq.html"
+                                href={"/faq"}
                               >
                                 پرسش و پاسخ
-                              </a>
+                              </Link>
                             </li>
                             <li>
                               <a
