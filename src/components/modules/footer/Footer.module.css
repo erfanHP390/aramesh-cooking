@@ -94,8 +94,8 @@
 }
 
 .newsletterInput:focus {
-  border-color: #f5ebdd;
-  box-shadow: 0 0 0 0.25rem rgba(139, 46, 44, 0.25);
+  border-color: #f5ebdd !important;
+  box-shadow: 0 0 0 0.5rem rgba(139, 46, 44, 0.25) !important;
 }
 
 .newsletterButton {
