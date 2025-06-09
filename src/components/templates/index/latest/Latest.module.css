@@ -1,0 +1,32 @@
+.latestSection {
+  background-color: #F5EBDD !important; 
+}
+
+.sectionHeader {
+  color: #8B2E2C; 
+}
+
+.sectionTitle {
+  color: inherit;
+}
+
+.sectionTitle span {
+  color: #A97142; 
+}
+
+.dividerLine {
+  background-color: #607744 !important; 
+  border-color: #607744 !important; 
+  height: 2px;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .sectionHeader {
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+}
