@@ -4,7 +4,7 @@
     left: 20px;
     width: 50px;
     height: 50px;
-    background-color: #CC5500;
+    background-color: #8B2E2C !important;
     color: white;
     border: none;
     border-radius: 50%;
@@ -19,7 +19,7 @@
     z-index: 1000;
   }
   .scroll_to_top:hover {
-    background-color: #FFD700;
+    background-color: #607744 !important;
   }
   .scroll_to_top.visible {
     opacity: 1;

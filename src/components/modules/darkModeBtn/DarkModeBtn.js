@@ -9,7 +9,7 @@ function DarkModeBtn() {
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="حالت شب و روز"
-        className="btn btn-circle btn-light btn-sm position-fixed start-1 bottom-1 z-index-10"
+        className={`${styles.DarkModeBtn}  btn btn-circle btn-light btn-sm position-fixed start-1 bottom-1 z-index-10`}
         aria-label="Toggle theme"
       >
         <i id="theme-icon" className="bi-sun">

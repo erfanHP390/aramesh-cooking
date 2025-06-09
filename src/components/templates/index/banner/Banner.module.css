@@ -29,7 +29,7 @@
 /* Navigation buttons */
 .swiperButtonNext,
 .swiperButtonPrev {
-  background-color: #8b2e2c;
+  background-color: #8B2E2C;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -45,7 +45,7 @@
 
 .swiperButtonNext:hover,
 .swiperButtonPrev:hover {
-  background-color: #a97142;
+  background-color: #607744 !important;
 }
 
 /* Pagination bullets */
