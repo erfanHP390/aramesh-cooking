@@ -37,27 +37,33 @@
     });
   };
 
-  // Typed Js
+  // Typed Js (با رفع مشکل JSON.parse)
   const myTyped = function () {
     var x = document.querySelectorAll('[data-toggle="typed"]');
-    "undefined" != typeof Typed &&
-      x &&
+    if (typeof Typed !== "undefined" && x) {
       [].forEach.call(x, function (x) {
-        !(function (x) {
+        (function (x) {
           var typo = x.dataset.options;
-          typo = typo ? JSON.parse(typo) : {};
-          var object = Object.assign(
-            {
+          try {
+            var options = typo ? JSON.parse(typo) : {
               typeSpeed: 100,
               backSpeed: 100,
-              backDelay: 1e3,
-              loop: !0,
-            },
-            typo
-          );
-          new Typed(x, object);
+              backDelay: 1000,
+              loop: true
+            };
+            new Typed(x, options);
+          } catch (e) {
+            console.error("Error parsing Typed.js options:", e);
+            new Typed(x, {
+              typeSpeed: 100,
+              backSpeed: 100,
+              backDelay: 1000,
+              loop: true
+            });
+          }
         })(x);
       });
+    }
   };
 
   // Counter js
@@ -98,8 +104,13 @@
     }
   };
 
-  // Isotope Filter
+  // Isotope Filter (با رفع مشکل تعریف نشدن)
   const myIsotope_filter = function () {
+    if (typeof Isotope === "undefined") {
+      console.warn("Isotope library is not loaded");
+      return;
+    }
+
     window.addEventListener("load", function () {
       var oe = document.querySelector(".grid");
       if (oe != null) {
@@ -112,46 +123,45 @@
         var filterFns = {
           // show if number is greater than 50
           numberGreaterThan50: function (itemElem) {
-            // use itemElem argument for item element
             var number = itemElem.querySelector(".number").textContent;
             return parseInt(number, 10) > 50;
           },
           // show if name ends with -ium
           ium: function (itemElem) {
-            var number = itemElem.querySelector(".name").textContent;
+            var name = itemElem.querySelector(".name").textContent;
             return name.match(/ium$/);
           },
         };
 
-
-
         // bind filter button click
         var filtersElem = document.querySelector(".filters-button-group");
-        filtersElem.addEventListener("click", function (event) {
-          // only work with buttons
-          if (!matchesSelector(event.target, "button")) {
-            return;
-          }
-          var filterValue = event.target.getAttribute("data-filter");
-          // use matching filter function
-          filterValue = filterFns[filterValue] || filterValue;
-          iso.arrange({ filter: filterValue });
-        });
+        if (filtersElem) {
+          filtersElem.addEventListener("click", function (event) {
+            // only work with buttons
+            if (!event.target.matches("button")) {
+              return;
+            }
+            var filterValue = event.target.getAttribute("data-filter");
+            // use matching filter function
+            filterValue = filterFns[filterValue] || filterValue;
+            iso.arrange({ filter: filterValue });
+          });
+        }
 
         // change is-checked class on buttons
         var buttonGroups = document.querySelectorAll(".button-group");
         for (var i = 0, len = buttonGroups.length; i < len; i++) {
-          var buttonGroup = buttonGroups[i];
-          radioButtonGroup(buttonGroup);
+          radioButtonGroup(buttonGroups[i]);
         }
 
         function radioButtonGroup(buttonGroup) {
           buttonGroup.addEventListener("click", function (event) {
             // only work with buttons
-            if (!matchesSelector(event.target, "button")) {
+            if (!event.target.matches("button")) {
               return;
             }
-            buttonGroup.querySelector(".active").classList.remove("active");
+            var activeBtn = buttonGroup.querySelector(".active");
+            if (activeBtn) activeBtn.classList.remove("active");
             event.target.classList.add("active");
           });
         }
@@ -327,40 +337,45 @@
   };
 
   // Back to top button
-  // const myBacktotop = function () {
-  //   // browser window scroll
-  //   var offset = 300,
-  //     offset_opacity = 1200,
-  //     back_to_top = document.querySelector(".back-top"),
-  //     scrollpos = window.scrollY;
+  const myBacktotop = function () {
+    var offset = 300,
+      offset_opacity = 1200,
+      back_to_top = document.querySelector(".back-top"),
+      scrollpos = window.scrollY;
 
-  //   var add_class_back_scroll = function add_class_back_scroll() {
-  //     return back_to_top.classList.add("backtop-is-visible");
-  //   };
+    var add_class_back_scroll = function add_class_back_scroll() {
+      if (back_to_top) {
+        back_to_top.classList.add("backtop-is-visible");
+      }
+    };
 
-  //   var add_class_offset_scroll = function add_class_offset_scroll() {
-  //     return back_to_top.classList.add("backtop-fade-out");
-  //   };
+    var add_class_offset_scroll = function add_class_offset_scroll() {
+      if (back_to_top) {
+        back_to_top.classList.add("backtop-fade-out");
+      }
+    };
 
-  //   var remove_class_back_scroll = function remove_class_back_scroll() {
-  //     return back_to_top.classList.remove(
-  //       "backtop-is-visible",
-  //       "backtop-fade-out"
-  //     );
-  //   };
+    var remove_class_back_scroll = function remove_class_back_scroll() {
+      if (back_to_top) {
+        back_to_top.classList.remove(
+          "backtop-is-visible",
+          "backtop-fade-out"
+        );
+      }
+    };
 
-  //   window.addEventListener("scroll", function () {
-  //     scrollpos = window.scrollY;
-  //     if (scrollpos > offset) {
-  //       add_class_back_scroll();
-  //     } else {
-  //       remove_class_back_scroll();
-  //     }
-  //     if (scrollpos > offset_opacity) {
-  //       add_class_offset_scroll();
-  //     }
-  //   });
-  // };
+    window.addEventListener("scroll", function () {
+      scrollpos = window.scrollY;
+      if (scrollpos > offset) {
+        add_class_back_scroll();
+      } else {
+        remove_class_back_scroll();
+      }
+      if (scrollpos > offset_opacity) {
+        add_class_offset_scroll();
+      }
+    });
+  };
 
   // Navbar if scroll down
   const myNavigation = function () {
@@ -824,47 +839,7 @@
    * Launch Functions
    * ------------------------------------------------------------------------
    */
-          const myBacktotop = function () {
-          var offset = 300,
-            offset_opacity = 1200,
-            back_to_top = document.querySelector(".back-top"),
-            scrollpos = window.scrollY;
-
-          var add_class_back_scroll = function () {
-            if (back_to_top) {
-              back_to_top.classList.add("backtop-is-visible");
-            }
-          };
-
-          var add_class_offset_scroll = function () {
-            if (back_to_top) {
-              back_to_top.classList.add("backtop-fade-out");
-            }
-          };
-
-          var remove_class_back_scroll = function () {
-            if (back_to_top) {
-              back_to_top.classList.remove(
-                "backtop-is-visible",
-                "backtop-fade-out"
-              );
-            }
-          };
-
-          window.addEventListener("scroll", function () {
-            scrollpos = window.scrollY;
-            if (scrollpos > offset) {
-              add_class_back_scroll();
-            } else {
-              remove_class_back_scroll();
-            }
-            if (scrollpos > offset_opacity) {
-              add_class_offset_scroll();
-            }
-          });
-        };
-
-  myBacktotop()
+  myBacktotop();
   myJarallax();
   myAos();
   myTyped();
