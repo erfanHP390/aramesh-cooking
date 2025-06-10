@@ -138,20 +138,20 @@ body::-webkit-scrollbar-thumb {
 }
 
 .Toastify__toast-container {
-  z-index: 1001; /* فقط کمی بالاتر از navbar */
+  z-index: 1001 !important; 
   position: fixed;
-  top: 80px !important; /* ارتفاع هدر شما */
+  top: 80px !important; 
 }
 
 .navbar {
-  z-index: 1000;
+  z-index: 1000 !important;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
 }
 
-.Toastify__toast {
+/* .Toastify__toast {
   font-family: 'Vazirmatn';
   direction: rtl !important;
   text-align: right !important;
@@ -169,7 +169,7 @@ body::-webkit-scrollbar-thumb {
 
 .Toastify__toast--error {
   background: #dc3545 !important;
-}
+} */
 
 /* ================================================================ */
 *,
