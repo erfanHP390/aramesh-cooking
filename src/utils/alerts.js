@@ -5,7 +5,7 @@ import swal from "sweetalert";
 const toastSuccess = (
   text,
   position,
-  autoclose,
+  autoClose, // درست شد: autoClose
   hideProgressBar,
   closeOnClick,
   pauseOnHover,
@@ -15,7 +15,7 @@ const toastSuccess = (
 ) => {
   toast.success(`${text}`, {
     position,
-    autoclose,
+    autoClose, // درست شد: autoClose
     hideProgressBar,
     closeOnClick,
     pauseOnHover,
@@ -28,7 +28,7 @@ const toastSuccess = (
 const toastError = (
   text,
   position,
-  autoclose,
+  autoClose, // درست شد: autoClose
   hideProgressBar,
   closeOnClick,
   pauseOnHover,
@@ -38,7 +38,7 @@ const toastError = (
 ) => {
   toast.error(`${text}`, {
     position,
-    autoclose,
+    autoClose, // درست شد: autoClose
     hideProgressBar,
     closeOnClick,
     pauseOnHover,
