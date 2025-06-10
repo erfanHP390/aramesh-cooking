@@ -3,6 +3,8 @@ import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Script from "next/script";
 import ScrollTopBtn from "@/components/modules/ScrollTopBtn/ScrollTopBtn";
 import DarkModeBtn from "@/components/modules/darkModeBtn/DarkModeBtn";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const metadata = {
   title: "Create Next App",
@@ -89,6 +91,18 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         {children}
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick={false}
+          rtl
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="colored"
+        />{" "}
         <DarkModeBtn />
         <ScrollTopBtn />
       </body>
