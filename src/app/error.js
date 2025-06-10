@@ -7,8 +7,8 @@ export default function Error({ error, reset }) {
     <div className={styles.container}>
       <div className={styles.errorContent}>
         <div className={styles.errorIllustration}>
-          <div className={styles.bowl}></div>
           <div className={styles.spilledSoup}></div>
+          <div className={styles.bowl}></div>
           <div className={styles.errorText}>خطا!</div>
         </div>
 

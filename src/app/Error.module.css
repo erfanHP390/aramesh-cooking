@@ -118,7 +118,7 @@
 }
 
 .retryButton {
-  background-color: #607744; 
+  background-color: #8B2E2C; 
   color: #FAF9F5; 
   padding: 0.8rem 1.5rem;
   border-radius: 8px;
@@ -126,17 +126,18 @@
   cursor: pointer;
   font-weight: bold;
   transition: all 0.3s ease;
-  border: 2px solid #607744;
+  border: 2px solid #8B2E2C;
 }
 
 .retryButton:hover {
-  background-color: transparent;
+  background-color: #607744 !important;
+    border: 2px solid #607744;
   color: #607744;
 }
 
 .homeButton {
   background-color: #8B2E2C; 
-  color: #FAF9F5; 
+  color: #FAF9F5 !important; 
   padding: 0.8rem 1.5rem;
   border-radius: 8px;
   text-decoration: none;
@@ -146,7 +147,8 @@
 }
 
 .homeButton:hover {
-  background-color: transparent;
+  background-color: #607744;
+    border: 2px solid #607744;
   color: #8B2E2C;
 }
 
