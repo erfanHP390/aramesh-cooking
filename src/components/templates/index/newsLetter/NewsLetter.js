@@ -39,7 +39,7 @@ function NewsLetter() {
       setEmail("");
       setIsLoading(false);
       toastSuccess(
-        "ایمیل با موفقیت ثبت شد. خبر های مهم را از طریق ایمیل خود پیگیری نمایید",
+        "ایمیل با موفقیت ثبت شد",
         "bottom-center",
         5000,
         false,
