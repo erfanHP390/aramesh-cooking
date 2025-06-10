@@ -138,9 +138,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 .Toastify__toast-container {
-  z-index: 1001 !important; 
+  z-index: 1001 !important;
   position: fixed;
-  top: 80px !important; 
+  top: 80px !important;
 }
 
 .navbar {
@@ -150,26 +150,6 @@ body::-webkit-scrollbar-thumb {
   top: 0;
   left: 0;
 }
-
-/* .Toastify__toast {
-  font-family: 'Vazirmatn';
-  direction: rtl !important;
-  text-align: right !important;
-  border-radius: 8px !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
-}
-
-.Toastify__toast-body {
-  padding: 0 12px !important;
-}
-
-.Toastify__toast--success {
-  background: #28a745 !important;
-}
-
-.Toastify__toast--error {
-  background: #dc3545 !important;
-} */
 
 /* ================================================================ */
 *,
@@ -197,3 +177,97 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 /* ============================================================================== */
+
+.Toastify__toast-container {
+  width: 400px !important;
+  height: 60px !important;
+  padding: 0 !important;
+  top: 110px !important;
+}
+
+/* تضمین پوزیشن پایین وسط */
+.Toastify__toast-container--bottom-center {
+  position: fixed !important;
+  width: 400px !important;
+}
+
+.Toastify__toast {
+  border-radius: 8px !important;
+  padding: 16px !important;
+  margin-bottom: 12px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  color: #faf9f5 !important;
+  background-color: #a97142 !important;
+  font-family: 'Vazirmatn', sans-serif !important; /* این بخش اضافه شد */
+}
+
+.Toastify__toast-body {
+  padding: 8px 12px !important;
+  margin: 0 !important;
+  font-family: 'Vazirmatn', sans-serif !important; /* این بخش اضافه شد */
+}
+
+.Toastify__toast--default {
+  background-color: #a97142 !important;
+}
+
+.Toastify__toast--info {
+  background-color: #607744 !important;
+}
+
+.Toastify__toast--success {
+  background-color: #607744 !important;
+}
+
+.Toastify__toast--warning {
+  background-color: #a97142 !important;
+}
+
+.Toastify__toast--error {
+  background-color: #8b2e2c !important;
+}
+
+.Toastify__progress-bar {
+  height: 4px !important;
+  background-color: rgba(250, 249, 245, 0.7) !important;
+}
+
+.Toastify__close-button {
+  color: #faf9f5 !important;
+  opacity: 0.8 !important;
+  align-self: center !important;
+}
+
+.Toastify__close-button:hover {
+  opacity: 1 !important;
+}
+
+.Toastify__toast-icon {
+  margin-right: 12px !important;
+}
+
+.toast-custom-content {
+  display: flex !important;
+  align-items: center !important;
+  font-family: 'Vazirmatn', sans-serif !important; /* اختیاری برای محتوای کاستوم */
+}
+
+.toast-custom-icon {
+  margin-right: 12px !important;
+  font-size: 20px !important;
+}
+
+.toast-custom-message {
+  flex: 1 !important;
+}
+
+.toast-custom-title {
+  font-weight: 600 !important;
+  margin-bottom: 4px !important;
+  font-size: 16px !important;
+}
+
+.toast-custom-description {
+  font-size: 14px !important;
+  opacity: 0.9 !important;
+}
