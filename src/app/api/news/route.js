@@ -30,6 +30,13 @@ export async function POST(req) {
       );
     }
 
+    const isExistEmail = await NewsModel.findOne({email})
+    if(isExistEmail) {
+      return Response.json({message: "email is already exist"} , {
+        status: 419
+      })
+    }
+
     await NewsModel.create({email})
 
     return Response.json({message: "email is registered successfully"} , {
