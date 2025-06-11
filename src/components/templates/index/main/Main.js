@@ -6,8 +6,15 @@ import Statistic from "../statistic/Statistic";
 import Team from "../team/Team";
 import Latest from "../latest/Latest";
 import Contact from "../contact/Contact";
+import connectToDB from "@/configs/db";
+import DepartmentModel from "@/models/Department"
 
-function Main() {
+async function Main() {
+
+
+  connectToDB()
+  const departments = await DepartmentModel.find({}).sort({_id: -1})
+
   return (
     <>
       <Banner id="home" />
@@ -27,7 +34,7 @@ function Main() {
         <Latest />
       </div>
       <div id="contact">
-        <Contact />
+        <Contact  departments={departments} />
       </div>
     </>
   );
