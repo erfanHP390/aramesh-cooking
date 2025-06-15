@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Contact.module.css";
 
-function Contact() {
+function Contact({ departments }) {
   return (
     <div id="contact" className={`section py-6 ${styles.contactSection}`}>
       <div className="container">
@@ -12,17 +12,23 @@ function Contact() {
               data-aos="fade-up"
             >
               <div className="text-center mb-5">
-                <h2 className={`h3 fw-bold ${styles.contactTitle}`}>ارتباط با گروه آشپزی آرامش</h2>
+                <h2 className={`h3 fw-bold ${styles.contactTitle}`}>
+                  ارتباط با گروه آشپزی آرامش
+                </h2>
                 <hr className={`divider my-4 ${styles.divider}`} />
                 <p className={`lead ${styles.contactSubtitle}`}>
-                  برای سفارش غذا، شرکت در دوره‌های آموزشی یا هرگونه سوال با ما در تماس باشید
+                  برای سفارش غذا، شرکت در دوره‌های آموزشی یا هرگونه سوال با ما
+                  در تماس باشید
                 </p>
               </div>
-              
+
               <form action="#" className="contact-form">
                 <div className="row">
                   <div className="col-md-6 mb-4">
-                    <label className={`form-label ${styles.formLabel}`} htmlFor="name">
+                    <label
+                      className={`form-label ${styles.formLabel}`}
+                      htmlFor="name"
+                    >
                       نام کامل
                     </label>
                     <input
@@ -34,7 +40,10 @@ function Contact() {
                     />
                   </div>
                   <div className="col-md-6 mb-4">
-                    <label className={`form-label ${styles.formLabel}`} htmlFor="email">
+                    <label
+                      className={`form-label ${styles.formLabel}`}
+                      htmlFor="email"
+                    >
                       ایمیل یا شماره تماس
                     </label>
                     <input
@@ -47,23 +56,29 @@ function Contact() {
                   </div>
                 </div>
                 <div className="mb-4">
-                  <label className={`form-label ${styles.formLabel}`} htmlFor="subject">
+                  <label
+                    className={`form-label ${styles.formLabel}`}
+                    htmlFor="subject"
+                  >
                     موضوع پیام
                   </label>
-                  <select 
-                    className={`form-select ${styles.formInput}`} 
-                    name="subject" 
+                  <select
+                    className={`form-select ${styles.formInput}`}
+                    name="subject"
                     id="subject"
                   >
+                    {" "}
                     <option value="">انتخاب کنید</option>
-                    <option value="order">سفارش غذای مجالس</option>
-                    <option value="class">ثبت نام در دوره‌های آموزشی</option>
-                    <option value="question">سوالات متداول</option>
-                    <option value="other">سایر موارد</option>
+                    {departments.map((item) => (
+                      <option value="order">{item.title}</option>
+                    ))}
                   </select>
                 </div>
                 <div className="mb-4">
-                  <label className={`form-label ${styles.formLabel}`} htmlFor="messages">
+                  <label
+                    className={`form-label ${styles.formLabel}`}
+                    htmlFor="messages"
+                  >
                     متن پیام
                   </label>
                   <textarea
@@ -75,7 +90,10 @@ function Contact() {
                   />
                 </div>
                 <div className="text-center mb-4">
-                  <button className={`btn ${styles.submitBtn}  ${styles.btn_services}`} type="submit">
+                  <button
+                    className={`btn ${styles.submitBtn}  ${styles.btn_services}`}
+                    type="submit"
+                  >
                     ارسال پیام
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
