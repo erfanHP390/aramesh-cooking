@@ -79,7 +79,6 @@ function NewsLetter() {
     } else if (res.status === 422) {
       setEmail("");
       setIsLoading(false);
-      toastError();
       toastError(
         "لطفا ایمیل معتبر وارد نمایید",
         "top-center",
