@@ -1,7 +1,104 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import styles from "./Subscribe.module.css";
+import Loading from "@/app/loading";
+import { swalAlert, toastError, toastSuccess } from "@/utils/alerts";
+import { validateEmail } from "@/utils/auth";
+import swal from "sweetalert";
 
 function Subscribe() {
+  const [email, setEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+    const registerEmail = async () => {
+    if (!email) {
+      setIsLoading(false);
+      return swalAlert("لطفا ایمیل خود را وارد نمایید", "error", "فهمیدم");
+    }
+
+    const isValidEmail = validateEmail(email);
+    if (!isValidEmail) {
+      setIsLoading(false);
+      return swalAlert("لطفا ایمیل معتبر وارد نمایید", "error", "فهمیدم");
+    }
+
+    const newsEmail = { email };
+
+    const res = await fetch("/api/news", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newsEmail),
+    });
+
+    if (res.status === 201) {
+      setEmail("");
+      setIsLoading(false);
+      swal({
+        title: "ایمیل شما با موفقیت ثبت شد",
+        icon: "success",
+        button: "فهمیدم",
+      });
+    } else if (res.status === 400) {
+      setEmail("");
+      setIsLoading(false);
+      toastError(
+        "لطفا ایمیل خود را وارد نمایید",
+        "top-center",
+        5000,
+        false,
+        true,
+        true,
+        true,
+        undefined,
+        "colored"
+      );
+    } else if (res.status === 419) {
+      setEmail("");
+      setIsLoading(false);
+      toastError(
+        "ایمیل ثبت شده است",
+        "bottom-center",
+        5000,
+        false,
+        true,
+        true,
+        true,
+        undefined,
+        "colored"
+      );
+    } else if (res.status === 422) {
+      setEmail("");
+      setIsLoading(false);
+      toastError(
+        "لطفا ایمیل معتبر وارد نمایید",
+        "top-center",
+        5000,
+        false,
+        true,
+        true,
+        true,
+        undefined,
+        "colored"
+      );
+    } else if (res.status === 500) {
+      setEmail("");
+      setIsLoading(false);
+      toastError(
+        "خطا در سرور لطفا پس از چند دقیقه دوباره تلاش نمایید",
+        "top-center",
+        5000,
+        false,
+        true,
+        true,
+        true,
+        undefined,
+        "colored"
+      );
+    }
+  };
+
   return (
     <div id="subscribe" className={styles.section}>
       {/* Particle animations */}
@@ -189,11 +286,21 @@ function Subscribe() {
                     dir="auto"
                     name="email"
                     aria-label="newsletter form"
+                    value={email}
+                    onChange={(event) => setEmail(event.target.value)}
                   />
                 </div>
                 <div className={styles.buttonContainer}>
-                  <button type="submit" className={`${styles.button}  btn_services`}>
-                    عضویت!
+                  <button
+                    onClick={(event) => {
+                      event.preventDefault();
+                      setIsLoading(true);
+                      registerEmail();
+                    }}
+                    type="submit"
+                    className={`${styles.button}  btn_services`}
+                  >
+                    {isLoading ? <Loading /> : "عضویت"}
                   </button>
                 </div>
               </div>
