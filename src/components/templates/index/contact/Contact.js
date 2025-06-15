@@ -1,7 +1,134 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import styles from "./Contact.module.css";
+import Loading from "@/app/loading";
+import { swalAlert, toastError, toastSuccess } from "@/utils/alerts";
+import { validateEmail, validatePhone } from "@/utils/auth";
 
 function Contact({ departments }) {
+  const [name, setName] = useState("");
+  const [info, setInfo] = useState("");
+  const [department, setDepartment] = useState("");
+  const [content, setContent] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [newSendMessage, setNewSendMessage] = useState("");
+
+  const sendMessage = async () => {
+    if (!name || !info || !department || !content || department === -1) {
+      setIsLoading(false);
+      return swalAlert(
+        "لطفا اطلاعات را بطور کامل ارسال کنید",
+        "error",
+        "فهمیدم"
+      );
+    }
+
+    const isValidEmail = validateEmail(info);
+    const isValidPhone = validatePhone(info);
+    if (isValidEmail) {
+      const newMessage = {
+        name,
+        email: info,
+        department,
+        content,
+      };
+      setNewSendMessage(newMessage);
+    } else if (isValidPhone) {
+      const newMessage = {
+        name,
+        phone: info,
+        department,
+        content,
+      };
+      setNewSendMessage(newMessage);
+    } else {
+      setIsLoading(false);
+      return swalAlert(
+        "لطفا ایمیل/شماره تلفن  معتبر را وارد نمایید",
+        "error",
+        "فهمیدم"
+      );
+    }
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newSendMessage),
+    });
+
+    if (res.status === 201) {
+      setName("");
+      setInfo("");
+      setDepartment(-1);
+      setContent("");
+      setIsLoading(false);
+      toastSuccess(
+        "پیام شما با موفقیت ثبت شد. پاسخ را بزودی دریافت خواهید کرد",
+        "bottom-center",
+        5000,
+        false,
+        true,
+        true,
+        true,
+        undefined,
+        "colored"
+      );
+    } else if (res.status === 400) {
+      setName("");
+      setInfo("");
+      setDepartment(-1);
+      setContent("");
+      setIsLoading(false);
+      toastError(
+        "لطفا اطلاعات را بطور کامل وارد نمایید",
+        "top-center",
+        5000,
+        false,
+        true,
+        true,
+        true,
+        undefined,
+        "colored"
+      );
+    } else if (res.status === 422) {
+      setName("");
+      setInfo("");
+      setDepartment(-1);
+      setContent("");
+      setIsLoading(false);
+      toastError(
+        "لطفا ایمیل/شماره تلفن معتبر وارد نمایید",
+        "top-center",
+        5000,
+        false,
+        true,
+        true,
+        true,
+        undefined,
+        "colored"
+      );
+    } else if (res.status === 500) {
+      setName("");
+      setInfo("");
+      setDepartment(-1);
+      setContent("");
+      setIsLoading(false);
+      toastError(
+        "خطا در سرور لطفا پس از چند دقیقه دوباره تلاش نمایید",
+        "top-center",
+        5000,
+        false,
+        true,
+        true,
+        true,
+        undefined,
+        "colored"
+      );
+    }
+  };
+
   return (
     <div id="contact" className={`section py-6 ${styles.contactSection}`}>
       <div className="container">
@@ -36,6 +163,8 @@ function Contact({ departments }) {
                       name="name"
                       className={`form-control ${styles.formInput}`}
                       id="name"
+                      value={name}
+                      onChange={(event) => setName(event.target.value)}
                       placeholder="نام و نام خانوادگی"
                     />
                   </div>
@@ -51,6 +180,8 @@ function Contact({ departments }) {
                       className={`form-control ${styles.formInput}`}
                       name="email"
                       id="email"
+                      value={info}
+                      onChange={(event) => setInfo(event.target.value)}
                       placeholder="example@example.com یا 0912XXX"
                     />
                   </div>
@@ -66,11 +197,14 @@ function Contact({ departments }) {
                     className={`form-select ${styles.formInput}`}
                     name="subject"
                     id="subject"
+                    onChange={(event) => setDepartment(event.target.value)}
                   >
                     {" "}
-                    <option value="">انتخاب کنید</option>
+                    <option value={-1}>انتخاب کنید</option>
                     {departments.map((item) => (
-                      <option value="order">{item.title}</option>
+                      <option key={item._id} value={item._id}>
+                        {item.title}
+                      </option>
                     ))}
                   </select>
                 </div>
@@ -86,6 +220,8 @@ function Contact({ departments }) {
                     name="message"
                     rows={8}
                     id="messages"
+                    value={content}
+                    onChange={(event) => setContent(event.target.value)}
                     placeholder="پیام خود را با جزئیات بنویسید..."
                   />
                 </div>
@@ -93,8 +229,13 @@ function Contact({ departments }) {
                   <button
                     className={`btn ${styles.submitBtn}  ${styles.btn_services}`}
                     type="submit"
+                    onClick={(event) => {
+                      event.preventDefault();
+                      setIsLoading(true);
+                      sendMessage();
+                    }}
                   >
-                    ارسال پیام
+                    {isLoading ? <Loading /> : "ارسال پیام"}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="1.5rem"
