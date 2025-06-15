@@ -33,7 +33,6 @@ function NewsLetter() {
       body: JSON.stringify(newsEmail),
     });
 
-    console.log(res);
 
     if (res.status === 201) {
       setEmail("");
