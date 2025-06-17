@@ -18,42 +18,67 @@
 .brandsContainer {
   background-color: #F5EBDD;
   border-radius: 12px;
-  padding: 20px 50px;
+  padding: 30px 60px;
   position: relative;
 }
 
 /* Swiper container */
 .brandSwiper {
-  padding: 20px 0;
+  padding: 30px 0;
 }
 
 /* Individual brand slide */
 .brandSlide {
-  padding: 10px 0;
+  padding: 15px 0;
   text-align: center;
+  height: 150px; /* افزایش ارتفاع اسلایدها */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brandLink {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Brand image styling */
 .brandImage {
-  max-height: 80px;
+  max-width: 100%;
+  max-height: 100%;
   width: auto;
+  height: auto;
+  object-fit: contain;
   filter: grayscale(20%);
   transition: all 0.3s ease;
 }
 
 .brandImage:hover {
   filter: grayscale(0%);
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 /* Navigation buttons */
 .swiperButtonPrev,
 .swiperButtonNext {
   color: #F5EBDD;
-  background-color:   #8B2E2C;
+  background-color: #8B2E2C;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,26 +87,45 @@
   transform: translateY(-50%);
   z-index: 10;
   cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   font-weight: bold;
-  font-size: 18px;
+  font-size: 24px;
+  transition: all 0.3s ease;
 }
 
 .swiperButtonPrev {
-  left: 10px;
+  left: 15px;
 }
 
 .swiperButtonNext {
-  right: 10px;
+  right: 15px;
 }
 
 .swiperButtonPrev:hover,
 .swiperButtonNext:hover {
   background-color: #607744;
   color: #FAF9F5;
+  transform: translateY(-50%) scale(1.1);
 }
 
 /* Responsive adjustments */
+@media (max-width: 992px) {
+  .brandsContainer {
+    padding: 25px 40px;
+  }
+  
+  .brandSlide {
+    height: 130px;
+  }
+  
+  .swiperButtonPrev,
+  .swiperButtonNext {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .brandsContainer {
     padding: 20px 30px;
@@ -90,6 +134,14 @@
   .sectionTitle {
     font-size: 1.5rem;
   }
+  
+  .brandSlide {
+    height: 110px;
+  }
+  
+  .imageContainer {
+    padding: 10px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -97,14 +149,14 @@
     padding: 20px 15px;
   }
   
-  .brandImage {
-    max-height: 60px;
+  .brandSlide {
+    height: 90px;
   }
   
   .swiperButtonPrev,
   .swiperButtonNext {
-    width: 30px;
-    height: 30px;
-    font-size: 14px;
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
   }
 }
