@@ -1,0 +1,74 @@
+/* Gallery.module.css */
+.galleryWrapper {
+  min-height: calc(100vh - 120px) !important;
+  padding: 4rem 0 !important;
+  background-color: #F5EBDD !important;
+}
+
+.productsGrid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)) !important;
+  gap: 2.5rem !important;
+  margin-top: 3rem !important;
+  height: auto !important;
+}
+
+
+.btn_category:hover {
+  background-color: #a97142 !important;
+  color: #fff !important;
+}
+
+.btn_category.active {
+  background-color: #8b2e2c !important;
+  color: #fff !important;
+}
+
+@media (max-width: 1200px) {
+  .productsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)) !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .productsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+    gap: 2rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .productsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
+    gap: 1.8rem !important;
+  }
+}
+
+.portfolio-nav-item {
+  transition: all 0.3s ease !important;
+  font-size: 1.1rem !important;
+  padding: 0.5rem 1rem !important;
+  color: #607744 !important; /* سبز ریحانی */
+  position: relative !important;
+}
+
+.portfolio-nav-item.active {
+  color: #8B2E2C !important; /* قرمز زرشکی */
+  font-weight: bold !important;
+}
+
+.portfolio-nav-item.active::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 60% !important;
+  height: 3px !important;
+  background-color: #8B2E2C !important; /* قرمز زرشکی */
+  border-radius: 3px !important;
+}
+
+.portfolio-nav-item:hover {
+  color: #A97142 !important; /* قهوه‌ای خاکی */
+}
