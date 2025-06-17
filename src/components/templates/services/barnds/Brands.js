@@ -12,80 +12,79 @@ function Brands() {
     // برندهای خارجی
     {
       id: 1,
-      img: "https://upload.wikimedia.org/wikipedia/commons/6/6f/Nestle_textlogo.svg",
+      img: "/images/brands/Nestlé.webp",
       alt: "Nestlé",
       url: "https://www.nestle.com",
     },
     {
       id: 2,
-      img: "https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/PepsiCo_logo.svg/1200px-PepsiCo_logo.svg.png",
+      img: "/images/brands/PepsiCo.png",
       alt: "PepsiCo",
       url: "https://www.pepsico.com",
     },
     {
       id: 3,
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Unilever_Logo.svg/1200px-Unilever_Logo.svg.png",
+      img: "/images/brands/Unilever.png",
       alt: "Unilever",
       url: "https://www.unilever.com",
     },
     {
       id: 4,
-      img: "https://upload.wikimedia.org/wikipedia/en/thumb/7/7e/Danone_logo.svg/1200px-Danone_logo.svg.png",
+      img: "/images/brands/Danone.png",
       alt: "Danone",
       url: "https://www.danone.com",
     },
     {
       id: 5,
-      img: "https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/Kellogg%27s_logo.svg/1200px-Kellogg%27s_logo.svg.png",
+      img: "/images/brands/Kellogg's.png",
       alt: "Kellogg's",
       url: "https://www.kelloggs.com",
     },
     {
       id: 6,
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Mondelez_international_logo_2012.svg/1200px-Mondelez_international_logo_2012.svg.png",
+      img: "/images/brands/Mondelez.png",
       alt: "Mondelez",
       url: "https://www.mondelezinternational.com",
     },
     {
       id: 7,
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Coca-Cola_logo.svg/1200px-Coca-Cola_logo.svg.png",
+      img: "/images/brands/Coca-Cola.png",
       alt: "Coca-Cola",
       url: "https://www.coca-cola.com",
     },
-    // برندهای ایرانی
     {
       id: 8,
-      img: "https://kalleh.com/wp-content/uploads/2020/06/kalleh-logo.svg",
+      img: "/images/brands/kalleh.jpg",
       alt: "کاله",
       url: "https://www.kalleh.com",
     },
     {
       id: 9,
-      img: "https://www.mihan.ir/wp-content/themes/mihan/assets/images/logo.svg",
+      img: "/images/brands/mihan.png",
       alt: "میهن",
       url: "https://www.mihan.ir",
     },
     {
       id: 10,
-      img: "https://www.shirin-asal.com/wp-content/uploads/2020/06/shirin-asal-logo.svg",
+      img: "/images/brands/shirin-asal.jpg",
       alt: "شیرین عسل",
       url: "https://www.shirin-asal.com",
     },
     {
       id: 11,
-      img: "https://www.saharkhiz.ir/wp-content/uploads/2020/06/saharkhiz-logo.svg",
+      img: "/images/brands/saharkhiz.jpg",
       alt: "سحرخیز",
       url: "https://www.saharkhiz.ir",
     },
     {
       id: 12,
-      img: "https://www.takmakaron.com/wp-content/uploads/2020/06/takmakaron-logo.svg",
+      img: "/images/brands/takmakaron.webp",
       alt: "تک ماکارون",
       url: "https://www.takmakaron.com",
     },
     {
       id: 13,
-      img: "https://www.pegah.ir/wp-content/uploads/2020/06/pegah-logo.svg",
+      img: "/images/brands/pegah..png",
       alt: "پگاه",
       url: "https://www.pegah.ir",
     },
@@ -96,7 +95,7 @@ function Brands() {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-12">
-            <h2 className={styles.sectionTitle}>برندهای همکار ما</h2>
+            <h2 className={`${styles.sectionTitle} font-vazir-bold`}>برندهای همکار ما</h2>
 
             <div className={styles.brandsContainer}>
               <Swiper
@@ -128,20 +127,22 @@ function Brands() {
                         href={brand.url}
                         target="_blank"
                         rel="noopener noreferrer"
+                        className={styles.brandLink}
                       >
-                        <img
-                          className={styles.brandImage}
-                          src={brand.img}
-                          alt={brand.alt}
-                        />
+                        <div className={styles.imageContainer}>
+                          <img
+                            className={styles.brandImage}
+                            src={brand.img}
+                            alt={brand.alt}
+                            loading="lazy"
+                          />
+                        </div>
                       </a>
                     </div>
                   </SwiperSlide>
                 ))}
               </Swiper>
 
-              <div className={styles.swiperButtonNext}>&gt;</div>
-              <div className={styles.swiperButtonPrev}>&lt;</div>
             </div>
           </div>
         </div>
