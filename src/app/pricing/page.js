@@ -10,9 +10,9 @@ function page() {
     <>
       <Navbar />
       <main id="content">
-        <Breadcrumb />
+        <Breadcrumb title={"تعرفه ها"} />
         <Plans />
-        <Subscribe />
+        {/* <Subscribe /> */}
       </main>
       <Footer />
     </>
