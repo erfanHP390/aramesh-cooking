@@ -12,7 +12,7 @@ function Plans() {
             <span className={`${styles.toggleLabel} ${styles.monthly}`}>ماهانه</span>
             <input type="checkbox" id="js-checkbox" className="js-checkbox" />
             <span className={styles.toggleSlider}></span>
-            <span className={`${styles.toggleLabel} ${styles.yearly}`}>سالانه</span>
+            <span className={`${styles.toggleLabel} ${styles.yearly}`}>ماهانه/سالانه</span>
           </label>
         </div>
 
@@ -30,8 +30,8 @@ function Plans() {
                     <span className="js-monthly">199,000 <em>تومان</em></span>
                     <span className="js-yearly d-none">1,990,000 <em>تومان</em></span>
                     <div className={styles.pricingPeriod}>
-                      <span className="js-monthly">/ماهانه</span>
-                      <span className="js-yearly d-none">/سالانه</span>
+                      <span className={`js-monthly ${styles.btn_pricing_time}`}>/ماهانه</span>
+                      <span className={`js-yearly d-none  ${styles.btn_pricing_time}`}>/سالانه</span>
                     </div>
                   </div>
                 </header>
@@ -64,8 +64,8 @@ function Plans() {
                     <span className="js-monthly">499,000 <em>تومان</em></span>
                     <span className="js-yearly d-none">4,990,000 <em>تومان</em></span>
                     <div className={styles.pricingPeriod}>
-                      <span className="js-monthly">/ماهانه</span>
-                      <span className="js-yearly d-none">/سالانه</span>
+                      <span className={`js-monthly ${styles.btn_pricing_time}`}>/ماهانه</span>
+                      <span className={`js-yearly d-none  ${styles.btn_pricing_time}`}>/سالانه</span>
                     </div>
                   </div>
                 </header>
@@ -97,8 +97,8 @@ function Plans() {
                     <span className="js-monthly">999,000 <em>تومان</em></span>
                     <span className="js-yearly d-none">9,990,000 <em>تومان</em></span>
                     <div className={styles.pricingPeriod}>
-                      <span className="js-monthly">/ماهانه</span>
-                      <span className="js-yearly d-none">/سالانه</span>
+                      <span className={`js-monthly ${styles.btn_pricing_time}`}>/ماهانه</span>
+                      <span className={`js-yearly d-none  ${styles.btn_pricing_time}`}>/سالانه</span>
                     </div>
                   </div>
                 </header>

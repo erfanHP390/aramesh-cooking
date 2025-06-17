@@ -1,6 +1,6 @@
 /* Main Section */
 .plansSection {
-  background-color: #F5EBDD;
+  background-color: #f5ebdd;
   padding: 4rem 0;
 }
 
@@ -30,25 +30,25 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #A97142;
-  transition: .4s;
+  background-color: #a97142;
+  transition: 0.4s;
   border-radius: 34px;
 }
 
 .toggleSlider:before {
   position: absolute;
-  content: "";
+  content: '';
   height: 26px;
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: #FAF9F5;
-  transition: .4s;
+  background-color: #faf9f5;
+  transition: 0.4s;
   border-radius: 50%;
 }
 
 input:checked + .toggleSlider {
-  background-color: #8B2E2C;
+  background-color: #8b2e2c;
 }
 
 input:checked + .toggleSlider:before {
@@ -59,7 +59,7 @@ input:checked + .toggleSlider:before {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  color: #FAF9F5;
+  color: #faf9f5;
   font-weight: 500;
   font-size: 14px;
 }
@@ -74,8 +74,8 @@ input:checked + .toggleSlider:before {
 
 /* Pricing Tables */
 .pricingTable {
-  background-color: #FAF9F5;
-  border: 2px solid #A97142;
+  background-color: #faf9f5;
+  border: 2px solid #a97142;
   border-radius: 12px;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -89,26 +89,34 @@ input:checked + .toggleSlider:before {
   box-shadow: 0 10px 20px rgba(139, 46, 44, 0.1);
 }
 
+.btn_pricing_time {
+  background-color: #a97142 !important;
+  font-size: 1.25rem !important;
+  color: #fff !important;
+  padding: 10px !important;
+  margin-top: 1.5rem !important;
+}
+
 .popularTable {
-  border: 2px solid #8B2E2C;
+  border: 2px solid #8b2e2c;
   margin-top: -1rem;
 }
 
 .pricingHeader {
   text-align: center;
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid #F5EBDD;
+  border-bottom: 1px solid #f5ebdd;
 }
 
 .pricingTitle {
-  color: #8B2E2C;
+  color: #8b2e2c;
   font-weight: 700;
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
 .pricingSubtitle {
-  color: #A97142;
+  color: #a97142;
   font-size: 1rem;
   margin-bottom: 1rem;
 }
@@ -116,12 +124,12 @@ input:checked + .toggleSlider:before {
 .dividerLine {
   height: 3px;
   width: 60px;
-  background: linear-gradient(to right, #8B2E2C, #607744);
+  background: linear-gradient(to right, #8b2e2c, #607744);
   margin: 0 auto 1.5rem;
 }
 
 .pricingAmount {
-  color: #8B2E2C;
+  color: #8b2e2c;
   font-weight: 700;
   font-size: 1.75rem;
   margin: 1.5rem 0;
@@ -129,7 +137,6 @@ input:checked + .toggleSlider:before {
 
 .pricingPeriod {
   font-weight: 300;
-  font-size: 0.875rem;
 }
 
 .pricingFeatures {
@@ -137,9 +144,9 @@ input:checked + .toggleSlider:before {
 }
 
 .pricingFeatures p {
-  color: #A97142;
+  color: #a97142;
   padding: 0.5rem 0;
-  border-bottom: 1px dashed #F5EBDD;
+  border-bottom: 1px dashed #f5ebdd;
   margin-bottom: 0.5rem;
 }
 
@@ -158,8 +165,8 @@ input:checked + .toggleSlider:before {
 }
 
 .primaryButton {
-  background-color: #8B2E2C;
-  color: #FAF9F5;
+  background-color: #8b2e2c;
+  color: #faf9f5;
 }
 
 .primaryButton:hover {
@@ -168,7 +175,7 @@ input:checked + .toggleSlider:before {
 
 .secondaryButton {
   background-color: #607744;
-  color: #FAF9F5;
+  color: #faf9f5;
 }
 
 .secondaryButton:hover {
@@ -191,7 +198,7 @@ input:checked + .toggleSlider:before {
   width: 150px;
   padding: 8px 0;
   background-color: #607744;
-  color: #FAF9F5;
+  color: #faf9f5;
   font-weight: 600;
   text-align: center;
   transform: rotate(45deg);
@@ -210,7 +217,7 @@ input:checked + .toggleSlider:before {
   .plansSection {
     padding: 5rem 0;
   }
-  
+
   .pricingTable {
     padding: 2.5rem;
   }
