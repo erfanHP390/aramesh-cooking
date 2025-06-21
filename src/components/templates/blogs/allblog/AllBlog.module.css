@@ -21,7 +21,7 @@
 }
 
 .bgBody {
-  background-color: #F5EBDD !important; /* بژ روشن */
+  background-color: #F5EBDD !important;
 }
 
 .rounded3 {
@@ -88,6 +88,7 @@
 .pxLg4 {
   padding-right: 1.5rem !important;
   padding-left: 1.5rem !important;
+  margin-bottom: 1.5rem !important; 
 }
 
 /* Blog Header */
@@ -96,19 +97,19 @@
   align-items: center;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid #A97142; /* قهوه‌ای خاکی */
+  border-bottom: 2px solid #A97142;
 }
 
 .cookingIcon {
   font-size: 2.5rem;
   margin-left: 1rem;
-  color: #8B2E2C; /* قرمز زرشکی */
+  color: #8B2E2C;
 }
 
 .blogMainTitle {
   font-size: 2rem;
   font-weight: 600;
-  color: #A97142; /* قهوه‌ای خاکی */
+  color: #A97142;
   margin: 0;
 }
 
@@ -123,6 +124,7 @@
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   transition: all 0.3s ease;
+  height: 100%; /* اضافه شد */
 }
 
 .card:hover {
@@ -132,7 +134,7 @@
 
 .blogTwo {
   border: none !important;
-  background-color: #FAF9F5; /* سفید گرم */
+  background-color: #FAF9F5;
 }
 
 .mb5 {
@@ -148,11 +150,14 @@
   position: relative;
   overflow: hidden;
   border-radius: 0.25rem 0.25rem 0 0;
+  height: 200px; /* اضافه شد */
 }
 
 .blogTwoImg img {
   transition: transform 0.5s ease;
   width: 100%;
+  height: 100%;
+  object-fit: cover; /* اضافه شد */
 }
 
 .blogTwoImg:hover img {
@@ -193,7 +198,7 @@
 
 .roundedCircle {
   border-radius: 50% !important;
-  border: 2px solid #F5EBDD; /* بژ روشن */
+  border: 2px solid #F5EBDD;
 }
 
 /* Card Title */
@@ -203,6 +208,9 @@
 
 .h5 {
   font-size: 1.25rem;
+  min-height: 3rem; /* اضافه شد */
+  display: flex;
+  align-items: center;
 }
 
 .mb3 {
@@ -210,13 +218,13 @@
 }
 
 .blogPostTitle {
-  color: #8B2E2C; /* قرمز زرشکی */
+  color: #8B2E2C;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .blogPostTitle:hover {
-  color: #A97142; /* قهوه‌ای خاکی */
+  color: #607744 !important;
 }
 
 /* Meta Info */
@@ -241,7 +249,7 @@
 }
 
 .dateText {
-  color: #607744; /* سبز ریحانی */
+  color: #607744;
 }
 
 /* Blog Excerpt */
@@ -249,6 +257,12 @@
   color: #5a5a5a;
   line-height: 1.7;
   margin-bottom: 1rem;
+  min-height: 4.5rem; /* اضافه شد */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 /* Button */
@@ -276,18 +290,18 @@
 
 .btnLight {
   color: #212529;
-  background-color: #F5EBDD; /* بژ روشن */
-  border-color: #A97142; /* قهوه‌ای خاکی */
+  background-color: #F5EBDD;
+  border-color: #A97142;
 }
 
 .btnLight:hover {
-  background-color: #A97142; /* قهوه‌ای خاکی */
-  color: #FAF9F5; /* سفید گرم */
-  border-color: #8B2E2C; /* قرمز زرشکی */
+  background-color: #A97142;
+  color: #FAF9F5;
+  border-color: #8B2E2C;
 }
 
 .border {
-  border: 1px solid #A97142 !important; /* قهوه‌ای خاکی */
+  border: 1px solid #A97142 !important;
 }
 
 .biArrowRepeat {
