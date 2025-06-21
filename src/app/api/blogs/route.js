@@ -4,7 +4,7 @@ import path from "path";
 import BlogModel from "@/models/Blog"
 
 export async function POST(req) {
-  connectToDB();
+  await connectToDB();
   try {
     const formData = await req.formData();
 
