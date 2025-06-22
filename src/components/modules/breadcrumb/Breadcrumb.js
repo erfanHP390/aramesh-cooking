@@ -4,7 +4,7 @@ import styles from "./Breadcrumb.module.css";
 import Link from "next/link";
 import { GiMeal } from "react-icons/gi";
 
-function Breadcrumb({title}) {
+function Breadcrumb({title , titr}) {
   return (
     <>
       <div id="hero" className={`section py-5 jarallax ${styles.breadcrumbContainer}`}>
@@ -54,7 +54,7 @@ function Breadcrumb({title}) {
                     className={`breadcrumb-item active d-none d-md-block ${styles.breadcrumbActiveItem}`}
                     aria-current="page"
                   >
-                    {title}
+                    {titr ? titr : title}
                   </li>
                 </ol>
               </nav>
