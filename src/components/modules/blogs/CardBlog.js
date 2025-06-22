@@ -1,36 +1,37 @@
 import React from "react";
 import styles from "../../templates/blogs/allblog/AllBlog.module.css";
+import Link from "next/link";
 
-function CardBlog({ titr, title, shortDesc, comments, author, description, createdAt, updatedAt, img }) {
+function CardBlog({ _id , titr, title, shortDesc, comments, author, description, createdAt, updatedAt, img }) {
   return (
     <div className={`${styles.colMd6} ${styles.pxLg4}`}>
       <div
         className={`${styles.card} ${styles.blogTwo} ${styles.mb5} ${styles.rounded3} ${styles.overflowHidden}`}
       >
         <div className={styles.blogTwoImg}>
-          <a href="#">
+          <Link href={`/blogs/${_id}`}>
             <img
               className={styles.imgFluid}
               src={img || "https://via.placeholder.com/300x200"} // Fallback image
               alt={title || "Blog Image"}
             />
-          </a>
+          </Link>
         </div>
         <div className={`${styles.cardBody} ${styles.px0}`}>
           <span className={styles.blogAuthor}>
-            <a href="#">
+            <Link href={`/blogs/${_id}`}>
               <img
                 className={`${styles.avatarMd} ${styles.mtN2} ${styles.roundedCircle}`}
                 src={author?.avatar || "src/img-min/avatar/img1-small.jpg"}
                 alt={author?.name || "Author"}
               />
-            </a>
+            </Link>
           </span>
           <div className={styles.cardTitle}>
             <h3 className={`${styles.h5} ${styles.mb3}`}>
-              <a href="#" className={styles.blogPostTitle}>
+              <Link href={`/blogs/${_id}`} className={styles.blogPostTitle}>
                 {title || "عنوان پست"}
-              </a>
+              </Link>
             </h3>
             <div className={`${styles.meta} ${styles.textMuted}`}>
               <svg
