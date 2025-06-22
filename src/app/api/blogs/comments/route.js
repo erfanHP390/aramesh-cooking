@@ -31,7 +31,7 @@ export async function POST(req) {
     const commentForBlog =await CommentModel.create({
       name,
       email,
-      education,
+      age,
       description,
       blogID,
     });
