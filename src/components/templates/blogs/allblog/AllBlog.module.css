@@ -346,3 +346,157 @@
     margin-bottom: 0.5rem;
   }
 }
+
+/* ===================== side bar ========================= */
+/* Base Styles */
+.colLg4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.psLg5 {
+  padding-right: 3rem !important;
+}
+
+.widgetArea {
+  background-color: #F5EBDD; /* بژ روشن */
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #A97142; /* قهوه‌ای خاکی */
+}
+
+.sticky {
+  position: sticky;
+  top: 1rem;
+}
+
+.mt5 {
+  margin-top: 3rem !important;
+}
+
+.mtLg0 {
+  margin-top: 0 !important;
+}
+
+/* Widget Styles */
+.widget {
+  margin-bottom: 1.5rem;
+}
+
+.mb4 {
+  margin-bottom: 1.5rem !important;
+}
+
+.widgetTitle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #8B2E2C; /* قرمز زرشکی */
+}
+
+.widgetIcon {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  color: #607744; /* سبز ریحانی */
+}
+
+.h5 {
+  font-size: 1.25rem;
+  color: #A97142; /* قهوه‌ای خاکی */
+  margin: 0;
+}
+
+/* Side Links */
+.sideLinks {
+  display: flex;
+  flex-direction: column;
+}
+
+.py2 {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.dFlex {
+  display: flex !important;
+}
+
+.justifyContentBetween {
+  justify-content: space-between !important;
+}
+
+.alignItemsCenter {
+  align-items: center !important;
+}
+
+.sideLinks a {
+  color: #5a5a5a;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(169, 113, 66, 0.1); /* قهوه‌ای خاکی با شفافیت */
+}
+
+.sideLinks a:hover {
+  color: #607744 !important; 
+  padding-right: 0.5rem;
+}
+
+/* Badge */
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+}
+
+.bgLightDark {
+  background-color: rgba(169, 113, 66, 0.1) !important; /* قهوه‌ای خاکی با شفافیت */
+}
+
+.textPrimary {
+  color: #8B2E2C !important; /* قرمز زرشکی */
+}
+
+.rounded3 {
+  border-radius: 0.5rem !important;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .colLg4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  
+  .psLg5 {
+    padding-right: 15px !important;
+  }
+  
+  .widgetArea {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .widgetTitle {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+  
+  .widgetIcon {
+    margin-left: 0;
+    margin-right: 0.5rem;
+  }
+}
