@@ -7,9 +7,9 @@ export async function POST(req) {
   try {
     connectToDB();
     const body = await req.json();
-    const { name, email, age, description, blogID } = body;
+    const { name, email, city, description, blogID } = body;
 
-    if (!name  || !email || !description || !blogID || !age) {
+    if (!name  || !email || !description || !blogID || !city) {
       return Response.json(
         { message: "all fields must have something expect score" },
         {
@@ -31,7 +31,7 @@ export async function POST(req) {
     const commentForBlog =await CommentModel.create({
       name,
       email,
-      age,
+      city,
       description,
       blogID,
     });
