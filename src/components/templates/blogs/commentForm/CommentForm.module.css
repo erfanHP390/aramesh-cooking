@@ -1,0 +1,113 @@
+/* Comments Section Styles */
+.commentsHeader {
+  color: #8B2E2C !important;
+  border-bottom: 2px solid #A97142 !important;
+  padding-bottom: 0.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.commentList {
+  list-style-type: none !important;
+  padding: 0 !important;
+}
+
+.userComment {
+  background-color: #FAF9F5 !important;
+  border: 1px solid #F5EBDD !important;
+  border-radius: 4px !important;
+  padding: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.userComment:hover {
+  border-color: #A97142 !important;
+}
+
+.commentAvatar {
+  border: 2px solid #607744 !important;
+}
+
+.commentAuthor {
+  color: #8B2E2C !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+}
+
+.commentAuthor:hover {
+  color: #A97142 !important;
+}
+
+.commentDate {
+  color: #607744 !important;
+  font-size: 0.9rem !important;
+}
+
+.commentText {
+  color: #333 !important;
+  margin: 1rem 0 !important;
+}
+
+.replyLink {
+  color: #607744 !important;
+  text-decoration: none !important;
+}
+
+.replyLink:hover {
+  color: #8B2E2C !important;
+}
+
+.subComment {
+  margin-left: 2rem !important;
+  margin-top: 1rem !important;
+  padding-left: 1rem !important;
+  border-left: 2px solid #A97142 !important;
+}
+
+/* Comment Form Styles */
+.commentFormHeader {
+  color: #8B2E2C !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.commentFormNote {
+  color: #607744 !important;
+  font-size: 0.9rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.commentForm {
+  background-color: #FAF9F5 !important;
+  padding: 1.5rem !important;
+  border-radius: 4px !important;
+  border: 1px solid #F5EBDD !important;
+}
+
+.formControl {
+  background-color: #FAF9F5 !important;
+  border: 1px solid #A97142 !important;
+  color: #333 !important;
+}
+
+.formControl:focus {
+  border-color: #8B2E2C !important;
+  box-shadow: 0 0 0 0.2rem rgba(139, 46, 44, 0.25) !important;
+}
+
+.invalidFeedback {
+  color: #8B2E2C !important;
+}
+
+.submitButton {
+  background-color: #8B2E2C !important;
+  border-color: #8B2E2C !important;
+  color: #FAF9F5 !important;
+}
+
+.submitButton:hover {
+  background-color: #A97142 !important;
+  border-color: #A97142 !important;
+}
+
+.formCheckLabel {
+  color: #607744 !important;
+}
