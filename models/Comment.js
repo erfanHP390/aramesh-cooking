@@ -11,7 +11,7 @@ const schema = mongoose.Schema(
       type: String,
       required: true,
     },
-    age: {
+    city: {
       type: String,
       required: true,
     },
