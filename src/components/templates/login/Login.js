@@ -1,8 +1,134 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import styles from "./Login.module.css";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { swalAlert, toastError, toastSuccess } from "@/utils/alerts";
+import { validateEmail } from "@/utils/auth";
+import Loading from "@/app/loading";
+import swal from "sweetalert";
 
 function Login() {
+  const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSaveUserLoginInfo, setIsSaveUserLoginInfo] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const getUserInfoLogin = JSON.parse(localStorage.getItem("userLogin"));
+      if (getUserInfoLogin) {
+        setEmail(getUserInfoLogin.email);
+        setPassword(getUserInfoLogin.password);
+      }
+    }
+  }, []);
+
+  const loginUser = async () => {
+    if (!email || !password) {
+      setIsLoading(false);
+      return swalAlert("لطفا تمامی موارد را پر کنید", "error", "فهمیدم");
+    }
+
+    const isValidEmail = validateEmail(email);
+
+    if (!isValidEmail) {
+      return swalAlert("ایمیل وارد شده معتبر نیست", "error", "تلاش مجدد");
+    }
+
+    const user = { email, password };
+
+    if (isSaveUserLoginInfo) {
+      localStorage.setItem("userLogin", JSON.stringify(user));
+    }
+
+    const res = await fetch("/api/auth/signin", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    });
+
+    const userData = await res.json();
+    if (res.status === 200) {
+      setIsLoading(false);
+      setEmail("");
+      setPassword("");
+      swal({
+        title: "خوش آمدید ، کد اشتراک شما",
+        text: `${userData.data.subscription}`,
+        icon: "success",
+        buttons: "فهمیدم",
+      }).then((result) => {
+        if (result) {
+          router.replace("/");
+        }
+      });
+    } else if (res.status === 419) {
+      setIsLoading(false);
+      setEmail("");
+      setPassword("");
+      toastError(
+        "ایمیل / رمز عبور نامعتبر است",
+        "top-center",
+        5000,
+        false,
+        true,
+        true,
+        true,
+        undefined,
+        "colored"
+      );
+    } else if (res.status === 404) {
+      setIsLoading(false);
+      setEmail("");
+      setPassword("");
+      toastError(
+        "کاربر یافت نشد",
+        "top-center",
+        5000,
+        false,
+        true,
+        true,
+        true,
+        undefined,
+        "colored"
+      );
+    } else if (res.status === 401) {
+      setIsLoading(false);
+      setEmail("");
+      setPassword("");
+      toastError(
+        "ایمیل/رمزعبور صحیح نیست",
+        "top-center",
+        5000,
+        false,
+        true,
+        true,
+        true,
+        undefined,
+        "colored"
+      );
+    } else if (res.status === 500) {
+      setIsLoading(false);
+      setEmail("");
+      setPassword("");
+      toastError(
+        "خطا در سرور ، لطفا بعدا تلاش کنید",
+        "top-center",
+        5000,
+        false,
+        true,
+        true,
+        true,
+        undefined,
+        "colored"
+      );
+    }
+  };
+
   return (
     <section id="login-area" className={styles.loginSection}>
       <div className={styles.loginContainer}>
@@ -12,7 +138,7 @@ function Login() {
               <form id="login-form" className={styles.loginForm} noValidate>
                 <h1 className={styles.loginTitle}>ورود به حساب کاربری</h1>
                 <div className={styles.loginDivider} />
-                
+
                 <div className={styles.formGroup}>
                   <input
                     name="email"
@@ -21,12 +147,14 @@ function Login() {
                     aria-label="email"
                     type="email"
                     required
+                    value={email}
+                    onChange={(event) => setEmail(event.target.value)}
                   />
                   <div className={styles.invalidFeedback}>
                     لطفا آدرس ایمیل را وارد کنید.
                   </div>
                 </div>
-                
+
                 <div className={styles.formGroup}>
                   <input
                     className={styles.formInput}
@@ -34,26 +162,40 @@ function Login() {
                     aria-label="password"
                     type="password"
                     required
+                    value={password}
+                    onChange={(event) => setPassword(event.target.value)}
                   />
                   <div className={styles.invalidFeedback}>
                     لطفا رمز عبور را وارد کنید.
                   </div>
                 </div>
-                
+
                 <div className={styles.formGroup}>
                   <div className={styles.formCheck}>
                     <input
                       className={styles.checkboxInput}
                       type="checkbox"
                       id="remember"
+                      checked={isSaveUserLoginInfo}
+                      onChange={() =>
+                        setIsSaveUserLoginInfo((prevValue) => !prevValue)
+                      }
                     />
                     <label className={styles.checkboxLabel} htmlFor="remember">
                       من را به یاد بیاورید
                     </label>
                   </div>
-                  
-                  <button type="submit" className={ `  btn_services ${styles.submitButton}`}>
-                    ورود به حساب کاربری
+
+                  <button
+                    type="submit"
+                    onClick={(event) => {
+                      event.preventDefault();
+                      setIsLoading(true);
+                      loginUser();
+                    }}
+                    className={`  btn_services ${styles.submitButton}`}
+                  >
+                    {isLoading ? <Loading /> : "ورود به حساب کاربری"}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={16}
@@ -74,10 +216,10 @@ function Login() {
                   </button>
                 </div>
               </form>
-              
+
               <div className={styles.socialLogin}>
                 <p className={styles.socialDivider}>یا</p>
-                
+
                 <div className={styles.socialButtons}>
                   <a href="#" className={styles.facebookButton}>
                     <svg
@@ -92,7 +234,7 @@ function Login() {
                     </svg>
                     ورود با فیسبوک
                   </a>
-                  
+
                   <a href="#" className={styles.twitterButton}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -107,15 +249,19 @@ function Login() {
                     ورود با توئیتر
                   </a>
                 </div>
-                
+
                 <div className={styles.loginLinks}>
                   <p>
                     حساب کاربری ندارید؟{" "}
-                    <Link href={"/register"} className={styles.link}>ثبت نام کنید</Link>
+                    <Link href={"/register"} className={styles.link}>
+                      ثبت نام کنید
+                    </Link>
                   </p>
                   <p>
                     رمز عبور از دست رفته؟{" "}
-                    <Link href={"/forgotPassword"} className={styles.link}>بازنشانی رمز عبور</Link>
+                    <Link href={"/forgotPassword"} className={styles.link}>
+                      بازنشانی رمز عبور
+                    </Link>
                   </p>
                 </div>
               </div>
