@@ -4,8 +4,13 @@ import styles from "./Navbar.module.css";
 import Link from "next/link";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
+import { toastError, toastSuccess } from "@/utils/alerts";
+import { useRouter } from "next/navigation";
 
-function Navbar() {
+function Navbar({isCookies}) {
+
+  const router = useRouter()
+
   const scrollToSection = (sectionId, offset = 0) => {
     if (typeof window !== "undefined") {
       const element = document.getElementById(sectionId);
@@ -20,6 +25,103 @@ function Navbar() {
       }
     }
   };
+  
+
+  useEffect(() => {
+
+    const refreshUser = async () => {
+
+      const res = await fetch("/api/auth/refresh" , {
+        method: "POST"
+      })
+
+      const userData = await res.json()
+
+      if(res.status === 200 && userData?.user?.refreshToken) {
+
+        const refreshT = userData.user.refreshToken
+
+        const signinUser = await fetch("/api/auth/signin", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ userRefreshToken: refreshT }),
+        });
+
+          if (signinUser.status === 200) {
+          toastSuccess(
+            "خوش آمدید 😊",
+            "top-center",
+            5000,
+            false,
+            true,
+            true,
+            true,
+            undefined,
+            "colored"
+          );
+          router.refresh();
+        } else if (signinUser.status === 419) {
+          toastError(
+            "ایمیل / رمز عبور نامعنبر است",
+            "top-center",
+            5000,
+            false,
+            true,
+            true,
+            true,
+            undefined,
+            "colored"
+          );
+        } else if (signinUser.status === 404) {
+          toastError(
+            "کاربر یافت نشد",
+            "top-center",
+            5000,
+            false,
+            true,
+            true,
+            true,
+            undefined,
+            "colored"
+          );
+        } else if (signinUser.status === 401) {
+          toastError(
+            "ایمیل/رمزعبور صحیح نیست",
+            "top-center",
+            5000,
+            false,
+            true,
+            true,
+            true,
+            undefined,
+            "colored"
+          );
+        } else if (res.status === 500) {
+          toastError(
+            "خطا در سرور ، لطفا بعدا تلاش کنید",
+            "top-center",
+            5000,
+            false,
+            true,
+            true,
+            true,
+            undefined,
+            "colored"
+          );
+        }
+
+      }
+
+    }
+
+    if (isCookies === false) {
+      refreshUser();
+    }
+
+  } , [])
+
 
   return (
     <>
