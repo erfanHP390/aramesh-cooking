@@ -1,31 +1,156 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import styles from "./ForgotPass.module.css";
+import { useRouter } from "next/navigation";
+import { swalAlert, toastError, toastSuccess } from "@/utils/alerts";
+import { validatePhone } from "@/utils/auth";
+import Loading from "@/app/loading";
 
 function ForgotPass() {
+  const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false);
+  const [phone, setPhone] = useState("");
+
+  const resetPassword = async () => {
+    if (!phone) {
+      setIsLoading(false);
+      return swalAlert(
+        "لطفا شماره تلفن  خود را وارد نمایید",
+        "error",
+        "فهمیدم"
+      );
+    }
+
+    const isValidPhone = validatePhone(phone);
+    if (!isValidPhone) {
+      setIsLoading(false);
+      return swalAlert(
+        "لطفا شماره تلفن یا ایمیل معتبر وارد نمایید",
+        "error",
+        "فهمیدم"
+      );
+    }
+
+    const res = await fetch("/api/auth/forgotPassword", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ phone }),
+    });
+
+    if (res.status === 200) {
+      setPhone("")
+      setIsLoading(false);
+      toastSuccess(
+        "رمز عبور  جدید با موفقیت ارسال شد",
+        "top-center",
+        5000,
+        false,
+        true,
+        true,
+        true,
+        undefined,
+        "colored"
+      );
+      router.replace("/login");
+    } else if (res.status === 400) {
+      setIsLoading(false);
+      toastError(
+        "لطفا شماره تلفن یا ایمیل خود را وارد نمایید",
+        "top-center",
+        5000,
+        false,
+        true,
+        true,
+        true,
+        undefined,
+        "colored"
+      );
+    } else if (res.status === 422) {
+      setIsLoading(false);
+      toastError(
+        "لطفا یک شماره تلفن یاایمیل معتبر وارد نمایید",
+        "top-center",
+        5000,
+        false,
+        true,
+        true,
+        true,
+        undefined,
+        "colored"
+      );
+    } else if (res.status === 404) {
+      setIsLoading(false);
+      toastError(
+        "کاربر یافت نشد",
+        "top-center",
+        5000,
+        false,
+        true,
+        true,
+        true,
+        undefined,
+        "colored"
+      );
+    } else if (res.status === 500) {
+      setIsLoading(false);
+      toastError(
+        "خطا در سرور ، لطفا بعدا تلاش کنید",
+        "top-center",
+        5000,
+        false,
+        true,
+        true,
+        true,
+        undefined,
+        "colored"
+      );
+    }
+  };
+
   return (
-    <section id="forgot-password" className={`section ${styles.forgotContainer}`}>
+    <section
+      id="forgot-password"
+      className={`section ${styles.forgotContainer}`}
+    >
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-12 col-md-10 col-lg-8 px-3 px-md-4" data-aos="fade-up">
+          <div
+            className="col-12 col-md-10 col-lg-8 px-3 px-md-4"
+            data-aos="fade-up"
+          >
             <div className={styles.forgotForm}>
               <form className="needs-validation" noValidate>
                 <h1 className={styles.forgotTitle}>بازیابی رمز عبور</h1>
                 <div className={styles.divider}></div>
-                
+
                 <div className="form-group">
                   <input
                     type="email"
                     className={styles.formControl}
-                    placeholder="آدرس ایمیل"
+                    placeholder="شماره تلفن"
                     required
+                    value={phone}
+                    onChange={(event) => setPhone(event.target.value)}
                   />
                   <div className={styles.invalidFeedback}>
-                    لطفا آدرس ایمیل معتبر وارد کنید.
+                    لطفا شماره تلفن معتبر وارد کنید.
                   </div>
                 </div>
-                
-                <button type="submit" className={styles.submitBtn}>
-                  بازیابی رمز عبور
+
+                <button
+                  onClick={(event) => {
+                    event.preventDefault();
+                    setIsLoading(true);
+                    resetPassword();
+                  }}
+                  type="submit"
+                  className={styles.submitBtn}
+                >
+                  {
+                    isLoading ? <Loading /> : "بازیابی رمزعبور"
+                  }
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className={styles.submitIcon}
@@ -43,10 +168,12 @@ function ForgotPass() {
                   </svg>
                 </button>
               </form>
-              
+
               <p className={styles.linkText}>
                 حساب کاربری ندارید؟{" "}
-                <a href="/register" className={styles.link}>ثبت نام کنید</a>
+                <a href="/register" className={styles.link}>
+                  ثبت نام کنید
+                </a>
               </p>
             </div>
           </div>
