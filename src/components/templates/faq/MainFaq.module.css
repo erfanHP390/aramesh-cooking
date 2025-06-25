@@ -1,10 +1,8 @@
-/* استایل‌های اصلی */
 .mainContainer {
   position: relative;
   overflow: hidden;
 }
 
-/* بخش هیرو */
 .heroSection {
   position: relative;
   padding: 6rem 0;
@@ -80,7 +78,6 @@
   height: 1rem;
 }
 
-/* بخش FAQ */
 .faqSection {
   padding: 4rem 0;
   background-color: #F5EBDD;
@@ -184,7 +181,7 @@
   z-index: 1;
 }
 
-/* ریسپانسیو */
+/* responsive */
 @media (max-width: 768px) {
   .heroSection {
     padding: 4rem 0;

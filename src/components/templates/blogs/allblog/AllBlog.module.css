@@ -1,4 +1,3 @@
-/* Base Styles */
 .section {
   position: relative;
   width: 100%;
@@ -91,7 +90,6 @@
   margin-bottom: 1.5rem !important; 
 }
 
-/* Blog Header */
 .blogHeader {
   display: flex;
   align-items: center;
@@ -113,7 +111,6 @@
   margin: 0;
 }
 
-/* Card Styles */
 .card {
   position: relative;
   display: flex;
@@ -124,7 +121,7 @@
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   transition: all 0.3s ease;
-  height: 100%; /* اضافه شد */
+  height: 100%; 
 }
 
 .card:hover {
@@ -145,19 +142,18 @@
   overflow: hidden !important;
 }
 
-/* Blog Image */
 .blogTwoImg {
   position: relative;
   overflow: hidden;
   border-radius: 0.25rem 0.25rem 0 0;
-  height: 200px; /* اضافه شد */
+  height: 200px; 
 }
 
 .blogTwoImg img {
   transition: transform 0.5s ease;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* اضافه شد */
+  object-fit: cover; 
 }
 
 .blogTwoImg:hover img {
@@ -169,7 +165,6 @@
   height: auto;
 }
 
-/* Card Body */
 .cardBody {
   flex: 1 1 auto;
   padding: 1.25rem;
@@ -180,7 +175,6 @@
   padding-left: 0 !important;
 }
 
-/* Author */
 .blogAuthor {
   position: absolute;
   top: -1.5rem;
@@ -201,14 +195,13 @@
   border: 2px solid #F5EBDD;
 }
 
-/* Card Title */
 .cardTitle {
   margin-bottom: 1rem;
 }
 
 .h5 {
   font-size: 1.25rem;
-  min-height: 3rem; /* اضافه شد */
+  min-height: 3rem; 
   display: flex;
   align-items: center;
 }
@@ -227,7 +220,6 @@
   color: #607744 !important;
 }
 
-/* Meta Info */
 .meta {
   display: flex;
   align-items: center;
@@ -252,12 +244,11 @@
   color: #607744;
 }
 
-/* Blog Excerpt */
 .blogExcerpt {
   color: #5a5a5a;
   line-height: 1.7;
   margin-bottom: 1rem;
-  min-height: 4.5rem; /* اضافه شد */
+  min-height: 4.5rem; 
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -308,7 +299,6 @@
   margin-right: 0.5rem;
 }
 
-/* Responsive Styles */
 @media (max-width: 992px) {
   .colLg8 {
     flex: 0 0 100%;
@@ -348,7 +338,6 @@
 }
 
 /* ===================== side bar ========================= */
-/* Base Styles */
 .colLg4 {
   flex: 0 0 33.333333%;
   max-width: 33.333333%;
@@ -363,10 +352,10 @@
 }
 
 .widgetArea {
-  background-color: #F5EBDD; /* بژ روشن */
+  background-color: #F5EBDD; 
   padding: 1.5rem;
   border-radius: 0.5rem;
-  border: 1px solid #A97142; /* قهوه‌ای خاکی */
+  border: 1px solid #A97142; 
 }
 
 .sticky {
@@ -382,7 +371,6 @@
   margin-top: 0 !important;
 }
 
-/* Widget Styles */
 .widget {
   margin-bottom: 1.5rem;
 }
@@ -396,22 +384,21 @@
   align-items: center;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #8B2E2C; /* قرمز زرشکی */
+  border-bottom: 2px solid #8B2E2C;
 }
 
 .widgetIcon {
   font-size: 1.5rem;
   margin-left: 0.5rem;
-  color: #607744; /* سبز ریحانی */
+  color: #607744; 
 }
 
 .h5 {
   font-size: 1.25rem;
-  color: #A97142; /* قهوه‌ای خاکی */
+  color: #A97142;
   margin: 0;
 }
 
-/* Side Links */
 .sideLinks {
   display: flex;
   flex-direction: column;
@@ -438,7 +425,7 @@
   color: #5a5a5a;
   text-decoration: none;
   transition: all 0.3s ease;
-  border-bottom: 1px solid rgba(169, 113, 66, 0.1); /* قهوه‌ای خاکی با شفافیت */
+  border-bottom: 1px solid rgba(169, 113, 66, 0.1); 
 }
 
 .sideLinks a:hover {
@@ -446,7 +433,6 @@
   padding-right: 0.5rem;
 }
 
-/* Badge */
 .badge {
   display: inline-block;
   padding: 0.25em 0.4em;
@@ -460,18 +446,17 @@
 }
 
 .bgLightDark {
-  background-color: rgba(169, 113, 66, 0.1) !important; /* قهوه‌ای خاکی با شفافیت */
+  background-color: rgba(169, 113, 66, 0.1) !important; 
 }
 
 .textPrimary {
-  color: #8B2E2C !important; /* قرمز زرشکی */
+  color: #8B2E2C !important; 
 }
 
 .rounded3 {
   border-radius: 0.5rem !important;
 }
 
-/* Responsive Styles */
 @media (max-width: 992px) {
   .colLg4 {
     flex: 0 0 100%;

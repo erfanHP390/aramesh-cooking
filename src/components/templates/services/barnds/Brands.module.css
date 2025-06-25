@@ -31,7 +31,7 @@
 .brandSlide {
   padding: 15px 0;
   text-align: center;
-  height: 150px; /* افزایش ارتفاع اسلایدها */
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;

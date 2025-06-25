@@ -1,24 +1,24 @@
 .teamSection {
-  background-color: #F5EBDD; /* رنگ بژ روشن برای پس‌زمینه */
+  background-color: #f5ebdd; 
 }
 
 .sectionTitle {
-  color: #8B2E2C; /* رنگ قرمز زرشکی برای عنوان */
+  color: #8b2e2c;
 }
 
 .divider {
-  background-color: #A97142; /* رنگ قهوه‌ای خاکی برای خط جداکننده */
-  border-color: #A97142;
+  background-color: #a97142; 
+  border-color: #a97142;
   height: 3px;
   opacity: 0.8;
 }
 
 .sectionSubtitle {
-  color: #607744; /* رنگ سبز ریحانی برای زیرعنوان */
+  color: #607744; 
 }
 
 .teamBlock {
-  background-color: #FAF9F5; /* سفید گرم برای کارت‌ها */
+  background-color: #faf9f5; 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -50,7 +50,7 @@
   right: 20px;
   width: 40px;
   height: 40px;
-  background-color: #8B2E2C;
+  background-color: #8b2e2c;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -70,7 +70,7 @@
 }
 
 .memberName {
-  color: #8B2E2C;
+  color: #8b2e2c;
   font-weight: bold;
   margin-bottom: 5px;
 }
@@ -93,7 +93,7 @@
 }
 
 .specialtiesList li {
-  background-color: #A97142;
+  background-color: #a97142;
   color: white;
   padding: 3px 10px;
   border-radius: 15px;
@@ -117,24 +117,24 @@
   .teamThumb {
     height: 200px;
   }
-  
+
   .teamInfo {
     padding: 15px;
   }
 }
 
 .viewProfile svg {
-    color: #fff;
+  color: #fff;
 }
 
 .viewProfile {
-    transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .viewProfile:hover {
-    background-color: #607744 !important;
+  background-color: #607744 !important;
 }
 
 .socialIcon:hover {
-    color: #607744 !important;
+  color: #607744 !important;
 }

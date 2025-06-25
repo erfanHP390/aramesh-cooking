@@ -3,13 +3,13 @@ import React, { useState } from "react";
 import styles from "./Gallery.module.css";
 import Product from "@/components/modules/portfolio/Product";
 
-function Gallery({ products, categories }) { // ✅ اصلاح شد (حذف async)
+function Gallery({ products, categories }) { 
   const [filteredProducts, setFilteredProducts] = useState(products);
   const [activeCategory, setActiveCategory] = useState("68505c3d5891c2655475ae0a"); 
 
   const showCategories = (categoryId) => {
     setActiveCategory(categoryId);
-    if (categoryId === "68505c3d5891c2655475ae0a") { // "همه"
+    if (categoryId === "68505c3d5891c2655475ae0a") { 
       setFilteredProducts(products);
     } else {
       const filtered = products.filter(

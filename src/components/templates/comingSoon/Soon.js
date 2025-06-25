@@ -102,14 +102,11 @@ function Soon() {
 
   return (
     <main id="content">
-      {/* بخش هیرو */}
       <div id="hero" className={styles.soonContainer}>
-        {/* پس‌زمینه ویدیویی */}
         <div className={styles.videoBackground}>
-          {/* افکت اورلی */}
           <div className={styles.heroOverlay}></div>
 
-          {/* محتوا */}
+          {/* content */}
           <div className="container">
             <div className={styles.heroContent}>
               <h1 className={styles.heroTitle}>به زودی راه‌اندازی می‌شویم!</h1>
@@ -117,7 +114,7 @@ function Soon() {
                 در حال آماده‌سازی بهترین تجربه آشپزی آنلاین برای شما هستیم
               </p>
 
-              {/* فرم خبرنامه */}
+              {/* newsLetter-form */}
               <div className={styles.newsletterForm}>
                 <input
                   type="email"
@@ -138,7 +135,7 @@ function Soon() {
                 </button>
               </div>
 
-              {/* آیکون‌های شبکه‌های اجتماعی */}
+              {/* socials-icon */}
               <div className={styles.socialIcons}>
                 <a
                   href="https://instagram.com/ashpazibaaaramsh"

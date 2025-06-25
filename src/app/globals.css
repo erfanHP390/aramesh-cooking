@@ -185,7 +185,6 @@ body {
   top: 110px !important;
 }
 
-/* تضمین پوزیشن پایین وسط */
 .Toastify__toast-container--bottom-center {
   position: fixed !important;
   width: 400px !important;
@@ -198,13 +197,13 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
   color: #faf9f5 !important;
   background-color: #a97142 !important;
-  font-family: 'Vazirmatn', sans-serif !important; /* این بخش اضافه شد */
+  font-family: 'Vazirmatn', sans-serif !important; 
 }
 
 .Toastify__toast-body {
   padding: 8px 12px !important;
   margin: 0 !important;
-  font-family: 'Vazirmatn', sans-serif !important; /* این بخش اضافه شد */
+  font-family: 'Vazirmatn', sans-serif !important; 
 }
 
 .Toastify__toast--default {
@@ -249,7 +248,7 @@ body {
 .toast-custom-content {
   display: flex !important;
   align-items: center !important;
-  font-family: 'Vazirmatn', sans-serif !important; /* اختیاری برای محتوای کاستوم */
+  font-family: 'Vazirmatn', sans-serif !important; 
 }
 
 .toast-custom-icon {

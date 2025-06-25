@@ -12,7 +12,7 @@ function CardBlog({ _id , titr, title, shortDesc, comments, author, description,
           <Link href={`/blogs/${_id}`}>
             <img
               className={styles.imgFluid}
-              src={img || "https://via.placeholder.com/300x200"} // Fallback image
+              src={img || "https://via.placeholder.com/300x200"}
               alt={title || "Blog Image"}
             />
           </Link>

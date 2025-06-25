@@ -3,7 +3,6 @@ import {
   generateAccessToken,
   generateRefreshToken,
   validateEmail,
-  validatePassword,
   verifyPassword,
 } from "@/utils/auth";
 import UserModel from "@/models/User";

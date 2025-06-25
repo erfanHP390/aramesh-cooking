@@ -90,7 +90,6 @@ function MainFaq() {
 
   return (
     <main className={styles.mainContainer}>
-      {/* بخش سوالات متداول */}
       <section className={styles.faqSection}>
         <div className="container">
           <header className={styles.faqHeader}>

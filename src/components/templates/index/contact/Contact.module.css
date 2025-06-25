@@ -1,18 +1,18 @@
 .contactSection {
-  background-color: #f5ebdd; /* رنگ بژ روشن برای پس‌زمینه */
+  background-color: #f5ebdd; 
 }
 
 .contactBox {
-  background-color: #faf9f5; /* سفید گرم برای باکس فرم */
-  border: 1px solid #a97142; /* حاشیه قهوه‌ای خاکی */
+  background-color: #faf9f5; 
+  border: 1px solid #a97142; 
 }
 
 .contactTitle {
-  color: #8b2e2c; /* قرمز زرشکی برای عنوان */
+  color: #8b2e2c; 
 }
 
 .divider {
-  background-color: #607744; /* سبز ریحانی برای خط جداکننده */
+  background-color: #607744; 
   border-color: #607744;
   height: 3px;
   width: 100px;
@@ -20,27 +20,27 @@
 }
 
 .contactSubtitle {
-  color: #607744; /* سبز ریحانی برای متن توضیح */
+  color: #607744; 
 }
 
 .formLabel {
-  color: #8b2e2c; /* قرمز زرشکی برای لیبل‌ها */
+  color: #8b2e2c; 
   font-weight: 500;
 }
 
 .formInput {
-  border: 1px solid #a97142; /* قهوه‌ای خاکی برای حاشیه فیلدها */
-  background-color: rgba(245, 235, 221, 0.5); /* بژ روشن با شفافیت */
+  border: 1px solid #a97142; 
+  background-color: rgba(245, 235, 221, 0.5); 
   transition: all 0.3s ease;
 }
 
 .formInput:focus {
-  border-color: #8b2e2c; /* قرمز زرشکی هنگام فوکوس */
-  box-shadow: 0 0 0 0.25rem rgba(139, 46, 44, 0.25); /* سایه هماهنگ */
+  border-color: #8b2e2c; 
+  box-shadow: 0 0 0 0.25rem rgba(139, 46, 44, 0.25); 
 }
 
 .submitBtn {
-  background-color: #8b2e2c; /* قرمز زرشکی برای دکمه */
+  background-color: #8b2e2c; 
   color: white;
   padding: 0.75rem 2rem;
   border: none;
@@ -48,12 +48,11 @@
 }
 
 .submitBtn:hover {
-  background-color: #a97142; /* قهوه‌ای خاکی هنگام هاور */
+  background-color: #a97142; 
   transform: translateY(-3px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* استایل‌های ریسپانسیو */
 @media (max-width: 768px) {
   .contactBox {
     padding: 2rem !important;

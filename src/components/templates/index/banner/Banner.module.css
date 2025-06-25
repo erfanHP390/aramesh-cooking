@@ -1,6 +1,6 @@
 .swiper {
   width: 100%;
-  height: 500px; /* ارتفاع ثابت برای اسلایدر */
+  height: 500px; 
   margin: 0 auto;
 }
 
@@ -22,7 +22,7 @@
 .slideImage {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* تضمین می‌کند همه عکس‌ها یکسان نمایش داده شوند */
+  object-fit: cover; 
   object-position: center;
 }
 
@@ -59,7 +59,7 @@
 
 @media (max-width: 768px) {
   .swiper {
-    height: 300px; /* ارتفاع کمتر برای موبایل */
+    height: 300px; 
   }
 }
 

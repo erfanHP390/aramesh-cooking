@@ -41,7 +41,6 @@ function Services() {
               className="col-md-6 text-light position-relative overflow-hidden"
               style={{ backgroundColor: "#8B2E2C" }}
             >
-              {/* scribble */}
               <figure className="scribble scale-3 opacity-10 bottom-0 end-0 z-index-n1">
                 <svg
                   className="text-secondary"
@@ -57,7 +56,6 @@ function Services() {
                   />
                 </svg>
               </figure>
-              {/* scribble */}
               <figure className="scribble scale-4 opacity-10 bottom-0 end-0 z-index-n1">
                 <svg
                   className="text-secondary"
@@ -73,7 +71,6 @@ function Services() {
                   />
                 </svg>
               </figure>
-              {/* scribble */}
               <figure className="scribble scale-5 opacity-10 bottom-0 end-0 z-index-n1">
                 <svg
                   className="text-secondary"
@@ -89,7 +86,6 @@ function Services() {
                   />
                 </svg>
               </figure>
-              {/* scribble */}
               <figure className="scribble scale-6 opacity-10 bottom-0 end-0 z-index-n1">
                 <svg
                   className="text-secondary"
@@ -106,7 +102,6 @@ function Services() {
                 </svg>
               </figure>
               <div className="py-5 px-2 px-lg-5">
-                {/* row */}
                 <div className="row align-items-center justify-content-around">
                   <div className="col-12" data-aos="fade-up">
                     <div className="my-3">

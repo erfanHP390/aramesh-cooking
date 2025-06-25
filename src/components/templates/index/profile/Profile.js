@@ -8,7 +8,6 @@ function Profile() {
         <div className="container">
           <div className="row justify-content-between">
             <div className="col-lg-6" data-aos="fade-right">
-              {/* About 2 Thumb */}
               <div className="text-center mb-4">
                 <div className="px-5 px-md-6 mb-5 mb-lg-0">
                   <img

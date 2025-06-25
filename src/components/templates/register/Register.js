@@ -17,7 +17,7 @@ function Register() {
   const [isReadRules, setIsReadRules] = useState(false);
 
   const registerUser = async () => {
-    // if (isReadRules) {
+    if (isReadRules) {
       if (!name || !email || !phone || !password) {
         setIsLoading(false);
         return swalAlert("لطفا تمامی موارد را پر کنید", "error", "فهمیدم");
@@ -135,14 +135,14 @@ function Register() {
           "colored"
         );
       }
-    // } else {
-    //   setIsLoading(false);
-    //   return swalAlert(
-    //     "لطفا ابتدا شرایط و قوانین را مطالعه فرمایید",
-    //     "error",
-    //     "فهمیدم"
-    //   );
-    // }
+    } else {
+      setIsLoading(false);
+      return swalAlert(
+        "لطفا ابتدا شرایط و قوانین را مطالعه فرمایید",
+        "error",
+        "فهمیدم"
+      );
+    }
   };
 
   return (

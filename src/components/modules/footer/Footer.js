@@ -8,7 +8,6 @@ function Footer() {
       <div className={`${styles.footerContent} section pt-6 `}>
         <div className="container">
           <div className="row">
-            {/* بخش اول - درباره ما */}
             <div className="col-lg-4">
               <div className={`${styles.widget} pe-lg-5`}>
                 <h4 className={styles.widgetTitle}>درباره گروه آشپزی آرامش</h4>
@@ -92,7 +91,6 @@ function Footer() {
               </div>
             </div>
 
-            {/* بخش دوم - لینک‌های سریع */}
             <div className="col-md-6 col-lg-4">
               <div className={styles.widget}>
                 <h4 className={styles.widgetTitle}>لینک‌های سریع</h4>
@@ -117,12 +115,10 @@ function Footer() {
               </div>
             </div>
 
-            {/* بخش سوم - خبرنامه و شبکه‌های اجتماعی */}
             <NewsLetter />       
           </div>
         </div>
 
-        {/* کپی رایت */}
         <div className={styles.copyright}>
           <div className="container py-3 border-top">
             <div className="row">

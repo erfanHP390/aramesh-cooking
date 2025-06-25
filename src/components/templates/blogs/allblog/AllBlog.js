@@ -11,13 +11,13 @@ function AllBlog({ blogs }) {
   const [activeFilter, setActiveFilter] = useState(null);
   const [filterType, setFilterType] = useState(null);
 
-  // محاسبه تعداد مقالات در هر دسته بندی
+  // - count blogs on category
   const categoryCounts = blogs.reduce((acc, blog) => {
     acc[blog.category] = (acc[blog.category] || 0) + 1;
     return acc;
   }, {});
 
-  // محاسبه تعداد مقالات در هر ماه
+  // - count blogs.length in month
   const archiveCounts = blogs.reduce((acc, blog) => {
     const date = new Date(blog.createdAt);
     const persianMonth = date.toLocaleDateString('fa-IR', { month: 'long', year: 'numeric' });
@@ -26,7 +26,7 @@ function AllBlog({ blogs }) {
   }, {});
 
   useEffect(() => {
-    // فیلتر کردن مقالات بر اساس انتخاب کاربر
+    // - filter blogs for choose user
     let filtered = blogs;
     if (activeFilter && filterType === 'category') {
       filtered = blogs.filter(blog => blog.category === activeFilter);
@@ -184,7 +184,6 @@ function AllBlog({ blogs }) {
                     </div>
                   </aside>
 
-                  {/* سایر */}
                   <aside id="meta" className={`${styles.widget} ${styles.mb4}`}>
                     <div className={styles.widgetTitle}>
                       <GiNotebook className={styles.widgetIcon} />

@@ -7,9 +7,7 @@ import "swiper/css/navigation";
 import styles from "./Brands.module.css";
 
 function Brands() {
-  // Brand data with external image URLs
   const brands = [
-    // برندهای خارجی
     {
       id: 1,
       img: "/images/brands/Nestlé.webp",

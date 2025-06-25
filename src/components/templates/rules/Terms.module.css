@@ -20,7 +20,7 @@
 }
 
 .bgBody {
-  background-color: #F5EBDD !important; /* بژ روشن */
+  background-color: #F5EBDD !important; 
 }
 
 .rounded3 {
@@ -84,26 +84,26 @@
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
-  color: #8B2E2C; /* قرمز زرشکی */
+  color: #8B2E2C; 
 }
 
 .cookingIcon {
   font-size: 2.5rem;
   margin-left: 1rem;
-  color: #607744; /* سبز ریحانی */
+  color: #607744; 
 }
 
 .mainTitle {
   font-size: 2rem;
   font-weight: 600;
-  color: #8B2E2C; /* قرمز زرشکی */
+  color: #8B2E2C;
   margin: 0;
 }
 
 .sectionTitle {
   font-size: 1.5rem;
   font-weight: 500;
-  color: #A97142; /* قهوه‌ای خاکی */
+  color: #A97142; 
   margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
@@ -121,27 +121,25 @@
 
 .strongText {
   font-weight: 600;
-  color: #8B2E2C; /* قرمز زرشکی */
+  color: #8B2E2C; 
 }
 
-/* رنگ‌های اضافی برای عناصر خاص */
 .primaryButton {
-  background-color: #8B2E2C; /* قرمز زرشکی */
-  color: #FAF9F5; /* سفید گرم */
+  background-color: #8B2E2C; 
+  color: #FAF9F5; 
   border: none;
   padding: 0.5rem 1.5rem;
   border-radius: 0.25rem;
 }
 
 .secondaryButton {
-  background-color: #607744; /* سبز ریحانی */
-  color: #FAF9F5; /* سفید گرم */
+  background-color: #607744; 
+  color: #FAF9F5; 
   border: none;
   padding: 0.5rem 1.5rem;
   border-radius: 0.25rem;
 }
 
-/* رسپانسیو */
 @media (max-width: 992px) {
   .colLg8 {
     flex: 0 0 100%;

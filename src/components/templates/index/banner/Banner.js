@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/navigation";
-import styles from "./Banner.module.css"
+import styles from "./Banner.module.css";
 
 import { Navigation, Autoplay } from "swiper/modules";
 
@@ -93,7 +93,7 @@ function Banner() {
           }}
         />
       </SwiperSlide>
-            <SwiperSlide>
+      <SwiperSlide>
         <img
           src="/images/sliders/slider6.jpg"
           alt="Slide"
@@ -108,7 +108,7 @@ function Banner() {
           }}
         />
       </SwiperSlide>
-            <SwiperSlide>
+      <SwiperSlide>
         <img
           src="/images/sliders/slider7.jpg"
           alt="Slide"
@@ -123,7 +123,7 @@ function Banner() {
           }}
         />
       </SwiperSlide>
-            <SwiperSlide>
+      <SwiperSlide>
         <img
           src="/images/sliders/slider8.webp"
           alt="Slide"
@@ -138,8 +138,8 @@ function Banner() {
           }}
         />
       </SwiperSlide>
-              <div className={`swiper-button-next ${styles.swiperButtonNext}`}></div>
-        <div className={`swiper-button-prev ${styles.swiperButtonPrev}`}></div>
+      <div className={`swiper-button-next ${styles.swiperButtonNext}`}></div>
+      <div className={`swiper-button-prev ${styles.swiperButtonPrev}`}></div>
     </Swiper>
   );
 }

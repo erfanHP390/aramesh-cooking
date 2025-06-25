@@ -2,7 +2,6 @@ import connectToDB from "@/configs/db";
 import { cookies } from "next/headers";
 import UserModel from "@/models/User";
 import { verify } from "jsonwebtoken";
-import { generateAccessToken, generateRefreshToken } from "@/utils/auth";
 
 export async function POST(req) {
     try {

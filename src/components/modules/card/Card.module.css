@@ -1,10 +1,9 @@
-/* Blog Card Styles */
 .blogCard {
-  background-color: #F5EBDD; /* کرم روشن */
+  background-color: #F5EBDD; 
 }
 
 .blogTitle {
-  color: #8B2E2C; /* قرمز زرشکی */
+  color: #8B2E2C; 
 }
 
 .blogTitleLink {
@@ -15,28 +14,27 @@
 
 .blogTitleLink:active,
 .blogTitleLink:focus {
-  color: #607744 !important; /* سبز ریحانی هنگام کلیک */
+  color: #607744 !important; 
   outline: none;
 }
 
 .blogTitleLink:hover {
-  color: #A97142; /* قهوه‌ای خاکی هنگام هاور */
+  color: #A97142; 
   text-decoration: none;
 }
 
 .blogMeta {
-  color: #A97142; /* قهوه‌ای خاکی */
+  color: #A97142; 
 }
 
 .foodIcon {
-  fill: #607744; /* سبز ریحانی */
+  fill: #607744; 
 }
 
 .blogContent {
-  color: #A97142; /* قهوه‌ای خاکی */
+  color: #A97142; 
 }
 
-/* Remove default link styles */
 .blogTitle a {
   text-decoration: none;
 }
@@ -46,7 +44,6 @@
   color: #607744  !important;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .blogTitle {
     font-size: 1.1rem;

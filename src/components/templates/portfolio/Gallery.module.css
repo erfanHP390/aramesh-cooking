@@ -1,4 +1,3 @@
-/* Gallery.module.css */
 .galleryWrapper {
   min-height: calc(100vh - 120px) !important;
   padding: 4rem 0 !important;
@@ -48,12 +47,12 @@
   transition: all 0.3s ease !important;
   font-size: 1.1rem !important;
   padding: 0.5rem 1rem !important;
-  color: #607744 !important; /* سبز ریحانی */
+  color: #607744 !important; 
   position: relative !important;
 }
 
 .portfolio-nav-item.active {
-  color: #8B2E2C !important; /* قرمز زرشکی */
+  color: #8B2E2C !important; 
   font-weight: bold !important;
 }
 
@@ -65,10 +64,10 @@
   transform: translateX(-50%) !important;
   width: 60% !important;
   height: 3px !important;
-  background-color: #8B2E2C !important; /* قرمز زرشکی */
+  background-color: #8B2E2C !important; 
   border-radius: 3px !important;
 }
 
 .portfolio-nav-item:hover {
-  color: #A97142 !important; /* قهوه‌ای خاکی */
+  color: #A97142 !important; 
 }
