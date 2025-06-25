@@ -1,0 +1,77 @@
+:global(body.dark-mode) .aboutContainer,
+:global(body.dark-mode) .bg-body {
+  background-color: #2e1f17 !important;
+  color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .aboutButton,
+:global(body.dark-mode) .btn-warning {
+  background-color: #8b2e2c !important;
+  color: #faf9f5 !important;
+  border-color: #8b2e2c !important;
+}
+
+:global(body.dark-mode) .aboutButton:hover,
+:global(body.dark-mode) .btn-warning:hover {
+  background-color: #607744 !important;
+  color: #ffff !important;
+  border-color: #607744 !important;
+}
+
+:global(body.dark-mode) .aboutParagraph,
+:global(body.dark-mode) .lead {
+  color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .aboutTitle {
+  color: #faf9f5 !important;
+}
+
+
+
+.aboutContainer {
+  transition: all 0.3s ease;
+}
+
+.aboutContent {
+  max-width: 1200px;
+}
+
+.aboutImage {
+  position: relative;
+}
+
+.aboutImg {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.aboutText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.aboutTitle {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.aboutParagraph {
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.aboutButton {
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.aboutIcon {
+  margin-right: 0.5rem;
+}
+
+.section {
+  padding: 60px 0;
+}
