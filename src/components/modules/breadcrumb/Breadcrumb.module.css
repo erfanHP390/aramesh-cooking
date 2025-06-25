@@ -1,3 +1,4 @@
+/* استایل‌های اصلی (بدون تغییر) */
 .breadcrumbContainer {
   background-color: #A97142 !important;
   position: relative;
@@ -131,4 +132,38 @@
   .breadcrumbParticle4 {
     display: block !important;
   }
+}
+
+/* ========= Dark Mode Overrides ========= */
+:global(body.dark-mode) .breadcrumbContainer {
+  background-color: #3a261c !important; 
+}
+
+:global(body.dark-mode) .breadcrumbOverlay {
+  background-color: #3a261c !important; 
+}
+
+:global(body.dark-mode) .breadcrumbParticle {
+  color: #607744 !important;
+}
+
+:global(body.dark-mode) .breadcrumbText {
+  color: #faf9f5 !important; 
+}
+
+:global(body.dark-mode) .breadcrumbDivider {
+  background-color: #8b2e2c !important; 
+  border-color: #8b2e2c !important;
+}
+
+:global(body.dark-mode) .breadcrumbLink {
+  color: #faf9f5 !important; 
+}
+
+:global(body.dark-mode) .breadcrumbActiveItem {
+  color: #faf9f5 !important; 
+}
+
+:global(body.dark-mode) .breadcrumbLink:hover {
+  color: #a97142 !important; 
 }
