@@ -79,3 +79,43 @@
 .btn_services svg {
   margin-right: 0.5rem !important;
 }
+
+/* تم تاریک */
+:global(body.dark-mode) .header,
+:global(body.dark-mode) .h3 {
+  color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .divider {
+  background-color: #8b2e2c !important;
+  border-color: #8b2e2c !important;
+}
+
+:global(body.dark-mode) .subtitle,
+:global(body.dark-mode) .lead {
+  color: #d1d1d1 !important;
+}
+
+:global(body.dark-mode) .description {
+  color: #e0e0e0 !important;
+}
+
+:global(body.dark-mode) .progressVertical {
+  background-color: #3a261c !important;
+}
+
+:global(body.dark-mode) .h6 {
+  color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .btn_services {
+  background-color: #8b2e2c !important;
+  border-color: #8b2e2c !important;
+  color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .btn_services:hover {
+  background-color: #607744 !important;
+  color: #fff !important;
+  border-color: #607744 !important;
+}
