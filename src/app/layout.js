@@ -29,7 +29,6 @@ export default function RootLayout({ children }) {
         <link rel="manifest" href="/js/pwa/manifest.json" />
         <link rel="apple-touch-icon" href="/img-min/logo/apple-icon.png" />
 
-        <Script src="/js/switch.js" strategy="beforeInteractive" />
         <Script
           src="/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"
           strategy="beforeInteractive"
