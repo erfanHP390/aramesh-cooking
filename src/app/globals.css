@@ -270,3 +270,54 @@ body {
   font-size: 14px !important;
   opacity: 0.9 !important;
 }
+/* ==================== dark mode btn =============== */
+body.dark-mode {
+  background-color: #2e1f17 !important; /* تم قهوه‌ای خیلی تیره */
+  color: #faf9f5 !important;
+}
+
+body.dark-mode a {
+  color: #f5ebdd !important;
+}
+
+body.dark-mode a:hover {
+  color: #a97142 !important;
+}
+
+body.dark-mode .card {
+  background-color: #3a261c !important;
+  border-color: #8b2e2c !important;
+  color: #faf9f5 !important;
+}
+
+body.dark-mode .btn,
+body.dark-mode .button {
+  background-color: #8b2e2c !important;
+  color: #faf9f5 !important;
+}
+
+body.dark-mode .btn:hover,
+body.dark-mode .button:hover {
+  background-color: #a97142 !important;
+}
+
+body.dark-mode .secondary-button {
+  background-color: #607744 !important;
+  color: #faf9f5 !important;
+}
+
+body.dark-mode .secondary-button:hover {
+  background-color: #4e6536 !important;
+}
+
+body.dark-mode hr {
+  background-color: #faf9f5 !important;
+}
+
+body.dark-mode::-webkit-scrollbar {
+  background-color: #3a261c !important;
+}
+
+body.dark-mode::-webkit-scrollbar-thumb {
+  background-color: #8b2e2c !important;
+}
