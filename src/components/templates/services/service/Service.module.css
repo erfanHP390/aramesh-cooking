@@ -2,8 +2,16 @@
   background-color: #f5ebdd;
 }
 
+:global(body.dark-mode) .primaryBg {
+  background-color: #2e1f17 !important;
+}
+
 .secondaryBg {
   background-color: #faf9f5;
+}
+
+:global(body.dark-mode) .secondaryBg {
+  background-color: #3a261c !important;
 }
 
 .iconBg {
@@ -11,17 +19,33 @@
   color: white;
 }
 
+:global(body.dark-mode) .iconBg {
+  background-color: #607744 !important;
+}
+
 .titleColor {
   color: #8b2e2c;
+}
+
+:global(body.dark-mode) .titleColor {
+  color: #faf9f5 !important;
 }
 
 .textColor {
   color: #a97142;
 }
 
+:global(body.dark-mode) .textColor {
+  color: #faf9f5 !important;
+}
+
 .hoverEffect:hover {
   background-color: #8b2e2c;
   color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .hoverEffect:hover {
+  background-color: #8b2e2c !important;
 }
 
 .section {
@@ -67,4 +91,8 @@
 .readMore:hover {
   transform: rotate(90deg);
   color: #607744 !important;
+}
+
+:global(body.dark-mode) .readMore:hover {
+  color: #8b2e2c !important;
 }
