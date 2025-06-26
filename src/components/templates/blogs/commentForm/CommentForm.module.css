@@ -1,3 +1,4 @@
+
 .commentsHeader {
   color: #8B2E2C !important;
   border-bottom: 2px solid #A97142 !important;
@@ -102,10 +103,93 @@
 }
 
 .submitButton:hover {
-  background-color: #A97142 !important;
-  border-color: #A97142 !important;
+  background-color: #607744 !important;
+  border-color: #607744 !important;
 }
 
 .formCheckLabel {
   color: #607744 !important;
+}
+
+:global(body.dark-mode) .commentFormHeader {
+  color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .commentFormNote {
+  color: #a97142 !important;
+}
+
+:global(body.dark-mode) .commentForm {
+  background-color: #3a261c !important;
+  border-color: #8b2e2c !important;
+}
+
+:global(body.dark-mode) .formControl {
+  background-color: #3a261c !important;
+  border-color: #8b2e2c !important;
+  color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .formControl:focus {
+  border-color: #a97142 !important;
+  box-shadow: 0 0 0 0.2rem rgba(169, 113, 66, 0.25) !important;
+}
+
+:global(body.dark-mode) .invalidFeedback {
+  color: #a97142 !important;
+}
+
+:global(body.dark-mode) .submitButton {
+  background-color: #8b2e2c !important;
+  border-color: #8b2e2c !important;
+}
+
+:global(body.dark-mode) .submitButton:hover {
+  background-color: #a97142 !important;
+  border-color: #a97142 !important;
+}
+
+:global(body.dark-mode) .formCheckLabel {
+  color: #a97142 !important;
+}
+
+:global(body.dark-mode) .userComment {
+  background-color: #3a261c !important;
+  border-color: #8b2e2c !important;
+}
+
+:global(body.dark-mode) .userComment:hover {
+  border-color: #a97142 !important;
+}
+
+:global(body.dark-mode) .commentAvatar {
+  border-color: #8b2e2c !important;
+}
+
+:global(body.dark-mode) .commentAuthor {
+  color: #f5ebdd !important;
+}
+
+:global(body.dark-mode) .commentAuthor:hover {
+  color: #a97142 !important;
+}
+
+:global(body.dark-mode) .commentDate {
+  color: #a97142 !important;
+}
+
+:global(body.dark-mode) .commentText {
+  color: #f5ebdd !important;
+}
+
+:global(body.dark-mode) .replyLink {
+  color: #a97142 !important;
+}
+
+:global(body.dark-mode) .replyLink:hover {
+  color: #8b2e2c !important;
+}
+
+:global(body.dark-mode) .subComment {
+  border-left-color: #8b2e2c !important;
 }

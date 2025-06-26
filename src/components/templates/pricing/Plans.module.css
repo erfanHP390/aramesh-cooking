@@ -4,6 +4,10 @@
   padding: 4rem 0;
 }
 
+:global(body.dark-mode) .plansSection {
+  background-color: #2e1f17 !important;
+}
+
 /* Toggle Switch */
 .toggleContainer {
   text-align: center;
@@ -35,6 +39,10 @@
   border-radius: 34px;
 }
 
+:global(body.dark-mode) .toggleSlider {
+  background-color: #8b2e2c !important;
+}
+
 .toggleSlider:before {
   position: absolute;
   content: '';
@@ -49,6 +57,10 @@
 
 input:checked + .toggleSlider {
   background-color: #8b2e2c;
+}
+
+:global(body.dark-mode) input:checked + .toggleSlider {
+  background-color: #a97142 !important;
 }
 
 input:checked + .toggleSlider:before {
@@ -84,9 +96,18 @@ input:checked + .toggleSlider:before {
   position: relative;
 }
 
+:global(body.dark-mode) .pricingTable {
+  background-color: #3a261c !important;
+  border-color: #8b2e2c !important;
+}
+
 .pricingTable:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(139, 46, 44, 0.1);
+}
+
+:global(body.dark-mode) .pricingTable:hover {
+  box-shadow: 0 10px 20px rgba(96, 119, 68, 0.2) !important;
 }
 
 .btn_pricing_time {
@@ -97,15 +118,27 @@ input:checked + .toggleSlider:before {
   margin-top: 1.5rem !important;
 }
 
+:global(body.dark-mode) .btn_pricing_time {
+  background-color: #8b2e2c !important;
+}
+
 .popularTable {
   border: 2px solid #8b2e2c;
   margin-top: -1rem;
+}
+
+:global(body.dark-mode) .popularTable {
+  border-color: #a97142 !important;
 }
 
 .pricingHeader {
   text-align: center;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid #f5ebdd;
+}
+
+:global(body.dark-mode) .pricingHeader {
+  border-bottom-color: #8b2e2c !important;
 }
 
 .pricingTitle {
@@ -115,10 +148,18 @@ input:checked + .toggleSlider:before {
   margin-bottom: 0.5rem;
 }
 
+:global(body.dark-mode) .pricingTitle {
+  color: #faf9f5 !important;
+}
+
 .pricingSubtitle {
   color: #a97142;
   font-size: 1rem;
   margin-bottom: 1rem;
+}
+
+:global(body.dark-mode) .pricingSubtitle {
+  color: #faf9f5 !important;
 }
 
 .dividerLine {
@@ -135,6 +176,10 @@ input:checked + .toggleSlider:before {
   margin: 1.5rem 0;
 }
 
+:global(body.dark-mode) .pricingAmount {
+  color: #faf9f5 !important;
+}
+
 .pricingPeriod {
   font-weight: 300;
 }
@@ -148,6 +193,11 @@ input:checked + .toggleSlider:before {
   padding: 0.5rem 0;
   border-bottom: 1px dashed #f5ebdd;
   margin-bottom: 0.5rem;
+}
+
+:global(body.dark-mode) .pricingFeatures p {
+  color: #faf9f5 !important;
+  border-bottom-color: #8b2e2c !important;
 }
 
 .pricingButton {
@@ -169,8 +219,16 @@ input:checked + .toggleSlider:before {
   color: #faf9f5;
 }
 
+:global(body.dark-mode) .primaryButton {
+  background-color: #8b2e2c !important;
+}
+
 .primaryButton:hover {
   background-color: #607744 !important;
+}
+
+:global(body.dark-mode) .primaryButton:hover {
+  background-color: #a97142 !important;
 }
 
 .secondaryButton {
@@ -178,8 +236,16 @@ input:checked + .toggleSlider:before {
   color: #faf9f5;
 }
 
+:global(body.dark-mode) .secondaryButton {
+  background-color: #607744 !important;
+}
+
 .secondaryButton:hover {
   background-color: #607744 !important;
+}
+
+:global(body.dark-mode) .secondaryButton:hover {
+  background-color: #8b2e2c !important;
 }
 
 .ribbon {
@@ -204,6 +270,10 @@ input:checked + .toggleSlider:before {
   transform: rotate(45deg);
   right: -35px;
   top: 25px;
+}
+
+:global(body.dark-mode) .ribbon span {
+  background-color: #8b2e2c !important;
 }
 
 /* Responsive Adjustments */

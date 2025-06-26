@@ -2,8 +2,16 @@
   background-color: #F5EBDD !important; 
 }
 
+:global(body.dark-mode) .latestSection {
+  background-color: #2e1f17 !important;
+}
+
 .sectionHeader {
   color: #8B2E2C; 
+}
+
+:global(body.dark-mode) .sectionHeader {
+  color: #faf9f5 !important;
 }
 
 .sectionTitle {
@@ -14,11 +22,20 @@
   color: #A97142; 
 }
 
+:global(body.dark-mode) .sectionTitle span {
+  color: #a97142 !important;
+}
+
 .dividerLine {
   background-color: #607744 !important; 
   border-color: #607744 !important; 
   height: 2px;
   opacity: 1;
+}
+
+:global(body.dark-mode) .dividerLine {
+  background-color: #faf9f5 !important;
+  border-color: #faf9f5 !important;
 }
 
 @media (max-width: 768px) {

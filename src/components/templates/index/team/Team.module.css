@@ -138,3 +138,59 @@
 .socialIcon:hover {
   color: #607744 !important;
 }
+
+/* ===================== dark-mode */
+:global(body.dark-mode) .teamSection {
+  background-color: #2e1f17 !important;
+}
+
+:global(body.dark-mode) .sectionTitle {
+  color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .divider {
+  background-color: #8b2e2c !important;
+  border-color: #8b2e2c !important;
+}
+
+:global(body.dark-mode) .sectionSubtitle {
+  color: #a97142 !important;
+}
+
+:global(body.dark-mode) .teamBlock {
+  background-color: #3a261c !important;
+  box-shadow: 0 4px 8px rgba(139, 46, 44, 0.3) !important;
+}
+
+:global(body.dark-mode) .teamBlock:hover {
+  box-shadow: 0 10px 20px rgba(139, 46, 44, 0.5) !important;
+}
+
+:global(body.dark-mode) .memberName {
+  color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .memberRole {
+  color: #a97142 !important;
+}
+
+:global(body.dark-mode) .specialtiesList li {
+  background-color: #8b2e2c !important;
+  color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .socialIcon {
+  color: #a97142 !important;
+}
+
+:global(body.dark-mode) .socialIcon:hover {
+  color: #607744 !important;
+}
+
+:global(body.dark-mode) .viewProfile {
+  background-color: #8b2e2c !important;
+}
+
+:global(body.dark-mode) .viewProfile:hover {
+  background-color: #a97142 !important;
+}

@@ -5,6 +5,10 @@
   padding-bottom: 4rem !important;
 }
 
+:global(body.dark-mode) .positionSection {
+  background-color: #2e1f17 !important;
+}
+
 /* Header Styles */
 .positionHeader {
   text-align: center !important;
@@ -17,12 +21,20 @@
   font-size: 1.75rem !important;
 }
 
+:global(body.dark-mode) .positionTitle {
+  color: #faf9f5 !important;
+}
+
 .positionDivider {
   background-color: #607744 !important;
   border-color: #607744 !important;
   height: 2px !important;
   margin: 1rem auto !important;
   width: 80px !important;
+}
+
+:global(body.dark-mode) .positionDivider {
+  background-color: #607744 !important;
 }
 
 /* Job List Styles */
@@ -33,9 +45,19 @@
   border-radius: 8px 8px 0 0 !important;
 }
 
+:global(body.dark-mode) .positionListHeader {
+  background-color: #553728  !important;
+  color: #faf9f5 !important;
+  border: 1px solid #8b2e2c !important;
+}
+
 .positionListHeader p {
   margin-bottom: 0 !important;
   color: #FAF9F5 !important;
+}
+
+:global(body.dark-mode) .positionListHeader p {
+  color: #faf9f5 !important;
 }
 
 .positionList {
@@ -45,9 +67,18 @@
   margin-bottom: 2rem !important;
 }
 
+:global(body.dark-mode) .positionList {
+  background-color: #3a261c !important;
+  border: 1px solid #8b2e2c !important;
+}
+
 .positionItem {
   border-bottom: 1px solid #F5EBDD !important;
   padding: 1.5rem !important;
+}
+
+:global(body.dark-mode) .positionItem {
+  border-bottom-color: #8b2e2c !important;
 }
 
 .positionItem:last-child {
@@ -60,14 +91,27 @@
   margin-bottom: 0 !important;
 }
 
+:global(body.dark-mode) .positionName {
+  color: #faf9f5 !important;
+}
+
 .positionTeam, .positionLocation {
   color: #A97142 !important;
+}
+
+:global(body.dark-mode) .positionTeam,
+:global(body.dark-mode) .positionLocation {
+  color: #faf9f5 !important;
 }
 
 /* Footer Text */
 .positionFooter {
   text-align: center !important;
   color: #A97142 !important;
+}
+
+:global(body.dark-mode) .positionFooter {
+  color: #faf9f5 !important;
 }
 
 .positionFooter a {
@@ -77,8 +121,16 @@
   transition: color 0.3s ease !important;
 }
 
+:global(body.dark-mode) .positionFooter a {
+  color: #a97142 !important;
+}
+
 .positionFooter a:hover {
   color: #607744 !important;
+}
+
+:global(body.dark-mode) .positionFooter a:hover {
+  color: #8b2e2c !important;
 }
 
 /* Responsive Adjustments */

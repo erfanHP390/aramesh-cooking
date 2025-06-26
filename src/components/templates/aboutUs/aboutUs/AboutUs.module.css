@@ -13,9 +13,9 @@
 
 :global(body.dark-mode) .aboutButton:hover,
 :global(body.dark-mode) .btn-warning:hover {
-  background-color: #607744 !important;
+  background-color: #a97142 !important;
   color: #ffff !important;
-  border-color: #607744 !important;
+  border-color: #a97142 !important;
 }
 
 :global(body.dark-mode) .aboutParagraph,

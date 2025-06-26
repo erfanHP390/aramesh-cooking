@@ -4,6 +4,10 @@
   padding: 4rem 0;
 }
 
+:global(body.dark-mode) .contactSection {
+  background-color: #2e1f17 !important;
+}
+
 /* Contact Card */
 .contactCard {
   background-color: #FAF9F5;
@@ -13,10 +17,19 @@
   height: 100%;
 }
 
+:global(body.dark-mode) .contactCard {
+  background-color: #3a261c !important;
+  border-color: #8b2e2c !important;
+}
+
 .contactIcon {
   color: #607744;
   width: 2rem;
   height: 2rem;
+}
+
+:global(body.dark-mode) .contactIcon {
+  color: #607744 !important;
 }
 
 .contactTitle {
@@ -26,9 +39,17 @@
   font-weight: 600;
 }
 
+:global(body.dark-mode) .contactTitle {
+  color: #faf9f5 !important;
+}
+
 .contactText {
   color: #A97142;
   margin-bottom: 1.5rem;
+}
+
+:global(body.dark-mode) .contactText {
+  color: #faf9f5 !important;
 }
 
 /* Contact Form */
@@ -39,11 +60,20 @@
   padding: 2rem;
 }
 
+:global(body.dark-mode) .contactFormContainer {
+  background-color: #3a261c !important;
+  border-color: #8b2e2c !important;
+}
+
 .formLabel {
   color: #8B2E2C;
   font-weight: 500;
   margin-bottom: 0.5rem;
   display: block;
+}
+
+:global(body.dark-mode) .formLabel {
+  color: #faf9f5 !important;
 }
 
 .formControl {
@@ -56,10 +86,21 @@
   margin-bottom: 1rem;
 }
 
+:global(body.dark-mode) .formControl {
+  background-color: #3a261c !important;
+  border-color: #8b2e2c !important;
+  color: #faf9f5 !important;
+}
+
 .formControl:focus {
   outline: none;
   border-color: #607744;
   box-shadow: 0 0 0 2px rgba(96, 119, 68, 0.2);
+}
+
+:global(body.dark-mode) .formControl:focus {
+  border-color: #8b2e2c !important;
+  box-shadow: 0 0 0 2px rgba(139, 46, 44, 0.3) !important;
 }
 
 .submitButton {
@@ -73,8 +114,17 @@
   transition: background-color 0.3s ease;
 }
 
+:global(body.dark-mode) .submitButton {
+  background-color: #8b2e2c !important;
+  color: #faf9f5 !important;
+}
+
 .submitButton:hover {
   background-color: #607744 !important;
+}
+
+:global(body.dark-mode) .submitButton:hover {
+  background-color: #a97142 !important;
 }
 
 /* Map Container */
@@ -83,6 +133,18 @@
   border-radius: 8px;
   overflow: hidden;
   border: 2px solid #A97142;
+}
+
+:global(body.dark-mode) .mapContainer {
+  border-color: #8b2e2c !important;
+}
+
+:global(body.dark-mode) .formInput {
+ color: #ffff !important;
+}
+
+:global(body.dark-mode) .form_input_option {
+ color: #ffff !important;
 }
 
 .mapContainer iframe {

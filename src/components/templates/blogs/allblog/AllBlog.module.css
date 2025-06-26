@@ -23,12 +23,21 @@
   background-color: #F5EBDD !important;
 }
 
+:global(body.dark-mode) .bgBody {
+  background-color: #2e1f17 !important;
+  border: 1px solid #8b2e2c !important;
+}
+
 .rounded3 {
   border-radius: 0.5rem !important;
 }
 
 .shadowSm {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+:global(body.dark-mode) .shadowSm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.3) !important;
 }
 
 .py4 {
@@ -98,10 +107,18 @@
   border-bottom: 2px solid #A97142;
 }
 
+:global(body.dark-mode) .blogHeader {
+  border-bottom-color: #8b2e2c !important;
+}
+
 .cookingIcon {
   font-size: 2.5rem;
   margin-left: 1rem;
   color: #8B2E2C;
+}
+
+:global(body.dark-mode) .cookingIcon {
+  color: #8b2e2c !important;
 }
 
 .blogMainTitle {
@@ -109,6 +126,10 @@
   font-weight: 600;
   color: #A97142;
   margin: 0;
+}
+
+:global(body.dark-mode) .blogMainTitle {
+  color: #faf9f5 !important;
 }
 
 .card {
@@ -124,14 +145,27 @@
   height: 100%; 
 }
 
+:global(body.dark-mode) .card {
+  background-color: #3a261c !important;
+  border-color: #8b2e2c !important;
+}
+
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 
+:global(body.dark-mode) .card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(139, 46, 44, 0.3) !important;
+}
+
 .blogTwo {
   border: none !important;
   background-color: #FAF9F5;
+}
+
+:global(body.dark-mode) .blogTwo {
+  background-color: #3a261c !important;
 }
 
 .mb5 {
@@ -195,6 +229,10 @@
   border: 2px solid #F5EBDD;
 }
 
+:global(body.dark-mode) .roundedCircle {
+  border-color: #3a261c !important;
+}
+
 .cardTitle {
   margin-bottom: 1rem;
 }
@@ -216,8 +254,16 @@
   transition: color 0.3s ease;
 }
 
+:global(body.dark-mode) .blogPostTitle {
+  color: #faf9f5 !important;
+}
+
 .blogPostTitle:hover {
   color: #607744 !important;
+}
+
+:global(body.dark-mode) .blogPostTitle:hover {
+  color: #a97142 !important;
 }
 
 .meta {
@@ -229,6 +275,10 @@
 
 .textMuted {
   color: #6c757d !important;
+}
+
+:global(body.dark-mode) .textMuted {
+  color: #aaa !important;
 }
 
 .bi {
@@ -244,6 +294,10 @@
   color: #607744;
 }
 
+:global(body.dark-mode) .dateText {
+  color: #607744 !important;
+}
+
 .blogExcerpt {
   color: #5a5a5a;
   line-height: 1.7;
@@ -254,6 +308,10 @@
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+}
+
+:global(body.dark-mode) .blogExcerpt {
+  color: #ddd !important;
 }
 
 /* Button */
@@ -285,14 +343,28 @@
   border-color: #A97142;
 }
 
+:global(body.dark-mode) .btnLight {
+  background-color: #3a261c !important;
+  color: #faf9f5 !important;
+  border-color: #8b2e2c !important;
+}
+
 .btnLight:hover {
   background-color: #A97142;
   color: #FAF9F5;
   border-color: #8B2E2C;
 }
 
+:global(body.dark-mode) .btnLight:hover {
+  background-color: #8b2e2c !important;
+}
+
 .border {
   border: 1px solid #A97142 !important;
+}
+
+:global(body.dark-mode) .border {
+  border-color: #8b2e2c !important;
 }
 
 .biArrowRepeat {
@@ -358,6 +430,11 @@
   border: 1px solid #A97142; 
 }
 
+:global(body.dark-mode) .widgetArea {
+  background-color: #3a261c !important;
+  border-color: #8b2e2c !important;
+}
+
 .sticky {
   position: sticky;
   top: 1rem;
@@ -387,16 +464,28 @@
   border-bottom: 2px solid #8B2E2C;
 }
 
+:global(body.dark-mode) .widgetTitle {
+  border-bottom-color: #8b2e2c !important;
+}
+
 .widgetIcon {
   font-size: 1.5rem;
   margin-left: 0.5rem;
   color: #607744; 
 }
 
+:global(body.dark-mode) .widgetIcon {
+  color: #607744 !important;
+}
+
 .h5 {
   font-size: 1.25rem;
   color: #A97142;
   margin: 0;
+}
+
+:global(body.dark-mode) .h5 {
+  color: #faf9f5 !important;
 }
 
 .sideLinks {
@@ -428,9 +517,18 @@
   border-bottom: 1px solid rgba(169, 113, 66, 0.1); 
 }
 
+:global(body.dark-mode) .sideLinks a {
+  color: #ddd !important;
+  border-bottom-color: rgba(139, 46, 44, 0.3) !important;
+}
+
 .sideLinks a:hover {
   color: #607744 !important; 
   padding-right: 0.5rem;
+}
+
+:global(body.dark-mode) .sideLinks a:hover {
+  color: #a97142 !important;
 }
 
 .badge {
@@ -449,8 +547,16 @@
   background-color: rgba(169, 113, 66, 0.1) !important; 
 }
 
+:global(body.dark-mode) .bgLightDark {
+  background-color: rgba(139, 46, 44, 0.2) !important;
+}
+
 .textPrimary {
   color: #8B2E2C !important; 
+}
+
+:global(body.dark-mode) .textPrimary {
+  color: #a97142 !important;
 }
 
 .rounded3 {

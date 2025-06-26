@@ -1,3 +1,4 @@
+
 .forgotContainer {
   background-color: #F5EBDD;
   border-top: 1px solid #A97142;
@@ -113,4 +114,55 @@
   .forgotContainer {
     padding: 2rem 0;
   }
+}
+
+:global(body.dark-mode) .forgotContainer {
+  background-color: #2e1f17 !important;
+  border-top-color: #8b2e2c !important;
+}
+
+:global(body.dark-mode) .forgotForm {
+  background-color: #3a261c !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3) !important;
+}
+
+:global(body.dark-mode) .forgotTitle {
+  color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .divider {
+  background-color: #8b2e2c !important;
+  border-color: #8b2e2c !important;
+}
+
+:global(body.dark-mode) .formControl {
+  background-color: #3a261c !important;
+  border-color: #8b2e2c !important;
+  color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .formControl:focus {
+  border-color: #a97142 !important;
+  box-shadow: 0 0 0 0.25rem rgba(169, 113, 66, 0.25) !important;
+}
+
+:global(body.dark-mode) .submitBtn {
+  background-color: #8b2e2c !important;
+  color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .submitBtn:hover {
+  background-color: #a97142 !important;
+}
+
+:global(body.dark-mode) .linkText {
+  color: #a97142 !important;
+}
+
+:global(body.dark-mode) .link {
+  color: #a97142 !important;
+}
+
+:global(body.dark-mode) .link:hover {
+  color: #8b2e2c !important;
 }

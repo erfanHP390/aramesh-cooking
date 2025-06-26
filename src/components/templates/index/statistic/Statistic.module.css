@@ -80,7 +80,6 @@
   margin-right: 0.5rem !important;
 }
 
-/* تم تاریک */
 :global(body.dark-mode) .header,
 :global(body.dark-mode) .h3 {
   color: #faf9f5 !important;
@@ -115,7 +114,7 @@
 }
 
 :global(body.dark-mode) .btn_services:hover {
-  background-color: #607744 !important;
+  background-color: #a97142 !important;
   color: #fff !important;
-  border-color: #607744 !important;
+  border-color: #a97142 !important;
 }

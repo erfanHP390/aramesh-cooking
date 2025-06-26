@@ -20,7 +20,12 @@
 }
 
 .bgBody {
-  background-color: #F5EBDD !important; 
+  background-color: #F5EBDD !important;
+}
+
+:global(body.dark-mode) .bgBody {
+  background-color: #2e1f17 !important;
+  border: 1px solid #8b2e2c !important;
 }
 
 .rounded3 {
@@ -29,6 +34,10 @@
 
 .shadowSm {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+:global(body.dark-mode) .shadowSm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.3) !important;
 }
 
 .py4 {
@@ -84,13 +93,21 @@
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
-  color: #8B2E2C; 
+  color: #8B2E2C;
+}
+
+:global(body.dark-mode) .titleContainer {
+  color: #faf9f5 !important;
 }
 
 .cookingIcon {
   font-size: 2.5rem;
   margin-left: 1rem;
-  color: #607744; 
+  color: #607744;
+}
+
+:global(body.dark-mode) .cookingIcon {
+  color: #607744 !important;
 }
 
 .mainTitle {
@@ -100,12 +117,20 @@
   margin: 0;
 }
 
+:global(body.dark-mode) .mainTitle {
+  color: #faf9f5 !important;
+}
+
 .sectionTitle {
   font-size: 1.5rem;
   font-weight: 500;
-  color: #A97142; 
+  color: #A97142;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
+}
+
+:global(body.dark-mode) .sectionTitle {
+  color: #a97142 !important;
 }
 
 .paragraph {
@@ -115,29 +140,47 @@
   margin-bottom: 1rem;
 }
 
+:global(body.dark-mode) .paragraph {
+  color: #faf9f5 !important;
+}
+
 .mt4 {
   margin-top: 1.5rem !important;
 }
 
 .strongText {
   font-weight: 600;
-  color: #8B2E2C; 
+  color: #8B2E2C;
+}
+
+:global(body.dark-mode) .strongText {
+  color: #a97142 !important;
 }
 
 .primaryButton {
-  background-color: #8B2E2C; 
-  color: #FAF9F5; 
+  background-color: #8B2E2C;
+  color: #FAF9F5;
   border: none;
   padding: 0.5rem 1.5rem;
   border-radius: 0.25rem;
 }
 
+:global(body.dark-mode) .primaryButton {
+  background-color: #8b2e2c !important;
+  color: #faf9f5 !important;
+}
+
 .secondaryButton {
-  background-color: #607744; 
-  color: #FAF9F5; 
+  background-color: #607744;
+  color: #FAF9F5;
   border: none;
   padding: 0.5rem 1.5rem;
   border-radius: 0.25rem;
+}
+
+:global(body.dark-mode) .secondaryButton {
+  background-color: #607744 !important;
+  color: #faf9f5 !important;
 }
 
 @media (max-width: 992px) {

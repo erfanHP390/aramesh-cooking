@@ -2,7 +2,15 @@
   background-color: #a97142 !important;
 }
 
+:global(body.dark-mode) .earthtone_primary_bg {
+  background-color: #3a261c !important;
+}
+
 .earthtone_light_text {
+  color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .earthtone_light_text {
   color: #faf9f5 !important;
 }
 
@@ -10,7 +18,15 @@
   color: #f5ebdd !important;
 }
 
+:global(body.dark-mode) .earthtone_hover_text {
+  color: #faf9f5 !important;
+}
+
 .earthtone_accent {
+  color: #8b2e2c !important;
+}
+
+:global(body.dark-mode) .earthtone_accent {
   color: #8b2e2c !important;
 }
 
@@ -18,8 +34,16 @@
   background-color: #607744 !important;
 }
 
+:global(body.dark-mode) .earthtone_secondary {
+  background-color: #607744 !important;
+}
+
 .earthtone_border_light {
   border-color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .earthtone_border_light {
+  border-color: #8b2e2c !important;
 }
 
 .earthtone_dropdown {
@@ -27,8 +51,17 @@
   border-color: #8b2e2c !important;
 }
 
+:global(body.dark-mode) .earthtone_dropdown {
+  background-color: #553728 !important;
+  border-color: #553728 !important;
+}
+
 .earthtone_dropdown_item {
   color: #8b2e2c !important;
+}
+
+:global(body.dark-mode) .earthtone_dropdown_item {
+  color: #faf9f5 !important;
 }
 
 .earthtone_dropdown_item:hover {
@@ -36,7 +69,16 @@
   color: #faf9f5 !important;
 }
 
+:global(body.dark-mode) .earthtone_dropdown_item:hover {
+  background-color: #8b2e2c !important;
+  color: #faf9f5 !important;
+}
+
 .earthtone_toggler_icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23FAF9F5' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+:global(body.dark-mode) .earthtone_toggler_icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23FAF9F5' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
@@ -44,12 +86,25 @@
   background-color: #8b2e2c !important;
 }
 
+:global(body.dark-mode) .earthtone_light_text::before {
+  background-color: #8b2e2c !important;
+}
+
 .earthtone_light_text::after {
   color: #fff !important;
 }
 
+:global(body.dark-mode) .earthtone_light_text::after {
+  color: #faf9f5 !important;
+}
+
 .earthtone_accent:hover {
   background-color: #607744 !important;
+  color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .earthtone_accent:hover {
+  background-color: #8b2e2c !important;
   color: #faf9f5 !important;
 }
 
@@ -79,16 +134,32 @@
   background-color: #A97142;
 }
 
+/* :global(body.dark-mode) .earthtone_primary_bg {
+  background-color: #2e1f17 !important;
+} */
+
 .earthtone_light_text {
   color: #FAF9F5;
+}
+
+:global(body.dark-mode) .earthtone_light_text {
+  color: #faf9f5 !important;
 }
 
 .earthtone_border_light {
   border-color: #F5EBDD;
 }
 
+:global(body.dark-mode) .earthtone_border_light {
+  border-color: #8b2e2c !important;
+}
+
 .earthtone_toggler_icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28245, 235, 221, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+:global(body.dark-mode) .earthtone_toggler_icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23FAF9F5' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
 .earthtone_dropdown {
@@ -96,17 +167,35 @@
   border: 1px solid #607744;
 }
 
+:global(body.dark-mode) .earthtone_dropdown {
+  background-color: #553728 !important;
+  border-color: #8b2e2c !important;
+}
+
 .earthtone_accent {
   color: #F5EBDD;
+}
+
+:global(body.dark-mode) .earthtone_accent {
+  color: #faf9f5 !important;
 }
 
 .earthtone_dropdown_item {
   color: #FAF9F5;
 }
 
+:global(body.dark-mode) .earthtone_dropdown_item {
+  color: #faf9f5 !important;
+}
+
 .earthtone_dropdown_item:hover {
   background-color: #607744;
   color: #FAF9F5;
+}
+
+:global(body.dark-mode) .earthtone_dropdown_item:hover {
+  background-color: #8b2e2c !important;
+  color: #faf9f5 !important;
 }
 
 .earthtone_light_text {
@@ -139,10 +228,18 @@
   color: #F5EBDD !important;
 }
 
+:global(body.dark-mode) .nav_link_button:hover {
+  color: #a97142 !important;
+}
+
 @media (max-width: 992px) {
   .navbar-collapse {
     padding: 1rem;
     background-color: #A97142;
+  }
+  
+  :global(body.dark-mode) .navbar-collapse {
+    background-color: #2e1f17 !important;
   }
   
   .nav_link_button {

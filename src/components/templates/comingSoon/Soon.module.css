@@ -5,6 +5,10 @@
   color: #8b2e2c;
 }
 
+:global(body.dark-mode) .soonContainer {
+  color: #faf9f5;
+}
+
 .heroOverlay {
   position: absolute;
   top: 0;
@@ -13,6 +17,10 @@
   height: 100%;
   background-color: #f5ebdd;
   z-index: 1;
+}
+
+:global(body.dark-mode) .heroOverlay {
+  background-color: #2e1f17 !important;
 }
 
 .heroContent {
@@ -31,10 +39,18 @@
   color: #8b2e2c;
 }
 
+:global(body.dark-mode) .heroTitle {
+  color: #faf9f5 !important;
+}
+
 .heroSubtitle {
   font-size: 1.5rem;
   margin-bottom: 2.5rem;
   opacity: 0.9;
+}
+
+:global(body.dark-mode) .heroSubtitle {
+  color: #faf9f5 !important;
 }
 
 .newsletterForm {
@@ -51,8 +67,13 @@
   font-size: 1rem;
 }
 
+:global(body.dark-mode) .emailInput {
+  background-color: #3a261c !important;
+  color: #faf9f5 !important;
+}
+
 .notifyBtn {
-  background-color: #f5a623;
+  background-color: #8b2e2c;
   color: white;
   border: none;
   padding: 0 1.5rem;
@@ -62,8 +83,16 @@
   transition: all 0.3s ease;
 }
 
+:global(body.dark-mode) .notifyBtn {
+  background-color: #8b2e2c !important;
+}
+
 .notifyBtn:hover {
   background-color: #607744 !important;
+}
+
+:global(body.dark-mode) .notifyBtn:hover {
+  background-color: #a97142 !important;
 }
 
 .socialIcons {
@@ -75,14 +104,22 @@
 }
 
 .socialIcon {
-  color: white;
+  color: #8b2e2c;
   transition: all 0.3s ease;
+}
+
+:global(body.dark-mode) .socialIcon {
+  color: #faf9f5 !important;
 }
 
 .socialIcon:hover {
   transform: translateY(-3px);
   opacity: 0.8;
   color: #607744 !important;
+}
+
+:global(body.dark-mode) .socialIcon:hover {
+  color: #a97142 !important;
 }
 
 @media (max-width: 768px) {

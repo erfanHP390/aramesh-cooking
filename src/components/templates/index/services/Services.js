@@ -4,13 +4,13 @@ import styles from "./Services.module.css";
 function Services() {
   return (
     <>
-      <div id="services" className="section  overflow-hidden">
+      <div id="services" className={`section overflow-hidden ${styles.servicesSection}`}>
         <div className="container-fluid">
           <div className="row">
-            <div className="col-md-6 bg-light-dark">
+            <div className={`col-md-6 bg-light-dark ${styles.servicesLeftCol}`}>
               <div className="px-4 py-5 px-lg-7 py-lg-7" data-aos="fade-right">
-                <h2 className="fw-bold mb-3">خدمات گروه آشپزی آرامش</h2>
-                <p className="lead mb-5">
+                <h2 className={`fw-bold mb-3 ${styles.servicesTitle}`}>خدمات گروه آشپزی آرامش</h2>
+                <p className={`lead mb-5 ${styles.servicesText}`}>
                   گروه تخصصی آشپزی آرامش با تیمی از سرآشپزان حرفه‌ای آماده ارائه
                   خدمات در زمینه‌های:
                   <br />
@@ -38,7 +38,7 @@ function Services() {
               </div>
             </div>
             <div
-              className="col-md-6 text-light position-relative overflow-hidden"
+              className={`col-md-6 text-light position-relative overflow-hidden ${styles.servicesRightCol}`}
               style={{ backgroundColor: "#8B2E2C" }}
             >
               <figure className="scribble scale-3 opacity-10 bottom-0 end-0 z-index-n1">

@@ -3,12 +3,20 @@
   overflow: hidden;
 }
 
+:global(body.dark-mode) .mainContainer {
+  background-color: #2e1f17 !important;
+}
+
 .heroSection {
   position: relative;
   padding: 6rem 0;
   background-size: cover;
   background-position: center;
   color: #8B2E2C;
+}
+
+:global(body.dark-mode) .heroSection {
+  color: #faf9f5 !important;
 }
 
 .heroOverlay {
@@ -19,6 +27,10 @@
   height: 100%;
   background-color: #F5EBDD;
   z-index: 1;
+}
+
+:global(body.dark-mode) .heroOverlay {
+  background-color: #2e1f17 !important;
 }
 
 .heroContent {
@@ -36,12 +48,20 @@
   margin-bottom: 1.5rem;
 }
 
+:global(body.dark-mode) .heroTitle {
+  color: #faf9f5 !important;
+}
+
 .heroDivider {
   width: 80px;
   height: 3px;
-  background-color: #F5A623;
+  background-color: #8B2E2C;
   margin: 1.5rem auto;
   border: none;
+}
+
+:global(body.dark-mode) .heroDivider {
+  background-color: #a97142 !important;
 }
 
 .searchForm {
@@ -59,8 +79,13 @@
   direction: rtl;
 }
 
+:global(body.dark-mode) .searchInput {
+  background-color: #3a261c !important;
+  color: #faf9f5 !important;
+}
+
 .searchButton {
-  background-color: #F5A623;
+  background-color: #8B2E2C;
   color: white;
   border: none;
   padding: 0 1.5rem;
@@ -69,8 +94,16 @@
   transition: background-color 0.3s ease;
 }
 
+:global(body.dark-mode) .searchButton {
+  background-color: #8b2e2c !important;
+}
+
 .searchButton:hover {
-  background-color: #e0921f;
+  background-color: #607744 !important;
+}
+
+:global(body.dark-mode) .searchButton:hover {
+  background-color: #a97142 !important;
 }
 
 .searchIcon {
@@ -81,6 +114,10 @@
 .faqSection {
   padding: 4rem 0;
   background-color: #F5EBDD;
+}
+
+:global(body.dark-mode) .faqSection {
+  background-color: #2e1f17 !important;
 }
 
 .faqHeader {
@@ -96,9 +133,18 @@
   margin-bottom: 1.5rem;
 }
 
-.faqCardHeader:hover , 
-.faqCardHeader:hover >  * {
+:global(body.dark-mode) .faqTitle {
+  color: #faf9f5 !important;
+}
+
+.faqCardHeader:hover, 
+.faqCardHeader:hover > * {
     background-color: #607744 !important;
+}
+
+:global(body.dark-mode) .faqCardHeader:hover,
+:global(body.dark-mode) .faqCardHeader:hover > * {
+  background-color: #8b2e2c !important;
 }
 
 .faqContainer {
@@ -114,11 +160,19 @@
   overflow: hidden;
 }
 
+:global(body.dark-mode) .faqCard {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2) !important;
+}
+
 .faqCardHeader {
   background-color: #8B2E2C;
   padding: 1rem 1.5rem;
   border: none;
   transition: all 0.5s ease;
+}
+
+:global(body.dark-mode) .faqCardHeader {
+  background-color: #8b2e2c !important;
 }
 
 .faqQuestion {
@@ -128,11 +182,15 @@
   text-align: right;
   padding: 0;
   font-weight: 600;
-  color: #333;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+}
+
+:global(body.dark-mode) .faqQuestion {
+  color: #faf9f5 !important;
 }
 
 .faqAnswer {
@@ -142,10 +200,19 @@
   line-height: 1.6;
 }
 
+:global(body.dark-mode) .faqAnswer {
+  background-color: #3a261c !important;
+  color: #faf9f5 !important;
+}
+
 .contactPrompt {
   text-align: center;
   margin-top: 3rem;
   color: #666;
+}
+
+:global(body.dark-mode) .contactPrompt {
+  color: #faf9f5 !important;
 }
 
 .contactLink {
@@ -155,8 +222,16 @@
   transition: color 0.3s ease;
 }
 
+:global(body.dark-mode) .contactLink {
+  color: #a97142 !important;
+}
+
 .contactLink:hover {
   color: #607744 !important;
+}
+
+:global(body.dark-mode) .contactLink:hover {
+  color: #8b2e2c !important;
 }
 
 @keyframes floatUp {
@@ -228,4 +303,3 @@
     font-size: 0.9rem;
   }
 }
-

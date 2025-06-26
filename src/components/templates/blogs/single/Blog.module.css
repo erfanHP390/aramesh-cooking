@@ -1,4 +1,4 @@
-/* Main Background and Container Styles */
+
 .postContainer {
   background-color: #F5EBDD !important;
   padding-bottom: 2rem !important;
@@ -11,7 +11,6 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* Post Content Styles */
 .postHeader {
   color: #8B2E2C !important;
   margin-bottom: 1.5rem !important;
@@ -43,7 +42,6 @@
   text-align: justify !important;
 }
 
-/* Author Section Styles */
 .authorSection {
   background-color: #FAF9F5 !important;
   border-top: 2px solid #A97142 !important;
@@ -75,7 +73,6 @@
   color: #A97142 !important;
 }
 
-/* Comments Section Styles */
 .commentsHeader {
   color: #8B2E2C !important;
   border-bottom: 2px solid #A97142 !important;
@@ -140,7 +137,6 @@
   border-left: 2px solid #A97142 !important;
 }
 
-/* Comment Form Styles */
 .commentFormHeader {
   color: #8B2E2C !important;
   margin-bottom: 0.5rem !important;
@@ -187,4 +183,99 @@
 
 .formCheckLabel {
   color: #607744 !important;
+}
+
+:global(body.dark-mode) .postContainer {
+  background-color: #2e1f17 !important;
+}
+
+:global(body.dark-mode) .postContentWrapper,
+:global(body.dark-mode) .userComment,
+:global(body.dark-mode) .commentForm {
+  background-color: #3a261c !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+:global(body.dark-mode) .postHeader,
+:global(body.dark-mode) .commentsHeader,
+:global(body.dark-mode) .commentFormHeader {
+  color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .postAbstract,
+:global(body.dark-mode) .commentFormNote {
+  color: #a97142 !important;
+}
+
+:global(body.dark-mode) .postImage {
+  border-color: #8b2e2c !important;
+}
+
+:global(body.dark-mode) .postImageCaption {
+  color: #f5ebdd !important;
+}
+
+:global(body.dark-mode) .postDescription,
+:global(body.dark-mode) .commentText {
+  color: #f5ebdd !important;
+}
+
+:global(body.dark-mode) .authorSection {
+  background-color: #3a261c !important;
+  border-color: #8b2e2c !important;
+}
+
+:global(body.dark-mode) .authorImage,
+:global(body.dark-mode) .commentAvatar {
+  border-color: #8b2e2c !important;
+}
+
+:global(body.dark-mode) .authorName,
+:global(body.dark-mode) .commentAuthor {
+  color: #f5ebdd !important;
+}
+
+:global(body.dark-mode) .authorLink,
+:global(body.dark-mode) .replyLink {
+  color: #a97142 !important;
+}
+
+:global(body.dark-mode) .authorLink:hover,
+:global(body.dark-mode) .commentAuthor:hover,
+:global(body.dark-mode) .replyLink:hover {
+  color: #8b2e2c !important;
+}
+
+:global(body.dark-mode) .postDate,
+:global(body.dark-mode) .commentDate {
+  color: #a97142 !important;
+}
+
+:global(body.dark-mode) .subComment {
+  border-left-color: #8b2e2c !important;
+}
+
+:global(body.dark-mode) .formControl {
+  background-color: #3a261c !important;
+  border-color: #8b2e2c !important;
+  color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .formControl:focus {
+  border-color: #a97142 !important;
+  box-shadow: 0 0 0 0.2rem rgba(169, 113, 66, 0.25) !important;
+}
+
+:global(body.dark-mode) .submitButton {
+  background-color: #8b2e2c !important;
+  border-color: #8b2e2c !important;
+}
+
+:global(body.dark-mode) .submitButton:hover {
+  background-color: #a97142 !important;
+  border-color: #a97142 !important;
+}
+
+:global(body.dark-mode) .formCheckLabel {
+  color: #a97142 !important;
 }

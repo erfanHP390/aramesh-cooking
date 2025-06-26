@@ -8,3 +8,40 @@
     background-color: #607744 !important;
     border-color: #607744 !important;
 }
+
+.profileSection {
+    background-color: inherit;
+}
+
+.profileTitle {
+    color: inherit;
+}
+
+.profileText {
+    color: inherit;
+}
+
+:global(body.dark-mode) .profileSection {
+    background-color: #2e1f17 !important;
+    color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .profileText {
+    color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .profileTitle {
+    color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .btn_services {
+    background-color: #8b2e2c !important;
+    color: #faf9f5 !important;
+    border-color: #8b2e2c !important;
+}
+
+:global(body.dark-mode) .btn_services:hover {
+    background-color: #a97142 !important;
+    color: #fff !important;
+    border-color: #a97142 !important;
+}

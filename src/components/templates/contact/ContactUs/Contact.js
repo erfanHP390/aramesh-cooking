@@ -250,7 +250,7 @@ function Contact({ departments }) {
                     {" "}
                     <option value={-1}>انتخاب کنید</option>
                     {departments.map((item) => (
-                      <option key={item._id} value={item._id}>
+                      <option key={item._id} value={item._id} className={styles.form_input_option}>
                         {item.title}
                       </option>
                     ))}

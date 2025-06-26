@@ -2,8 +2,17 @@
   background-color: #F5EBDD; 
 }
 
+:global(body.dark-mode) .blogCard {
+  background-color: #3a261c !important;
+  border-color: #8b2e2c !important;
+}
+
 .blogTitle {
   color: #8B2E2C; 
+}
+
+:global(body.dark-mode) .blogTitle {
+  color: #faf9f5 !important;
 }
 
 .blogTitleLink {
@@ -18,21 +27,42 @@
   outline: none;
 }
 
+:global(body.dark-mode) .blogTitleLink:active,
+:global(body.dark-mode) .blogTitleLink:focus {
+  color: #607744 !important;
+}
+
 .blogTitleLink:hover {
   color: #A97142; 
   text-decoration: none;
+}
+
+:global(body.dark-mode) .blogTitleLink:hover {
+  color: #a97142 !important;
 }
 
 .blogMeta {
   color: #A97142; 
 }
 
+:global(body.dark-mode) .blogMeta {
+  color: #faf9f5 !important;
+}
+
 .foodIcon {
   fill: #607744; 
 }
 
+:global(body.dark-mode) .foodIcon {
+  fill: #607744 !important;
+}
+
 .blogContent {
   color: #A97142; 
+}
+
+:global(body.dark-mode) .blogContent {
+  color: #faf9f5 !important;
 }
 
 .blogTitle a {
@@ -42,6 +72,10 @@
 .blogTitle a:hover {
   text-decoration: none;
   color: #607744  !important;
+}
+
+:global(body.dark-mode) .blogTitle a:hover {
+  color: #607744 !important;
 }
 
 @media (max-width: 768px) {

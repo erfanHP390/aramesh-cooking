@@ -2,13 +2,26 @@
   background-color: #f5ebdd; 
 }
 
+:global(body.dark-mode) .contactSection {
+  background-color: #2e1f17 !important;
+}
+
 .contactBox {
   background-color: #faf9f5; 
   border: 1px solid #a97142; 
 }
 
+:global(body.dark-mode) .contactBox {
+  background-color: #3a261c !important;
+  border-color: #8b2e2c !important;
+}
+
 .contactTitle {
   color: #8b2e2c; 
+}
+
+:global(body.dark-mode) .contactTitle {
+  color: #faf9f5 !important;
 }
 
 .divider {
@@ -19,13 +32,26 @@
   margin: 1rem auto;
 }
 
+:global(body.dark-mode) .divider {
+  background-color: #faf9f5 !important;
+  border-color: #faf9f5 !important;
+}
+
 .contactSubtitle {
   color: #607744; 
+}
+
+:global(body.dark-mode) .contactSubtitle {
+  color: #faf9f5 !important;
 }
 
 .formLabel {
   color: #8b2e2c; 
   font-weight: 500;
+}
+
+:global(body.dark-mode) .formLabel {
+  color: #faf9f5 !important;
 }
 
 .formInput {
@@ -34,9 +60,20 @@
   transition: all 0.3s ease;
 }
 
+:global(body.dark-mode) .formInput {
+  border-color: #8b2e2c !important;
+  background-color: rgba(58, 38, 28, 0.7) !important;
+  color: #faf9f5 !important;
+}
+
 .formInput:focus {
   border-color: #8b2e2c; 
   box-shadow: 0 0 0 0.25rem rgba(139, 46, 44, 0.25); 
+}
+
+:global(body.dark-mode) .formInput:focus {
+  border-color: #a97142 !important;
+  box-shadow: 0 0 0 0.25rem rgba(169, 113, 66, 0.25) !important;
 }
 
 .submitBtn {
@@ -47,10 +84,19 @@
   transition: all 0.3s ease;
 }
 
+:global(body.dark-mode) .submitBtn {
+  background-color: #8b2e2c !important;
+  color: #faf9f5 !important;
+}
+
 .submitBtn:hover {
   background-color: #a97142; 
   transform: translateY(-3px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+:global(body.dark-mode) .submitBtn:hover {
+  background-color: #a97142 !important;
 }
 
 @media (max-width: 768px) {
@@ -73,9 +119,17 @@
   transition: all 0.5s ease !important;
 }
 
+:global(body.dark-mode) .btn_services {
+  background-color: #8b2e2c !important;
+}
+
 .btn_services:hover {
   background-color: #607744 !important;
   border-color: #607744 !important;
+}
+
+:global(body.dark-mode) .btn_services:hover {
+  background-color: #a97142 !important;
 }
 
 .btn_services svg {

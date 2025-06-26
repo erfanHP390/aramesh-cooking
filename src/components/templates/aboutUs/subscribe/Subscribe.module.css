@@ -211,3 +211,62 @@
     font-size: 1rem;
   }
 }
+
+:global(body.dark-mode) .section {
+  background-color: #2e1f17 !important;
+}
+
+:global(body.dark-mode) .icon {
+  color: #8b2e2c !important;
+}
+
+:global(body.dark-mode) .title,
+:global(body.dark-mode) .titleLight {
+  color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .divider {
+  background-color: #8b2e2c !important;
+}
+
+:global(body.dark-mode) .description {
+  color: #a97142 !important;
+}
+
+:global(body.dark-mode) .input {
+  background-color: #3a261c !important;
+  border-color: #8b2e2c !important;
+  color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .input:focus {
+  border-color: #a97142 !important;
+  box-shadow: 0 0 0 2px rgba(169, 113, 66, 0.3) !important;
+}
+
+:global(body.dark-mode) .input::placeholder {
+color:  #fff !important;
+}
+
+:global(body.dark-mode) .button {
+  background-color: #8b2e2c !important;
+  color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .button:hover {
+  background-color: #a97142 !important;
+}
+
+:global(body.dark-mode) .particle1,
+:global(body.dark-mode) .particle3,
+:global(body.dark-mode) .particle4,
+:global(body.dark-mode) .particle5 {
+  color: #8b2e2c !important;
+}
+
+:global(body.dark-mode) .particle2,
+:global(body.dark-mode) .particle6,
+:global(body.dark-mode) .particle7 {
+  color: #607744 !important;
+}
+

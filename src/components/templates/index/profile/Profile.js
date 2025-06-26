@@ -4,7 +4,7 @@ import styles from "./Profile.module.css";
 function Profile() {
   return (
     <>
-      <div id="profile" className="section py-6 py-md-7 bg-body">
+      <div id="profile" className={`section py-6 py-md-7 bg-body ${styles.profileSection}`}>
         <div className="container">
           <div className="row justify-content-between">
             <div className="col-lg-6" data-aos="fade-right">
@@ -20,10 +20,10 @@ function Profile() {
             </div>
             <div className="col-lg-6" data-aos="flip-up">
               <div className="pt-0">
-                <h2 className="fw-bold mb-3">
+                <h2 className={`fw-bold mb-3 ${styles.profileTitle}`}>
                   گروه آشپزی آرامش | تخصص در طعم‌های اصیل
                 </h2>
-                <p className="lead mb-5">
+                <p className={`lead mb-5 ${styles.profileText}`}>
                   گروه تخصصی آشپزی آرامش با سال‌ها تجربه در زمینه آموزش آشپزی
                   حرفه‌ای و پذیرش سفارشات مجالس، آماده ارائه خدمات با کیفیت به
                   شما عزیزان می‌باشد. ما با استفاده از بهترین مواد اولیه و تیم

@@ -9,6 +9,59 @@
     border-color: #607744 !important;
 }
 
-.btn_services  svg {
+.btn_services svg {
     margin-right: 0.5rem !important;
+}
+
+.servicesSection {
+    background-color: inherit;
+}
+
+.servicesTitle {
+    color: inherit;
+}
+
+.servicesText {
+    color: inherit;
+}
+
+.servicesLeftCol {
+    background-color: inherit;
+}
+
+.servicesRightCol {
+    background-color: inherit;
+}
+
+:global(body.dark-mode) .servicesSection {
+    background-color: #2e1f17 !important;
+}
+
+:global(body.dark-mode) .servicesLeftCol {
+    background-color: #3a261c !important;
+    color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .servicesTitle {
+    color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .servicesText {
+    color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .servicesRightCol {
+    background-color: #8b2e2c !important;
+}
+
+:global(body.dark-mode) .btn_services {
+    background-color: #8b2e2c !important;
+    color: #faf9f5 !important;
+    border-color: #8b2e2c !important;
+}
+
+:global(body.dark-mode) .btn_services:hover {
+    background-color: #a97142 !important;
+    color: #fff !important;
+    border-color: #a97142 !important;
 }

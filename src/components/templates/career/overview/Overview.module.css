@@ -5,6 +5,10 @@
   padding-bottom: 3rem !important;
 }
 
+:global(body.dark-mode) .overviewSection {
+  background-color: #2e1f17 !important;
+}
+
 /* Image Container */
 .overviewImageContainer {
   padding: 0 1.25rem !important;
@@ -16,15 +20,27 @@
   font-weight: 300 !important;
 }
 
+:global(body.dark-mode) .overviewTitle {
+  color: #faf9f5 !important;
+}
+
 .overviewTitleBold {
   font-weight: 600 !important;
   color: #8B2E2C !important;
+}
+
+:global(body.dark-mode) .overviewTitleBold {
+  color: #a97142 !important;
 }
 
 .overviewText {
   color: #A97142 !important;
   font-size: 1.25rem !important;
   line-height: 1.6 !important;
+}
+
+:global(body.dark-mode) .overviewText {
+  color: #faf9f5 !important;
 }
 
 /* Service Boxes */
@@ -37,14 +53,27 @@
   transition: all 0.3s ease !important;
 }
 
+:global(body.dark-mode) .serviceBox {
+  background-color: #3a261c !important;
+  border-color: #8b2e2c !important;
+}
+
 .serviceBox:hover {
   transform: translateY(-0.5rem) !important;
   box-shadow: 0 0.5rem 1rem rgba(139, 46, 44, 0.1) !important;
 }
 
+:global(body.dark-mode) .serviceBox:hover {
+  box-shadow: 0 0.5rem 1rem rgba(96, 119, 68, 0.2) !important;
+}
+
 .serviceIcon {
   color: #607744 !important;
   margin-bottom: 1rem !important;
+}
+
+:global(body.dark-mode) .serviceIcon {
+  color: #607744 !important;
 }
 
 .serviceTitle {
@@ -53,9 +82,17 @@
   margin-bottom: 0.75rem !important;
 }
 
+:global(body.dark-mode) .serviceTitle {
+  color: #faf9f5 !important;
+}
+
 .serviceDescription {
   color: #A97142 !important;
   line-height: 1.6 !important;
+}
+
+:global(body.dark-mode) .serviceDescription {
+  color: #faf9f5 !important;
 }
 
 /* Responsive Adjustments */
