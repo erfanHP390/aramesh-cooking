@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Services.module.css";
+import Link from "next/link";
 
 function Services() {
   return (
@@ -21,7 +22,7 @@ function Services() {
                   - طراحی منوی اختصاصی برای رستوران‌ها
                   <br />- مشاوره تغذیه و برنامه‌ریزی غذایی
                 </p>
-                <a href="#" className={`${styles.btn_services} btn btn-primary`}>
+                <Link href={"/portfolio"} className={`${styles.btn_services} btn btn-primary`}>
                   مشاهده منوی کامل
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +35,7 @@ function Services() {
                     <path d="M15.5 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H14v10a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V6H8.5v10a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V6H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 3h15Z" />
                     <path d="M3 0h1.5v1H3a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1.5v1H3a1 1 0 0 0-1 1v1.5a1 1 0 0 0 1 1h1.5v1H3a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2Zm12 0h-1.5v1H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-1.5v1H15a1 1 0 0 1 1 1v1.5a1 1 0 0 1-1 1h-1.5v1H15a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Z" />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
             <div

@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Profile.module.css";
+import Link from "next/link";
 
 function Profile() {
   return (
@@ -30,7 +31,7 @@ function Profile() {
                   حرفه‌ای، هر نوع سفارش غذایی از مهمانی‌های کوچک تا مجالس بزرگ
                   را پذیرفته و با بالاترین استانداردها اجرا می‌کنیم.
                 </p>
-                <a href="#services" className={`${styles.btn_services} btn btn-warning`}>
+                <Link href={"/services"} className={`${styles.btn_services} btn btn-warning`}>
                   مشاهده خدمات ما
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +50,7 @@ function Profile() {
                       d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
                     />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

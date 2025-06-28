@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
 import styles from "./Statistic.module.css";
+import Link from "next/link";
 
 const Statistic = () => {
   useEffect(() => {
@@ -124,7 +125,7 @@ const Statistic = () => {
             استفاده از بهترین مواد اولیه و تیم حرفه‌ای، همواره در تلاش برای
             ارائه خدمات باکیفیت هستیم.
           </p>
-          <a href="#" className={`btn btn-warning ${styles.btn_services}`}>
+          <Link href={"/about"} className={`btn btn-warning ${styles.btn_services}`}>
             مشاهده جزئیات
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -143,7 +144,7 @@ const Statistic = () => {
                 d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
               />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
