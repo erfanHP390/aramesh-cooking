@@ -1,0 +1,156 @@
+/* فقط استایل‌های مربوط به کامپوننت Comments - بهینه‌شده برای موبایل (500px به پایین) */
+
+.commentList {
+  list-style-type: none !important;
+  padding: 0 !important;
+}
+
+.userComment {
+  background-color: #FAF9F5 !important;
+  border: 1px solid #F5EBDD !important;
+  border-radius: 4px !important;
+  padding: 0.8rem !important;
+  margin-bottom: 0.8rem !important;
+}
+
+.userComment:hover {
+  border-color: #A97142 !important;
+}
+
+.commentAvatar {
+  border: 2px solid #607744 !important;
+  width: 32px !important;
+  height: 32px !important;
+  float: left !important;
+  margin-right: 0.6rem !important;
+}
+
+.commentAuthor {
+  color: #8B2E2C !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+  line-height: 1.3 !important;
+  display: inline-block !important;
+  margin-bottom: 0.1rem !important;
+}
+
+.commentAuthor:hover {
+  color: #A97142 !important;
+}
+
+.commentDate {
+  color: #607744 !important;
+  font-size: 0.7rem !important;
+  display: block !important;
+}
+
+.commentText {
+  color: #333 !important;
+  margin: 0.5rem 0 0 0 !important;
+  font-size: 0.85rem !important;
+  line-height: 1.5 !important;
+  clear: both !important;
+}
+
+.commentText p {
+  margin: 0 !important;
+}
+
+.btnReply {
+  text-align: left !important;
+  margin-top: 0.4rem !important;
+}
+
+.replyLink {
+  background-color: #8B2E2C !important;
+  color: #fff !important;
+  padding: 10px;
+  border-radius: 30%;
+  text-decoration: none !important;
+  font-size: 0.75rem !important;
+  transition: all 0.5s ease;
+}
+
+.replyLink:hover {
+  background-color:  #607744 !important;
+}
+
+.subComment {
+  margin-left: 0.8rem !important;
+  margin-top: 0.6rem !important;
+  padding-left: 0.6rem !important;
+  border-left: 2px solid #A97142 !important;
+}
+
+/* بهینه‌سازی برای موبایل (500px به پایین) */
+@media (max-width: 500px) {
+  .userComment {
+    padding: 0.7rem !important;
+    margin-bottom: 0.7rem !important;
+  }
+  
+  .commentAvatar {
+    width: 28px !important;
+    height: 28px !important;
+    margin-right: 0.5rem !important;
+  }
+  
+  .commentAuthor {
+    font-size: 0.85rem !important;
+  }
+  
+  .commentDate {
+    font-size: 0.65rem !important;
+  }
+  
+  .commentText {
+    font-size: 0.8rem !important;
+    line-height: 1.45 !important;
+  }
+  
+  .subComment {
+    margin-left: 0.6rem !important;
+    padding-left: 0.5rem !important;
+  }
+  
+  .replyLink {
+    font-size: 0.7rem !important;
+  }
+}
+
+/* بخش‌های مربوط به دارک مود (بدون تغییر) */
+:global(body.dark-mode) .userComment {
+  background-color: #3a261c !important;
+  border-color: #3a261c !important;
+}
+
+:global(body.dark-mode) .commentAuthor {
+  color: #f5ebdd !important;
+}
+
+:global(body.dark-mode) .commentAuthor:hover {
+  color: #8b2e2c !important;
+}
+
+:global(body.dark-mode) .commentText {
+  color: #f5ebdd !important;
+}
+
+:global(body.dark-mode) .replyLink {
+  background-color:  #8b2e2c !important;
+  color: #fff !important;
+}
+
+:global(body.dark-mode) .replyLink:hover {
+  background-color: #a97142 !important;
+  color: #fff !important;
+}
+
+:global(body.dark-mode) .subComment {
+  border-left-color: #8b2e2c !important;
+}
+
+:global(body.dark-mode) .commentAvatar {
+  border-color: #8b2e2c !important;
+}
