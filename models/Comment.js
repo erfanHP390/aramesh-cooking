@@ -23,6 +23,10 @@ const schema = mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    hasAnswer: {
+      type: Boolean,
+      default: false,
+    },
     isAccept: {
       type: Boolean,
       default: false,
