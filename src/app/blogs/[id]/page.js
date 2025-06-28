@@ -8,7 +8,7 @@ import BlogModel from "@/models/Blog"
 
 async function page({params}) {
     connectToDB()
-    const blog = await BlogModel.findOne({_id: params.id}).lean()
+    const blog = await BlogModel.findOne({_id: params.id}).populate("comments").lean()
 
   return (
     <>
