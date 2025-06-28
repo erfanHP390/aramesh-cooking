@@ -11,12 +11,15 @@ import { Navigation, Autoplay } from "swiper/modules";
 function Banner() {
   return (
     <Swiper
-      rewind={true}
-      navigation={true}
-      loop={true}
-      autoplay={{ delay: 3500 }}
-      modules={[Navigation, Autoplay]}
-      className="mySwiper home-slider"
+        rewind={true}
+        navigation={{
+          nextEl: `.${styles.swiperButtonNext}`,
+          prevEl: `.${styles.swiperButtonPrev}`,
+        }}
+        loop={true}
+        autoplay={{ delay: 3500 }}
+        modules={[Navigation, Autoplay]}
+        className={`mySwiper home-slider`}
     >
       <SwiperSlide>
         <img
