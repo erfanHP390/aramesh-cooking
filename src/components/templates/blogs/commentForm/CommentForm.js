@@ -6,8 +6,10 @@ import { swalAlert, toastError, toastSuccess } from "@/utils/alerts";
 import { validateEmail } from "@/utils/auth";
 import { useRouter } from "next/navigation";
 
-function CommentForm({blogID}) {
-  const router = useRouter()
+function CommentForm({ blogID, replyingTo, commentName }) {
+  console.log(replyingTo);
+
+  const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -22,9 +24,14 @@ function CommentForm({blogID}) {
       if (getUserInfoComment) {
         setName(getUserInfoComment.name);
         setEmail(getUserInfoComment.email);
+        setCity(getUserInfoComment.city);
       }
     }
-  }, []);
+
+    if (replyingTo) {
+      setDescription(`در پاسخ به کامنت${" "} ${commentName}:`);
+    }
+  }, [replyingTo]);
 
   const sendComment = async () => {
     if (!name || !description || !email || !city) {
@@ -55,7 +62,7 @@ function CommentForm({blogID}) {
       description,
       email,
       city,
-      blogID: blogID
+      blogID: blogID,
     };
 
     const res = await fetch("/api/blogs/comments", {
@@ -83,7 +90,119 @@ function CommentForm({blogID}) {
         undefined,
         "colored"
       );
-      router.refresh()
+      router.refresh();
+    } else if (res.status === 400) {
+      setName("");
+      setEmail("");
+      setDescription("");
+      setCity("");
+      setIsLoading(false);
+      toastError(
+        "لطفا همه موارد * را پر نمایید . در صورت بروز مشکل به پشتیبانی پیام دهید",
+        "top-center",
+        5000,
+        false,
+        true,
+        true,
+        true,
+        undefined,
+        "colored"
+      );
+    } else if (res.status === 422) {
+      setName("");
+      setEmail("");
+      setDescription("");
+      setCity("");
+      setIsLoading(false);
+      toastError(
+        "لطفا یک ایمیل معتبر را وارد کنید",
+        "top-center",
+        5000,
+        false,
+        true,
+        true,
+        true,
+        undefined,
+        "colored"
+      );
+    } else if (res.status === 500) {
+      setName("");
+      setEmail("");
+      setDescription("");
+      setCity("");
+      setIsLoading(false);
+      toastError(
+        "خطا در سرور ، لطفا چند دقیقه بعد دوباره تلاش کنید",
+        "top-center",
+        5000,
+        false,
+        true,
+        true,
+        true,
+        undefined,
+        "colored"
+      );
+    }
+  };
+
+  const sendAnswer = async () => {
+    if (!name || !description || !email || !city) {
+      setIsLoading(false);
+      return swalAlert("لطفا تمامی موارد را پر کنید", "error", "فهمیدم");
+    }
+
+    const isValidEmail = validateEmail(email);
+    if (!isValidEmail) {
+      setIsLoading(false);
+      return swalAlert("لطفا یک ایمیل معتبر وارد نمایید", "error", "فهمیدم");
+    }
+
+    if (isSaveValue) {
+      const userInfo = {
+        name,
+        email,
+        city,
+      };
+
+      if (typeof window !== "undefined") {
+        localStorage.setItem("user", JSON.stringify(userInfo));
+      }
+    }
+
+    const newAnswer = {
+      name,
+      description,
+      email,
+      city,
+      commentID: replyingTo,
+    };
+
+    const res = await fetch("/api/blogs/comments/answer", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(newAnswer),
+    });
+
+    if (res.status === 201) {
+      setName("");
+      setEmail("");
+      setDescription("");
+      setCity("");
+      setIsLoading(false);
+      toastSuccess(
+        "پاسخ شما برای کامنت مورد نظر ثبت شد ، در صورت تایید نمایش داده خواهد شد",
+        "top-center",
+        5000,
+        false,
+        true,
+        true,
+        true,
+        undefined,
+        "colored"
+      );
+      router.refresh();
     } else if (res.status === 400) {
       setName("");
       setEmail("");
@@ -225,7 +344,11 @@ function CommentForm({blogID}) {
               onClick={(event) => {
                 event.preventDefault();
                 setIsLoading(true);
-                sendComment();
+                if (replyingTo) {
+                  sendAnswer();
+                } else {
+                  sendComment();
+                }
               }}
               className={`${styles.submitButton} btn btn-primary`}
             >
