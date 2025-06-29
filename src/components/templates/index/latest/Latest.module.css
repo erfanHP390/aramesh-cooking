@@ -1,36 +1,43 @@
 .latestSection {
-  background-color: #F5EBDD !important; 
-}
-
-:global(body.dark-mode) .latestSection {
-  background-color: #2e1f17 !important;
+  background-color: #F5EBDD;
+  padding: 3rem 0;
 }
 
 .sectionHeader {
-  color: #8B2E2C; 
+  color: #8B2E2C;
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  color: inherit;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.sectionTitle span {
+  color: #A97142;
+}
+
+.dividerLine {
+  background-color: #607744;
+  border-color: #607744;
+  height: 2px;
+  opacity: 1;
+  width: 80px;
+  margin: 0 auto;
+}
+
+/* Dark Mode Styles - کاملاً حفظ شده */
+:global(body.dark-mode) .latestSection {
+  background-color: #2e1f17 !important;
 }
 
 :global(body.dark-mode) .sectionHeader {
   color: #faf9f5 !important;
 }
 
-.sectionTitle {
-  color: inherit;
-}
-
-.sectionTitle span {
-  color: #A97142; 
-}
-
 :global(body.dark-mode) .sectionTitle span {
   color: #a97142 !important;
-}
-
-.dividerLine {
-  background-color: #607744 !important; 
-  border-color: #607744 !important; 
-  height: 2px;
-  opacity: 1;
 }
 
 :global(body.dark-mode) .dividerLine {
@@ -38,12 +45,41 @@
   border-color: #faf9f5 !important;
 }
 
-@media (max-width: 768px) {
-  .sectionHeader {
-    margin-bottom: 1.5rem !important;
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .latestSection {
+    padding: 2.5rem 0;
   }
   
   .sectionTitle {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .latestSection {
+    padding: 2rem 0;
+  }
+  
+  .sectionHeader {
+    margin-bottom: 1.5rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.4rem;
+  }
+  
+  .dividerLine {
+    width: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sectionTitle {
+    font-size: 1.3rem;
+  }
+  
+  .dividerLine {
+    height: 1.5px;
   }
 }
