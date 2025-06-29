@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Footer.module.css";
 import NewsLetter from "@/components/templates/index/newsLetter/NewsLetter";
+import Link from "next/link";
 
 function Footer() {
   return (
@@ -97,18 +98,18 @@ function Footer() {
                 <div className="row">
                   <div className="col-sm-6">
                     <ul className={styles.linkList}>
-                      <li><a href="#">صفحه اصلی</a></li>
-                      <li><a href="#">درباره ما</a></li>
-                      <li><a href="#">خدمات ما</a></li>
-                      <li><a href="#">تماس با ما</a></li>
+                      <li><Link href={"/"}>صفحه اصلی</Link></li>
+                      <li><Link href={"/about"}>درباره ما</Link></li>
+                      <li><Link href={"/services"}>خدمات ما</Link></li>
+                      <li><Link href={"/contact"}>تماس با ما</Link></li>
                     </ul>
                   </div>
                   <div className="col-sm-6">
                     <ul className={styles.linkList}>
-                      <li><a href="#">منوی غذاها</a></li>
-                      <li><a href="#">دوره‌های آموزشی</a></li>
-                      <li><a href="#">وبلاگ آشپزی</a></li>
-                      <li><a href="#">سوالات متداول</a></li>
+                      <li><Link href={"/portfolio"}>منوی غذاها</Link></li>
+                      <li><Link href={"/pricing"}>دوره‌های آموزشی</Link></li>
+                      <li><Link href={"/blogs"}>وبلاگ آشپزی</Link></li>
+                      <li><Link href={"faq"}>سوالات متداول</Link></li>
                     </ul>
                   </div>
                 </div>
