@@ -143,7 +143,7 @@ function MainFaq() {
               <p className="mb-0">
                 پاسخ سوال خود را پیدا نکردید؟{" "}
                 <a href="/contact" className={styles.contactLink}>
-                  از طریق واتساپ با ما در تماس باشید
+                   با ما در تماس باشید
                 </a>
               </p>
             </div>
