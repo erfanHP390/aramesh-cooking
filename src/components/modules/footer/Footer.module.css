@@ -219,9 +219,9 @@
 }
 
 @media (max-width: 576px) {
-  .footerContent {
+  /* .footerContent {
     padding: 2rem 0;
-  }
+  } */
 
   .widgetTitle {
     font-size: 1.1rem;
