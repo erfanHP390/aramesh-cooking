@@ -1,28 +1,40 @@
+/* استایل‌های پایه با اولویت بالا */
 .container {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #F5EBDD; 
-  padding: 2rem;
+  background-color: #F5EBDD;
+  padding: 1rem;
   direction: rtl;
 }
 
-.errorContent {
-  max-width: 800px;
-  width: 100%;
-  text-align: center;
-  padding: 2rem;
-  background-color: #FAF9F5; 
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  border: 2px solid #A97142; 
+:global(body.dark-mode) .container {
+  background-color: #2e1f17 !important;
 }
 
+.errorContent {
+  max-width: 95%;
+  width: 100%;
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #FAF9F5;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 2px solid #A97142;
+  margin: 0 auto;
+}
+
+:global(body.dark-mode) .errorContent {
+  background-color: #3a261c !important;
+  border-color: #8b2e2c !important;
+}
+
+/* استایل‌های موبایل اول (اولویت اجرا) */
 .errorIllustration {
   position: relative;
-  height: 200px;
-  margin-bottom: 2rem;
+  height: 120px;
+  margin-bottom: 1.5rem;
 }
 
 .bowl {
@@ -30,12 +42,17 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 150px;
-  height: 80px;
-  background-color: #FAF9F5; 
-  border-radius: 0 0 80px 80px;
-  border: 5px solid #A97142; 
+  width: 100px;
+  height: 50px;
+  background-color: #FAF9F5;
+  border-radius: 0 0 60px 60px;
+  border: 4px solid #A97142;
   overflow: hidden;
+}
+
+:global(body.dark-mode) .bowl {
+  background-color: #3a261c !important;
+  border-color: #8b2e2c !important;
 }
 
 .spilledSoup {
@@ -43,11 +60,15 @@
   left: 50%;
   top: 60%;
   transform: translateX(-50%);
-  width: 200px;
-  height: 100px;
+  width: 130px;
+  height: 65px;
   background-color: #8B2E2C;
   border-radius: 50%;
   animation: spill 2s ease-in-out infinite;
+}
+
+:global(body.dark-mode) .spilledSoup {
+  background-color: #8b2e2c !important;
 }
 
 .oven {
@@ -55,22 +76,30 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 180px;
-  height: 120px;
-  background-color: #A97142; 
-  border-radius: 10px;
+  width: 120px;
+  height: 80px;
+  background-color: #A97142;
+  border-radius: 8px;
+}
+
+:global(body.dark-mode) .oven {
+  background-color: #a97142 !important;
 }
 
 .oven:before {
   content: '';
   position: absolute;
-  top: -30px;
+  top: -20px;
   left: 50%;
   transform: translateX(-50%);
-  width: 120px;
-  height: 40px;
+  width: 80px;
+  height: 25px;
   background-color: #A97142;
-  border-radius: 10px 10px 0 0;
+  border-radius: 8px 8px 0 0;
+}
+
+:global(body.dark-mode) .oven:before {
+  background-color: #a97142 !important;
 }
 
 .smoke {
@@ -78,8 +107,8 @@
   left: 50%;
   top: 30%;
   transform: translateX(-50%);
-  width: 100px;
-  height: 80px;
+  width: 80px;
+  height: 60px;
   background: radial-gradient(circle, rgba(0,0,0,0.1) 0%, transparent 70%);
   animation: smoke 3s ease-in-out infinite;
 }
@@ -89,68 +118,93 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
-  color: #8B2E2C; 
+  color: #8B2E2C;
   opacity: 0.8;
   z-index: 2;
 }
 
+:global(body.dark-mode) .errorText {
+  color: #faf9f5 !important;
+}
+
 .title {
-  color: #8B2E2C; 
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+  color: #8B2E2C;
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+:global(body.dark-mode) .title {
+  color: #faf9f5 !important;
 }
 
 .description {
-  color: #A97142; 
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 2rem;
+  color: #A97142;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+:global(body.dark-mode) .description {
+  color: #faf9f5 !important;
 }
 
 .actions {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.retryButton, .homeButton {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  text-align: center;
 }
 
 .retryButton {
-  background-color: #8B2E2C; 
-  color: #FAF9F5; 
-  padding: 0.8rem 1.5rem;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  transition: all 0.3s ease;
+  background-color: #8B2E2C;
+  color: #FAF9F5;
   border: 2px solid #8B2E2C;
+  cursor: pointer;
 }
 
-.retryButton:hover {
-  background-color: #607744 !important;
-    border: 2px solid #607744;
-  color: #607744;
+:global(body.dark-mode) .retryButton {
+  background-color: #8b2e2c !important;
+  border-color: #8b2e2c !important;
+  color: #faf9f5 !important;
 }
 
 .homeButton {
-  background-color: #8B2E2C; 
-  color: #FAF9F5 !important; 
-  padding: 0.8rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s ease;
+  background-color: #8B2E2C;
+  color: #FAF9F5;
   border: 2px solid #8B2E2C;
+  text-decoration: none;
 }
 
-.homeButton:hover {
+:global(body.dark-mode) .homeButton {
+  background-color: #8b2e2c !important;
+  border-color: #8b2e2c !important;
+  color: #faf9f5 !important;
+}
+
+.retryButton:hover, .homeButton:hover {
   background-color: #607744;
-    border: 2px solid #607744;
-  color: #8B2E2C;
+  border-color: #607744;
 }
 
+:global(body.dark-mode) .retryButton:hover,
+:global(body.dark-mode) .homeButton:hover {
+  background-color: #607744 !important;
+  border-color: #607744 !important;
+}
+
+/* انیمیشن‌ها */
 @keyframes spill {
   0%, 100% {
     transform: translateX(-50%) scale(1);
@@ -174,14 +228,27 @@
   }
 }
 
-@media (max-width: 768px) {
+/* استایل‌های تبلت (768px به بالا) */
+@media (min-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+  
+  .errorContent {
+    max-width: 85%;
+    padding: 2rem;
+    border-radius: 14px;
+  }
+  
   .errorIllustration {
     height: 150px;
+    margin-bottom: 1.8rem;
   }
   
   .bowl {
     width: 120px;
     height: 60px;
+    border-radius: 0 0 70px 70px;
   }
   
   .spilledSoup {
@@ -194,58 +261,99 @@
     height: 90px;
   }
   
+  .oven:before {
+    width: 100px;
+    height: 30px;
+    top: -25px;
+  }
+  
   .errorText {
     font-size: 2.5rem;
   }
   
   .title {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 1rem;
-  }
-  
-  .errorContent {
-    padding: 1.5rem;
-  }
-  
-  .errorIllustration {
-    height: 120px;
-    margin-bottom: 1.5rem;
-  }
-  
-  .bowl {
-    width: 100px;
-    height: 50px;
-  }
-  
-  .spilledSoup {
-    width: 130px;
-    height: 65px;
-  }
-  
-  .errorText {
-    font-size: 2rem;
-  }
-  
-  .title {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
   }
   
   .description {
     font-size: 1rem;
+    margin-bottom: 1.8rem;
   }
   
   .actions {
-    flex-direction: column;
-    gap: 0.5rem;
+    flex-direction: row;
+    gap: 1rem;
   }
   
   .retryButton, .homeButton {
-    width: 100%;
-    text-align: center;
+    width: auto;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* استایل‌های دسکتاپ (992px به بالا) */
+@media (min-width: 992px) {
+  .errorContent {
+    max-width: 800px;
+    padding: 2.5rem;
+    border-radius: 16px;
+  }
+  
+  .errorIllustration {
+    height: 200px;
+    margin-bottom: 2rem;
+  }
+  
+  .bowl {
+    width: 150px;
+    height: 80px;
+    border-radius: 0 0 80px 80px;
+    border-width: 5px;
+  }
+  
+  .spilledSoup {
+    width: 200px;
+    height: 100px;
+  }
+  
+  .oven {
+    width: 180px;
+    height: 120px;
+  }
+  
+  .oven:before {
+    width: 120px;
+    height: 40px;
+    top: -30px;
+  }
+  
+  .smoke {
+    width: 100px;
+    height: 80px;
+  }
+  
+  .errorText {
+    font-size: 3rem;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+  
+  .actions {
+    gap: 1.5rem;
+  }
+  
+  .retryButton, .homeButton {
+    padding: 0.9rem 1.8rem;
   }
 }

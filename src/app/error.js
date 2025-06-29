@@ -9,6 +9,8 @@ export default function Error({ error, reset }) {
         <div className={styles.errorIllustration}>
           <div className={styles.spilledSoup}></div>
           <div className={styles.bowl}></div>
+          <div className={styles.oven}></div>
+          <div className={styles.smoke}></div>
           <div className={styles.errorText}>خطا!</div>
         </div>
 

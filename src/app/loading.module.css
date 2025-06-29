@@ -1,10 +1,11 @@
+/* استایل‌های پایه با رویکرد Mobile-First */
 .loadingContainer {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #F5EBDD; 
+  background-color: #F5EBDD;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,27 +13,37 @@
   direction: rtl;
 }
 
+:global(body.dark-mode) .loadingContainer {
+  background-color: #2e1f17 !important;
+}
+
 .loadingContent {
   text-align: center;
-  max-width: 90%;
-  width: 100%;
-  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  padding: 1.5rem;
 }
 
 .utensils {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
 }
 
 .spoon, .fork, .knife {
-  width: 40px;
-  height: 80px;
-  background-color: #A97142; 
+  width: 25px;
+  height: 50px;
+  background-color: #A97142;
   position: relative;
-  border-radius: 4px;
+  border-radius: 3px;
   animation: bounce 1.5s infinite ease-in-out;
+}
+
+:global(body.dark-mode) .spoon,
+:global(body.dark-mode) .fork,
+:global(body.dark-mode) .knife {
+  background-color: #a97142 !important;
 }
 
 .spoon {
@@ -53,49 +64,65 @@
 .spoon:before {
   content: '';
   position: absolute;
-  bottom: -10px;
-  left: 5px;
-  width: 30px;
-  height: 15px;
+  bottom: -8px;
+  left: 4px;
+  width: 18px;
+  height: 10px;
   border-radius: 50%;
   background-color: #A97142;
+}
+
+:global(body.dark-mode) .spoon:before {
+  background-color: #a97142 !important;
 }
 
 .fork:after {
   content: '';
   position: absolute;
-  top: -10px;
+  top: -8px;
   left: 0;
-  width: 40px;
-  height: 10px;
+  width: 25px;
+  height: 8px;
   background-color: #A97142;
   clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+}
+
+:global(body.dark-mode) .fork:after {
+  background-color: #a97142 !important;
 }
 
 .knife:after {
   content: '';
   position: absolute;
-  top: -5px;
-  left: 5px;
-  width: 30px;
-  height: 5px;
-  background-color: #8B2E2C; 
+  top: -4px;
+  left: 4px;
+  width: 18px;
+  height: 4px;
+  background-color: #8B2E2C;
   transform: skewY(-15deg);
+}
+
+:global(body.dark-mode) .knife:after {
+  background-color: #8b2e2c !important;
 }
 
 .loadingText {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .textPart {
-  font-size: 1.5rem;
-  color: #8B2E2C; 
+  font-size: 1rem;
+  color: #8B2E2C;
   font-weight: bold;
   opacity: 0;
   animation: fadeInOut 3s infinite;
+}
+
+:global(body.dark-mode) .textPart {
+  color: #faf9f5 !important;
 }
 
 .textPart:nth-child(1) {
@@ -112,35 +139,45 @@
 
 .progressBar {
   width: 100%;
-  max-width: 300px;
-  height: 8px;
-  background-color: #F5EBDD; 
-  border-radius: 4px;
+  max-width: 250px;
+  height: 6px;
+  background-color: #F5EBDD;
+  border-radius: 3px;
   margin: 0 auto;
   overflow: hidden;
-  border: 1px solid #A97142; 
+  border: 1px solid #A97142;
+}
+
+:global(body.dark-mode) .progressBar {
+  background-color: #3a261c !important;
+  border-color: #8b2e2c !important;
 }
 
 .progressFill {
   height: 100%;
   width: 0;
-  background-color: #607744; 
+  background-color: #607744;
   animation: progress 2.5s infinite ease-in-out;
 }
 
+:global(body.dark-mode) .progressFill {
+  background-color: #607744 !important;
+}
+
+/* انیمیشن‌ها */
 @keyframes bounce {
   0%, 100% {
     transform: translateY(0) rotate(15deg);
   }
   50% {
-    transform: translateY(-20px) rotate(15deg);
+    transform: translateY(-15px) rotate(15deg);
   }
 }
 
 @keyframes fadeInOut {
   0%, 100% {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(8px);
   }
   50% {
     opacity: 1;
@@ -160,36 +197,93 @@
   }
 }
 
-@media (max-width: 768px) {
+/* استایل‌های تبلت (768px به بالا) */
+@media (min-width: 768px) {
+  .loadingContent {
+    padding: 2rem;
+  }
+  
   .utensils {
-    gap: 1rem;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
   }
   
   .spoon, .fork, .knife {
-    width: 30px;
-    height: 60px;
+    width: 35px;
+    height: 70px;
+  }
+  
+  .spoon:before {
+    bottom: -10px;
+    left: 5px;
+    width: 25px;
+    height: 12px;
+  }
+  
+  .fork:after {
+    top: -10px;
+    width: 35px;
+    height: 10px;
+  }
+  
+  .knife:after {
+    top: -5px;
+    left: 5px;
+    width: 25px;
+    height: 5px;
+  }
+  
+  .loadingText {
+    margin-bottom: 2rem;
   }
   
   .textPart {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+  }
+  
+  .progressBar {
+    height: 8px;
+    max-width: 300px;
   }
 }
 
-@media (max-width: 480px) {
-  .loadingContent {
-    padding: 1rem;
-  }
-  
+/* استایل‌های دسکتاپ (992px به بالا) */
+@media (min-width: 992px) {
   .utensils {
-    gap: 0.7rem;
+    gap: 1.5rem;
   }
   
   .spoon, .fork, .knife {
-    width: 25px;
-    height: 50px;
+    width: 40px;
+    height: 80px;
+  }
+  
+  .spoon:before {
+    bottom: -12px;
+    left: 5px;
+    width: 30px;
+    height: 15px;
+  }
+  
+  .fork:after {
+    top: -12px;
+    width: 40px;
+    height: 12px;
+  }
+  
+  .knife:after {
+    top: -6px;
+    left: 5px;
+    width: 30px;
+    height: 6px;
   }
   
   .textPart {
-    font-size: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .progressBar {
+    height: 10px;
+    max-width: 350px;
   }
 }

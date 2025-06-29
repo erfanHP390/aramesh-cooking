@@ -8,6 +8,10 @@
   direction: rtl;
 }
 
+:global(body.dark-mode) .container {
+  background-color: #2e1f17 !important;
+}
+
 .content {
   max-width: 800px;
   width: 100%;
@@ -17,6 +21,11 @@
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   border: 2px solid #A97142; 
+}
+
+:global(body.dark-mode) .content {
+  background-color: #3a261c !important;
+  border-color: #8b2e2c !important;
 }
 
 .errorIllustration {
@@ -36,6 +45,10 @@
   border-radius: 50%;
 }
 
+:global(body.dark-mode) .pan {
+  background-color: #a97142 !important;
+}
+
 .pan:before {
   content: '';
   position: absolute;
@@ -46,6 +59,10 @@
   height: 20px;
   background-color: #A97142;
   border-radius: 5px;
+}
+
+:global(body.dark-mode) .pan:before {
+  background-color: #a97142 !important;
 }
 
 .egg {
@@ -61,6 +78,11 @@
   animation: eggShake 3s infinite ease-in-out;
 }
 
+:global(body.dark-mode) .egg {
+  background-color: #3a261c !important;
+  border-color: #8b2e2c !important;
+}
+
 .errorText {
   position: absolute;
   left: 50%;
@@ -73,10 +95,18 @@
   z-index: 2;
 }
 
+:global(body.dark-mode) .errorText {
+  color: #faf9f5 !important;
+}
+
 .title {
   color: #8B2E2C;
   font-size: 2rem;
   margin-bottom: 1rem;
+}
+
+:global(body.dark-mode) .title {
+  color: #faf9f5 !important;
 }
 
 .description {
@@ -84,6 +114,10 @@
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 2rem;
+}
+
+:global(body.dark-mode) .description {
+  color: #a97142 !important;
 }
 
 .actions {
@@ -104,10 +138,22 @@
   border: 2px solid #8B2E2C;
 }
 
+:global(body.dark-mode) .primaryButton {
+  background-color: #8b2e2c !important;
+  color: #faf9f5 !important;
+  border-color: #8b2e2c !important;
+}
+
 .primaryButton:hover {
   background-color: #A97142;
   color: #8B2E2C;
   border-color: #A97142;
+}
+
+:global(body.dark-mode) .primaryButton:hover {
+  background-color: #a97142 !important;
+  color: #faf9f5 !important;
+  border-color: #a97142 !important;
 }
 
 .secondaryButton {
@@ -121,9 +167,19 @@
   border: 2px solid #607744;
 }
 
+:global(body.dark-mode) .secondaryButton {
+  color: #607744 !important;
+  border-color: #607744 !important;
+}
+
 .secondaryButton:hover {
   background-color: #607744;
   color: #FAF9F5;
+}
+
+:global(body.dark-mode) .secondaryButton:hover {
+  background-color: #607744 !important;
+  color: #faf9f5 !important;
 }
 
 @keyframes eggShake {
