@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./AboutUs.module.css";
+import Link from "next/link";
 
 function AboutUs() {
   return (
@@ -35,7 +36,7 @@ function AboutUs() {
                   <br /><br />
                   ما با بهره‌گیری از بهترین مواد اولیه و تکنیک‌های روز آشپزی بین‌المللی، تجربه‌ای منحصر به فرد از طعم و کیفیت را برای شما به ارمغان می‌آوریم. اعتماد شما سرمایه ماست.
                 </p>
-                <a href="#services" className={`btn btn-warning btn_services ${styles.aboutButton}`}>
+                <Link href={"/services"} className={`btn btn-warning btn_services ${styles.aboutButton}`}>
                   خدمات ما
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +55,7 @@ function AboutUs() {
                       d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
                     />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
