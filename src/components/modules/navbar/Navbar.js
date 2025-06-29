@@ -7,9 +7,8 @@ import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { toastError, toastSuccess } from "@/utils/alerts";
 import { useRouter } from "next/navigation";
 
-function Navbar({isCookies}) {
-
-  const router = useRouter()
+function Navbar({ isCookies, user }) {
+  const router = useRouter();
 
   const scrollToSection = (sectionId, offset = 0) => {
     if (typeof window !== "undefined") {
@@ -25,21 +24,17 @@ function Navbar({isCookies}) {
       }
     }
   };
-  
 
   useEffect(() => {
-
     const refreshUser = async () => {
+      const res = await fetch("/api/auth/refresh", {
+        method: "POST",
+      });
 
-      const res = await fetch("/api/auth/refresh" , {
-        method: "POST"
-      })
+      const userData = await res.json();
 
-      const userData = await res.json()
-
-      if(res.status === 200 && userData?.user?.refreshToken) {
-
-        const refreshT = userData.user.refreshToken
+      if (res.status === 200 && userData?.user?.refreshToken) {
+        const refreshT = userData.user.refreshToken;
 
         const signinUser = await fetch("/api/auth/signin", {
           method: "POST",
@@ -49,7 +44,7 @@ function Navbar({isCookies}) {
           body: JSON.stringify({ userRefreshToken: refreshT }),
         });
 
-          if (signinUser.status === 200) {
+        if (signinUser.status === 200) {
           toastSuccess(
             "خوش آمدید 😊",
             "top-center",
@@ -98,7 +93,7 @@ function Navbar({isCookies}) {
             undefined,
             "colored"
           );
-        } else if (res.status === 500) {
+        } else if (signinUser.status === 500) {
           toastError(
             "خطا در سرور ، لطفا بعدا تلاش کنید",
             "top-center",
@@ -111,17 +106,13 @@ function Navbar({isCookies}) {
             "colored"
           );
         }
-
       }
+    };
 
-    }
-
-    if (isCookies === false) {
+    if (!isCookies) {
       refreshUser();
     }
-
-  } , [])
-
+  }, []);
 
   return (
     <>
@@ -333,20 +324,12 @@ function Navbar({isCookies}) {
                           </a>
                         </li>
                         <li>
-                          <a
+                          <Link
                             className={`dropdown-item ${styles.earthtone_dropdown_item}`}
-                            href="single.html"
+                            href={"/blogs/68565c571794979b13c4a37b"}
                           >
                             مقاله
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            className={`dropdown-item ${styles.earthtone_dropdown_item}`}
-                            href="classic-post.html"
-                          >
-                            مقاله کلاسیک
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </li>
@@ -356,7 +339,7 @@ function Navbar({isCookies}) {
                         className={`dropdown-item dropdown-toggle ${styles.earthtone_accent}`}
                         href="#"
                       >
-                        کاربران
+                        {user ? "کاربر" : "کاربران"}
                         <MdOutlineKeyboardArrowLeft />
                       </a>
                       <ul
@@ -366,25 +349,29 @@ function Navbar({isCookies}) {
                         <li>
                           <Link
                             className={`dropdown-item ${styles.earthtone_dropdown_item}`}
-                            href={"/login"}
+                            href={user ? "#" : "/login"}
                           >
-                            ورود
+                            {user ? <>{`نام: ${user.name}`}</> : "ورود"}
                           </Link>
                         </li>
                         <li>
                           <Link
                             className={`dropdown-item ${styles.earthtone_dropdown_item}`}
-                            href={"/register"}
+                            href={user ? "#" : "/register"}
                           >
-                            ثبت نام
+                            {user ? <>{`ایمیل: ${user.email}`}</> : "ثبت نام"}
                           </Link>
                         </li>
                         <li>
                           <Link
                             className={`dropdown-item ${styles.earthtone_dropdown_item}`}
-                            href={"/forgotPassword"}
+                            href={user ? "#" : "/forgotPassword"}
                           >
-                            بازیابی رمز
+                            {user ? (
+                              <>{`کداشتراک: ${user.subscription}`}</>
+                            ) : (
+                              "بازیابی رمزعبور"
+                            )}{" "}
                           </Link>
                         </li>
                       </ul>
