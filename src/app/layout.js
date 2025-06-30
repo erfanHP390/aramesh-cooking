@@ -5,6 +5,7 @@ import ScrollTopBtn from "@/components/modules/ScrollTopBtn/ScrollTopBtn";
 import DarkModeBtn from "@/components/modules/darkModeBtn/DarkModeBtn";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ClientRefresher from "@/components/modules/refresher/ClientRefresher";
 
 export const metadata = {
   title: "Create Next App",
@@ -89,6 +90,7 @@ export default function RootLayout({ children }) {
         <Script src="/js/theme.js" strategy="afterInteractive" />
       </head>
       <body>
+        <ClientRefresher />
         {children}
         <ToastContainer
           position="top-center"
