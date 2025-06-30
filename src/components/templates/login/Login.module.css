@@ -272,6 +272,7 @@
   color: #0d6efd;
   text-decoration: underline;
   transition: all 0.5s ease;
+  text-decoration: none;
 }
 
 .link:hover {
@@ -369,9 +370,9 @@
 
 :global(body.dark-mode) .link {
   color: #a97142 !important;
+  text-decoration: none !important;
 }
 
 :global(body.dark-mode) .link:hover {
   color: #8b2e2c !important;
-  background-color: rgba(139, 46, 44, 0.2) !important;
 }
