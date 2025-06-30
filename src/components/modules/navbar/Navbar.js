@@ -8,6 +8,8 @@ import { toastError, toastSuccess } from "@/utils/alerts";
 import { useRouter } from "next/navigation";
 
 function Navbar({ isCookies, user }) {
+
+  
   const router = useRouter();
 
   const scrollToSection = (sectionId, offset = 0) => {
@@ -252,7 +254,7 @@ function Navbar({ isCookies, user }) {
                         className={`dropdown-item dropdown-toggle ${styles.earthtone_accent}`}
                         href="#"
                       >
-                        {user ? "کاربر" : "کاربران"}
+                        {isCookies ? "کاربر" : "کاربران"}
                         <MdOutlineKeyboardArrowLeft />
                       </a>
                       <ul
@@ -262,25 +264,25 @@ function Navbar({ isCookies, user }) {
                         <li>
                           <Link
                             className={`dropdown-item ${styles.earthtone_dropdown_item}`}
-                            href={user ? "#" : "/login"}
+                            href={isCookies ? "#" : "/login"}
                           >
-                            {user ? <>{`نام: ${user.name}`}</> : "ورود"}
+                            {isCookies ? <>{`نام: ${user.name}`}</> : "ورود"}
                           </Link>
                         </li>
                         <li>
                           <Link
                             className={`dropdown-item ${styles.earthtone_dropdown_item}`}
-                            href={user ? "#" : "/register"}
+                            href={isCookies ? "#" : "/register"}
                           >
-                            {user ? <>{`ایمیل: ${user.email}`}</> : "ثبت نام"}
+                            {isCookies ? <>{`ایمیل: ${user.email}`}</> : "ثبت نام"}
                           </Link>
                         </li>
                         <li>
                           <Link
                             className={`dropdown-item ${styles.earthtone_dropdown_item}`}
-                            href={user ? "#" : "/forgotPassword"}
+                            href={isCookies ? "#" : "/forgotPassword"}
                           >
-                            {user ? (
+                            {isCookies ? (
                               <>{`کداشتراک: ${user.subscription}`}</>
                             ) : (
                               "بازیابی رمزعبور"
