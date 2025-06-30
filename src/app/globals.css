@@ -141,6 +141,7 @@ body::-webkit-scrollbar-thumb {
   z-index: 1001 !important;
   position: fixed;
   top: 80px !important;
+  margin-top: 1.5rem !important;
 }
 
 .navbar {
