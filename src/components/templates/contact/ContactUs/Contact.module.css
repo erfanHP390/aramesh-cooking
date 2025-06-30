@@ -169,3 +169,13 @@
     padding: 5rem 0;
   }
 }
+
+.option_chosen {
+  background-color: #607744 !important;
+  color: #fff !important;
+}
+
+:global(body.dark-mode) .option_chosen {
+  background-color: #a97142 !important;
+  color: #fff !important;
+}

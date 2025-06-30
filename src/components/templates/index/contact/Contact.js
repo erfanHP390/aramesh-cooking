@@ -200,9 +200,9 @@ function Contact({ departments }) {
                     onChange={(event) => setDepartment(event.target.value)}
                   >
                     {" "}
-                    <option value={-1}>انتخاب کنید</option>
+                    <option className={styles.option_chosen} value={-1}>انتخاب کنید</option>
                     {departments.map((item) => (
-                      <option key={item._id} value={item._id}>
+                      <option className={styles.option_chosen} key={item._id} value={item._id}>
                         {item.title}
                       </option>
                     ))}
