@@ -17,7 +17,7 @@
 }
 
 .btn_category:hover {
-  background-color: #a97142 !important;
+  background-color: #607744 !important;
   color: #fff !important;
 }
 
@@ -27,7 +27,7 @@
 }
 
 :global(body.dark-mode) .btn_category:hover {
-  background-color: #8b2e2c !important;
+  background-color: #A97142 !important;
   color: #faf9f5 !important;
 }
 
