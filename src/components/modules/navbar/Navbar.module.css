@@ -3,7 +3,7 @@
 }
 
 :global(body.dark-mode) .earthtone_primary_bg {
-  background-color: #3a261c !important;
+  background-color: #442d21 !important;
 }
 
 .earthtone_light_text {
@@ -78,16 +78,28 @@
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23FAF9F5' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
+.earthtone_toggler_icon:hover,
+.earthtone_border_light:hover {
+  background-color: #607744 !important;
+  border-color: #607744 !important;
+}
+
+:global(body.dark-mode)  .earthtone_toggler_icon:hover,
+:global(body.dark-mode)  .earthtone_border_light:hover {
+  background-color: #A97142 !important;
+  border-color: #A97142 !important;
+}
+
 :global(body.dark-mode) .earthtone_toggler_icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23FAF9F5' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
 .earthtone_light_text::before {
-  background-color: #8b2e2c !important;
+  background-color:  #8b2e2c !important;
 }
 
 :global(body.dark-mode) .earthtone_light_text::before {
-  background-color: #8b2e2c !important;
+  background-color:  #607744 !important;
 }
 
 .earthtone_light_text::after {
@@ -229,7 +241,8 @@
 }
 
 :global(body.dark-mode) .nav_link_button:hover {
-  color: #a97142 !important;
+  color: #fff !important;
+  background: transparent !important;
 }
 
 @media (max-width: 992px) {
