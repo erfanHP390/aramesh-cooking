@@ -13,8 +13,9 @@
 }
 
 .blogImageWrapper {
+  width: 100%;
+  aspect-ratio: 4 / 3; /* حفظ تناسب تصویر برای همه کارت‌ها */
   overflow: hidden;
-  height: 200px;
 }
 
 .blogImage {
@@ -30,9 +31,10 @@
 
 .blogBody {
   padding: 1.5rem;
-  flex: 1;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
 }
 
 .blogTitleWrapper {
@@ -53,7 +55,7 @@
 }
 
 .blogTitleLink:hover {
-  color: #A97142;
+  color: #607744 !important;
 }
 
 .blogMeta {
@@ -74,10 +76,9 @@
   font-size: 0.9rem;
   line-height: 1.6;
   margin-bottom: 0;
-  flex: 1;
 }
 
-/* Dark Mode Styles - کاملاً حفظ شده */
+/* ------------------ Dark Mode Styles ------------------ */
 :global(body.dark-mode) .blogCard {
   background-color: #3a261c !important;
   border-color: #8b2e2c !important;
@@ -103,50 +104,34 @@
   color: #f5ebdd !important;
 }
 
-/* Responsive Adjustments */
+/* ------------------ Responsive Adjustments ------------------ */
 @media (max-width: 1200px) {
-  .blogImageWrapper {
-    height: 180px;
-  }
-  
   .blogBody {
     padding: 1.25rem;
   }
 }
 
 @media (max-width: 992px) {
-  .blogImageWrapper {
-    height: 160px;
-  }
-  
   .blogTitle {
     font-size: 1.1rem;
   }
 }
 
 @media (max-width: 768px) {
-  .blogImageWrapper {
-    height: 140px;
-  }
-  
   .blogBody {
     padding: 1rem;
   }
-  
+
   .blogTitle {
     font-size: 1rem;
   }
-  
+
   .blogContent {
     font-size: 0.85rem;
   }
 }
 
 @media (max-width: 576px) {
-  .blogImageWrapper {
-    height: 120px;
-  }
-  
   .blogMeta {
     font-size: 0.8rem;
   }

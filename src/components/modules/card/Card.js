@@ -5,12 +5,12 @@ const BlogCard = ({ blogs }) => {
   return (
     <>
       {blogs.slice(0, 4).map((blog) => (
-        <div className="col-12 col-md-6 col-lg-4 col-xl-3 mb-4" key={blog._id}>
-          <div 
-            className={`card h-100 border-0 rounded-3 overflow-hidden ${styles.blogCard}`}
+        <div className="col-12 col-sm-6 col-lg-4 col-xl-3 mb-4" key={blog._id}>
+          <div
+            className={`card h-100 border-0 rounded-3 overflow-hidden d-flex flex-column ${styles.blogCard}`}
             data-aos="fade-up"
           >
-            <div className={`${styles.blogImageWrapper}`}>
+            <div className={styles.blogImageWrapper}>
               <a href="#">
                 <img
                   className={`img-fluid ${styles.blogImage}`}
@@ -20,7 +20,7 @@ const BlogCard = ({ blogs }) => {
                 />
               </a>
             </div>
-            <div className={`card-body ${styles.blogBody}`}>
+            <div className={`card-body d-flex flex-column ${styles.blogBody}`}>
               <div className={styles.blogTitleWrapper}>
                 <h3 className={`h5 ${styles.blogTitle}`}>
                   <a href="#" className={styles.blogTitleLink}>
@@ -28,11 +28,11 @@ const BlogCard = ({ blogs }) => {
                   </a>
                 </h3>
               </div>
-              <div className={`${styles.blogMeta}`}>
+              <div className={styles.blogMeta}>
                 <svg
-                  className={`${styles.foodIcon}`}
-                  width=".8rem"
-                  height=".8rem"
+                  className={styles.foodIcon}
+                  width="0.8rem"
+                  height="0.8rem"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -44,9 +44,7 @@ const BlogCard = ({ blogs }) => {
                 </svg>
                 <span>{new Date(blog.createdAt).toLocaleDateString("fa-IR")}</span>
               </div>
-              <p className={`${styles.blogContent}`}>
-                {blog.shortDesc}
-              </p>
+              <p className={styles.blogContent}>{blog.shortDesc}</p>
             </div>
           </div>
         </div>
