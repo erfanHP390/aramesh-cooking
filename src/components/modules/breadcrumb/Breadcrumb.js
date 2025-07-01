@@ -4,7 +4,7 @@ import styles from "./Breadcrumb.module.css";
 import Link from "next/link";
 import { GiMeal } from "react-icons/gi";
 
-function Breadcrumb({title , titr , Children}) {
+function Breadcrumb({title , titr , children}) {
   return (
     <>
       <div id="hero" className={`section py-5 jarallax ${styles.breadcrumbContainer}`}>
@@ -62,7 +62,7 @@ function Breadcrumb({title , titr , Children}) {
                 <h1 className={`text-white text-shadow ${styles.breadcrumbText}`}>{title}</h1>
                 <hr className={`divider mt-4 mx-auto ${styles.breadcrumbDivider}`} />
               </div>
-              {Children}
+              {children}
             </div>
             {/* End content */}
           </div>

@@ -167,3 +167,11 @@
 :global(body.dark-mode) .breadcrumbLink:hover {
   color: #a97142 !important; 
 }
+
+/* ================= */
+
+.breadcrumbOverlay,
+.breadcrumbParticleContainer,
+.breadcrumbParticle {
+  pointer-events: none !important;
+}
