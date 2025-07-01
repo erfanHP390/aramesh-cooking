@@ -1,6 +1,4 @@
 import Breadcrumb from "@/components/modules/breadcrumb/Breadcrumb";
-import Footer from "@/components/modules/footer/Footer";
-import Navbar from "@/components/modules/navbar/Navbar";
 import Gallery from "@/components/templates/portfolio/Gallery";
 import React from "react";
 import connectToDB from "@/configs/db";
@@ -14,12 +12,10 @@ async function page() {
 
   return (
     <>
-      <Navbar />
       <main id="content" className="flex-grow-1">
         <Breadcrumb title={"نمونه ها"} />
         <Gallery products={JSON.parse(JSON.stringify(products))} categories={JSON.parse(JSON.stringify(categories))} />
       </main>
-      <Footer />
     </>
   );
 }

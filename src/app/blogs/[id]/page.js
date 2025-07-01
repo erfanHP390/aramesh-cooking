@@ -1,6 +1,4 @@
 import Breadcrumb from '@/components/modules/breadcrumb/Breadcrumb'
-import Footer from '@/components/modules/footer/Footer'
-import Navbar from '@/components/modules/navbar/Navbar'
 import Blog from '@/components/templates/blogs/single/Blog'
 import connectToDB from '@/configs/db'
 import React from 'react'
@@ -12,12 +10,10 @@ async function page({params}) {
 
   return (
     <>
-      <Navbar />
       <main id="content">'
         <Breadcrumb title={`${blog.titr}`} titr={`${blog.title}`} />
         <Blog  blog={JSON.parse(JSON.stringify(blog))} />
       </main>
-      <Footer />
     </>
   )
 }
