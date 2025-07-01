@@ -1,0 +1,570 @@
+/* Button */
+.textCenter {
+  text-align: center !important;
+  margin-top: 2rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btnLight {
+  color: #212529;
+  background-color: #f5ebdd;
+  border-color: #a97142;
+}
+
+:global(body.dark-mode) .btnLight {
+  background-color: #3a261c !important;
+  color: #faf9f5 !important;
+  border-color: #8b2e2c !important;
+}
+
+.btnLight:hover {
+  background-color: #a97142;
+  color: #faf9f5;
+  border-color: #8b2e2c;
+}
+
+:global(body.dark-mode) .btnLight:hover {
+  background-color: #8b2e2c !important;
+}
+
+.border {
+  border: 1px solid #a97142 !important;
+}
+
+:global(body.dark-mode) .border {
+  border-color: #8b2e2c !important;
+}
+
+.biArrowRepeat {
+  margin-right: 0.5rem;
+}
+
+/* SearchBar.module.css */
+
+.searchContainer {
+  background-color: #a97142; /* قهوه‌ای خاکی برای پس‌زمینه */
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+:global(body.dark-mode) .searchContainer {
+  background-color: #3a261c !important; /* بژ مایل به خاکستری برای تم تاریک */
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  background-color: #f5ebdd; /* بژ برای زمینه ثانویه */
+  color: #333;
+  font-size: 1rem;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+:global(body.dark-mode) .searchInput {
+  background-color: #442d21 !important;
+  color: #faf9f5 !important;
+}
+
+.searchInput::placeholder {
+  color: #999;
+}
+
+:global(body.dark-mode) .searchInput::placeholder {
+  color: #a97142 !important;
+}
+
+.searchButton {
+  padding: 1rem 1.25rem;
+  background-color: #8b2e2c; /* قرمز زرشکی برای دکمه */
+  color: #faf9f5; /* سفید گرم برای متن */
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:global(body.dark-mode) .searchButton {
+  background-color: #8b2e2c !important;
+}
+
+.searchButton:hover {
+  background-color: #607744 !important; /* تیره‌تر برای حالت هاور */
+}
+
+:global(body.dark-mode) .searchButton:hover {
+  background-color: #a97142 !important; /* نارنجی-طلایی خاکی برای هاور در تم تاریک */
+}
+
+.searchIcon {
+  color: #faf9f5; /* سفید گرم برای آیکون */
+}
+
+:global(body.dark-mode) .searchIcon {
+  color: #faf9f5 !important;
+}
+
+/* =============================================== */
+
+.noResults {
+  width: 100%;
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5ebdd;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(169, 113, 66, 0.1);
+  margin: 2rem 0;
+}
+
+:global(body.dark-mode) .noResults {
+  background-color: #3a261c !important;
+  box-shadow: 0 4px 12px rgba(46, 31, 23, 0.3) !important;
+}
+
+.noResultsContainer {
+  text-align: center;
+  max-width: 500px;
+  padding: 2rem;
+}
+
+.noResultsIcon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1.5rem;
+  animation: bounce 2s infinite;
+}
+
+:global(body.dark-mode) .noResultsIcon path {
+  stroke: #8b2e2c !important;
+}
+
+.noResultsTitle {
+  color: #8b2e2c;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+:global(body.dark-mode) .noResultsTitle {
+  color: #faf9f5 !important;
+}
+
+.noResultsText {
+  color: #a97142;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+:global(body.dark-mode) .noResultsText {
+  color: #a97142 !important;
+}
+
+.noResultsButton {
+  background-color: #8b2e2c;
+  color: #faf9f5;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(139, 46, 44, 0.2);
+}
+
+:global(body.dark-mode) .noResultsButton {
+  background-color:  #8b2e2c !important;
+  color: #faf9f5 !important;
+}
+
+.noResultsButton:hover {
+  background-color: #607744 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 46, 44, 0.3);
+}
+
+:global(body.dark-mode) .noResultsButton:hover {
+  background-color: #a97142 !important;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .noResults {
+    padding: 2rem 1rem;
+  }
+
+  .noResultsContainer {
+    padding: 1rem;
+  }
+
+  .noResultsIcon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .noResultsTitle {
+    font-size: 1.3rem;
+  }
+
+  .noResultsText {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .noResults {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .noResultsTitle {
+    font-size: 1.2rem;
+  }
+
+  .noResultsButton {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* ==================================== */
+
+.container {
+  margin: 0 auto;
+}
+
+.authorProfileCard {
+  background-color: #F5EBDD;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 8px 24px rgba(169, 113, 66, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.authorProfileCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(169, 113, 66, 0.15);
+}
+
+.authorProfileCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(90deg, #8B2E2C, #A97142);
+}
+
+.authorAvatarContainer {
+  display: flex;
+  justify-content: center;
+  /* margin-top: -4rem; */
+  margin-bottom: 1.5rem;
+}
+
+.authorAvatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #FAF9F5;
+  box-shadow: 0 4px 12px rgba(169, 113, 66, 0.2);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.authorAvatar:hover {
+  transform: scale(1.05);
+}
+
+.authorContent {
+  text-align: center;
+}
+
+.authorName {
+  color: #8B2E2C;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.authorTitle {
+  color: #607744;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.authorStats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.statLabel {
+  color: #A97142;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.statCount {
+  background-color: #8B2E2C;
+  color: #FAF9F5;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.socialLink {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.socialLink svg {
+  width: 24px;
+  height: 24px;
+}
+
+.socialLink.facebook {
+  background-color: rgba(59, 89, 152, 0.1);
+  color: #3b5998;
+}
+
+.socialLink.facebook:hover {
+  background-color: #3b5998;
+  color: white;
+}
+
+.socialLink.twitter {
+  background-color: rgba(29, 161, 242, 0.1);
+  color: #1da1f2;
+}
+
+.socialLink.twitter:hover {
+  background-color: #1da1f2;
+  color: white;
+}
+
+.socialLink.linkedin {
+  background-color: rgba(0, 119, 181, 0.1);
+  color: #0077b5;
+}
+
+.socialLink.linkedin:hover {
+  background-color: #0077b5;
+  color: white;
+}
+
+.socialLink.instagram {
+  background: rgba(225, 48, 108, 0.1);
+  color: #e1306c;
+}
+
+.socialLink.instagram:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  color: white;
+}
+
+.socialLink.youtube {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #ff0000;
+}
+
+.socialLink.youtube:hover {
+  background-color: #ff0000;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .authorProfileCard {
+    padding: 1.5rem;
+  }
+  
+  .authorName {
+    font-size: 1.5rem;
+  }
+  
+  .authorStats {
+    gap: 1.5rem;
+  }
+  
+  .socialLinks {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .authorAvatar {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .authorStats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .socialLink {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .socialLink svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* ===== Dark Mode Styles ===== */
+:global(body.dark-mode) .container {
+  background-color: transparent !important;
+}
+
+:global(body.dark-mode) .authorProfileCard {
+  background-color: #442d21 !important; /* بژ مایل به خاکستری */
+  box-shadow: 0 8px 24px rgba(46, 31, 23, 0.3) !important;
+}
+
+:global(body.dark-mode) .authorProfileCard:hover {
+  box-shadow: 0 12px 28px rgba(46, 31, 23, 0.4) !important;
+}
+
+:global(body.dark-mode) .authorProfileCard::before {
+  background: linear-gradient(90deg, #8b2e2c, #a97142) !important;
+}
+
+:global(body.dark-mode) .authorAvatar {
+  border-color: #3a261c !important;
+  box-shadow: 0 4px 12px rgba(46, 31, 23, 0.4) !important;
+}
+
+:global(body.dark-mode) .authorName {
+  color: #faf9f5 !important; /* سفید گرم */
+}
+
+:global(body.dark-mode) .authorTitle {
+  color: #607744 !important; /* سبز زیتونی */
+}
+
+:global(body.dark-mode) .statLabel {
+  color: #a97142 !important; /* نارنجی-طلایی خاکی */
+}
+
+:global(body.dark-mode) .statCount {
+  background-color: #8b2e2c !important; /* قرمز زرشکی */
+  color: #faf9f5 !important; /* سفید گرم */
+}
+
+/* Social Links in Dark Mode */
+:global(body.dark-mode) .socialLink.facebook {
+  background-color: rgba(59, 89, 152, 0.2) !important;
+  color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .socialLink.facebook:hover {
+  background-color: #3b5998 !important;
+}
+
+:global(body.dark-mode) .socialLink.twitter {
+  background-color: rgba(29, 161, 242, 0.2) !important;
+  color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .socialLink.twitter:hover {
+  background-color: #1da1f2 !important;
+}
+
+:global(body.dark-mode) .socialLink.linkedin {
+  background-color: rgba(0, 119, 181, 0.2) !important;
+  color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .socialLink.linkedin:hover {
+  background-color: #0077b5 !important;
+}
+
+:global(body.dark-mode) .socialLink.instagram {
+  background-color: rgba(225, 48, 108, 0.2) !important;
+  color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .socialLink.instagram:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+}
+
+:global(body.dark-mode) .socialLink.youtube {
+  background-color: rgba(255, 0, 0, 0.2) !important;
+  color: #faf9f5 !important;
+}
+
+:global(body.dark-mode) .socialLink.youtube:hover {
+  background-color: #ff0000 !important;
+}
