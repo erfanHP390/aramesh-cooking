@@ -3,6 +3,7 @@ import styles from "./Blog.module.css";
 import Comments from "../comments/Comments";
 import connectToDB from "@/configs/db";
 import CommentModel from "@/models/Comment";
+import Link from "next/link";
 
 async function Blog({ blog }) {
   connectToDB();
@@ -55,9 +56,9 @@ async function Blog({ blog }) {
                       <span className="fw-bold">{blog.author}</span>
                     </p>
                     <p className="mb-1">
-                      <a className={styles.authorLink} href="#">
+                      <Link className={styles.authorLink} href={`/blogs/author/${blog.author}`}>
                         دیدن مقالات بیشتر از این نویسنده
-                      </a>
+                      </Link>
                     </p>
                     {/*description*/}
                     <p className={styles.postDate}>
