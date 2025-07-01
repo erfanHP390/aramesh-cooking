@@ -223,12 +223,12 @@ function Navbar({ isCookies, user }) {
                           </Link>
                         </li>
                         <li>
-                          <a
+                          <Link
                             className={`dropdown-item ${styles.earthtone_dropdown_item}`}
-                            href="search.html"
+                            href={"/blogs/search"}
                           >
                             جستجو
-                          </a>
+                          </Link>
                         </li>
                         <li>
                           <a
