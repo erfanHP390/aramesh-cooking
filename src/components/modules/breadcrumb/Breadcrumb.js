@@ -1,10 +1,10 @@
 "use client";
-import React from "react";
+import React, { Children } from "react";
 import styles from "./Breadcrumb.module.css";
 import Link from "next/link";
 import { GiMeal } from "react-icons/gi";
 
-function Breadcrumb({title , titr}) {
+function Breadcrumb({title , titr , Children}) {
   return (
     <>
       <div id="hero" className={`section py-5 jarallax ${styles.breadcrumbContainer}`}>
@@ -62,6 +62,7 @@ function Breadcrumb({title , titr}) {
                 <h1 className={`text-white text-shadow ${styles.breadcrumbText}`}>{title}</h1>
                 <hr className={`divider mt-4 mx-auto ${styles.breadcrumbDivider}`} />
               </div>
+              {Children}
             </div>
             {/* End content */}
           </div>
