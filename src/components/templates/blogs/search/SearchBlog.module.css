@@ -1,0 +1,270 @@
+/* Button */
+.textCenter {
+  text-align: center !important;
+  margin-top: 2rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btnLight {
+  color: #212529;
+  background-color: #f5ebdd;
+  border-color: #a97142;
+}
+
+:global(body.dark-mode) .btnLight {
+  background-color: #3a261c !important;
+  color: #faf9f5 !important;
+  border-color: #8b2e2c !important;
+}
+
+.btnLight:hover {
+  background-color: #a97142;
+  color: #faf9f5;
+  border-color: #8b2e2c;
+}
+
+:global(body.dark-mode) .btnLight:hover {
+  background-color: #8b2e2c !important;
+}
+
+.border {
+  border: 1px solid #a97142 !important;
+}
+
+:global(body.dark-mode) .border {
+  border-color: #8b2e2c !important;
+}
+
+.biArrowRepeat {
+  margin-right: 0.5rem;
+}
+
+/* SearchBar.module.css */
+
+.searchContainer {
+  background-color: #a97142; /* قهوه‌ای خاکی برای پس‌زمینه */
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+:global(body.dark-mode) .searchContainer {
+  background-color: #3a261c !important; /* بژ مایل به خاکستری برای تم تاریک */
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  background-color: #f5ebdd; /* بژ برای زمینه ثانویه */
+  color: #333;
+  font-size: 1rem;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+:global(body.dark-mode) .searchInput {
+  background-color: #442d21 !important;
+  color: #faf9f5 !important;
+}
+
+.searchInput::placeholder {
+  color: #999;
+}
+
+:global(body.dark-mode) .searchInput::placeholder {
+  color: #a97142 !important;
+}
+
+.searchButton {
+  padding: 1rem 1.25rem;
+  background-color: #8b2e2c; /* قرمز زرشکی برای دکمه */
+  color: #faf9f5; /* سفید گرم برای متن */
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:global(body.dark-mode) .searchButton {
+  background-color: #8b2e2c !important;
+}
+
+.searchButton:hover {
+  background-color: #607744 !important; /* تیره‌تر برای حالت هاور */
+}
+
+:global(body.dark-mode) .searchButton:hover {
+  background-color: #a97142 !important; /* نارنجی-طلایی خاکی برای هاور در تم تاریک */
+}
+
+.searchIcon {
+  color: #faf9f5; /* سفید گرم برای آیکون */
+}
+
+:global(body.dark-mode) .searchIcon {
+  color: #faf9f5 !important;
+}
+
+/* =============================================== */
+
+.noResults {
+  width: 100%;
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5ebdd;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(169, 113, 66, 0.1);
+  margin: 2rem 0;
+}
+
+:global(body.dark-mode) .noResults {
+  background-color: #3a261c !important;
+  box-shadow: 0 4px 12px rgba(46, 31, 23, 0.3) !important;
+}
+
+.noResultsContainer {
+  text-align: center;
+  max-width: 500px;
+  padding: 2rem;
+}
+
+.noResultsIcon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1.5rem;
+  animation: bounce 2s infinite;
+}
+
+:global(body.dark-mode) .noResultsIcon path {
+  stroke: #8b2e2c !important;
+}
+
+.noResultsTitle {
+  color: #8b2e2c;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+:global(body.dark-mode) .noResultsTitle {
+  color: #faf9f5 !important;
+}
+
+.noResultsText {
+  color: #a97142;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+:global(body.dark-mode) .noResultsText {
+  color: #a97142 !important;
+}
+
+.noResultsButton {
+  background-color: #8b2e2c;
+  color: #faf9f5;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(139, 46, 44, 0.2);
+}
+
+:global(body.dark-mode) .noResultsButton {
+  background-color:  #8b2e2c !important;
+  color: #faf9f5 !important;
+}
+
+.noResultsButton:hover {
+  background-color: #607744 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 46, 44, 0.3);
+}
+
+:global(body.dark-mode) .noResultsButton:hover {
+  background-color: #a97142 !important;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .noResults {
+    padding: 2rem 1rem;
+  }
+
+  .noResultsContainer {
+    padding: 1rem;
+  }
+
+  .noResultsIcon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .noResultsTitle {
+    font-size: 1.3rem;
+  }
+
+  .noResultsText {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .noResults {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .noResultsTitle {
+    font-size: 1.2rem;
+  }
+
+  .noResultsButton {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+  }
+}
