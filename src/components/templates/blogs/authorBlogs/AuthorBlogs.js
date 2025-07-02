@@ -9,12 +9,19 @@ function AuthorBlogs({ blogs, author }) {
   const [displayedBlogs, setDisplayedBlogs] = useState([]);
   const [visibleCount, setVisibleCount] = useState(4);
   const [commentCount, setCommentCount] = useState(0);
+  const [img , setImg] =useState(null)
 
   useEffect(() => {
     // Calculate total comments count
     const totalComments = blogs.reduce((total, blog) => {
       return total + (blog.comments?.length || 0);
     }, 0);
+
+    teamMembers.filter(member => {
+      if(member.name === author) {
+        setImg(member.image)
+      }
+    })
 
     setCommentCount(totalComments);
 
@@ -33,7 +40,7 @@ function AuthorBlogs({ blogs, author }) {
       <div className={styles.authorProfileCard}>
         <div className={styles.authorAvatarContainer}>
           <img
-            src={"/images/profile-user.png"}
+            src={img}
             alt="نمایه نویسنده"
             width={120}
             height={120}
