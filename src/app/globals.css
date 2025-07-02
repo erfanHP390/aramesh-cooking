@@ -273,7 +273,7 @@ body {
 }
 /* ==================== dark mode btn =============== */
 body.dark-mode {
-  background-color: #2e1f17 !important; /* تم قهوه‌ای خیلی تیره */
+  background-color: #2e1f17 !important; 
   color: #faf9f5 !important;
 }
 

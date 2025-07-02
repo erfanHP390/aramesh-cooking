@@ -1,10 +1,9 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./Navbar.module.css";
 import Link from "next/link";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
-import { toastError, toastSuccess } from "@/utils/alerts";
 import { useRouter } from "next/navigation";
 
 function Navbar({ isCookies, user }) {

@@ -29,28 +29,8 @@ function DarkModeBtn() {
       aria-label="Toggle theme"
     >
       {dark ? (
-        // <svg
-        //   xmlns="http://www.w3.org/2000/svg"
-        //   width={16}
-        //   height={16}
-        //   fill="currentColor"
-        //   className="bi bi-moon-stars-fill"
-        //   viewBox="0 0 16 16"
-        // >
-        //   <path d="M6 .278a.77.77..." />
-        // </svg>
         <IoSunny />
       ) : (
-        // <svg
-        //   xmlns="http://www.w3.org/2000/svg"
-        //   width={16}
-        //   height={16}
-        //   fill="currentColor"
-        //   className="bi bi-brightness-high-fill"
-        //   viewBox="0 0 16 16"
-        // >
-        //   <path d="M12 8a4 4..." />
-        // </svg>
         <IoMoon />
       )}
     </button>

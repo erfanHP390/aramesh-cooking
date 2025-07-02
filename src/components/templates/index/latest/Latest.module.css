@@ -27,7 +27,6 @@
   margin: 0 auto;
 }
 
-/* Dark Mode Styles - کاملاً حفظ شده */
 :global(body.dark-mode) .latestSection {
   background-color: #2e1f17 !important;
 }

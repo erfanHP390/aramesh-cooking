@@ -14,7 +14,7 @@
 
 .blogImageWrapper {
   width: 100%;
-  aspect-ratio: 4 / 3; /* حفظ تناسب تصویر برای همه کارت‌ها */
+  aspect-ratio: 4 / 3; 
   overflow: hidden;
 }
 

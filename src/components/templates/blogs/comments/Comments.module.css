@@ -1,5 +1,3 @@
-/* فقط استایل‌های مربوط به کامپوننت Comments - بهینه‌شده برای موبایل (500px به پایین) */
-
 .commentList {
   list-style-type: none !important;
   padding: 0 !important;
@@ -83,7 +81,6 @@
   border-left: 2px solid #A97142 !important;
 }
 
-/* بهینه‌سازی برای موبایل (500px به پایین) */
 @media (max-width: 500px) {
   .userComment {
     padding: 0.7rem !important;
@@ -119,7 +116,6 @@
   }
 }
 
-/* بخش‌های مربوط به دارک مود (بدون تغییر) */
 :global(body.dark-mode) .userComment {
   background-color: #3a261c !important;
   border-color: #3a261c !important;

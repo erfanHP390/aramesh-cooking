@@ -7,7 +7,6 @@ import { validateEmail } from "@/utils/auth";
 import { useRouter } from "next/navigation";
 
 function CommentForm({ blogID, replyingTo, commentName }) {
-  console.log(replyingTo);
 
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);

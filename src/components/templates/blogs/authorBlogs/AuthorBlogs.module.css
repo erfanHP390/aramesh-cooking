@@ -58,13 +58,13 @@
 /* SearchBar.module.css */
 
 .searchContainer {
-  background-color: #a97142; /* قهوه‌ای خاکی برای پس‌زمینه */
+  background-color: #a97142; 
   padding: 1rem;
   border-radius: 8px;
 }
 
 :global(body.dark-mode) .searchContainer {
-  background-color: #3a261c !important; /* بژ مایل به خاکستری برای تم تاریک */
+  background-color: #3a261c !important; 
 }
 
 .inputGroup {
@@ -77,7 +77,7 @@
   padding: 0.75rem 1rem;
   border: none;
   border-radius: 4px 0 0 4px;
-  background-color: #f5ebdd; /* بژ برای زمینه ثانویه */
+  background-color: #f5ebdd; 
   color: #333;
   font-size: 1rem;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -98,8 +98,8 @@
 
 .searchButton {
   padding: 1rem 1.25rem;
-  background-color: #8b2e2c; /* قرمز زرشکی برای دکمه */
-  color: #faf9f5; /* سفید گرم برای متن */
+  background-color: #8b2e2c; 
+  color: #faf9f5; 
   border: none;
   border-radius: 0 4px 4px 0;
   cursor: pointer;
@@ -114,15 +114,15 @@
 }
 
 .searchButton:hover {
-  background-color: #607744 !important; /* تیره‌تر برای حالت هاور */
+  background-color: #607744 !important; 
 }
 
 :global(body.dark-mode) .searchButton:hover {
-  background-color: #a97142 !important; /* نارنجی-طلایی خاکی برای هاور در تم تاریک */
+  background-color: #a97142 !important; 
 }
 
 .searchIcon {
-  color: #faf9f5; /* سفید گرم برای آیکون */
+  color: #faf9f5; 
 }
 
 :global(body.dark-mode) .searchIcon {
@@ -489,7 +489,7 @@
 }
 
 :global(body.dark-mode) .authorProfileCard {
-  background-color: #442d21 !important; /* بژ مایل به خاکستری */
+  background-color: #442d21 !important; 
   box-shadow: 0 8px 24px rgba(46, 31, 23, 0.3) !important;
 }
 
@@ -507,20 +507,20 @@
 }
 
 :global(body.dark-mode) .authorName {
-  color: #faf9f5 !important; /* سفید گرم */
+  color: #faf9f5 !important; 
 }
 
 :global(body.dark-mode) .authorTitle {
-  color: #607744 !important; /* سبز زیتونی */
+  color: #607744 !important; 
 }
 
 :global(body.dark-mode) .statLabel {
-  color: #a97142 !important; /* نارنجی-طلایی خاکی */
+  color: #a97142 !important; 
 }
 
 :global(body.dark-mode) .statCount {
-  background-color: #8b2e2c !important; /* قرمز زرشکی */
-  color: #faf9f5 !important; /* سفید گرم */
+  background-color: #8b2e2c !important; 
+  color: #faf9f5 !important; 
 }
 
 /* Social Links in Dark Mode */
