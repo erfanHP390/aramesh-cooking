@@ -1,17 +1,19 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Profile.module.css";
 import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 function Profile() {
+  const [isClient, setIsClient] = useState(false);
+
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
+    AOS.init({ duration: 1000, once: true });
+    setIsClient(true); 
   }, []);
+
+  if (!isClient) return null; 
 
   return (
     <div
