@@ -2,6 +2,7 @@
 import React from "react";
 import styles from "./Team.module.css";
 import { teamMembers } from "@/utils/constants";
+import Link from "next/link";
 
 function Team() {
   return (
@@ -34,8 +35,8 @@ function Team() {
                     alt={`تصویر ${member.name}`}
                     loading="lazy"
                   />
-                  <a
-                    href="#"
+                  <Link
+                    href={member.href}
                     onClick={(e) => e.preventDefault()}
                     className={styles.viewProfile}
                     data-bs-toggle="tooltip"
@@ -62,7 +63,7 @@ function Team() {
                         clipRule="evenodd"
                       />
                     </svg>
-                  </a>
+                  </Link>
                 </div>
                 <div className={styles.teamInfo}>
                   <div className={styles.teamInfoContent}>
