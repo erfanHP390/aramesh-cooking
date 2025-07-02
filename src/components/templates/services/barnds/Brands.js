@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 import styles from "./Brands.module.css";
 
 function Brands() {
+  const swiperRef = useRef(null);
   const brands = [
     {
       id: 1,
@@ -88,6 +89,12 @@ function Brands() {
     },
   ];
 
+  useEffect(() => {
+    if (swiperRef.current) {
+      swiperRef.current.swiper.update();
+    }
+  }, []);
+
   return (
     <div id="partner-brand" className={styles.sectionContainer}>
       <div className="container">
@@ -97,6 +104,7 @@ function Brands() {
 
             <div className={styles.brandsContainer}>
               <Swiper
+                ref={swiperRef}
                 modules={[Autoplay, Navigation]}
                 spaceBetween={30}
                 slidesPerView={2}
@@ -115,7 +123,7 @@ function Brands() {
                   prevEl: `.${styles.swiperButtonPrev}`,
                 }}
                 loop={true}
-                rtl={true}
+                dir="rtl"
                 className={styles.brandSwiper}
               >
                 {brands.map((brand) => (
@@ -140,7 +148,6 @@ function Brands() {
                   </SwiperSlide>
                 ))}
               </Swiper>
-
             </div>
           </div>
         </div>

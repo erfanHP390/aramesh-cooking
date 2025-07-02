@@ -1,8 +1,21 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import { FaUtensils, FaGlassCheers, FaBookOpen, FaBoxOpen, FaCalendarAlt, FaUserMd } from "react-icons/fa";
 import styles from "./Service.module.css";
 
 function Service() {
+  useEffect(() => {
+    const loadAOS = async () => {
+      const AOS = await import('aos');
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
+      });
+    };
+    loadAOS();
+  }, []);
+
   return (
     <>
       <div id="service" className={`section pt-6 pt-md-7 ${styles.primaryBg}`}>

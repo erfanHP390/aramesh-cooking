@@ -18,13 +18,13 @@ async function Blog({ blog }) {
               <div className={`${styles.postContentWrapper} px-md-3`}>
                 {/* Post content */}
                 <div className="pt-3 pb-3">
-                  <p>
+                  <div className={styles.postHeaderContainer}>
                     <h1 className={styles.postHeader}>{blog.title}</h1>
                     <h2 className={styles.postAbstract}>چکیده</h2>
-                    <span className={styles.postAbstract}>
+                    <div className={styles.postAbstractText}>
                       {blog.shortDesc}
-                    </span>
-                  </p>
+                    </div>
+                  </div>
                   <figure className={`${styles.postImage} align-center`}>
                     <img
                       className="img-fluid"
@@ -35,7 +35,9 @@ async function Blog({ blog }) {
                       {blog.title}
                     </figcaption>
                   </figure>
-                  <p className={styles.postDescription}>{blog.description}</p>
+                  <div className={styles.postDescription}>
+                    {blog.description}
+                  </div>
                 </div>
                 {/* author */}
                 <div
@@ -52,19 +54,19 @@ async function Blog({ blog }) {
                   </div>
                   <div className="col-8 col-sm-9 col-md-10">
                     {/*name*/}
-                    <p className={`${styles.authorName} h5 mb-2`}>
+                    <div className={`${styles.authorName} h5 mb-2`}>
                       <span className="fw-bold">{blog.author}</span>
-                    </p>
-                    <p className="mb-1">
+                    </div>
+                    <div className="mb-1">
                       <Link className={styles.authorLink} href={`/blogs/author/${blog.author}`}>
                         دیدن مقالات بیشتر از این نویسنده
                       </Link>
-                    </p>
+                    </div>
                     {/*description*/}
-                    <p className={styles.postDate}>
+                    <div className={styles.postDate}>
                       تاریخ ثبت :{" "}
                       {new Date(blog.createdAt).toLocaleDateString("fa-IR")}
-                    </p>
+                    </div>
                   </div>
                 </div>
                 {/* Comments */}

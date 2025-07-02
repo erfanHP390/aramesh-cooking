@@ -1,5 +1,5 @@
 import "./globals.css";
-import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import Script from "next/script";
 import ScrollTopBtn from "@/components/modules/ScrollTopBtn/ScrollTopBtn";
 import DarkModeBtn from "@/components/modules/darkModeBtn/DarkModeBtn";
@@ -30,7 +30,7 @@ export const metadata = {
     "مشاوره تغذیه",
   ],
   icons: {
-    icon: "http://localhost:3000/images/LOGOv2.png",
+    icon: "https://img.favpng.com/6/8/2/labor-icon-cook-icon-chef-icon-9Jj3hbHm.jpg",
   },
   alternates: {
     canonical: "https://aramesh-cooking.ir",
@@ -76,10 +76,12 @@ export default async function RootLayout({ children }) {
         <link rel="stylesheet" href="/css/theme-rtl.css" />
         <link rel="stylesheet" href="/css/colors1.css" />
 
-        <link rel="icon" href="/images/LOGOv2.png" type="image/png" />
-
+        <link
+          rel="icon"
+          href="https://img.favpng.com/6/8/2/labor-icon-cook-icon-chef-icon-9Jj3hbHm.jpg"
+          type="image/png"
+        />
         <link rel="manifest" href="/js/pwa/manifest.json" />
-        <link rel="apple-touch-icon" href="/img-min/logo/apple-icon.png" />
 
         <Script
           src="/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"
@@ -93,6 +95,7 @@ export default async function RootLayout({ children }) {
           src="/plugins/jarallax/dist/jarallax-video.min.js"
           strategy="beforeInteractive"
         />
+
         <Script
           src="/plugins/lightgallery.js/dist/js/lightgallery.min.js"
           strategy="afterInteractive"
@@ -140,6 +143,7 @@ export default async function RootLayout({ children }) {
         />
         <Script src="/js/theme.js" strategy="afterInteractive" />
       </head>
+
       <body>
         <ClientRefresher />
         <Navbar isCookies={!!isCookies} user={user} />
@@ -159,6 +163,10 @@ export default async function RootLayout({ children }) {
         />
         <DarkModeBtn />
         <ScrollTopBtn />
+
+        <Script id="aos-init" strategy="afterInteractive">
+          {`if (typeof window !== 'undefined' && window.AOS) { AOS.init({ once: true }); }`}
+        </Script>
       </body>
     </html>
   );

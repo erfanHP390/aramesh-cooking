@@ -1,31 +1,37 @@
+"use client";
+
 import React from "react";
+import Link from "next/link";
 import styles from "./Card.module.css";
 
 const BlogCard = ({ blogs }) => {
   return (
     <>
       {blogs.slice(0, 4).map((blog) => (
-        <div className="col-12 col-sm-6 col-lg-4 col-xl-3 mb-4" key={blog._id}>
+        <div
+          className="col-12 col-sm-6 col-lg-4 col-xl-3 mb-4"
+          key={blog._id}
+        >
           <div
             className={`card h-100 border-0 rounded-3 overflow-hidden d-flex flex-column ${styles.blogCard}`}
             data-aos="fade-up"
           >
             <div className={styles.blogImageWrapper}>
-              <a href="#">
-                <img
-                  className={`img-fluid ${styles.blogImage}`}
-                  src={blog.img}
-                  alt={blog.title}
-                  loading="lazy"
-                />
-              </a>
+              <Link href={`/blog/${blog._id}`} passHref>
+                  <img
+                    className={`img-fluid ${styles.blogImage}`}
+                    src={blog.img}
+                    alt={blog.title}
+                    loading="lazy"
+                  />
+              </Link>
             </div>
             <div className={`card-body d-flex flex-column ${styles.blogBody}`}>
               <div className={styles.blogTitleWrapper}>
                 <h3 className={`h5 ${styles.blogTitle}`}>
-                  <a href="#" className={styles.blogTitleLink}>
+                  <Link href={`/blog/${blog._id}`} passHref  className={styles.blogTitleLink}>
                     {blog.title}
-                  </a>
+                  </Link>
                 </h3>
               </div>
               <div className={styles.blogMeta}>
@@ -35,6 +41,8 @@ const BlogCard = ({ blogs }) => {
                   height="0.8rem"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  focusable="false"
                 >
                   <path
                     fillRule="evenodd"
