@@ -47,7 +47,7 @@ export const metadata = {
 
 async function page() {
   connectToDB()
-  const departments = await DepartmentModel.find({}).sort({_id: -1})
+  const departments = await DepartmentModel.find({}).sort({_id: -1}).lean()
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -81,7 +81,7 @@ async function page() {
       />
       <main id="content" itemScope itemType="https://schema.org/ContactPage">
         <Breadcrumb title={"تماس با ما"} />
-        <Contact departments={departments} />
+        <Contact departments={JSON.parse(JSON.stringify(departments))} />
       </main>
     </>
   )

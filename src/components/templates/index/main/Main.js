@@ -13,7 +13,7 @@ async function Main() {
 
 
   connectToDB()
-  const departments = await DepartmentModel.find({}).sort({_id: -1})
+  const departments = await DepartmentModel.find({}).sort({_id: -1}).lean()
 
   return (
     <>
@@ -34,7 +34,7 @@ async function Main() {
         <Latest />
       </div>
       <div id="contact">
-        <Contact  departments={departments} />
+        <Contact  departments={JSON.parse(JSON.stringify(departments))} />
       </div>
     </>
   );

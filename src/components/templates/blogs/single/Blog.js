@@ -7,7 +7,7 @@ import Link from "next/link";
 
 async function Blog({ blog }) {
   connectToDB();
-  const answerComments = await CommentModel.find({ isAnswer: true });
+  const answerComments = await CommentModel.find({ isAnswer: true }).lean()
 
   return (
     <>
@@ -81,7 +81,7 @@ async function Blog({ blog }) {
                   <Comments
                     comments={blog.comments}
                     blogID={blog._id}
-                    answers={answerComments}
+                    answers={JSON.parse(JSON.stringify(answerComments))}
                   />
                 </div>
               </div>
