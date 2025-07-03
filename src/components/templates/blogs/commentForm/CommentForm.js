@@ -150,101 +150,111 @@ function CommentForm({ blogID, replyingTo, commentName }) {
   };
 
   return (
-    <div id="comment-form" className="mt-5">
-      <h4 className={`${styles.commentFormHeader} h5`}>پاسخ دهید</h4>
-      <p className={styles.commentFormNote}>آدرس ایمیل شما منتشر نمی‌شود.</p>
-      <div className={styles.commentForm}>
-        <form className="needs-validation" action="#" noValidate>
-          <div className="mb-4">
-            <textarea
-              className={`${styles.formControl} form-control`}
-              placeholder="دیدگاه"
-              aria-label="درج نظر"
-              rows={4}
-              required
-              value={description}
-              onChange={(e) => setDescription(e.target.value)}
-            />
-            <div className={styles.invalidFeedback}>
-              لطفا نظر خود را وارد کنید
+    <>
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <>
+          <div id="comment-form" className="mt-5">
+            <h4 className={`${styles.commentFormHeader} h5`}>پاسخ دهید</h4>
+            <p className={styles.commentFormNote}>
+              آدرس ایمیل شما منتشر نمی‌شود.
+            </p>
+            <div className={styles.commentForm}>
+              <form className="needs-validation" action="#" noValidate>
+                <div className="mb-4">
+                  <textarea
+                    className={`${styles.formControl} form-control`}
+                    placeholder="دیدگاه"
+                    aria-label="درج نظر"
+                    rows={4}
+                    required
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
+                  />
+                  <div className={styles.invalidFeedback}>
+                    لطفا نظر خود را وارد کنید
+                  </div>
+                </div>
+
+                <div className="mb-4">
+                  <input
+                    className={`${styles.formControl} form-control`}
+                    placeholder="نام"
+                    aria-label="name"
+                    type="text"
+                    required
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                  />
+                  <div className={styles.invalidFeedback}>
+                    لطفا نام خود را وارد کنید
+                  </div>
+                </div>
+
+                <div className="mb-4">
+                  <input
+                    className={`${styles.formControl} form-control`}
+                    placeholder="ایمیل"
+                    aria-label="email"
+                    type="email"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                  <div className={styles.invalidFeedback}>
+                    لطفا ایمیل خود را وارد کنید
+                  </div>
+                </div>
+
+                <div className="mb-4">
+                  <input
+                    className={`${styles.formControl} form-control`}
+                    placeholder="شهر"
+                    type="text"
+                    value={city}
+                    onChange={(e) => setCity(e.target.value)}
+                  />
+                </div>
+
+                <div className="mb-4">
+                  <div className="form-check">
+                    <input
+                      className="form-check-input"
+                      id="comment-cookies"
+                      name="comment-cookies"
+                      type="checkbox"
+                      checked={isSaveValue}
+                      onChange={() => setIsSaveValue((prev) => !prev)}
+                    />
+                    <label
+                      className={`${styles.formCheckLabel} form-check-label`}
+                      htmlFor="comment-cookies"
+                    >
+                      برای دفعات بعد نام، ایمیل و شهر مرا ذخیره کن
+                    </label>
+                  </div>
+                </div>
+
+                <div className="mb-4">
+                  <button
+                    type="submit"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setIsLoading(true);
+                      replyingTo ? sendAnswer() : sendComment();
+                    }}
+                    className={`${styles.submitButton} btn btn-primary`}
+                  >
+                    ارسال دیدگاه
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
-
-          <div className="mb-4">
-            <input
-              className={`${styles.formControl} form-control`}
-              placeholder="نام"
-              aria-label="name"
-              type="text"
-              required
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-            <div className={styles.invalidFeedback}>
-              لطفا نام خود را وارد کنید
-            </div>
-          </div>
-
-          <div className="mb-4">
-            <input
-              className={`${styles.formControl} form-control`}
-              placeholder="ایمیل"
-              aria-label="email"
-              type="email"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <div className={styles.invalidFeedback}>
-              لطفا ایمیل خود را وارد کنید
-            </div>
-          </div>
-
-          <div className="mb-4">
-            <input
-              className={`${styles.formControl} form-control`}
-              placeholder="شهر"
-              type="text"
-              value={city}
-              onChange={(e) => setCity(e.target.value)}
-            />
-          </div>
-
-          <div className="mb-4">
-            <div className="form-check">
-              <input
-                className="form-check-input"
-                id="comment-cookies"
-                name="comment-cookies"
-                type="checkbox"
-                checked={isSaveValue}
-                onChange={() => setIsSaveValue((prev) => !prev)}
-              />
-              <label
-                className={`${styles.formCheckLabel} form-check-label`}
-                htmlFor="comment-cookies"
-              >
-                برای دفعات بعد نام، ایمیل و شهر مرا ذخیره کن
-              </label>
-            </div>
-          </div>
-
-          <div className="mb-4">
-            <button
-              type="submit"
-              onClick={(e) => {
-                e.preventDefault();
-                setIsLoading(true);
-                replyingTo ? sendAnswer() : sendComment();
-              }}
-              className={`${styles.submitButton} btn btn-primary`}
-            >
-              {isLoading ? <Loading /> : "ارسال دیدگاه"}
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
+        </>
+      )}
+    </>
   );
 }
 
