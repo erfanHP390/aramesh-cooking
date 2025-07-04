@@ -122,4 +122,57 @@ cp .env.example .env.local
 
 # اجرای پروژه در محیط توسعه
 npm run dev
+<hr />
 
+🇬🇧 Aramesh Cooking - Next.js Full-Stack Project
+A full-featured recipe and content-based cooking website developed with Next.js 13 using App Router. This platform provides cooking articles, newsletter subscription, and interactive features in a calming design atmosphere.
+
+🔹 Key Features
+Fully responsive design
+
+Newsletter subscription feature
+
+Contact us form with MongoDB connection
+
+Users can leave comments under articles
+
+A full blog system with dedicated article pages
+
+Dark/Light Theme Toggle with a calm color palette
+
+Color harmony inspired by natural tones:
+
+Earthy brown, beige, basil green, warm white, pomegranate red
+
+SEO optimized and well-structured
+
+Secure MongoDB connection
+
+Bootstrap-powered layout and responsiveness
+
+🧰 Tech Stack
+Next.js 13 (App Router)
+
+React.js
+
+Bootstrap 5
+
+MongoDB (Mongoose)
+
+CSS Modules
+
+AOS for scroll animation
+
+Vercel for deployment
+
+📦 Setup
+bash
+Copy
+Edit
+git clone https://github.com/erfanHP390/aramesh-cooking.git
+cd aramesh-cooking
+npm install
+cp .env.example .env.local
+npm run dev
+🌍 Live Demo
+aramesh-cooking.vercel.app
