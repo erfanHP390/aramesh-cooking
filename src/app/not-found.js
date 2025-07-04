@@ -20,10 +20,10 @@ export default function NotFound() {
         </p>
         
         <div className={styles.actions}>
-          <Link href="/" className={styles.primaryButton}>
+          <Link href="/" target='_blank' className={styles.primaryButton}>
             بازگشت به صفحه اصلی
           </Link>
-          <Link href="/blog" className={styles.secondaryButton}>
+          <Link href="/blog"  target='_blank' className={styles.secondaryButton}>
             مشاهده وبلاگ
           </Link>
         </div>

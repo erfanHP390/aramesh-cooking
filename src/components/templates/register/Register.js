@@ -236,7 +236,7 @@ function Register() {
                             }
                           />
                           <span className={styles.textColor}>
-                            <a href="/terms" className={styles.loginLink}>
+                            <a href="/rules" className={styles.loginLink}>
                               شرایط و ضوابط
                             </a>{" "}
                             را می‌پذیرم

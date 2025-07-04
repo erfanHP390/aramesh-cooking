@@ -43,6 +43,7 @@ function Team() {
                     data-bs-placement="top"
                     aria-label={`مشاهده پروفایل ${member.name}`}
                     title={`مشاهده پروفایل ${member.name}`}
+                    target="_blank"
                   >
                     <svg
                       className="bi bi-eye"
