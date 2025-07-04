@@ -10,10 +10,10 @@ function Profile() {
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
-    setIsClient(true); 
+    setIsClient(true);
   }, []);
 
-  if (!isClient) return null; 
+  if (!isClient) return null;
 
   return (
     <div
@@ -29,6 +29,7 @@ function Profile() {
                   className="img-fluid"
                   src="/images/our-services-home.webp"
                   alt="company profile"
+                  loading="lazy"
                 />
               </div>
             </div>

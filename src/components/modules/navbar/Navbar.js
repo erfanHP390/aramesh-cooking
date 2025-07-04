@@ -7,8 +7,6 @@ import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { useRouter } from "next/navigation";
 
 function Navbar({ isCookies, user }) {
-
-  
   const router = useRouter();
 
   const scrollToSection = (sectionId, offset = 0) => {
@@ -26,8 +24,6 @@ function Navbar({ isCookies, user }) {
     }
   };
 
-  
-
   return (
     <>
       <header>
@@ -38,10 +34,11 @@ function Navbar({ isCookies, user }) {
             <Link className="navbar-brand main-logo" href="/">
               <img
                 className={`logo-dark ${styles.logo}`}
-                src="/images/logonav.png"
+                src="/images/logonav.webp"
                 alt="LOGO"
                 width={120}
                 height={60}
+                loading="lazy"
               />
               <span
                 className={`h2 ${styles.earthtone_light_text} fw-bold mt-2`}
@@ -232,7 +229,9 @@ function Navbar({ isCookies, user }) {
                         <li>
                           <Link
                             className={`dropdown-item ${styles.earthtone_dropdown_item}`}
-                            href={"http://localhost:3000/blogs/author/%D9%86%DB%8C%D9%85%D8%A7%20%D8%B1%D8%B6%D8%A7%DB%8C%DB%8C"}
+                            href={
+                              "http://localhost:3000/blogs/author/%D9%86%DB%8C%D9%85%D8%A7%20%D8%B1%D8%B6%D8%A7%DB%8C%DB%8C"
+                            }
                           >
                             صفحه نویسنده
                           </Link>
@@ -273,7 +272,11 @@ function Navbar({ isCookies, user }) {
                             className={`dropdown-item ${styles.earthtone_dropdown_item}`}
                             href={isCookies ? "#" : "/register"}
                           >
-                            {isCookies ? <>{`ایمیل: ${user.email}`}</> : "ثبت نام"}
+                            {isCookies ? (
+                              <>{`ایمیل: ${user.email}`}</>
+                            ) : (
+                              "ثبت نام"
+                            )}
                           </Link>
                         </li>
                         <li>

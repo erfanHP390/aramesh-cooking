@@ -2,7 +2,18 @@ import React from "react";
 import styles from "../../templates/blogs/allblog/AllBlog.module.css";
 import Link from "next/link";
 
-function CardBlog({ _id , titr, title, shortDesc, comments, author, description, createdAt, updatedAt, img }) {
+function CardBlog({
+  _id,
+  titr,
+  title,
+  shortDesc,
+  comments,
+  author,
+  description,
+  createdAt,
+  updatedAt,
+  img,
+}) {
   return (
     <div className={`${styles.colMd6} ${styles.pxLg4}`}>
       <div
@@ -14,6 +25,7 @@ function CardBlog({ _id , titr, title, shortDesc, comments, author, description,
               className={styles.imgFluid}
               src={img || "https://via.placeholder.com/300x200"}
               alt={title || "Blog Image"}
+              loading="lazy"
             />
           </Link>
         </div>
@@ -24,6 +36,7 @@ function CardBlog({ _id , titr, title, shortDesc, comments, author, description,
                 className={`${styles.avatarMd} ${styles.mtN2} ${styles.roundedCircle}`}
                 src={author?.avatar || "src/img-min/avatar/img1-small.jpg"}
                 alt={author?.name || "Author"}
+                loading="lazy"
               />
             </Link>
           </span>
@@ -54,7 +67,9 @@ function CardBlog({ _id , titr, title, shortDesc, comments, author, description,
                 />
               </svg>
               <span className={styles.dateText}>
-                {createdAt ? new Date(createdAt).toLocaleDateString("fa-IR") : "تاریخ نامعلوم"}
+                {createdAt
+                  ? new Date(createdAt).toLocaleDateString("fa-IR")
+                  : "تاریخ نامعلوم"}
               </span>
             </div>
           </div>

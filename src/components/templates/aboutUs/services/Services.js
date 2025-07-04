@@ -10,12 +10,16 @@ function Services() {
       >
         <div className="container">
           {/* section header */}
-          <header className={`text-center mx-auto mb-5 ${styles.dark_mode_text}`}>
+          <header
+            className={`text-center mx-auto mb-5 ${styles.dark_mode_text}`}
+          >
             <h2 className={`h3 fw-bold ${styles.dark_mode_heading}`}>
               {" "}
               خدمات <span className="fw-light">ما</span>
             </h2>
-            <hr className={`divider my-4 mx-auto bg-warning border-warning ${styles.dark_mode_divider}`} />
+            <hr
+              className={`divider my-4 mx-auto bg-warning border-warning ${styles.dark_mode_divider}`}
+            />
           </header>
           {/* end section header */}
           <div className="row">
@@ -32,13 +36,18 @@ function Services() {
                     <img
                       alt="service"
                       className={`${styles.img_content} ${styles.dark_mode_img}`}
-                      src="/images/Food.jpg"
+                      src="/images/Food.webp"
+                      loading="lazy"
                     />
                   </div>
                   {/* content block */}
-                  <div className={`col-lg-6 order-lg-1 my-auto showcase-text ${styles.dark_mode_showcase_text}`}>
+                  <div
+                    className={`col-lg-6 order-lg-1 my-auto showcase-text ${styles.dark_mode_showcase_text}`}
+                  >
                     <div className="p-4">
-                      <h3 className={`h4 mb-3 ${styles.dark_mode_subheading}`}>پذیرایی مجالس و مراسمات</h3>
+                      <h3 className={`h4 mb-3 ${styles.dark_mode_subheading}`}>
+                        پذیرایی مجالس و مراسمات
+                      </h3>
                       <p className={`lead mb-5 ${styles.dark_mode_paragraph}`}>
                         خدمات پذیرایی حرفه‌ای برای تمامی مراسمات از جمله عروسی،
                         جشن تولد، همایش‌ها و مراسمات شرکتی. ما با تیم حرفه‌ای
@@ -65,14 +74,19 @@ function Services() {
                   >
                     <img
                       alt="service"
-                      src="/images/Vegan-food.jpg"
+                      src="/images/Vegan-food.webp"
                       className={`${styles.img_content} ${styles.dark_mode_img}`}
+                      loading="lazy"
                     />
                   </div>
                   {/* content block */}
-                  <div className={`col-lg-6 order-lg-1 my-auto showcase-text ${styles.dark_mode_showcase_text}`}>
+                  <div
+                    className={`col-lg-6 order-lg-1 my-auto showcase-text ${styles.dark_mode_showcase_text}`}
+                  >
                     <div className="p-4">
-                      <h3 className={`h4 mb-3 ${styles.dark_mode_subheading}`}>آموزش آشپزی حرفه‌ای</h3>
+                      <h3 className={`h4 mb-3 ${styles.dark_mode_subheading}`}>
+                        آموزش آشپزی حرفه‌ای
+                      </h3>
                       <p className={`lead mb-5 ${styles.dark_mode_paragraph}`}>
                         دوره‌های آموزشی آشپزی برای تمامی سطوح از مبتدی تا
                         پیشرفته زیر نظر بهترین سرآشپزان کشور. چه بخواهید به صورت

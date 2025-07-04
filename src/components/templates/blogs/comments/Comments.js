@@ -30,7 +30,7 @@ function Comments({ comments, blogID, answers }) {
                     <footer className={styles.commentFooter}>
                       <img
                         className={`${styles.commentAvatar} avatar-md border img-fluid float-start me-3`}
-                        src="/images/profile-user.png"
+                        src="/images/profile-user.webp"
                         alt="avatar"
                         loading="lazy"
                       />
@@ -87,7 +87,7 @@ function Comments({ comments, blogID, answers }) {
                               <footer className={styles.commentFooter}>
                                 <img
                                   className={`${styles.commentAvatar} avatar-md border img-fluid float-start me-3`}
-                                  src="/images/profile-user.png"
+                                  src="/images/profile-user.webp"
                                   alt="avatar"
                                   loading="lazy"
                                 />

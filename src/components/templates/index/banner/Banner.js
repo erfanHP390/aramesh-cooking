@@ -11,20 +11,21 @@ import { Navigation, Autoplay } from "swiper/modules";
 function Banner() {
   return (
     <Swiper
-        rewind={true}
-        navigation={{
-          nextEl: `.${styles.swiperButtonNext}`,
-          prevEl: `.${styles.swiperButtonPrev}`,
-        }}
-        loop={true}
-        autoplay={{ delay: 3500 }}
-        modules={[Navigation, Autoplay]}
-        className={`mySwiper home-slider`}
+      rewind={true}
+      navigation={{
+        nextEl: `.${styles.swiperButtonNext}`,
+        prevEl: `.${styles.swiperButtonPrev}`,
+      }}
+      loop={true}
+      autoplay={{ delay: 3500 }}
+      modules={[Navigation, Autoplay]}
+      className={`mySwiper home-slider`}
     >
       <SwiperSlide>
         <img
-          src="/images/sliders/slider1.jpeg"
+          src="/images/sliders/slider1.webp"
           alt="Slide"
+          loading="lazy"
           style={{
             width: "100%",
             maxWidth: "1920px",
@@ -40,6 +41,7 @@ function Banner() {
         <img
           src="/images/sliders/slider2.webp"
           alt="Slide"
+          loading="lazy"
           style={{
             width: "100%",
             maxWidth: "1920px",
@@ -55,6 +57,7 @@ function Banner() {
         <img
           src="/images/sliders/slider3.webp"
           alt="Slide"
+          loading="lazy"
           style={{
             width: "100%",
             maxWidth: "1920px",
@@ -68,8 +71,9 @@ function Banner() {
       </SwiperSlide>
       <SwiperSlide>
         <img
-          src="/images/sliders/slider4.jpg"
+          src="/images/sliders/slider4.webp"
           alt="Slide"
+          loading="lazy"
           style={{
             width: "100%",
             maxWidth: "1920px",
@@ -83,8 +87,9 @@ function Banner() {
       </SwiperSlide>
       <SwiperSlide>
         <img
-          src="/images/sliders/slider5.jpg"
+          src="/images/sliders/slider5.webp"
           alt="Slide"
+          loading="lazy"
           style={{
             width: "100%",
             maxWidth: "1920px",
@@ -98,8 +103,9 @@ function Banner() {
       </SwiperSlide>
       <SwiperSlide>
         <img
-          src="/images/sliders/slider6.jpg"
+          src="/images/sliders/slider6.webp"
           alt="Slide"
+          loading="lazy"
           style={{
             width: "100%",
             maxWidth: "1920px",
@@ -113,8 +119,9 @@ function Banner() {
       </SwiperSlide>
       <SwiperSlide>
         <img
-          src="/images/sliders/slider7.jpg"
+          src="/images/sliders/slider7.webp"
           alt="Slide"
+          loading="lazy"
           style={{
             width: "100%",
             maxWidth: "1920px",
@@ -130,6 +137,7 @@ function Banner() {
         <img
           src="/images/sliders/slider8.webp"
           alt="Slide"
+          loading="lazy"
           style={{
             width: "100%",
             maxWidth: "1920px",

@@ -7,7 +7,7 @@ import Link from "next/link";
 
 async function Blog({ blog }) {
   connectToDB();
-  const answerComments = await CommentModel.find({ isAnswer: true }).lean()
+  const answerComments = await CommentModel.find({ isAnswer: true }).lean();
 
   return (
     <>
@@ -30,6 +30,7 @@ async function Blog({ blog }) {
                       className="img-fluid"
                       src={blog.img}
                       alt="Image description"
+                      loading="lazy"
                     />
                     <figcaption className={styles.postImageCaption}>
                       {blog.title}
@@ -47,8 +48,9 @@ async function Blog({ blog }) {
                     <a href="#">
                       <img
                         className={`${styles.authorImage} rounded-circle border img-fluid`}
-                        src="/images/profile-user.png"
+                        src="/images/profile-user.webp"
                         alt="author"
+                        loading="lazy"
                       />
                     </a>
                   </div>
@@ -58,7 +60,10 @@ async function Blog({ blog }) {
                       <span className="fw-bold">{blog.author}</span>
                     </div>
                     <div className="mb-1">
-                      <Link className={styles.authorLink} href={`/blogs/author/${blog.author}`}>
+                      <Link
+                        className={styles.authorLink}
+                        href={`/blogs/author/${blog.author}`}
+                      >
                         دیدن مقالات بیشتر از این نویسنده
                       </Link>
                     </div>
