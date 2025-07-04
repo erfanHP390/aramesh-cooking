@@ -17,7 +17,7 @@ const BlogCard = ({ blogs }) => {
             data-aos="fade-up"
           >
             <div className={styles.blogImageWrapper}>
-              <Link href={`/blog/${blog._id}`} passHref>
+              <Link href={`/blogs/${blog._id}`} passHref>
                   <img
                     className={`img-fluid ${styles.blogImage}`}
                     src={blog.img}
@@ -29,7 +29,7 @@ const BlogCard = ({ blogs }) => {
             <div className={`card-body d-flex flex-column ${styles.blogBody}`}>
               <div className={styles.blogTitleWrapper}>
                 <h3 className={`h5 ${styles.blogTitle}`}>
-                  <Link href={`/blog/${blog._id}`} passHref  className={styles.blogTitleLink}>
+                  <Link href={`/blogs/${blog._id}`} passHref  className={styles.blogTitleLink}>
                     {blog.title}
                   </Link>
                 </h3>
