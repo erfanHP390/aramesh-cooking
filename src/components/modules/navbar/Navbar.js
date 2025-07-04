@@ -230,12 +230,12 @@ function Navbar({ isCookies, user }) {
                           </Link>
                         </li>
                         <li>
-                          <a
+                          <Link
                             className={`dropdown-item ${styles.earthtone_dropdown_item}`}
-                            href="author.html"
+                            href={"http://localhost:3000/blogs/author/%D9%86%DB%8C%D9%85%D8%A7%20%D8%B1%D8%B6%D8%A7%DB%8C%DB%8C"}
                           >
                             صفحه نویسنده
-                          </a>
+                          </Link>
                         </li>
                         <li>
                           <Link
