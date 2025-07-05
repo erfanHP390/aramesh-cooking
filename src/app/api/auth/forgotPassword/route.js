@@ -45,7 +45,7 @@ export async function POST(req) {
           pass: "Faraz@1971700890643903",
           fromNum: "3000505",
           toNum: phone,
-          patternCode: "oasl38luzggtkv3",
+          patternCode: "oes337glk7g546n",
           inputData: [{ "verification-code": code }],
         },
         json: true,
