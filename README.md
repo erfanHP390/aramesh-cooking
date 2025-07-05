@@ -33,60 +33,60 @@
 ### 🏠 صفحه اصلی
 
 ![Home](./aramesh-cooking-gallery/home-page-1.png)
-![Home](./public/uploads/gallery/home-page-2.png)
-![Home](./public/uploads/gallery/home-page-3.png)
-![Home](./public/uploads/gallery/home-page-4.png)
-![Home](./public/uploads/gallery/home-page-5.png)
-![Home](./public/uploads/gallery/home-page-6.png)
-![Home](./public/uploads/gallery/home-page-7.png)
-![Home](./public/uploads/gallery/home-page-8.png)
+![Home](./aramesh-cooking-gallery/home-page-2.png)
+![Home](./aramesh-cooking-gallery/home-page-3.png)
+![Home](./aramesh-cooking-gallery/home-page-4.png)
+![Home](./aramesh-cooking-gallery/home-page-5.png)
+![Home](./aramesh-cooking-gallery/home-page-6.png)
+![Home](./aramesh-cooking-gallery/home-page-7.png)
+![Home](./aramesh-cooking-gallery/home-page-8.png)
 
 ### 📄 درباره ما
 
-![AboutUs](./public/uploads/gallery/about-us.png)
-![AboutUs](./public/uploads/gallery/about-us-2.png)
-![AboutUs](./public/uploads/gallery/about-us-3.png)
-![AboutUs](./public/uploads/gallery/about-us-dark.png)
-![AboutUs](./public/uploads/gallery/about-us-dark-2.png)
-![AboutUs](./public/uploads/gallery/about-us-dark-3.png)
-![AboutUs](./public/uploads/gallery/about-us-dark-4.png)
+![AboutUs](./aramesh-cooking-gallery/about-us.png)
+![AboutUs](./aramesh-cooking-gallery/about-us-2.png)
+![AboutUs](./aramesh-cooking-gallery/about-us-3.png)
+![AboutUs](./aramesh-cooking-gallery/about-us-dark.png)
+![AboutUs](./aramesh-cooking-gallery/about-us-dark-2.png)
+![AboutUs](./aramesh-cooking-gallery/about-us-dark-3.png)
+![AboutUs](./aramesh-cooking-gallery/about-us-dark-4.png)
 
 ### 📄 حرفه و اشتغال
 
-![Career](./public/uploads/gallery/career.png)
-![Career](./public/uploads/gallery/career-2.png)
-![Career](./public/uploads/gallery/career-dark.png)
-![Career](./public/uploads/gallery/career-dark-2.png)
-![Career](./public/uploads/gallery/carer-dark-3.png)
+![Career](./aramesh-cooking-gallery/career.png)
+![Career](./aramesh-cooking-gallery/career-2.png)
+![Career](./aramesh-cooking-gallery/career-dark.png)
+![Career](./aramesh-cooking-gallery/career-dark-2.png)
+![Career](./aramesh-cooking-gallery/carer-dark-3.png)
 
 ### 📄 تماس با ما
 
-![Contact-Us](./public/uploads/gallery/contact-us.png)
+![Contact-Us](./aramesh-cooking-gallery/contact-us.png)
 
 ### 📄 سوالات متداول
 
-![Faq](./public/uploads/gallery/faq.png)
+![Faq](./aramesh-cooking-gallery/faq.png)
 
 ### 📄 فرم فراموشی رمزعبور ، ورود ، ثبت نام
 
-![Forgot-Password](./public/uploads/gallery/forgot-password.png)
-![Login](./public/uploads/gallery/login.png)
-![Register](./public/uploads/gallery/register.png)
+![Forgot-Password](./aramesh-cooking-gallery/forgot-password.png)
+![Login](./aramesh-cooking-gallery/login.png)
+![Register](./aramesh-cooking-gallery/register.png)
 
 ### 📄 تعرفه ها و نمونه کارها
 
-![Portfolio](./public/uploads/gallery/portfolio.png)
-![Pricing](./public/uploads/gallery/pricing.png)
-![Pricing](./public/uploads/gallery/pricing-dark.png)
+![Portfolio](./aramesh-cooking-gallery/portfolio.png)
+![Pricing](./aramesh-cooking-gallery/pricing.png)
+![Pricing](./aramesh-cooking-gallery/pricing-dark.png)
 
 ### 📄 بزودی
 
-![Soon](./public/uploads/gallery/soon.png)
+![Soon](./aramesh-cooking-gallery/soon.png)
 
 ### 📄 قوانین
 
-![Rules](./public/uploads/gallery/rules.png)
-![Rules](./public/uploads/gallery/rules-2.png)
+![Rules](./aramesh-cooking-gallery/rules.png)
+![Rules](./aramesh-cooking-gallery/rules-2.png)
 
 ### 📄 خدمات
 
@@ -95,14 +95,14 @@
 
 ### 📚 بلاگ و مقالات
 
-![Blogs](./public/uploads/gallery/author-blogs.png)
-![Blogs](./public/uploads/gallery/author-blogs-dark.png)
-![Blogs](./public/uploads/gallery/blog.png)
-![Blogs](./public/uploads/gallery/blog-2.png)
-![Blogs](./public/uploads/gallery/blog-3.png)
-![Blogs](./public/uploads/gallery/blogs.png)
-![Blogs](./public/uploads/gallery/blogs-2.png)
-![Blogs](./public/uploads/gallery/search-blogs.png)
+![Blogs](./aramesh-cooking-gallery/author-blogs.png)
+![Blogs](./aramesh-cooking-gallery/author-blogs-dark.png)
+![Blogs](./aramesh-cooking-gallery/blog.png)
+![Blogs](./aramesh-cooking-gallery/blog-2.png)
+![Blogs](./aramesh-cooking-gallery/blog-3.png)
+![Blogs](./aramesh-cooking-gallery/blogs.png)
+![Blogs](./aramesh-cooking-gallery/blogs-2.png)
+![Blogs](./aramesh-cooking-gallery/search-blogs.png)
 
 ---
 
